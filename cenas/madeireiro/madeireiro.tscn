@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://cd0iquutm1bmq"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1789750473]
+[ext_resource type="PackedScene" uid="uid://bok071vgd4sa" path="res://cenas/prefab/base_character.tscn" id="1_jhx8n"]
+
+[node name="Madeireiro" unique_id=1385650990 instance=ExtResource("1_jhx8n")]
