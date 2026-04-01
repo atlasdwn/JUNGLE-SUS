@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ba05g4t8wxwwb" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_3-Sheet.png" id="1_xb8rf"]
 [ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="2_6w31h"]
 [ext_resource type="Texture2D" uid="uid://cn6owm4yd1ap4" path="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Side-Sheet.png" id="4_r80mx"]
+[ext_resource type="PackedScene" uid="uid://berp31hv4a7y6" path="res://cenas/madeireiro/player_mock.tscn" id="5_16xrk"]
 [ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/madeireiro/npc_madeireiro.gd" id="5_r80mx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c32j"]
@@ -437,7 +438,7 @@ animations = [{
 size = Vector2(16, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3wcef"]
-size = Vector2(80, 30)
+size = Vector2(109, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08w5b"]
 size = Vector2(42, 49)
@@ -496,24 +497,27 @@ shadow_color = Color(0, 0, 0, 1)
 
 [node name="madeireiro" type="Node2D" unique_id=1052854838]
 
-[node name="cortador1" type="Area2D" parent="." unique_id=1849721112]
+[node name="cortador1" type="StaticBody2D" parent="." unique_id=1162115607]
+collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cortador1" unique_id=536721108]
 sprite_frames = SubResource("SpriteFrames_65g2u")
+autoplay = "default"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="cortador1" unique_id=1315545370]
 position = Vector2(-16, 25)
 shape = SubResource("RectangleShape2D_iepuk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cortador1" unique_id=2141711678]
-position = Vector2(16, -1)
+position = Vector2(1.5, -1)
 shape = SubResource("RectangleShape2D_3wcef")
 
-[node name="cortador2" type="Area2D" parent="." unique_id=577680611]
+[node name="cortador2" type="StaticBody2D" parent="." unique_id=1181598301]
 position = Vector2(114, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cortador2" unique_id=1058661059]
 sprite_frames = SubResource("SpriteFrames_65g2u")
+autoplay = "default"
 frame = 18
 frame_progress = 0.46927482
 
@@ -525,7 +529,7 @@ shape = SubResource("RectangleShape2D_08w5b")
 position = Vector2(24.5, 0.5)
 shape = SubResource("RectangleShape2D_7212u")
 
-[node name="cortador3" type="Area2D" parent="." unique_id=1164438719]
+[node name="cortador3" type="StaticBody2D" parent="." unique_id=814923468]
 position = Vector2(20, 64)
 
 [node name="Sprite" type="Sprite2D" parent="cortador3" unique_id=2097115025]
@@ -575,6 +579,11 @@ offset_top = -40.0
 offset_right = 22.0
 offset_bottom = -17.0
 label_settings = SubResource("LabelSettings_5c32j")
+
+[node name="PlayerMock" parent="." unique_id=131879222 instance=ExtResource("5_16xrk")]
+position = Vector2(-225, 5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1128393089]
 
 [connection signal="body_entered" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_entered"]
 [connection signal="body_exited" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_exited"]
