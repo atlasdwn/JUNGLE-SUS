@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ba05g4t8wxwwb" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_3-Sheet.png" id="1_xb8rf"]
 [ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="2_6w31h"]
+[ext_resource type="Texture2D" uid="uid://cn6owm4yd1ap4" path="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Side-Sheet.png" id="4_r80mx"]
+[ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/madeireiro/npc_madeireiro.gd" id="5_r80mx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c32j"]
 atlas = ExtResource("1_xb8rf")
@@ -446,6 +448,52 @@ size = Vector2(63, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huood"]
 size = Vector2(31, 15)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
+atlas = ExtResource("4_r80mx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iepuk"]
+atlas = ExtResource("4_r80mx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcef"]
+atlas = ExtResource("4_r80mx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08w5b"]
+atlas = ExtResource("4_r80mx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7212u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65g2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iepuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08w5b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
+size = Vector2(58, 55)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c32j"]
+bg_color = Color(0, 0, 0, 0.41568628)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5c32j"]
+font_size = 7
+shadow_color = Color(0, 0, 0, 1)
+
 [node name="madeireiro" type="Node2D" unique_id=1052854838]
 
 [node name="cortador1" type="Area2D" parent="." unique_id=1849721112]
@@ -486,3 +534,47 @@ texture = ExtResource("2_6w31h")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cortador3" unique_id=23705889]
 position = Vector2(-0.5, 8.5)
 shape = SubResource("RectangleShape2D_huood")
+
+[node name="NpcMadeireiro" type="Area2D" parent="." unique_id=1471709955]
+position = Vector2(-136, 0)
+script = ExtResource("5_r80mx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NpcMadeireiro" unique_id=269998737]
+sprite_frames = SubResource("SpriteFrames_7212u")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NpcMadeireiro" unique_id=1166941443]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_5c32j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="NpcMadeireiro" unique_id=497592015]
+
+[node name="CaixaDialogo" type="Label" parent="NpcMadeireiro/CanvasLayer" unique_id=1955449297]
+offset_left = 13.0
+offset_top = 197.0
+offset_right = 1113.0
+offset_bottom = 347.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5c32j")
+autowrap_mode = 2
+
+[node name="TextoDialogo" type="Label" parent="NpcMadeireiro/CanvasLayer" unique_id=332434727]
+offset_left = 13.0
+offset_top = 197.0
+offset_right = 1013.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="NpcMadeireiro/CanvasLayer" unique_id=1548965348]
+
+[node name="LabelInteracao" type="Label" parent="NpcMadeireiro" unique_id=141693762]
+offset_left = -18.0
+offset_top = -40.0
+offset_right = 22.0
+offset_bottom = -17.0
+label_settings = SubResource("LabelSettings_5c32j")
+
+[connection signal="body_entered" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_entered"]
+[connection signal="body_exited" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_exited"]
