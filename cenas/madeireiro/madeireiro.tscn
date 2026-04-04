@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ba05g4t8wxwwb" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_3-Sheet.png" id="1_xb8rf"]
 [ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="2_6w31h"]
 [ext_resource type="Texture2D" uid="uid://cn6owm4yd1ap4" path="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Side-Sheet.png" id="4_r80mx"]
-[ext_resource type="PackedScene" uid="uid://berp31hv4a7y6" path="res://cenas/madeireiro/player_mock.tscn" id="5_16xrk"]
 [ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/madeireiro/npc_madeireiro.gd" id="5_r80mx"]
+[ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="6_16xrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5c32j"]
 atlas = ExtResource("1_xb8rf")
@@ -580,10 +580,10 @@ offset_right = 22.0
 offset_bottom = -17.0
 label_settings = SubResource("LabelSettings_5c32j")
 
-[node name="PlayerMock" parent="." unique_id=131879222 instance=ExtResource("5_16xrk")]
-position = Vector2(-225, 5)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1128393089]
+
+[node name="Carina" parent="." unique_id=1385650990 instance=ExtResource("6_16xrk")]
+position = Vector2(-229, -2)
 
 [connection signal="body_entered" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_entered"]
 [connection signal="body_exited" from="NpcMadeireiro" to="NpcMadeireiro" method="_on_body_exited"]
