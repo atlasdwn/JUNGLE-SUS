@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://cqw6qw0kq8rpn"]
 
+[ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="1_ig7tw"]
+
 [node name="Node2D" type="Node2D" unique_id=416408272]
+
+[node name="Carina" parent="." unique_id=1385650990 instance=ExtResource("1_ig7tw")]
+position = Vector2(303, 342)
+
+[node name="Camera2D" type="Camera2D" parent="Carina" unique_id=609025670]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+editor_draw_drag_margin = true
