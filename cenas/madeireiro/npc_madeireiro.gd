@@ -39,7 +39,7 @@ func _on_body_entered(body) -> void:
 
 
 func _on_body_exited(body) -> void:
-	if body.name == "PlayerMock":
+	if body.name == "Carina":
 		player_in_area = false
 		label_interacao.visible = false
 		if falando:
