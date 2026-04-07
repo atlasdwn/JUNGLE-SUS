@@ -1,6 +1,6 @@
 class_name StateWalk extends State
 
-@export var move_speed : float = 50.0
+@export var move_speed : float = 60.0
 @onready var idle: State = $"../Idle"
 
 ## O que acontece quando o player entra no estado
