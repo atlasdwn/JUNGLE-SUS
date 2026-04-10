@@ -16,7 +16,7 @@ func process(_delta: float) -> State:
 	if player.direction == Vector2.ZERO:
 		return idle
 	
-	player.velocity = player.direction * move_speed
+	player.velocity = player.direction.normalized() * move_speed
 	
 	if player.set_direction():
 		player.update_animation("walk")
