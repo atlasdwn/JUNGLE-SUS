@@ -24,8 +24,7 @@ func set_direction() -> bool:
 	if  direction == Vector2.ZERO:
 		return false
 
-	if direction.y == 0:
-		Vector2()
+	if	 direction.y == 0:
 		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
 
 	elif direction.x == 0:
@@ -37,7 +36,6 @@ func set_direction() -> bool:
 	cardinal_direction = new_dir
 	anim.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
-
 
 func update_animation(state : String) -> void:
 	anim_player.play(state + "_" + anim_direction())
