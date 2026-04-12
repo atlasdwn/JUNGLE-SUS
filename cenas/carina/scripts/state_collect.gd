@@ -1,11 +1,8 @@
-class_name StateWalk extends State
-
-@export var move_speed : float = 60.0
-@onready var idle: State = $"../Idle"
+class_name StateCollect extends State
 
 ## O que acontece quando o player entra no estado
 func enter() -> void:
-	player.update_animation("walk")
+	player.update_animation("collect")
 	pass
 
 func exit() -> void:
@@ -13,14 +10,6 @@ func exit() -> void:
 
 ## O que acontece durante _process
 func process(_delta: float) -> State:
-	if player.direction == Vector2.ZERO:
-		return idle
-	
-	player.velocity = player.direction.normalized() * move_speed
-	
-	if player.set_direction():
-		player.update_animation("walk")
-		
 	return null
 	
 ## O que acontece durante _physics_process
