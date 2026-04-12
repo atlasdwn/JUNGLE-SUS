@@ -882,4 +882,5 @@ tile_set = SubResource("TileSet_d083j")
 [node name="Carina" parent="." unique_id=1385650990 instance=ExtResource("3_s55ga")]
 
 [node name="Camera2D" type="Camera2D" parent="Carina" unique_id=2091242147]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.7, 1.7)
+position_smoothing_enabled = true
