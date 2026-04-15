@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfnmug2kprnef"]
+
+[ext_resource type="Script" uid="uid://bng5gxko0cjgy" path="res://cenas/items/scripts/item_data.gd" id="1_5teqy"]
+[ext_resource type="Texture2D" uid="uid://bbdbeyy3wb46j" path="res://cenas/items/sprites/Preview.png" id="2_ji837"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528ph"]
+atlas = ExtResource("2_ji837")
+region = Rect2(8, 8, 112, 120)
+
+[resource]
+script = ExtResource("1_5teqy")
+name = "Supply"
+description = "Uma caixa de medicamentos."
+texture = SubResource("AtlasTexture_528ph")
+metadata/_custom_type_script = "uid://bng5gxko0cjgy"
