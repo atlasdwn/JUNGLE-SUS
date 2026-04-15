@@ -4,7 +4,7 @@ class_name StateCollect extends State
 func enter() -> void:
 	player.update_animation("collect")
 	pass
-
+	
 func exit() -> void:
 	pass
 
