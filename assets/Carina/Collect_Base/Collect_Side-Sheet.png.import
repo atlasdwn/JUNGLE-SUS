@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn6owm4yd1ap4"
-path="res://.godot/imported/Idle_Side-Sheet.png-21467b281bf0c7ddde07936743de5a75.ctex"
+uid="uid://xd6i221id87m"
+path="res://.godot/imported/Collect_Side-Sheet.png-63b60112cba0b862b5715ee8a0c9ce78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Side-Sheet.png"
-dest_files=["res://.godot/imported/Idle_Side-Sheet.png-21467b281bf0c7ddde07936743de5a75.ctex"]
+source_file="res://assets/Carina/Collect_Base/Collect_Side-Sheet.png"
+dest_files=["res://.godot/imported/Collect_Side-Sheet.png-63b60112cba0b862b5715ee8a0c9ce78.ctex"]
 
 [params]
 

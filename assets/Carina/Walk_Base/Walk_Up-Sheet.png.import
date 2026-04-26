@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cti4v7uhvc1qr"
-path="res://.godot/imported/Walk_Down-Sheet.png-b2bb8ee6c603b3f86808c975e922ee1f.ctex"
+uid="uid://dm08exn8tgyqs"
+path="res://.godot/imported/Walk_Up-Sheet.png-83979258837db8dd396be086d96e4852.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Walk_Base/Walk_Down-Sheet.png"
-dest_files=["res://.godot/imported/Walk_Down-Sheet.png-b2bb8ee6c603b3f86808c975e922ee1f.ctex"]
+source_file="res://assets/Carina/Walk_Base/Walk_Up-Sheet.png"
+dest_files=["res://.godot/imported/Walk_Up-Sheet.png-83979258837db8dd396be086d96e4852.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lrynvfqm55k4"
-path="res://.godot/imported/Idle_Up-Sheet.png-a17244965445f8992a6cfedfcccb736c.ctex"
+uid="uid://cti4v7uhvc1qr"
+path="res://.godot/imported/Walk_Down-Sheet.png-72644b864a912749d968b3e5cabefc86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Up-Sheet.png"
-dest_files=["res://.godot/imported/Idle_Up-Sheet.png-a17244965445f8992a6cfedfcccb736c.ctex"]
+source_file="res://assets/Carina/Walk_Base/Walk_Down-Sheet.png"
+dest_files=["res://.godot/imported/Walk_Down-Sheet.png-72644b864a912749d968b3e5cabefc86.ctex"]
 
 [params]
 

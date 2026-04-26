@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bepvelpmler74"
-path="res://.godot/imported/Run_Side-Sheet.png-1c2fa13a49b6446f53072415d49187eb.ctex"
+uid="uid://lrynvfqm55k4"
+path="res://.godot/imported/Idle_Up-Sheet.png-7ab82e7ad8aeeb54a782226f833eaeb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Run_Base/Run_Side-Sheet.png"
-dest_files=["res://.godot/imported/Run_Side-Sheet.png-1c2fa13a49b6446f53072415d49187eb.ctex"]
+source_file="res://assets/Carina/Idle_Base/Idle_Up-Sheet.png"
+dest_files=["res://.godot/imported/Idle_Up-Sheet.png-7ab82e7ad8aeeb54a782226f833eaeb5.ctex"]
 
 [params]
 

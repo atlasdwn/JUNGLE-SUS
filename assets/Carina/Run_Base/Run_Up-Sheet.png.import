@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xd6i221id87m"
-path="res://.godot/imported/Collect_Side-Sheet.png-6dc9ce441b0defdb304d4e7343be9be3.ctex"
+uid="uid://d1wsim6olg2em"
+path="res://.godot/imported/Run_Up-Sheet.png-984b76ce58884d13997743c04e0055e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Collect_Base/Collect_Side-Sheet.png"
-dest_files=["res://.godot/imported/Collect_Side-Sheet.png-6dc9ce441b0defdb304d4e7343be9be3.ctex"]
+source_file="res://assets/Carina/Run_Base/Run_Up-Sheet.png"
+dest_files=["res://.godot/imported/Run_Up-Sheet.png-984b76ce58884d13997743c04e0055e4.ctex"]
 
 [params]
 
