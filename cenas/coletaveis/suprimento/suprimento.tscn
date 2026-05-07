@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bayvpyn46qgbr"]
+
+[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/suprimento/scripts/suprimento.gd" id="1_im5y5"]
+[ext_resource type="Texture2D" uid="uid://ceik3x4r2j444" path="res://assets/Teclas/Keyboard Letters and Symbols.png" id="2_2x4lr"]
+[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/items/maça.tres" id="2_7ki5i"]
+[ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_7ki5i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohphm"]
+radius = 98.045906
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528ph"]
+atlas = ExtResource("3_7ki5i")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohphm"]
+atlas = ExtResource("2_2x4lr")
+region = Rect2(65, 34, 13, 12)
+
+[node name="Suprimento" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_im5y5")
+item = ExtResource("2_7ki5i")
+
+[node name="CollectibleArea" type="Area2D" parent="." unique_id=1551370280]
+collision_layer = 16
+
+[node name="Collision" type="CollisionShape2D" parent="CollectibleArea" unique_id=424898172]
+scale = Vector2(0.14061564, 0.14061564)
+shape = SubResource("CircleShape2D_ohphm")
+
+[node name="SpriteMaça" type="Sprite2D" parent="." unique_id=1561457950]
+texture = SubResource("AtlasTexture_528ph")
+
+[node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=240322463]
+position = Vector2(0, -18)
+texture = SubResource("AtlasTexture_ohphm")
+
+[connection signal="area_entered" from="CollectibleArea" to="." method="_on_collectible_area_entered"]
+[connection signal="area_exited" from="CollectibleArea" to="." method="_on_collectible_area_exited"]
+[connection signal="body_entered" from="CollectibleArea" to="." method="_on_collectible_area_body_entered"]
+[connection signal="body_exited" from="CollectibleArea" to="." method="_on_collectible_area_body_exited"]

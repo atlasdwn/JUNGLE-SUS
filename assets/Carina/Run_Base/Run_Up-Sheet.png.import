@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1wsim6olg2em"
-path="res://.godot/imported/Run_Up-Sheet.png-984b76ce58884d13997743c04e0055e4.ctex"
+uid="uid://1w2sbg7a1iua"
+path="res://.godot/imported/Run_Up-Sheet.png-780158c34f9507dc826559f42b2e394a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Carina/Run_Base/Run_Up-Sheet.png"
-dest_files=["res://.godot/imported/Run_Up-Sheet.png-984b76ce58884d13997743c04e0055e4.ctex"]
+source_file="res://assets/carina/Run_Base/Run_Up-Sheet.png"
+dest_files=["res://.godot/imported/Run_Up-Sheet.png-780158c34f9507dc826559f42b2e394a.ctex"]
 
 [params]
 
