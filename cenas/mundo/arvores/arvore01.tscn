@@ -14,7 +14,6 @@ texture = ExtResource("1_00srs")
 2:0/size_in_atlas = Vector2i(2, 4)
 2:0/next_alternative_id = 2
 2:0/0 = 0
-2:0/0/z_index = 1
 2:0/0/y_sort_origin = 25
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.4730568, 23.939196, 2.374134, 24.137041, 2.1762905, 31.951902, -2.9676685, 32.545433)
 
@@ -31,6 +30,5 @@ sources/0 = SubResource("TileSetAtlasSource_o5hlb")
 sources/1 = SubResource("TileSetAtlasSource_b0nsc")
 
 [node name="Arvore01" type="TileMapLayer" unique_id=583816885]
-scale = Vector2(1.3, 1.3)
-tile_map_data = PackedByteArray(0, 0, 249, 255, 253, 255, 0, 0, 2, 0, 0, 0, 0, 0, 249, 255, 255, 255, 1, 0, 7, 0, 5, 0, 0, 0, 5, 0, 254, 255, 0, 0, 9, 0, 2, 0, 0, 0, 5, 0, 255, 255, 1, 0, 0, 0, 6, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 253, 255, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 0, 7, 0, 5, 0, 0, 0, 7, 0, 254, 255, 0, 0, 9, 0, 2, 0, 0, 0, 7, 0, 255, 255, 1, 0, 0, 0, 6, 0, 0, 0)
 tile_set = SubResource("TileSet_svdyx")
