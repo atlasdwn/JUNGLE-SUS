@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cihsaprg6tbqy" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="1_v4jgv"]
 [ext_resource type="Texture2D" uid="uid://d0h4ivxtu7v2n" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="2_myvte"]
-[ext_resource type="Texture2D" uid="uid://dudhxutu14ka0" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="3_d083j"]
+[ext_resource type="PackedScene" uid="uid://dxxxvtsk5802s" path="res://cenas/mundo/arvores/arvore01.tscn" id="3_d083j"]
 [ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="3_s55ga"]
-[ext_resource type="Texture2D" uid="uid://ckm8j5krv7h1v" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_03/Size_02.png" id="4_cxrh1"]
-[ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="5_g2uqa"]
+[ext_resource type="PackedScene" uid="uid://dyhk7aqi2vrcd" path="res://cenas/mundo/arvores/arvore02.tscn" id="4_cxrh1"]
+[ext_resource type="PackedScene" uid="uid://bluyd2ic5lhvb" path="res://cenas/mundo/arvores/arvore03.tscn" id="5_ttabm"]
+[ext_resource type="PackedScene" uid="uid://by8pd5nvmo0f4" path="res://cenas/mundo/arvores/arvore04.tscn" id="6_cq3ta"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvte"]
 texture = ExtResource("1_v4jgv")
@@ -547,140 +548,16 @@ texture = ExtResource("2_myvte")
 [sub_resource type="TileSet" id="TileSet_d083j"]
 sources/0 = SubResource("TileSetAtlasSource_s55ga")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cxrh1"]
-texture = ExtResource("3_d083j")
-texture_region_size = Vector2i(32, 64)
-1:0/0 = 0
-1:0/0/y_sort_origin = 19
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.6601257, 22.900509, 2.473053, 22.702671, 2.868744, 32, -3.4622803, 32)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.2945023, 20.911726, 2.6244354, 20.855886, 2.1777267, 32.079536, -2.9594727, 32.023697)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2uqa"]
-texture = ExtResource("4_cxrh1")
-texture_region_size = Vector2i(32, 80)
-2:0/0 = 0
-2:0/0/y_sort_origin = 30
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.2536583, 39.865685, 4.4515038, 39.76676, 2.1762905, 35.117416, 2.769825, 28.885311, -2.769823, 28.885311, -2.374134, 34.227116)
-0:0/0 = 0
-0:0/0/y_sort_origin = 30
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.1269875, 35.178604, -2.177723, 25.239254, 2.1218834, 26.579391, 2.3452396, 34.84357, 4.2996063, 39.75741, -4.1320906, 39.70157)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttabm"]
-texture = ExtResource("5_g2uqa")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-0:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-3:4/0 = 0
-2:4/0 = 0
-4:3/0 = 0
-4:4/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-9:3/0 = 0
-8:3/0 = 0
-8:2/0 = 0
-7:3/0 = 0
-10:3/0 = 0
-9:5/0 = 0
-10:4/0 = 0
-6:5/0 = 0
-5:5/0 = 0
-5:4/0 = 0
-7:2/0 = 0
-7:1/0 = 0
-6:2/0 = 0
-8:1/0 = 0
-8:0/0 = 0
-7:0/0 = 0
-9:0/0 = 0
-9:1/0 = 0
-9:2/0 = 0
-10:0/0 = 0
-10:1/0 = 0
-10:2/0 = 0
-11:3/0 = 0
-11:2/0 = 0
-11:1/0 = 0
-11:0/0 = 0
-4:5/0 = 0
-4:6/0 = 0
-3:6/0 = 0
-2:6/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-3:5/0 = 0
-2:5/0 = 0
-2:7/0 = 0
-2:8/0 = 0
-1:8/0 = 0
-1:9/0 = 0
-0:9/0 = 0
-0:8/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-5:7/0 = 0
-3:8/0 = 0
-1:10/0 = 0
-0:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-11:4/0 = 0
-11:5/0 = 0
-10:5/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-12:0/0 = 0
-12:1/0 = 0
-12:2/0 = 0
-13:0/0 = 0
-13:1/0 = 0
-13:2/0 = 0
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_cxrh1"]
+resource_name = "arvores"
+scenes/1/scene = ExtResource("3_d083j")
+scenes/2/scene = ExtResource("4_cxrh1")
+scenes/3/scene = ExtResource("5_ttabm")
+scenes/4/scene = ExtResource("6_cq3ta")
 
 [sub_resource type="TileSet" id="TileSet_g2uqa"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_cxrh1")
-sources/2 = SubResource("TileSetAtlasSource_g2uqa")
-sources/3 = SubResource("TileSetAtlasSource_ttabm")
+sources/1 = SubResource("TileSetScenesCollectionSource_cxrh1")
 
 [node name="Mundo" type="Node2D" unique_id=1017883843]
 metadata/_edit_vertical_guides_ = [-2561.0, 2562.0]
@@ -698,11 +575,14 @@ tile_set = SubResource("TileSet_d083j")
 y_sort_enabled = true
 
 [node name="detalhes" type="TileMapLayer" parent="Y-sorting" unique_id=95392569]
+z_index = 1
+z_as_relative = false
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAAEAAwAAAAoAAAABAAEAAwABAAoAAAACAAEAAwAAAAoAAAAEAPv/AAABAAAAAAAHAPr/AgAAAAAAAAAJAPr/AgACAAAAAAAFAPz/AwACAAgAAAAFAP3/AwACAAkAAAAEAP3/AwABAAkAAAAEAP7/AwABAAoAAAADAP3/AwAAAAkAAAADAPz/AwAAAAgAAAAEAPz/AwABAAgAAAADAP7/AwAAAAoAAAA=")
+tile_map_data = PackedByteArray("AAAGAPn/AQAAAAAAAQAEAPj/AQAAAAAAAgDt//j/AQAAAAAAAwD0//D/AQAAAAAABAA=")
 tile_set = SubResource("TileSet_g2uqa")
 
 [node name="Carina" parent="Y-sorting" unique_id=1385650990 instance=ExtResource("3_s55ga")]
+z_index = 2
 
 [node name="Camera2D" type="Camera2D" parent="Y-sorting/Carina" unique_id=2091242147]
 zoom = Vector2(1.5, 1.5)
