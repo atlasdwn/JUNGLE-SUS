@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s5c6d8twohn5"
-path="res://.godot/imported/Collect_Up-Sheet.png-44fab0c194e8408303add1aa8f6a3757.ctex"
+path="res://.godot/imported/Collect_Up-Sheet.png-73e8cf845d7674d6bc226a02e85d79e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/carina/Collect_Base/Collect_Up-Sheet.png"
-dest_files=["res://.godot/imported/Collect_Up-Sheet.png-44fab0c194e8408303add1aa8f6a3757.ctex"]
+source_file="res://assets/Carina/Collect_Base/Collect_Up-Sheet.png"
+dest_files=["res://.godot/imported/Collect_Up-Sheet.png-73e8cf845d7674d6bc226a02e85d79e1.ctex"]
 
 [params]
 
