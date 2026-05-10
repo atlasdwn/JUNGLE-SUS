@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0lr0ijew2mlj"
-path="res://.godot/imported/Walk_Side-Sheet.png-e6b8c6bdb39acb6b1e5f6ba8288179ad.ctex"
+uid="uid://byxfp5478iyja"
+path="res://.godot/imported/Sample-InventorySlotsSet.png-34fa5af476794dd0a8885ada42474f3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/carina/Walk_Base/Walk_Side-Sheet.png"
-dest_files=["res://.godot/imported/Walk_Side-Sheet.png-e6b8c6bdb39acb6b1e5f6ba8288179ad.ctex"]
+source_file="res://assets/inventario/Sample-InventorySlotsSet.png"
+dest_files=["res://.godot/imported/Sample-InventorySlotsSet.png-34fa5af476794dd0a8885ada42474f3f.ctex"]
 
 [params]
 

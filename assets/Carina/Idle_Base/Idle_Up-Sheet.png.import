@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lrynvfqm55k4"
-path="res://.godot/imported/Idle_Up-Sheet.png-7ab82e7ad8aeeb54a782226f833eaeb5.ctex"
+uid="uid://isfcohnt4prq"
+path="res://.godot/imported/Idle_Up-Sheet.png-7697d28205a44f80be65f263ab4f119f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Carina/Idle_Base/Idle_Up-Sheet.png"
-dest_files=["res://.godot/imported/Idle_Up-Sheet.png-7ab82e7ad8aeeb54a782226f833eaeb5.ctex"]
+source_file="res://assets/carina/Idle_Base/Idle_Up-Sheet.png"
+dest_files=["res://.godot/imported/Idle_Up-Sheet.png-7697d28205a44f80be65f263ab4f119f.ctex"]
 
 [params]
 
