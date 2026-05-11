@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dn3twek62g7xa" path="res://assets/Carina/Walk_Base/Walk_Down-Sheet.png" id="6_5xett"]
 [ext_resource type="Texture2D" uid="uid://b0lr0ijew2mlj" path="res://assets/Carina/Walk_Base/Walk_Side-Sheet.png" id="7_gnhr8"]
 [ext_resource type="Texture2D" uid="uid://c2yggqbh8u82n" path="res://assets/Carina/Walk_Base/Walk_Up-Sheet.png" id="8_q2g1g"]
+[ext_resource type="Texture2D" uid="uid://dt4be8jakosyk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png" id="9_pfolhas"]
 [ext_resource type="Script" uid="uid://dtg73eevfgqun" path="res://cenas/carina/scripts/player_state_machine.gd" id="12_me0xk"]
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
@@ -797,6 +798,34 @@ _data = {
 radius = 7.0
 height = 18.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_folhas"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 6
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_folhas"]
+offsets = PackedFloat32Array(0.0054644807, 0.13661203, 0.88114756, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_folhas"]
+gradient = SubResource("Gradient_folhas")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_folhas"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 1)
+spread = 0.0
+initial_velocity_min = 8.139999
+initial_velocity_max = 68.14
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 49.99998
+gravity = Vector3(0, 6, 0)
+scale_min = 0.099999994
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_folhas")
+anim_offset_max = 0.46559998
+
 [node name="Carina" unique_id=1385650990 instance=ExtResource("1_ftdvw")]
 position = Vector2(0, -16)
 collision_mask = 6
@@ -836,6 +865,15 @@ collision_mask = 16
 position = Vector2(0, 12)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
+
+[node name="FolhasAmbiente" type="GPUParticles2D" parent="." index="5" unique_id=816801991]
+z_index = 2
+material = SubResource("CanvasItemMaterial_folhas")
+emitting = false
+amount = 40
+texture = ExtResource("9_pfolhas")
+visibility_rect = Rect2(-500, -200, 1000, 400)
+process_material = SubResource("ParticleProcessMaterial_folhas")
 
 [connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]
