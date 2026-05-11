@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dxxxvtsk5802s"]
+
+[ext_resource type="Texture2D" uid="uid://dudhxutu14ka0" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_02.png" id="1_00srs"]
+[ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="2_j117q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5hlb"]
+texture = ExtResource("1_00srs")
+2:0/size_in_atlas = Vector2i(2, 4)
+2:0/next_alternative_id = 2
+2:0/0 = 0
+2:0/0/y_sort_origin = 25
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.4730568, 23.939196, 2.374134, 24.137041, 2.1762905, 31.951902, -2.9676685, 32.545433)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0nsc"]
+texture = ExtResource("2_j117q")
+7:5/size_in_atlas = Vector2i(3, 1)
+7:5/0 = 0
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_svdyx"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 6
+sources/0 = SubResource("TileSetAtlasSource_o5hlb")
+sources/1 = SubResource("TileSetAtlasSource_b0nsc")
+
+[node name="Arvore01" type="TileMapLayer" unique_id=583816885]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 253, 255, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 0, 7, 0, 5, 0, 0, 0, 7, 0, 254, 255, 0, 0, 9, 0, 2, 0, 0, 0, 7, 0, 255, 255, 1, 0, 0, 0, 6, 0, 0, 0)
+tile_set = SubResource("TileSet_svdyx")
