@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0lr0ijew2mlj"
-path="res://.godot/imported/Walk_Side-Sheet.png-e6b8c6bdb39acb6b1e5f6ba8288179ad.ctex"
+path="res://.godot/imported/Walk_Side-Sheet.png-5fe772b7f9245895ebfa4a8b32d8843e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/carina/Walk_Base/Walk_Side-Sheet.png"
-dest_files=["res://.godot/imported/Walk_Side-Sheet.png-e6b8c6bdb39acb6b1e5f6ba8288179ad.ctex"]
+source_file="res://assets/Carina/Walk_Base/Walk_Side-Sheet.png"
+dest_files=["res://.godot/imported/Walk_Side-Sheet.png-5fe772b7f9245895ebfa4a8b32d8843e.ctex"]
 
 [params]
 
