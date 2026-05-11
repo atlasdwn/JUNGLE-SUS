@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b3ssdjdkpy75s"]
+
+[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/suprimento/scripts/suprimento.gd" id="1_0g38e"]
+[ext_resource type="Resource" uid="uid://b0onf3o0rfww6" path="res://recursos/items/suprimento.tres" id="2_ukla1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukla1"]
+radius = 49.78109
+height = 142.23169
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ea4t"]
+load_path = "res://.godot/imported/Farm.png-6b0b1bd5b24492ee3647eebc7c000f30.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g38e"]
+atlas = SubResource("CompressedTexture2D_7ea4t")
+region = Rect2(256, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_38yap"]
+load_path = "res://.godot/imported/Keyboard Letters and Symbols.png-37e39907d6e71ef9d1c2fe8a41ada563.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edw16"]
+atlas = SubResource("CompressedTexture2D_38yap")
+region = Rect2(65, 34, 13, 12)
+
+[node name="Suprimento" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_0g38e")
+item = ExtResource("2_ukla1")
+
+[node name="CollectibleArea" type="Area2D" parent="." unique_id=1551370280]
+collision_layer = 16
+
+[node name="Collision" type="CollisionShape2D" parent="CollectibleArea" unique_id=424898172]
+rotation = 1.5707964
+scale = Vector2(0.14061564, 0.14061564)
+shape = SubResource("CapsuleShape2D_ukla1")
+
+[node name="SpriteSuprimento" type="Sprite2D" parent="." unique_id=1561457950]
+texture = SubResource("AtlasTexture_0g38e")
+
+[node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=240322463]
+position = Vector2(0, -18)
+texture = SubResource("AtlasTexture_edw16")
+
+[connection signal="area_entered" from="CollectibleArea" to="." method="_on_collectible_area_entered"]
+[connection signal="area_exited" from="CollectibleArea" to="." method="_on_collectible_area_exited"]
+[connection signal="body_entered" from="CollectibleArea" to="." method="_on_collectible_area_body_entered"]
+[connection signal="body_exited" from="CollectibleArea" to="." method="_on_collectible_area_body_exited"]

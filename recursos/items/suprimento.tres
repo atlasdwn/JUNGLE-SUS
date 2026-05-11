@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b0onf3o0rfww6"]
+
+[ext_resource type="Script" uid="uid://bng5gxko0cjgy" path="res://recursos/items/scripts/item_data.gd" id="1_inimf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ea4t"]
+load_path = "res://.godot/imported/Farm.png-6b0b1bd5b24492ee3647eebc7c000f30.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g38e"]
+atlas = SubResource("CompressedTexture2D_7ea4t")
+region = Rect2(256, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_inimf")
+name = "Suprimento"
+texture = SubResource("AtlasTexture_0g38e")
+metadata/_custom_type_script = "uid://bng5gxko0cjgy"

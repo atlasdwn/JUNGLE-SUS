@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dg2qchifle45e"]
+
+[ext_resource type="Texture2D" uid="uid://citewbhumjatd" path="res://assets/inventario/inventory-slot.png" id="1_04hr1"]
+[ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://autoloads/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
+[ext_resource type="FontFile" uid="uid://bfqd18xyi784b" path="res://assets/fonts/monogram.ttf" id="3_4utms"]
+[ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_6yrxe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yrxe"]
+texture = ExtResource("1_04hr1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4utms"]
+texture = ExtResource("1_04hr1")
+modulate_color = Color(0.90186185, 0.90186185, 0.90186185, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4utms"]
+atlas = ExtResource("3_6yrxe")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6yrxe"]
+font = ExtResource("3_4utms")
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InvSlot" type="Button" unique_id=1950122671]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = -1
+anchor_right = 0.05
+anchor_bottom = 0.089
+offset_bottom = -0.040000916
+theme_override_styles/normal = SubResource("StyleBoxTexture_6yrxe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4utms")
+script = ExtResource("2_4utms")
+
+[node name="ItemDisplay" type="TextureRect" parent="." unique_id=1352482995]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4utms")
+stretch_mode = 3
+
+[node name="AmountDisplay" type="Label" parent="." unique_id=1173876063]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.0625
+anchor_right = 0.9375
+anchor_bottom = 0.9375
+grow_horizontal = 2
+grow_vertical = 2
+text = "99"
+label_settings = SubResource("LabelSettings_6yrxe")
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
