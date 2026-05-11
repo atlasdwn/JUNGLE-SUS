@@ -282,7 +282,7 @@ texture = ExtResource("1_v4jgv")
 8:14/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s55ga"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_myvte")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2qnpr"]
@@ -408,7 +408,7 @@ scenes/3/scene = ExtResource("5_ttabm")
 scenes/4/scene = ExtResource("6_cq3ta")
 
 [sub_resource type="TileSet" id="TileSet_g2uqa"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 6
 sources/1 = SubResource("TileSetScenesCollectionSource_cxrh1")
 
@@ -443,7 +443,7 @@ texture = ExtResource("5_g2uqa")
 0:11/0/texture_origin = Vector2i(0, 10)
 
 [sub_resource type="TileSet" id="TileSet_wyviv"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_uyvml")
 sources/1 = SubResource("TileSetAtlasSource_k0wqi")
