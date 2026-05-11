@@ -5,8 +5,9 @@
 [ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/items/maça.tres" id="2_7ki5i"]
 [ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_7ki5i"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ohphm"]
-radius = 98.045906
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au7qt"]
+radius = 49.78109
+height = 99.56218
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_528ph"]
 atlas = ExtResource("3_7ki5i")
@@ -16,7 +17,7 @@ region = Rect2(128, 48, 16, 16)
 atlas = ExtResource("2_2x4lr")
 region = Rect2(65, 34, 13, 12)
 
-[node name="Suprimento" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
+[node name="Maça" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_im5y5")
@@ -26,8 +27,9 @@ item = ExtResource("2_7ki5i")
 collision_layer = 16
 
 [node name="Collision" type="CollisionShape2D" parent="CollectibleArea" unique_id=424898172]
+position = Vector2(0, 1)
 scale = Vector2(0.14061564, 0.14061564)
-shape = SubResource("CircleShape2D_ohphm")
+shape = SubResource("CapsuleShape2D_au7qt")
 
 [node name="SpriteMaça" type="Sprite2D" parent="." unique_id=1561457950]
 texture = SubResource("AtlasTexture_528ph")

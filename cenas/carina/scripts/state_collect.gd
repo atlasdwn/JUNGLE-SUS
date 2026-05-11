@@ -3,11 +3,12 @@ class_name StateCollect extends State
 @onready var idle: StateIdle = $"../Idle"
 var final_dir: Vector2
 var finished = false
-var original_dir: Vector2 
+var original_dir: Vector2
+
 ## O que acontece quando o player entra no estado
 func enter() -> void:
 	var item = player.collectible
-	var item_distance = item.global_position - player.global_position
+	var item_distance = item.global_position - player.collision.global_position
 	
 	player.velocity = Vector2.ZERO
 	
@@ -50,7 +51,6 @@ func physics(_delta: float) -> State:
 ## O que acontece com os inputs do estado
 func handle_input(_event: InputEvent) -> State:
 	return null
-
 
 func _on_anim_player_animation_finished(_anim_name: StringName) -> void:
 	finished = true

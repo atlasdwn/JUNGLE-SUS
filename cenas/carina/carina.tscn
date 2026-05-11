@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://blwlgf7noc70j"]
 
-[ext_resource type="PackedScene" uid="uid://bok071vgd4sa" path="res://cenas/prefab/base_character.tscn" id="1_ftdvw"]
 [ext_resource type="Script" uid="uid://c5xgou0t74hxb" path="res://cenas/carina/scripts/carina.gd" id="2_0u81b"]
 [ext_resource type="Resource" uid="uid://bc8s1num7u6jt" path="res://recursos/inventario/player_inventory.tres" id="3_ew0c6"]
 [ext_resource type="Texture2D" uid="uid://bhe0t4o712fr5" path="res://assets/carina/Collect_Base/Collect_Down-Sheet.png" id="3_q2g1g"]
@@ -397,7 +396,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -420,7 +419,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_side",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -694,8 +693,9 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_1hr3a"]
 resource_name = "walk_down"
+length = 0.75
 loop_mode = 1
-step = 0.16666667
+step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -715,7 +715,7 @@ tracks/1/path = NodePath("Anim:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.6666667, 0.8333333),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
@@ -723,8 +723,9 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_me0xk"]
 resource_name = "walk_side"
+length = 0.75
 loop_mode = 1
-step = 0.16666667
+step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -744,7 +745,7 @@ tracks/1/path = NodePath("Anim:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.6666667, 0.8333333),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
@@ -752,8 +753,9 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8dyrv"]
 resource_name = "walk_up"
+length = 0.75
 loop_mode = 1
-step = 0.16666667
+step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -773,7 +775,7 @@ tracks/1/path = NodePath("Anim:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.6666667, 0.8333333),
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
@@ -797,45 +799,48 @@ _data = {
 radius = 7.0
 height = 18.0
 
-[node name="Carina" unique_id=1385650990 instance=ExtResource("1_ftdvw")]
+[node name="Carina" type="CharacterBody2D" unique_id=1385650990]
 position = Vector2(0, -16)
 collision_mask = 6
+motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
 
-[node name="Collision" parent="." index="0" unique_id=253625139]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=253625139]
 position = Vector2(0, 12)
 shape = SubResource("CircleShape2D_2ojii")
 
-[node name="Anim" parent="." index="1" unique_id=1296088842]
+[node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1296088842]
 sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
 
-[node name="AnimPlayer" parent="." index="2" unique_id=1843870118]
+[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1843870118]
 libraries/ = SubResource("AnimationLibrary_gnhr8")
 autoplay = &"idle_side"
 
-[node name="StateMachine" type="Node" parent="." index="3" unique_id=1256214414]
+[node name="StateMachine" type="Node" parent="." unique_id=1256214414]
 script = ExtResource("12_me0xk")
 
-[node name="Idle" type="Node" parent="StateMachine" index="0" unique_id=2057004036]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=2057004036]
 script = ExtResource("13_1hr3a")
 
-[node name="Walk" type="Node" parent="StateMachine" index="1" unique_id=975542278]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=975542278]
 script = ExtResource("14_8dyrv")
 
-[node name="Collect" type="Node" parent="StateMachine" index="2" unique_id=466380645]
+[node name="Collect" type="Node" parent="StateMachine" unique_id=466380645]
 script = ExtResource("15_t3phn")
 
-[node name="Collider" type="Area2D" parent="." index="4" unique_id=1408964914]
+[node name="Collider" type="Area2D" parent="." unique_id=1408964914]
+position = Vector2(0, 12)
 collision_layer = 16
 collision_mask = 16
 
-[node name="ColliderShape" type="CollisionShape2D" parent="Collider" index="0" unique_id=1424946646]
-position = Vector2(0, 12)
+[node name="ColliderShape" type="CollisionShape2D" parent="Collider" unique_id=1424946646]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=851684615]
 
 [connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]

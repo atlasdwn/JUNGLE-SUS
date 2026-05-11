@@ -4,7 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var collision: CollisionShape2D = $Collision
 @onready var anim_player: AnimationPlayer = $AnimPlayer
 @onready var state_machine: PlayerStateMachine = $StateMachine
-
+@export var camera : Camera2D
 @export var inventory : InventoryData
 
 var is_collecting = false
@@ -15,6 +15,7 @@ var cardinal_direction: Vector2 = Vector2.DOWN
 var collectible_in_area = false
 
 func _ready():
+	$RemoteTransform2D.remote_path = camera.get_path()
 	state_machine.initialize(self)
 
 func _process(_delta: float) -> void:
@@ -54,15 +55,3 @@ func anim_direction() -> String:
 			return "up"
 		_:
 			return "side"
-
-func _on_collider_area_entered(area: Area2D) -> void:
-	if area.owner.is_in_group("Collectibles"):
-		collectible = area.owner
-		collectible_in_area = true
-		
-#func _on_collider_area_exited(area: Area2D) -> void:
-	#if area.owner == collectible:
-		#collectible = null
-		#print(collectible)
-		#collectible_in_area = false
-		#print(collectible_in_area)
