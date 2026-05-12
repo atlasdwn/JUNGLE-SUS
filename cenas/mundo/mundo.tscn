@@ -487,6 +487,5 @@ z_as_relative = false
 y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Y-sorting/Carina" unique_id=2091242147]
-zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 editor_draw_drag_margin = true
