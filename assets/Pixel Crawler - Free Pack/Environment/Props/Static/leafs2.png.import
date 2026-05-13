@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fsc21l5r0ott"
-path="res://.godot/imported/Idle_Down-Sheet.png-2d46ec0043802b52c9d54512e9749a2a.ctex"
+uid="uid://dt4be8jakosyk"
+path="res://.godot/imported/leafs2.png-a165ae46bbddf85390e437b1445fdddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Carina/Idle_Base/Idle_Down-Sheet.png"
-dest_files=["res://.godot/imported/Idle_Down-Sheet.png-2d46ec0043802b52c9d54512e9749a2a.ctex"]
+source_file="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png"
+dest_files=["res://.godot/imported/leafs2.png-a165ae46bbddf85390e437b1445fdddd.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fsc21l5r0ott"
-path="res://.godot/imported/Idle_Down-Sheet.png-2d46ec0043802b52c9d54512e9749a2a.ctex"
+uid="uid://dfd5canb77dqn"
+path="res://.godot/imported/Water Foam.png-5d03e4a15deb1f7f4fdbc1072861b6b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Carina/Idle_Base/Idle_Down-Sheet.png"
-dest_files=["res://.godot/imported/Idle_Down-Sheet.png-2d46ec0043802b52c9d54512e9749a2a.ctex"]
+source_file="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water Foam.png"
+dest_files=["res://.godot/imported/Water Foam.png-5d03e4a15deb1f7f4fdbc1072861b6b0.ctex"]
 
 [params]
 

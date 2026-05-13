@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://blwlgf7noc70j"]
 
+[ext_resource type="PackedScene" uid="uid://bok071vgd4sa" path="res://cenas/prefab/base_character.tscn" id="1_ftdvw"]
 [ext_resource type="Script" uid="uid://c5xgou0t74hxb" path="res://cenas/carina/scripts/carina.gd" id="2_0u81b"]
 [ext_resource type="Resource" uid="uid://bc8s1num7u6jt" path="res://recursos/inventario/player_inventory.tres" id="3_ew0c6"]
-[ext_resource type="Texture2D" uid="uid://bhe0t4o712fr5" path="res://assets/carina/Collect_Base/Collect_Down-Sheet.png" id="3_q2g1g"]
-[ext_resource type="Texture2D" uid="uid://fsc21l5r0ott" path="res://assets/carina/Idle_Base/Idle_Down-Sheet.png" id="3_tmgrf"]
-[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/carina/Idle_Base/Idle_Side-Sheet.png" id="4_i5oqq"]
-[ext_resource type="Texture2D" uid="uid://d18kyo7064tfc" path="res://assets/carina/Collect_Base/Collect_Side-Sheet.png" id="4_me0xk"]
-[ext_resource type="Texture2D" uid="uid://s5c6d8twohn5" path="res://assets/carina/Collect_Base/Collect_Up-Sheet.png" id="5_1hr3a"]
-[ext_resource type="Texture2D" uid="uid://isfcohnt4prq" path="res://assets/carina/Idle_Base/Idle_Up-Sheet.png" id="5_2ojii"]
-[ext_resource type="Texture2D" uid="uid://dn3twek62g7xa" path="res://assets/carina/Walk_Base/Walk_Down-Sheet.png" id="6_5xett"]
-[ext_resource type="Texture2D" uid="uid://b0lr0ijew2mlj" path="res://assets/carina/Walk_Base/Walk_Side-Sheet.png" id="7_gnhr8"]
-[ext_resource type="Texture2D" uid="uid://c2yggqbh8u82n" path="res://assets/carina/Walk_Base/Walk_Up-Sheet.png" id="8_q2g1g"]
+[ext_resource type="Texture2D" uid="uid://bhe0t4o712fr5" path="res://assets/Carina/Collect_Base/Collect_Down-Sheet.png" id="3_q2g1g"]
+[ext_resource type="Texture2D" uid="uid://fsc21l5r0ott" path="res://assets/Carina/Idle_Base/Idle_Down-Sheet.png" id="3_tmgrf"]
+[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="4_i5oqq"]
+[ext_resource type="Texture2D" uid="uid://d18kyo7064tfc" path="res://assets/Carina/Collect_Base/Collect_Side-Sheet.png" id="4_me0xk"]
+[ext_resource type="Texture2D" uid="uid://s5c6d8twohn5" path="res://assets/Carina/Collect_Base/Collect_Up-Sheet.png" id="5_1hr3a"]
+[ext_resource type="Texture2D" uid="uid://isfcohnt4prq" path="res://assets/Carina/Idle_Base/Idle_Up-Sheet.png" id="5_2ojii"]
+[ext_resource type="Texture2D" uid="uid://dn3twek62g7xa" path="res://assets/Carina/Walk_Base/Walk_Down-Sheet.png" id="6_5xett"]
+[ext_resource type="Texture2D" uid="uid://b0lr0ijew2mlj" path="res://assets/Carina/Walk_Base/Walk_Side-Sheet.png" id="7_gnhr8"]
+[ext_resource type="Texture2D" uid="uid://c2yggqbh8u82n" path="res://assets/Carina/Walk_Base/Walk_Up-Sheet.png" id="8_q2g1g"]
+[ext_resource type="Texture2D" uid="uid://dt4be8jakosyk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png" id="9_pfolhas"]
 [ext_resource type="Script" uid="uid://dtg73eevfgqun" path="res://cenas/carina/scripts/player_state_machine.gd" id="12_me0xk"]
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
@@ -799,18 +801,46 @@ _data = {
 radius = 7.0
 height = 18.0
 
-[node name="Carina" type="CharacterBody2D" unique_id=1385650990]
-position = Vector2(0, -16)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_folhas"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 6
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_folhas"]
+offsets = PackedFloat32Array(0.0054644807, 0.13661203, 0.88114756, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_folhas"]
+gradient = SubResource("Gradient_folhas")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_folhas"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 1)
+spread = 0.0
+initial_velocity_min = 8.139999
+initial_velocity_max = 68.14
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 49.99998
+gravity = Vector3(0, 6, 0)
+scale_min = 0.099999994
+scale_max = 0.29999998
+color_ramp = SubResource("GradientTexture1D_folhas")
+anim_offset_max = 0.46559998
+
+[node name="Carina" unique_id=1385650990 instance=ExtResource("1_ftdvw")]
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=253625139]
-position = Vector2(0, 12)
+[node name="Collision" parent="." index="0" unique_id=253625139]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_2ojii")
 
-[node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1296088842]
+[node name="Anim" parent="." index="1" unique_id=1296088842]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
@@ -832,15 +862,29 @@ script = ExtResource("14_8dyrv")
 script = ExtResource("15_t3phn")
 
 [node name="Collider" type="Area2D" parent="." unique_id=1408964914]
-position = Vector2(0, 12)
 collision_layer = 16
 collision_mask = 16
 
-[node name="ColliderShape" type="CollisionShape2D" parent="Collider" unique_id=1424946646]
+[node name="ColliderShape" type="CollisionShape2D" parent="Collider" index="0" unique_id=1424946646]
+position = Vector2(0, -4)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=851684615]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." index="5" unique_id=851684615]
+
+[node name="FolhasAmbiente" type="GPUParticles2D" parent="." index="6" unique_id=816801991]
+z_index = 2
+material = SubResource("CanvasItemMaterial_folhas")
+position = Vector2(0, -16)
+emitting = false
+amount = 40
+texture = ExtResource("9_pfolhas")
+visibility_rect = Rect2(-500, -200, 1000, 400)
+process_material = SubResource("ParticleProcessMaterial_folhas")
+
+[node name="PoeiraPasso" type="Marker2D" parent="." index="7" unique_id=153903177]
+position = Vector2(0, -2)
+gizmo_extents = 5.0
 
 [connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]
