@@ -845,7 +845,7 @@ sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
 
-[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1843870118]
+[node name="AnimPlayer" parent="." index="2" unique_id=1843870118]
 libraries/ = SubResource("AnimationLibrary_gnhr8")
 autoplay = &"idle_side"
 
