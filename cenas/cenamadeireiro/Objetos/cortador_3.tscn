@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://baedtfilulleq"]
+
+[ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="1_8xdu2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huood"]
+size = Vector2(31, 15)
+
+[node name="cortador3" type="StaticBody2D" unique_id=1445648248]
+y_sort_enabled = true
+collision_layer = 16
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1529934998]
+texture = ExtResource("1_8xdu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=570891387]
+position = Vector2(-0.5, 8.5)
+shape = SubResource("RectangleShape2D_huood")

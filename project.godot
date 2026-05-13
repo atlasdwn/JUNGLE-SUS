@@ -71,11 +71,10 @@ inventario={
 [layer_names]
 
 2d_physics/layer_1="Carina"
-2d_physics/layer_2="World"
+2d_physics/layer_2="Mundo"
 2d_physics/layer_3="NPC's"
-2d_physics/layer_4="Collectibles"
-2d_physics/layer_5="Collision"
-2d_physics/layer_6="Collider"
+2d_physics/layer_4="Coletaveis"
+2d_physics/layer_5="Objetos"
 
 [physics]
 

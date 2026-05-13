@@ -17,8 +17,9 @@
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2ojii"]
-radius = 7.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8id7"]
+radius = 4.0
+height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxe2k"]
 atlas = ExtResource("3_q2g1g")
@@ -829,20 +830,20 @@ color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
 [node name="Carina" type="CharacterBody2D" unique_id=1385650990]
-position = Vector2(0, -16)
-collision_mask = 6
+collision_mask = 20
 motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=253625139]
-position = Vector2(0, 12)
-shape = SubResource("CircleShape2D_2ojii")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_w8id7")
 
 [node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1296088842]
 sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
+offset = Vector2(0, -13.035)
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1843870118]
 libraries/ = SubResource("AnimationLibrary_gnhr8")
@@ -861,7 +862,6 @@ script = ExtResource("14_8dyrv")
 script = ExtResource("15_t3phn")
 
 [node name="Collider" type="Area2D" parent="." unique_id=1408964914]
-position = Vector2(0, 12)
 collision_layer = 16
 collision_mask = 16
 
@@ -869,9 +869,7 @@ collision_mask = 16
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=851684615]
-
-[node name="FolhasAmbiente" type="GPUParticles2D" parent="." index="5" unique_id=816801991]
+[node name="FolhasAmbiente" type="GPUParticles2D" parent="." unique_id=816801991]
 z_index = 2
 material = SubResource("CanvasItemMaterial_folhas")
 emitting = false
@@ -879,6 +877,8 @@ amount = 40
 texture = ExtResource("9_pfolhas")
 visibility_rect = Rect2(-500, -200, 1000, 400)
 process_material = SubResource("ParticleProcessMaterial_folhas")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=851684615]
 
 [connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]
