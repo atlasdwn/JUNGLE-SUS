@@ -18,8 +18,9 @@
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2ojii"]
-radius = 7.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8id7"]
+radius = 4.0
+height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxe2k"]
 atlas = ExtResource("3_q2g1g")
@@ -829,21 +830,22 @@ scale_max = 0.29999998
 color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
-[node name="Carina" unique_id=1385650990 instance=ExtResource("1_ftdvw")]
-collision_mask = 6
+[node name="Carina" type="CharacterBody2D" unique_id=1385650990]
+collision_mask = 20
 motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
 
-[node name="Collision" parent="." index="0" unique_id=253625139]
-position = Vector2(0, -4)
-shape = SubResource("CircleShape2D_2ojii")
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=253625139]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_w8id7")
 
 [node name="Anim" parent="." index="1" unique_id=1296088842]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
+offset = Vector2(0, -13.035)
 
 [node name="AnimPlayer" parent="." index="2" unique_id=1843870118]
 libraries/ = SubResource("AnimationLibrary_gnhr8")
