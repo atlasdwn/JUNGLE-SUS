@@ -827,16 +827,16 @@ color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
 [node name="Carina" unique_id=1385650990 instance=ExtResource("1_ftdvw")]
-position = Vector2(0, -16)
 collision_mask = 6
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
 
 [node name="Collision" parent="." index="0" unique_id=253625139]
-position = Vector2(0, 12)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_2ojii")
 
 [node name="Anim" parent="." index="1" unique_id=1296088842]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_5x4i6")
 animation = &"idle_side"
 autoplay = "idle_side"
@@ -862,18 +862,23 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="ColliderShape" type="CollisionShape2D" parent="Collider" index="0" unique_id=1424946646]
-position = Vector2(0, 12)
+position = Vector2(0, -4)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
 
 [node name="FolhasAmbiente" type="GPUParticles2D" parent="." index="5" unique_id=816801991]
 z_index = 2
 material = SubResource("CanvasItemMaterial_folhas")
+position = Vector2(0, -16)
 emitting = false
 amount = 40
 texture = ExtResource("9_pfolhas")
 visibility_rect = Rect2(-500, -200, 1000, 400)
 process_material = SubResource("ParticleProcessMaterial_folhas")
+
+[node name="PoeiraPasso" type="Marker2D" parent="." index="6" unique_id=153903177]
+position = Vector2(0, -2)
+gizmo_extents = 5.0
 
 [connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]

@@ -23,5 +23,6 @@ sources/1 = SubResource("TileSetAtlasSource_wyici")
 sources/0 = SubResource("TileSetAtlasSource_qihou")
 
 [node name="Arvore02" type="TileMapLayer" unique_id=495842257]
+y_sort_enabled = true
 tile_map_data = PackedByteArray(0, 0, 0, 0, 251, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 0, 7, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_hq8ww")

@@ -7,10 +7,10 @@ class_name StateWalk extends State
 ## O que acontece quando o player entra no estado
 func enter() -> void:
 	player.update_animation("walk")
-	pass
+	player.set_walk_dust(true)
 
 func exit() -> void:
-	pass
+	player.set_walk_dust(false)
 
 ## O que acontece durante _process
 func process(_delta: float) -> State:

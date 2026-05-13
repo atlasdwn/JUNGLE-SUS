@@ -6,7 +6,7 @@ class_name StateIdle extends State
 ## O que acontece quando o player entra no estado
 func enter() -> void:
 	player.update_animation("idle")
-	pass
+	player.set_walk_dust(false)
 
 func exit() -> void:
 	pass

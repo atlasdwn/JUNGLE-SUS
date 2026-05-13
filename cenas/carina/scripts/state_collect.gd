@@ -10,6 +10,7 @@ func enter() -> void:
 	var item_distance = item.global_position - player.global_position
 	
 	player.velocity = Vector2.ZERO
+	player.set_walk_dust(false)
 	
 	if item == null:
 		return
