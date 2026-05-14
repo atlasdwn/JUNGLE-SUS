@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3ssdjdkpy75s"]
 
 [ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/suprimento/scripts/suprimento.gd" id="1_0g38e"]
-[ext_resource type="Resource" uid="uid://b0onf3o0rfww6" path="res://recursos/items/suprimento.tres" id="2_ukla1"]
+[ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/items/suprimento.tres" id="2_ukla1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukla1"]
 radius = 49.78109
