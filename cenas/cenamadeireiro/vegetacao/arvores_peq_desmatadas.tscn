@@ -75,10 +75,6 @@ texture = ExtResource("3_xaneh")
 7:5/0 = 0
 8:5/0 = 0
 9:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
 0:8/0 = 0
 1:8/0 = 0
 2:8/0 = 0
@@ -88,13 +84,17 @@ texture = ExtResource("3_xaneh")
 0:10/0 = 0
 1:10/0 = 0
 2:10/0 = 0
-1:11/0 = 0
-2:11/0 = 0
 0:12/0 = 0
+1:11/0 = 0
 1:12/0 = 0
-2:12/0 = 0
 1:13/0 = 0
+2:11/0 = 0
+2:12/0 = 0
 2:13/0 = 0
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+0:6/0/texture_origin = Vector2i(0, 6)
+0:6/0/z_index = -1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkbyf"]
 texture = ExtResource("1_qudvg")
@@ -120,5 +120,5 @@ sources/4 = SubResource("TileSetAtlasSource_vkbyf")
 sources/0 = SubResource("TileSetAtlasSource_qudvg")
 
 [node name="ArvoresPeqDesmatadas" type="TileMapLayer" unique_id=1898803324]
-tile_map_data = PackedByteArray(0, 0, 0, 0, 254, 255, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 5, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0)
 tile_set = SubResource("TileSet_7aqv4")

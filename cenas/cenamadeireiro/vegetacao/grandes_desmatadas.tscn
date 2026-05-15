@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dootfr8xaq8aa"]
+
+[ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="1_o6t4g"]
+[ext_resource type="Texture2D" uid="uid://c7g4gcd08npbp" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Bonfire/Bonfire_04-Sheet.png" id="2_mu3rw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bwnd"]
+texture = ExtResource("1_o6t4g")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:5/size_in_atlas = Vector2i(2, 1)
+3:5/0 = 0
+3:5/0/texture_origin = Vector2i(0, 5)
+3:5/0/z_index = -1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_te4s2"]
+texture = ExtResource("2_mu3rw")
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/y_sort_origin = 11
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.02999, 9.8482485, -7.026787, 8, -4.766422, 5.552635, 5.356082, 5.356082, 7.026786, 8, 7.0045285, 9.977443, 4.9285316, 12.034788, -4.9945807, 12.008913)
+
+[sub_resource type="TileSet" id="TileSet_imdim"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_8bwnd")
+sources/1 = SubResource("TileSetAtlasSource_te4s2")
+
+[node name="GrandesDesmatadas" type="TileMapLayer" unique_id=113056493]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 5, 0, 0, 0, 0, 0, 255, 255, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_imdim")

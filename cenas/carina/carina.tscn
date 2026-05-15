@@ -3,19 +3,24 @@
 [ext_resource type="Script" uid="uid://c5xgou0t74hxb" path="res://cenas/carina/scripts/carina.gd" id="2_0u81b"]
 [ext_resource type="Resource" uid="uid://bc8s1num7u6jt" path="res://recursos/inventario/player_inventory.tres" id="3_ew0c6"]
 [ext_resource type="Texture2D" uid="uid://bhe0t4o712fr5" path="res://assets/Carina/Collect_Base/Collect_Down-Sheet.png" id="3_q2g1g"]
-[ext_resource type="Texture2D" uid="uid://fsc21l5r0ott" path="res://assets/Carina/Idle_Base/Idle_Down-Sheet.png" id="3_tmgrf"]
-[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="4_i5oqq"]
+[ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="3_w8id7"]
 [ext_resource type="Texture2D" uid="uid://d18kyo7064tfc" path="res://assets/Carina/Collect_Base/Collect_Side-Sheet.png" id="4_me0xk"]
 [ext_resource type="Texture2D" uid="uid://s5c6d8twohn5" path="res://assets/Carina/Collect_Base/Collect_Up-Sheet.png" id="5_1hr3a"]
-[ext_resource type="Texture2D" uid="uid://isfcohnt4prq" path="res://assets/Carina/Idle_Base/Idle_Up-Sheet.png" id="5_2ojii"]
 [ext_resource type="Texture2D" uid="uid://dn3twek62g7xa" path="res://assets/Carina/Walk_Base/Walk_Down-Sheet.png" id="6_5xett"]
+[ext_resource type="Texture2D" uid="uid://ckhqpixhy7q7p" path="res://assets/Carina/Idle_Base/carina_idle_baixo.png" id="6_ew0c6"]
 [ext_resource type="Texture2D" uid="uid://b0lr0ijew2mlj" path="res://assets/Carina/Walk_Base/Walk_Side-Sheet.png" id="7_gnhr8"]
+[ext_resource type="Texture2D" uid="uid://lc75eodm5a05" path="res://assets/Carina/Idle_Base/carina_Idle_lados.png" id="7_w8id7"]
+[ext_resource type="Texture2D" uid="uid://0frch0iut7bc" path="res://assets/Carina/Idle_Base/carina_idle_cima.png" id="8_1e60c"]
 [ext_resource type="Texture2D" uid="uid://c2yggqbh8u82n" path="res://assets/Carina/Walk_Base/Walk_Up-Sheet.png" id="8_q2g1g"]
 [ext_resource type="Texture2D" uid="uid://dt4be8jakosyk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png" id="9_pfolhas"]
 [ext_resource type="Script" uid="uid://dtg73eevfgqun" path="res://cenas/carina/scripts/player_state_machine.gd" id="12_me0xk"]
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18ija"]
+atlas = ExtResource("3_w8id7")
+region = Rect2(-1, 104, 35, 15)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8id7"]
 radius = 4.0
@@ -118,51 +123,51 @@ atlas = ExtResource("5_1hr3a")
 region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qruav"]
-atlas = ExtResource("3_tmgrf")
+atlas = ExtResource("6_ew0c6")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ibos"]
-atlas = ExtResource("3_tmgrf")
+atlas = ExtResource("6_ew0c6")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8iiq2"]
-atlas = ExtResource("3_tmgrf")
+atlas = ExtResource("6_ew0c6")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gu3wf"]
-atlas = ExtResource("3_tmgrf")
+atlas = ExtResource("6_ew0c6")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5nk5d"]
-atlas = ExtResource("4_i5oqq")
+atlas = ExtResource("7_w8id7")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0q8b"]
-atlas = ExtResource("4_i5oqq")
+atlas = ExtResource("7_w8id7")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t70w4"]
-atlas = ExtResource("4_i5oqq")
+atlas = ExtResource("7_w8id7")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntbyx"]
-atlas = ExtResource("4_i5oqq")
+atlas = ExtResource("7_w8id7")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4cad"]
-atlas = ExtResource("5_2ojii")
+atlas = ExtResource("8_1e60c")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy4d6"]
-atlas = ExtResource("5_2ojii")
+atlas = ExtResource("8_1e60c")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mks8y"]
-atlas = ExtResource("5_2ojii")
+atlas = ExtResource("8_1e60c")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8arva"]
-atlas = ExtResource("5_2ojii")
+atlas = ExtResource("8_1e60c")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3iapa"]
@@ -828,6 +833,11 @@ collision_mask = 20
 motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=519295561]
+position = Vector2(2.9802322e-08, 2)
+scale = Vector2(0.7142857, 1)
+texture = SubResource("AtlasTexture_18ija")
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=253625139]
 rotation = 1.5707964

@@ -433,7 +433,6 @@ pattern_1 = SubResource("TileMapPattern_8ktfk")
 pattern_2 = SubResource("TileMapPattern_uyvml")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_cxrh1"]
-resource_name = "arvores"
 scenes/2/scene = ExtResource("4_cxrh1")
 scenes/3/scene = ExtResource("5_ttabm")
 scenes/4/scene = ExtResource("6_cq3ta")

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://sbh2uxuhjtmw" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Vegetation.png" id="7_7t5w6"]
 [ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="8_c0g02"]
 [ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="9_vpp2i"]
-[ext_resource type="PackedScene" uid="uid://cd0iquutm1bmq" path="res://cenas/cenamadeireiro/madeireiro.tscn" id="10_ndc2u"]
+[ext_resource type="PackedScene" uid="uid://cd0iquutm1bmq" path="res://cenas/cenamadeireiro/cena_madeireiro.tscn" id="10_ndc2u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvte"]
 texture = ExtResource("1_ddh42")

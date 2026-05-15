@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cvxhai18ys8wd"]
+
+[ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/cenamadeireiro/madeireiro/scripts/npc_madeireiro.gd" id="1_ut076"]
+[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="2_ex5cn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
+atlas = ExtResource("2_ex5cn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iepuk"]
+atlas = ExtResource("2_ex5cn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcef"]
+atlas = ExtResource("2_ex5cn")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08w5b"]
+atlas = ExtResource("2_ex5cn")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7212u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65g2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iepuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08w5b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
+size = Vector2(58, 55)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c32j"]
+bg_color = Color(0, 0, 0, 0.41568628)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5c32j"]
+font_size = 7
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="NpcMadeireiro" type="Area2D" unique_id=1470037563]
+script = ExtResource("1_ut076")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350984207]
+sprite_frames = SubResource("SpriteFrames_7212u")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1209348106]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_5c32j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2130904633]
+
+[node name="CaixaDialogo" type="Label" parent="CanvasLayer" unique_id=251888854]
+visible = false
+offset_left = 13.0
+offset_top = 197.0
+offset_right = 1113.0
+offset_bottom = 347.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5c32j")
+autowrap_mode = 2
+
+[node name="TextoDialogo" type="Label" parent="CanvasLayer" unique_id=1974073775]
+offset_left = 13.0
+offset_top = 197.0
+offset_right = 1013.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1656966294]
+
+[node name="LabelInteracao" type="Label" parent="." unique_id=701730239]
+offset_left = -18.0
+offset_top = -40.0
+offset_right = 22.0
+offset_bottom = -17.0
+label_settings = SubResource("LabelSettings_5c32j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

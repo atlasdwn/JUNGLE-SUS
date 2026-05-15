@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://0822qru8ystp"]
+
+[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="1_iw2kc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
+atlas = ExtResource("1_iw2kc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iepuk"]
+atlas = ExtResource("1_iw2kc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcef"]
+atlas = ExtResource("1_iw2kc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08w5b"]
+atlas = ExtResource("1_iw2kc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7212u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65g2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iepuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08w5b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
+size = Vector2(58, 55)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8id7"]
+radius = 4.0
+height = 16.0
+
+[node name="Matinta" type="Area2D" unique_id=1181002116]
+
+[node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1559849775]
+sprite_frames = SubResource("SpriteFrames_7212u")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -11.83)
+flip_h = true
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=998777912]
+position = Vector2(0, -9.805)
+shape = SubResource("RectangleShape2D_5c32j")
+
+[node name="Collider" type="Area2D" parent="." unique_id=34530913]
+
+[node name="Collision" type="CollisionShape2D" parent="Collider" unique_id=1014482068]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_w8id7")
