@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c5xgou0t74hxb" path="res://cenas/carina/scripts/carina.gd" id="2_0u81b"]
 [ext_resource type="Resource" uid="uid://bc8s1num7u6jt" path="res://recursos/inventario/player_inventory.tres" id="3_ew0c6"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bhe0t4o712fr5" path="res://assets/Carina/Collect_Base/Collect_Down-Sheet.png" id="3_q2g1g"]
 [ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="3_w8id7"]
 [ext_resource type="Texture2D" uid="uid://d18kyo7064tfc" path="res://assets/Carina/Collect_Base/Collect_Side-Sheet.png" id="4_me0xk"]
@@ -13,8 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://lc75eodm5a05" path="res://assets/Carina/Idle_Base/carina_Idle_lados.png" id="7_w8id7"]
 [ext_resource type="Texture2D" uid="uid://0frch0iut7bc" path="res://assets/Carina/Idle_Base/carina_idle_cima.png" id="8_1e60c"]
 [ext_resource type="Texture2D" uid="uid://c2yggqbh8u82n" path="res://assets/Carina/Walk_Base/Walk_Up-Sheet.png" id="8_q2g1g"]
-=======
->>>>>>> e39d68d (finalizando caminhos)
 [ext_resource type="Texture2D" uid="uid://dt4be8jakosyk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png" id="9_pfolhas"]
 [ext_resource type="Script" uid="uid://dtg73eevfgqun" path="res://cenas/carina/scripts/player_state_machine.gd" id="12_me0xk"]
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
@@ -29,7 +26,6 @@ region = Rect2(-1, 104, 35, 15)
 radius = 4.0
 height = 16.0
 
-<<<<<<< HEAD
 [sub_resource type="AtlasTexture" id="AtlasTexture_ew0c6"]
 atlas = ExtResource("3_q2g1g")
 region = Rect2(0, 0, 64, 64)
@@ -799,9 +795,6 @@ _data = {
 &"walk_side": SubResource("Animation_dpxno"),
 &"walk_up": SubResource("Animation_2mvx2")
 }
-
-=======
->>>>>>> e39d68d (finalizando caminhos)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew0c6"]
 radius = 4.0
 height = 16.0
@@ -849,7 +842,6 @@ texture = SubResource("AtlasTexture_18ija")
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_w8id7")
 
-<<<<<<< HEAD
 [node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1437569234]
 sprite_frames = SubResource("SpriteFrames_18ija")
 animation = &"idle_down"
@@ -858,9 +850,6 @@ offset = Vector2(0, -11.995)
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1571950009]
 libraries/ = SubResource("AnimationLibrary_s58ca")
-
-=======
->>>>>>> e39d68d (finalizando caminhos)
 [node name="StateMachine" type="Node" parent="." unique_id=1256214414]
 script = ExtResource("12_me0xk")
 
@@ -878,10 +867,7 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="ColliderShape" type="CollisionShape2D" parent="Collider" unique_id=1424946646]
-<<<<<<< HEAD
-=======
 position = Vector2(0, -4)
->>>>>>> e39d68d (finalizando caminhos)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
 
