@@ -2,14 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dah7vgkqw05ow" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_05.png" id="1_gmetq"]
 [ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="1_ukcun"]
+[ext_resource type="Script" uid="uid://dbpkdavk2k3k" path="res://cenas/mundo/arvores/scripts/arvore_04.gd" id="3_gmetq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qihou"]
 texture = ExtResource("1_gmetq")
 0:0/size_in_atlas = Vector2i(7, 10)
 0:0/0 = 0
 0:0/0/z_index = 1
-0:0/0/y_sort_origin = 50
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32.734287, 76.799675, -27.878101, 77.87883, -19.190926, 80.324905, -14.442656, 80.62167, -2.8777409, 78.4184, 3.057598, 78.23855, 7.01449, 79.49756, 11.277142, 79.83029, 14.046967, 70.5316, 14.250127, 77.51577, 19.286808, 77.27008, 22.357958, 71.74202, 22.842058, 77.51911, 27.518385, 76.97954, 31.29542, 76.080246, 27.886024, 65.476875, 18.795238, 63.21135, 24.03812, 63.013504, 22.84934, 57.860428, 15.234034, 54.20942, -14.8383465, 54.70403, -18.05835, 55.403507, -22.112267, 56.386276, -24.0778, 58.106117, -24.631653, 63.013504, -26.411873, 65.84541, -29.316973, 65.64844, -33.9933, 70.144905)
+0:0/0/y_sort_origin = 53
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32.734287, 76.799675, -27.878101, 77.87883, -19.190926, 80.324905, -14.442656, 80.62167, -2.8777409, 78.4184, 3.057598, 78.23855, 7.01449, 79.49756, 11.277142, 79.83029, 14.046967, 70.5316, 14.250127, 77.51577, 19.286808, 77.27008, 22.357958, 71.74202, 22.842058, 77.51911, 27.518385, 76.97954, 31.29542, 76.080246, 27.886024, 65.476875, 18.795238, 63.21135, 24.03812, 63.013504, 22.84934, 57.860428, 15.728645, 51.14283, -14.24481, 51.043903, -18.05835, 55.403507, -22.112267, 56.386276, -24.0778, 58.106117, -24.631653, 63.013504, -26.411873, 65.84541, -29.316973, 65.64844, -33.9933, 70.144905)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyici"]
 texture = ExtResource("1_ukcun")
@@ -22,7 +23,21 @@ physics_layer_0/collision_mask = 6
 sources/1 = SubResource("TileSetAtlasSource_wyici")
 sources/0 = SubResource("TileSetAtlasSource_qihou")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qihou"]
+radius = 50.0
+height = 128.0
+
 [node name="Arvore02" type="TileMapLayer" unique_id=495842257]
 y_sort_enabled = true
 tile_map_data = PackedByteArray(0, 0, 0, 0, 251, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 1, 0, 7, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_hq8ww")
+script = ExtResource("3_gmetq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=123251261]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1541136357]
+position = Vector2(6, -83)
+shape = SubResource("CapsuleShape2D_qihou")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

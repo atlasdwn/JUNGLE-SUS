@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="2_0qg2v"]
 [ext_resource type="Texture2D" uid="uid://bin6ewg5rneno" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_04.png" id="2_yiiok"]
+[ext_resource type="Script" uid="uid://bddlfjotvtt4" path="res://cenas/mundo/arvores/scripts/arvore_03.gd" id="3_0qg2v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyici"]
 texture = ExtResource("2_0qg2v")
@@ -23,7 +24,21 @@ physics_layer_0/collision_mask = 6
 sources/1 = SubResource("TileSetAtlasSource_wyici")
 sources/2 = SubResource("TileSetAtlasSource_0qg2v")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yiiok"]
+radius = 32.0
+height = 102.0
+
 [node name="Arvore02" type="TileMapLayer" unique_id=495842257]
 y_sort_enabled = true
 tile_map_data = PackedByteArray(0, 0, 0, 0, 252, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 7, 0, 3, 0, 0, 0)
 tile_set = SubResource("TileSet_hq8ww")
+script = ExtResource("3_0qg2v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1244575390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=387412336]
+position = Vector2(7, -66)
+shape = SubResource("CapsuleShape2D_yiiok")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
