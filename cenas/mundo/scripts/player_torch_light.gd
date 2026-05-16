@@ -8,18 +8,28 @@ extends PointLight2D
 @export var base_texture_scale := 1.05
 @export var scale_flicker := 0.05
 @export var position_flicker := 0.35
+@export var obstructed_energy := 0.85
+@export var obstructed_texture_scale := 0.82
+@export var obstruction_transition := 0.25
 
 var target: Node2D
+var current_base_energy := 0.0
+var current_base_texture_scale := 0.0
+var obstruction_count := 0
+var obstruction_tween: Tween
 var flicker_offset := 0.0
 var rng := RandomNumberGenerator.new()
 
 
 func _ready() -> void:
+	add_to_group("player_torch")
 	rng.randomize()
 	_resolve_target()
 	flicker_offset = rng.randf_range(0.0, TAU)
-	energy = base_energy
-	texture_scale = base_texture_scale
+	current_base_energy = base_energy
+	current_base_texture_scale = base_texture_scale
+	energy = current_base_energy
+	texture_scale = current_base_texture_scale
 
 
 func _process(_delta: float) -> void:
@@ -32,8 +42,8 @@ func _process(_delta: float) -> void:
 	pulse += sin(time * flicker_speed * 2.41) * 0.13
 	pulse = clampf(pulse, -1.0, 1.0)
 
-	energy = maxf(0.0, base_energy + (pulse * flicker_strength))
-	texture_scale = base_texture_scale + (pulse * scale_flicker)
+	energy = maxf(0.0, current_base_energy + (pulse * flicker_strength))
+	texture_scale = maxf(0.0, current_base_texture_scale + (pulse * scale_flicker))
 
 	var flicker_position := Vector2(
 		sin(time * 2.3),
@@ -54,3 +64,31 @@ func _resolve_target() -> void:
 
 	if target == null and get_parent() != null:
 		target = get_parent().get_node_or_null(target_path) as Node2D
+
+
+func add_obstruction() -> void:
+	obstruction_count += 1
+	_update_obstruction_state()
+
+
+func remove_obstruction() -> void:
+	obstruction_count = max(0, obstruction_count - 1)
+	_update_obstruction_state()
+
+
+func clear_obstructions() -> void:
+	obstruction_count = 0
+	_update_obstruction_state()
+
+
+func _update_obstruction_state() -> void:
+	var target_energy := obstructed_energy if obstruction_count > 0 else base_energy
+	var target_texture_scale := obstructed_texture_scale if obstruction_count > 0 else base_texture_scale
+
+	if obstruction_tween != null and obstruction_tween.is_valid():
+		obstruction_tween.kill()
+
+	obstruction_tween = create_tween()
+	obstruction_tween.set_parallel(true)
+	obstruction_tween.tween_property(self, "current_base_energy", target_energy, obstruction_transition).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	obstruction_tween.tween_property(self, "current_base_texture_scale", target_texture_scale, obstruction_transition).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
