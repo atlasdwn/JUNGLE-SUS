@@ -1,5 +1,12 @@
 [gd_scene format=3 uid="uid://lq43cdbj4q32"]
 
+[ext_resource type="Script" uid="uid://b46klj26qxt4n" path="res://cenas/GUI/dialog system/scripts/dialog_system.gd" id="1_kou48"]
+
 [node name="DialogSystem" type="CanvasLayer" unique_id=216714086]
 process_mode = 3
 layer = 0
+script = ExtResource("1_kou48")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=307881112]
+offset_right = 40.0
+offset_bottom = 40.0

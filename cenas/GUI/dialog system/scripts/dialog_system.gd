@@ -1,4 +1,4 @@
-class_name DialogSystemNode extends Node
+class_name DialogSystemNode extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
