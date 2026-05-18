@@ -795,7 +795,6 @@ _data = {
 &"walk_side": SubResource("Animation_dpxno"),
 &"walk_up": SubResource("Animation_2mvx2")
 }
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew0c6"]
 radius = 4.0
 height = 16.0
@@ -829,7 +828,7 @@ color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
 [node name="Carina" type="CharacterBody2D" unique_id=1385650990]
-collision_mask = 20
+collision_mask = 22
 motion_mode = 1
 script = ExtResource("2_0u81b")
 inventory = ExtResource("3_ew0c6")
@@ -851,7 +850,6 @@ offset = Vector2(0, -11.995)
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1571950009]
 libraries/ = SubResource("AnimationLibrary_s58ca")
-
 [node name="StateMachine" type="Node" parent="." unique_id=1256214414]
 script = ExtResource("12_me0xk")
 
@@ -869,6 +867,7 @@ collision_layer = 16
 collision_mask = 16
 
 [node name="ColliderShape" type="CollisionShape2D" parent="Collider" unique_id=1424946646]
+position = Vector2(0, -4)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ew0c6")
 
@@ -888,6 +887,5 @@ process_material = SubResource("ParticleProcessMaterial_folhas")
 position = Vector2(0, -2)
 gizmo_extents = 5.0
 
-[connection signal="animation_finished" from="AnimPlayer" to="StateMachine/Collect" method="_on_anim_player_animation_finished"]
 [connection signal="area_entered" from="Collider" to="." method="_on_collider_area_entered"]
 [connection signal="area_exited" from="Collider" to="." method="_on_collider_area_exited"]

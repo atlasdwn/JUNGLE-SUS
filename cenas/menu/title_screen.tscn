@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://da0svce61unex"]
+
+[ext_resource type="Script" uid="uid://cw8r0msk0kf7s" path="res://cenas/menu/scripts/title_screen.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://s0ikbekdjce" path="res://assets/menu/Illustration79_16x9_center.png" id="2_center"]
+[ext_resource type="FontFile" uid="uid://n42dt1pq53g0" path="res://assets/fonts/static/PixelifySans-Bold.ttf" id="3_font"]
+[ext_resource type="Texture2D" uid="uid://colisks0upytu" path="res://assets/menu/buttons/wood_sign_top_left.png" id="4_wood_sign"]
+[ext_resource type="Script" uid="uid://dvkp50ts6e056" path="res://cenas/menu/scripts/firefly_layer.gd" id="5_firefly_layer"]
+
+[node name="TitleScreen" type="Control" unique_id=105985552]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1891287097]
+texture_filter = 6
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_center")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="FireflyLayer" type="Control" parent="." unique_id=1528330796]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_firefly_layer")
+
+[node name="SafeArea" type="Control" parent="." unique_id=1128847715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BottomDock" type="VBoxContainer" parent="SafeArea" unique_id=7875100]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VerticalSpacer" type="Control" parent="SafeArea/BottomDock" unique_id=1225797860]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BottomRow" type="HBoxContainer" parent="SafeArea/BottomDock" unique_id=60009461]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HorizontalSpacer" type="Control" parent="SafeArea/BottomDock/BottomRow" unique_id=1457199031]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Buttons" type="VBoxContainer" parent="SafeArea/BottomDock/BottomRow" unique_id=315572460]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="TextureButton" parent="SafeArea/BottomDock/BottomRow/Buttons" unique_id=597242065]
+texture_filter = 6
+custom_minimum_size = Vector2(170, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_wood_sign")
+texture_pressed = ExtResource("4_wood_sign")
+texture_hover = ExtResource("4_wood_sign")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="SafeArea/BottomDock/BottomRow/Buttons/StartButton" unique_id=2008483294]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -15.0
+offset_right = 42.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988235, 0.972549, 0.921569, 1)
+theme_override_colors/font_outline_color = Color(0.25098, 0.145098, 0.121569, 0.45)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 25
+text = "Iniciar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="SafeArea/BottomDock/BottomRow/Buttons" unique_id=503319223]
+texture_filter = 6
+custom_minimum_size = Vector2(170, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_wood_sign")
+texture_pressed = ExtResource("4_wood_sign")
+texture_hover = ExtResource("4_wood_sign")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="SafeArea/BottomDock/BottomRow/Buttons/ExitButton" unique_id=375743513]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -15.0
+offset_right = 26.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988235, 0.972549, 0.921569, 1)
+theme_override_colors/font_outline_color = Color(0.25098, 0.145098, 0.121569, 0.45)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 25
+text = "Sair"
+horizontal_alignment = 1
+vertical_alignment = 1
