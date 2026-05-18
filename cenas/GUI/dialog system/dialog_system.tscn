@@ -1,12 +1,84 @@
 [gd_scene format=3 uid="uid://lq43cdbj4q32"]
 
 [ext_resource type="Script" uid="uid://b46klj26qxt4n" path="res://cenas/GUI/dialog system/scripts/dialog_system.gd" id="1_kou48"]
+[ext_resource type="Texture2D" uid="uid://cugw5bbr2pyf6" path="res://assets/npc_and_dialog/sprites/text-bubble.png" id="2_mf8n1"]
+[ext_resource type="FontFile" uid="uid://mdvpqqagjwdp" path="res://assets/npc_and_dialog/fonts/Abaddon Light.ttf" id="3_6ahns"]
+[ext_resource type="FontFile" uid="uid://daao4vtcmdxn5" path="res://assets/npc_and_dialog/fonts/Abaddon Bold.ttf" id="4_8fri0"]
+
+[sub_resource type="Gradient" id="Gradient_8jyo3"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e4gep"]
+gradient = SubResource("Gradient_8jyo3")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4m2nn"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+texture = ExtResource("2_mf8n1")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
 
 [node name="DialogSystem" type="CanvasLayer" unique_id=216714086]
 process_mode = 3
 layer = 0
 script = ExtResource("1_kou48")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=307881112]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="DialogUI" type="Control" parent="." unique_id=940465494]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="DialogUI" unique_id=307881112]
+modulate = Color(0, 0, 0, 0.8901961)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0046875
+anchor_top = 0.5
+anchor_right = 0.9953125
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_e4gep")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogUI" unique_id=1797087359]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -498.0
+offset_top = -111.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4m2nn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer" unique_id=1074942112]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.4392157, 0.39607844, 0.32156864, 1)
+theme_override_fonts/normal_font = ExtResource("3_6ahns")
+theme_override_fonts/bold_font = ExtResource("4_8fri0")
+bbcode_enabled = true
+text = "Example [b]text[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="Label" type="Label" parent="DialogUI" unique_id=787147999]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 222.0
+offset_right = 181.0
+offset_bottom = 245.0
+text = "NAME"
