@@ -1952,7 +1952,7 @@ position = Vector2(240, 97)
 
 [node name="Carina" parent="Ambiente" unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
 y_sort_enabled = true
-position = Vector2(1892, 53)
+position = Vector2(1624, 66)
 collision_mask = 22
 safe_margin = 0.001
 camera = NodePath("Camera2D")
