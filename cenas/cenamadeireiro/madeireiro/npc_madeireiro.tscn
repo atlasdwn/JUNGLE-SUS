@@ -50,6 +50,7 @@ font_size = 7
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="NpcMadeireiro" type="Area2D" unique_id=1470037563]
+collision_layer = 0
 script = ExtResource("1_ut076")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350984207]
@@ -63,6 +64,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_5c32j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2130904633]
+visible = false
 
 [node name="CaixaDialogo" type="Label" parent="CanvasLayer" unique_id=251888854]
 visible = false
@@ -74,6 +76,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5c32j")
 autowrap_mode = 2
 
 [node name="TextoDialogo" type="Label" parent="CanvasLayer" unique_id=1974073775]
+visible = false
 offset_left = 13.0
 offset_top = 197.0
 offset_right = 1013.0
@@ -85,6 +88,7 @@ autowrap_mode = 2
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1656966294]
 
 [node name="LabelInteracao" type="Label" parent="." unique_id=701730239]
+visible = false
 offset_left = -18.0
 offset_top = -40.0
 offset_right = 22.0

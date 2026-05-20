@@ -18,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://baedtfilulleq" path="res://cenas/cenamadeireiro/Objetos/cortador_3.tscn" id="16_iukor"]
 [ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="17_lkkyf"]
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
+[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="19_autvp"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://cenas/interactibles/dialog/scripts/dialog_text.gd" id="20_km7vu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1952,8 +1954,7 @@ position = Vector2(240, 97)
 
 [node name="Carina" parent="Ambiente" unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
 y_sort_enabled = true
-position = Vector2(1624, 66)
-collision_mask = 22
+position = Vector2(-162, 82)
 safe_margin = 0.001
 camera = NodePath("Camera2D")
 
@@ -1974,6 +1975,12 @@ polygon = PackedVector2Array(-7, 11.09, -7, 14, -5, 16, 5, 16, 7, 14, 7, 11.09, 
 
 [node name="NpcMadeireiro" parent="." unique_id=1470037563 instance=ExtResource("19_akwsc")]
 position = Vector2(-84, 54)
+
+[node name="DialogInteraction" parent="NpcMadeireiro" unique_id=276655289 instance=ExtResource("19_autvp")]
+
+[node name="DialogText" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=663692697]
+script = ExtResource("20_km7vu")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]
 position = Vector2(1858, -23)

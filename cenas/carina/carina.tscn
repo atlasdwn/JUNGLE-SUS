@@ -795,6 +795,7 @@ _data = {
 &"walk_side": SubResource("Animation_dpxno"),
 &"walk_up": SubResource("Animation_2mvx2")
 }
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew0c6"]
 radius = 4.0
 height = 16.0
@@ -850,6 +851,7 @@ offset = Vector2(0, -11.995)
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1571950009]
 libraries/ = SubResource("AnimationLibrary_s58ca")
+
 [node name="StateMachine" type="Node" parent="." unique_id=1256214414]
 script = ExtResource("12_me0xk")
 

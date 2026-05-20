@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cxt06qneps3s3"]
+
+[ext_resource type="Script" uid="uid://comg51xrbicww" path="res://cenas/interactibles/dialog/scripts/dialog_interaction.gd" id="1_6a3p3"]
+[ext_resource type="Texture2D" uid="uid://up28tnu50u5p" path="res://cenas/interactibles/dialog/sprites/dialog_interactable.png" id="1_t72fj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a3p3"]
+size = Vector2(20, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wic8u"]
+atlas = ExtResource("1_t72fj")
+region = Rect2(0, 0, 13, 13)
+
+[sub_resource type="Animation" id="Animation_qx38s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h7ihi"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hka8k"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -55), Vector2(0, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u6w4g"]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -52), Vector2(0, -55)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_16sac"]
+_data = {
+&"RESET": SubResource("Animation_qx38s"),
+&"default": SubResource("Animation_h7ihi"),
+&"hide": SubResource("Animation_hka8k"),
+&"show": SubResource("Animation_u6w4g")
+}
+
+[node name="DialogInteraction" type="Area2D" unique_id=276655289]
+process_mode = 3
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_6a3p3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228163063]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_6a3p3")
+debug_color = Color(0, 0.7021107, 0.432765, 0.042000003)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1458956668]
+position = Vector2(0, -52)
+texture = SubResource("AtlasTexture_wic8u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1475837662]
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_16sac")
+autoplay = &"default"
