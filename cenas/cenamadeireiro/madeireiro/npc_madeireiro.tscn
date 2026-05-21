@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/cenamadeireiro/madeireiro/scripts/npc_madeireiro.gd" id="1_ut076"]
 [ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="2_ex5cn"]
+[ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/personagens_info.tres" id="2_t2e2s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
 atlas = ExtResource("2_ex5cn")
@@ -52,6 +53,7 @@ shadow_color = Color(0, 0, 0, 1)
 [node name="NpcMadeireiro" type="Area2D" unique_id=1470037563]
 collision_layer = 0
 script = ExtResource("1_ut076")
+char_info = ExtResource("2_t2e2s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350984207]
 sprite_frames = SubResource("SpriteFrames_7212u")

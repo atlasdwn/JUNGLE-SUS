@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 DialogSystem="*uid://lq43cdbj4q32"
+PlayerManager="*uid://dlrtb8ym8615l"
 
 [display]
 

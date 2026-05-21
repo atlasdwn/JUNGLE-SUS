@@ -27,7 +27,7 @@ func player_interact() -> void:
 	player_interacted.emit()
 	await get_tree().process_frame
 	await get_tree().process_frame
-	DialogSystem.showdialog(dialog_items)
+	DialogSystem.show_dialog(dialog_items)
 	DialogSystem.finished.connect(_on_dialog_finished)
 	pass
 
@@ -36,13 +36,13 @@ func _on_body_entered(_body : PhysicsBody2D) -> void:
 	if enabled == false || dialog_items.size() == 0:
 		return
 	animation_player.play('show')
-	#PlayerManager.interact_pressed.connect(player_interact)
+	PlayerManager.interact_pressed.connect(player_interact)
 	
 	pass
 	
 func _on_body_exited(_body : PhysicsBody2D) -> void:
 	animation_player.play('hide')
-	#PlayerManager.interact_pressed.disconnect(player_interact)
+	PlayerManager.interact_pressed.disconnect(player_interact)
 	
 	pass
 	
@@ -51,8 +51,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 		return ['Requires at least one DialogItem node']
 	else:
 		return []
-	pass
-	
+
 func _check_for_dialog_items() -> bool :
 	for c in get_children():
 		if c is DialogItem:

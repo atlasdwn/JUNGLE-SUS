@@ -5,6 +5,8 @@ class_name NPC extends Area2D
 @onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
 
+@export var char_info: CharacterResource
+
 var player_in_area = false
 var falando = false
 var pode_avancar = false

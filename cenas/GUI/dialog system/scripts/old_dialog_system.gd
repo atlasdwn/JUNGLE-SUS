@@ -26,6 +26,7 @@ func _ready() -> void:
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:
+	print(is_active)
 	if is_active == false:
 		return
 	#if event.is_action_pressed("teste"):
@@ -39,8 +40,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	):
 		dialog_item_index += 1
 		if dialog_item_index < dialog_items.size():
+			print(event,'sim')
 			start_dialog()
 		else:
+			print(event,'nao')
 			hide_dialog()
 	pass
 
@@ -72,8 +75,8 @@ func start_dialog() -> void:
 func set_dialog_data(_d : DialogItem) -> void:
 	if _d is DialogText:
 		content.text = _d.text
-	name_label.text = _d.npc_info.name
-	portrait.texture = _d.npc_info.portrait
+	name_label.text = _d.char_info.name
+	portrait.texture = _d.char_info.portrait
 	pass
 
 func show_dialog_button( _is_visible: bool) -> void:

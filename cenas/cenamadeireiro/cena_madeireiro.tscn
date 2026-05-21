@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="19_autvp"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://cenas/interactibles/dialog/scripts/dialog_text.gd" id="20_km7vu"]
+[ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/personagens_info.tres" id="21_km7vu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1979,7 +1980,17 @@ position = Vector2(-84, 54)
 [node name="DialogInteraction" parent="NpcMadeireiro" unique_id=276655289 instance=ExtResource("19_autvp")]
 
 [node name="DialogText" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=663692697]
+process_mode = 3
 script = ExtResource("20_km7vu")
+text = "Ola, voce esta perdida? vc eh do ibama?"
+char_info = ExtResource("21_km7vu")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[node name="DialogText2" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=1682363716]
+process_mode = 3
+script = ExtResource("20_km7vu")
+text = "sIM5"
+char_info = ExtResource("21_km7vu")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4gp8w387g102"]
 
-[ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://autoloads/inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
+[ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
 [ext_resource type="Texture2D" uid="uid://dogyydxq3u66q" path="res://assets/inventario/inventory-background.png" id="2_7mcwm"]
-[ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://autoloads/inventario/inv_slot.tscn" id="3_4lnmx"]
+[ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://inventario/inv_slot.tscn" id="3_4lnmx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lnmx"]
 content_margin_left = 6.0

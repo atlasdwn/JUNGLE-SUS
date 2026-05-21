@@ -2,7 +2,7 @@
 @icon("res://assets/npc_and_dialog/icons/chat_bubble.svg")
 class_name DialogItem extends Node
 
-@export var npc_info: NPCResource
+@export var char_info: CharacterResource
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -11,14 +11,14 @@ func _ready() -> void:
 	pass
 	
 func check_npc_data():
-	if npc_info == null:
+	if char_info == null:
 		var p = self
 		var _checking : bool = true
 		while  _checking == true:
 			p = p.get_parent()
 			if p:
-				if p is NPC and p.npc_resource:
-					npc_info = p.npc_resource
+				if p is NPC and p.char_info:
+					char_info = p.char_info
 					_checking = false
 			else:
 				_checking = false

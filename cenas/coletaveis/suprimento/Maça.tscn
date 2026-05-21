@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/suprimento/scripts/suprimento.gd" id="1_im5y5"]
 [ext_resource type="Texture2D" uid="uid://ceik3x4r2j444" path="res://assets/Teclas/Keyboard Letters and Symbols.png" id="2_2x4lr"]
-[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/items/maça.tres" id="2_7ki5i"]
+[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/maça.tres" id="2_7ki5i"]
 [ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_7ki5i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au7qt"]
