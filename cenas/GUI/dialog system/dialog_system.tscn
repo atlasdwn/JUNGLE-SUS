@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lq43cdbj4q32"]
 
-[ext_resource type="Script" uid="uid://bogh8m1e2yho4" path="res://cenas/GUI/dialog system/dialog_system.gd" id="1_8fri0"]
+[ext_resource type="Script" uid="uid://b46klj26qxt4n" path="res://cenas/GUI/dialog system/scripts/old_dialog_system.gd" id="1_8fri0"]
 [ext_resource type="Texture2D" uid="uid://cugw5bbr2pyf6" path="res://assets/npc_and_dialog/sprites/text-bubble.png" id="2_mf8n1"]
 [ext_resource type="FontFile" uid="uid://mdvpqqagjwdp" path="res://assets/npc_and_dialog/fonts/Abaddon Light.ttf" id="3_6ahns"]
 [ext_resource type="FontFile" uid="uid://daao4vtcmdxn5" path="res://assets/npc_and_dialog/fonts/Abaddon Bold.ttf" id="4_8fri0"]

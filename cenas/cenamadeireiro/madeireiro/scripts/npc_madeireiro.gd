@@ -17,7 +17,7 @@ var falas = [
 
 
 func _ready() -> void:
-	gather_interactables()
+	#gather_interactables()
 	caixa_dialogo.visible = false
 	texto_dialogo.visible = false
 	label_interacao.visible = false
@@ -28,20 +28,20 @@ func _process(_delta: float) -> void:
 	#elif falando and pode_avancar and Input.is_action_just_pressed("interact"):
 		#proxima_fala()
 	pass
-func gather_interactables() -> void:
-	for c in get_children():
-		if c is DialogInteraction:
-			c.player_interacted.connect(_on_player_interacted)
-			c.finished.connect(_on_interaction_finished)
-	pass
+#func gather_interactables() -> void:
+	#for c in get_children():
+		#if c is DialogInteraction:
+			#c.player_interacted.connect(_on_player_interacted)
+			#c.finished.connect(_on_interaction_finished)
+	#pass
 
-func _on_player_interacted() -> void:
-	#update_direction(PlayerManager.player.global_position)
-	#state = idle
-	#velocity = Vector2.ZERO
-	#update_animation()
-	#do_behavior = false
-	pass
+#func _on_player_interacted() -> void:
+	##update_direction(PlayerManager.player.global_position)
+	##state = idle
+	##velocity = Vector2.ZERO
+	##update_animation()
+	##do_behavior = false
+	#pass
 
 func _on_interaction_finished() -> void:	
 	#state = idle

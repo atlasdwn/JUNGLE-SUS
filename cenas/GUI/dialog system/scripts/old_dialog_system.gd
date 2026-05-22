@@ -12,9 +12,14 @@ class_name DialogSystemNode extends CanvasLayer
 signal finished
 
 var is_active : bool = false
+var text_in_progress : bool = false
+
 var dialog_items : Array[DialogItem]
 var dialog_item_index : int = 0
 
+var text_speed : float = 0.02
+var text_length : int = 0
+var plain_text : String
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -26,30 +31,29 @@ func _ready() -> void:
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:
-	print(is_active)
-	if is_active == false:
-		return
-	#if event.is_action_pressed("teste"):
-		#if is_active == false:
-			#show_dialog()
-		#else:
-			#hide_dialog()
-	if(
-		event.is_action_pressed("interact") or
-		event.is_action_pressed('ui_accept')
-	):
-		dialog_item_index += 1
-		if dialog_item_index < dialog_items.size():
-			print(event,'sim')
-			start_dialog()
-		else:
-			print(event,'nao')
-			hide_dialog()
-	pass
+	if event.is_action_pressed("interact"):
+		if is_active == false:
+			return
+		#if event.is_action_pressed("teste"):
+			#if is_active == false:
+				#show_dialog()
+			#else:
+				#hide_dialog()
+		if(
+			event.is_action_pressed("interact") or
+			event.is_action_pressed('ui_accept')
+		):
+			dialog_item_index += 1
+			if dialog_item_index < dialog_items.size():
+				print(event,'sim')
+				start_dialog()
+			else:
+				print(event,'nao')
+				hide_dialog()
+		pass
 
 func show_dialog(_items: Array[DialogItem]) -> void:
 	is_active = true
-	dialog_ui.visible = true
 	dialog_ui.process_mode = Node.PROCESS_MODE_ALWAYS
 	dialog_items = _items
 	dialog_item_index = 0
@@ -67,18 +71,22 @@ func hide_dialog() -> void:
 	pass
 
 func start_dialog() -> void:
+	dialog_ui.visible = true
 	show_dialog_button(true)
 	var _d : DialogItem = dialog_items[dialog_item_index]
 	set_dialog_data(_d)
 	pass
 	
 func set_dialog_data(_d : DialogItem) -> void:
-	if _d is DialogText:
-		content.text = _d.text
-	name_label.text = _d.char_info.name
+	content.text = _d.text
+	name_label.text = _d.char_info.npc_name
 	portrait.texture = _d.char_info.portrait
+	content.visible_characters = 0
+	text_length = content.get_total_character_count()
+	plain_text = content.get_parsed_text()
+	text_in_progress = true
+	start_timer()
 	pass
-
 func show_dialog_button( _is_visible: bool) -> void:
 	dialog_progress.visible = _is_visible
 	if dialog_item_index + 1 < dialog_items.size():

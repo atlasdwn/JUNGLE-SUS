@@ -13,5 +13,6 @@ func _process(_delta: float) -> void:
 	pass
 
 func interact() -> void:
+	print('emitiu interact')
 	interact_handled = false
 	interact_pressed.emit()

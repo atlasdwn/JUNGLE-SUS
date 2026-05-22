@@ -24,7 +24,7 @@ func _ready() -> void:
 	pass
  
 func player_interact() -> void:
-	player_interacted.emit()
+	#player_interacted.emit()
 	await get_tree().process_frame
 	await get_tree().process_frame
 	DialogSystem.show_dialog(dialog_items)
@@ -32,12 +32,10 @@ func player_interact() -> void:
 	pass
 
 func _on_body_entered(_body : PhysicsBody2D) -> void:
-	print(_body)
 	if enabled == false || dialog_items.size() == 0:
 		return
 	animation_player.play('show')
 	PlayerManager.interact_pressed.connect(player_interact)
-	
 	pass
 	
 func _on_body_exited(_body : PhysicsBody2D) -> void:
