@@ -1,6 +1,7 @@
 @tool
 @icon("res://assets/npc_and_dialog/icons/star_bubble.svg")
-class_name DialogSystemNode extends CanvasLayer
+extends CanvasLayer
+class_name DialogSystemNode 
 
 @onready var dialog_ui: Control = $DialogUI
 @onready var name_label: Label = $DialogUI/NameLabel
@@ -8,8 +9,10 @@ class_name DialogSystemNode extends CanvasLayer
 @onready var dialog_progress: PanelContainer = $DialogUI/DialogProgress
 @onready var dialog_progress_button: Label = $DialogUI/DialogProgress/DialogProgressButton
 @onready var content: RichTextLabel = $DialogUI/DialogBG/Content
+@onready var timer: Timer = $DialogUI/Timer
 
 signal finished
+signal letter_added (letter : String)
 
 var is_active : bool = false
 var text_in_progress : bool = false
@@ -27,6 +30,7 @@ func _ready() -> void:
 			get_parent().remove_child(self)
 			return
 		return
+	timer.timeout.connect( _on_timer_timeout )
 	hide_dialog()
 	pass
 
@@ -79,7 +83,7 @@ func start_dialog() -> void:
 	
 func set_dialog_data(_d : DialogItem) -> void:
 	content.text = _d.text
-	name_label.text = _d.char_info.npc_name
+	name_label.text = _d.char_info.name
 	portrait.texture = _d.char_info.portrait
 	content.visible_characters = 0
 	text_length = content.get_total_character_count()
@@ -87,6 +91,7 @@ func set_dialog_data(_d : DialogItem) -> void:
 	text_in_progress = true
 	start_timer()
 	pass
+	
 func show_dialog_button( _is_visible: bool) -> void:
 	dialog_progress.visible = _is_visible
 	if dialog_item_index + 1 < dialog_items.size():
@@ -94,3 +99,22 @@ func show_dialog_button( _is_visible: bool) -> void:
 	else:
 		dialog_progress_button.text = 'END'
 	
+func start_timer() -> void:
+	timer.wait_time = text_speed
+	var _char = plain_text[ content.visible_characters - 1 ]
+	if '.!?:;'.contains( _char ):
+		timer.wait_time *= 4
+	elif ', '.contains( _char ):
+		timer.wait_time *= 2
+	timer.start()
+	pass
+
+func _on_timer_timeout() -> void:
+	content.visible_characters += 1
+	if content.visible_characters <= text_length:
+		letter_added.emit( plain_text[ content.visible_characters - 1 ] )
+		start_timer()
+	else:
+		show_dialog_button( true )
+		text_in_progress = false
+	pass
