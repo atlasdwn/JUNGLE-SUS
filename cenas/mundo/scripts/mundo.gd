@@ -9,11 +9,15 @@ var cutscene_started := false
 
 func _ready() -> void:
 	_find_nodes()
+	print("[Mundo] player=", player, " | barco=", barco, " | dialog=", dialog_box)
 	inventory.all_collected.connect(_on_all_collected)
 
 	if barco != null:
 		barco.player_arrived.connect(_on_player_at_barco)
+		barco.player_embarked.connect(_on_player_embarked)
 		barco.departed.connect(_on_barco_departed)
+	else:
+		push_warning("[Mundo] Barco nao encontrado! Verifique se o no 'Barco' esta na cena.")
 
 func _find_nodes() -> void:
 	player = _find_child_by_class("Player") as Player
@@ -56,23 +60,25 @@ func _on_player_at_barco() -> void:
 	if cutscene_started:
 		return
 	cutscene_started = true
+	print("[Mundo] Carina chegou ao barco! Embarcando...")
 
 	if dialog_box != null:
 		dialog_box.hide_message()
 
-	var cutscene_state = player.state_machine.get_node_or_null("Cutscene")
-	if cutscene_state == null:
-		push_warning("[Mundo] StateCutscene 'Cutscene' não encontrado na StateMachine!")
-		return
+	# Tira o controle do jogador
+	player.is_collecting = true
 
-	cutscene_state.target_position = barco.ponto_embarque.global_position
-	player.state_machine.change_state(cutscene_state)
+	# Esconde o sprite da Carina
+	var anim_sprite = player.get_node_or_null("Anim")
+	if anim_sprite != null:
+		anim_sprite.visible = false
+	else:
+		push_warning("[Mundo] Node 'Anim' nao encontrado na Carina!")
 
-	cutscene_state.arrived_at_target.connect(_on_carina_embarked, CONNECT_ONE_SHOT)
-
-func _on_carina_embarked() -> void:
-	player.visible = false
+	# Parte o barco
 	barco.depart()
+
+func _on_player_embarked() -> void:
 	print("[Mundo] Carina embarcou! Barco partindo...")
 
 func _on_barco_departed() -> void:
