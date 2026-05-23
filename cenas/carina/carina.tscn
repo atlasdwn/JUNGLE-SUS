@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
+[ext_resource type="Script" uid="uid://c6egnpajd3d3d" path="res://cenas/carina/scripts/state_cutscene.gd" id="17_1e60c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18ija"]
 atlas = ExtResource("3_w8id7")
@@ -795,6 +796,7 @@ _data = {
 &"walk_side": SubResource("Animation_dpxno"),
 &"walk_up": SubResource("Animation_2mvx2")
 }
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ew0c6"]
 radius = 4.0
 height = 16.0
@@ -850,6 +852,7 @@ offset = Vector2(0, -11.995)
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1571950009]
 libraries/ = SubResource("AnimationLibrary_s58ca")
+
 [node name="StateMachine" type="Node" parent="." unique_id=1256214414]
 script = ExtResource("12_me0xk")
 
@@ -861,6 +864,9 @@ script = ExtResource("14_8dyrv")
 
 [node name="Collect" type="Node" parent="StateMachine" unique_id=466380645]
 script = ExtResource("15_t3phn")
+
+[node name="Cutscene" type="Node" parent="StateMachine" unique_id=755965487]
+script = ExtResource("17_1e60c")
 
 [node name="Collider" type="Area2D" parent="." unique_id=1408964914]
 collision_layer = 16

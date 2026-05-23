@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dkmei1utcmrll"]
 
+[ext_resource type="Script" uid="uid://xumfssmpa8j4" path="res://cenas/mundo/scripts/mundo.gd" id="1_682qv"]
 [ext_resource type="Texture2D" uid="uid://cihsaprg6tbqy" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="1_v4jgv"]
 [ext_resource type="Texture2D" uid="uid://d0h4ivxtu7v2n" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="2_myvte"]
 [ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="3_s55ga"]
@@ -13,6 +14,9 @@
 [ext_resource type="Script" uid="uid://ryaje27xj66q" path="res://cenas/mundo/scripts/world_firefly_layer.gd" id="10_world_fireflies"]
 [ext_resource type="Texture2D" uid="uid://bn5hvifrdykjd" path="res://assets/effects/torch_light.png" id="11_torch"]
 [ext_resource type="Script" uid="uid://blw0wrnx3asua" path="res://cenas/mundo/scripts/player_torch_light.gd" id="12_torch_light"]
+[ext_resource type="PackedScene" uid="uid://cd0ueycfkyl31" path="res://cenas/mundo/barco/barco.tscn" id="15_vuvim"]
+[ext_resource type="PackedScene" path="res://cenas/GUI/dialog_box/dialog_box.tscn" id="16_7vlvb"]
+[ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento/suprimento2.tscn" id="17_vuvim"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvte"]
 texture = ExtResource("1_v4jgv")
@@ -465,8 +469,9 @@ sources/1 = SubResource("TileSetAtlasSource_k0wqi")
 sources/2 = SubResource("TileSetAtlasSource_ty0wy")
 
 [node name="Mundo" type="Node2D" unique_id=1017883843]
-metadata/_edit_vertical_guides_ = [-2561.0, 2562.0]
-metadata/_edit_horizontal_guides_ = [-1441.0, 1526.0]
+script = ExtResource("1_682qv")
+metadata/_edit_vertical_guides_ = [-2561.0, 2562.0, 2.0]
+metadata/_edit_horizontal_guides_ = [-1441.0, 1526.0, 51.0]
 
 [node name="NightCycle" type="CanvasModulate" parent="." unique_id=1853100932]
 script = ExtResource("9_night_cycle")
@@ -531,3 +536,20 @@ camera = NodePath("Camera2D")
 position = Vector2(0, -16)
 position_smoothing_enabled = true
 editor_draw_drag_margin = true
+
+[node name="Barco" parent="." unique_id=1138993283 instance=ExtResource("15_vuvim")]
+position = Vector2(-5, 17)
+
+[node name="DialogBoxLayer" parent="." unique_id=1492253376 instance=ExtResource("16_7vlvb")]
+
+[node name="Suprimento" parent="." unique_id=1250907370 instance=ExtResource("17_vuvim")]
+position = Vector2(-56, -271)
+
+[node name="Suprimento2" parent="." unique_id=465045288 instance=ExtResource("17_vuvim")]
+position = Vector2(45, -311)
+
+[node name="Suprimento3" parent="." unique_id=2073189819 instance=ExtResource("17_vuvim")]
+position = Vector2(-14, -326)
+
+[node name="Suprimento4" parent="." unique_id=1454991590 instance=ExtResource("17_vuvim")]
+position = Vector2(3, -272)
