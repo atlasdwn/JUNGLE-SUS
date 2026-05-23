@@ -21,9 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="19_autvp"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://cenas/interactibles/dialog/scripts/dialog_text.gd" id="20_km7vu"]
-[ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/personagens_info.tres" id="21_km7vu"]
-[ext_resource type="Texture2D" uid="uid://b5hlubpigc7cm" path="res://assets/npc_and_dialog/sprites/portraits/hero_portrait.png" id="22_pqr77"]
-[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/npc_resource.gd" id="23_um7d6"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="21_km7vu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1910,12 +1908,6 @@ sources/0 = SubResource("TileSetAtlasSource_62v6h")
 sources/4 = SubResource("TileSetAtlasSource_5dfey")
 sources/5 = SubResource("TileSetScenesCollectionSource_gmk1b")
 
-[sub_resource type="Resource" id="Resource_5h3mn"]
-script = ExtResource("23_um7d6")
-name = "Hero"
-portrait = ExtResource("22_pqr77")
-metadata/_custom_type_script = "uid://3se4ee0klg28"
-
 [node name="CenaMadeireiro" type="Node2D" unique_id=1052854838]
 position = Vector2(0, -6)
 metadata/_edit_vertical_guides_ = [-43.0]
@@ -1991,14 +1983,13 @@ position = Vector2(-84, 54)
 process_mode = 3
 script = ExtResource("20_km7vu")
 text = "Ola, voce esta perdida? vc eh do ibama?"
-char_info = ExtResource("21_km7vu")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [node name="DialogText2" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=1682363716]
 process_mode = 3
 script = ExtResource("20_km7vu")
 text = "sIM5"
-char_info = SubResource("Resource_5h3mn")
+char_info = ExtResource("21_km7vu")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]

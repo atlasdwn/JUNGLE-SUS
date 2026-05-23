@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://cx1x2rlqha3je"]
 
 [ext_resource type="Texture2D" uid="uid://bbfx3u7owhc5f" path="res://assets/npc_and_dialog/sprites/portraits/npc_portrait_01.png" id="1_2o3pq"]
-[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/npc_resource.gd" id="2_2vhc6"]
+[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="2_2vhc6"]
 
 [resource]
 script = ExtResource("2_2vhc6")

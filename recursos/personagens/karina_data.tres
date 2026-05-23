@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://ld8ty8apvv22"]
+
+[ext_resource type="Texture2D" uid="uid://b5hlubpigc7cm" path="res://assets/npc_and_dialog/sprites/portraits/hero_portrait.png" id="1_j03ai"]
+[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="2_w2n8l"]
+
+[resource]
+script = ExtResource("2_w2n8l")
+name = "Karina"
+portrait = ExtResource("1_j03ai")
+metadata/_custom_type_script = "uid://3se4ee0klg28"

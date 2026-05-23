@@ -38,11 +38,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if is_active == false:
 			return
-		#if event.is_action_pressed("teste"):
-			#if is_active == false:
-				#show_dialog()
-			#else:
-				#hide_dialog()
+
 		if(
 			event.is_action_pressed("interact") or
 			event.is_action_pressed('ui_accept')
