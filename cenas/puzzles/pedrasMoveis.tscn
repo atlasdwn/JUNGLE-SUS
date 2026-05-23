@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://678q46ccs74h"]
+
+[ext_resource type="Script" uid="uid://bbun3hi20d0t7" path="res://cenas/puzzles/pedra_puzzle.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://drv6ayu16cthg" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Rocks.png" id="2_rocks"]
+[ext_resource type="Texture2D" uid="uid://c8t2pdslk5ssk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Shadows.png" id="3_rvu2p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rock"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq4qx"]
+texture = ExtResource("2_rocks")
+0:1/size_in_atlas = Vector2i(2, 3)
+0:1/0 = 0
+0:1/0/z_index = 1
+0:1/0/y_sort_origin = 8
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_glccb"]
+texture = ExtResource("3_rvu2p")
+0:8/size_in_atlas = Vector2i(3, 3)
+0:8/0 = 0
+0:8/0/texture_origin = Vector2i(1, 3)
+
+[sub_resource type="TileSet" id="TileSet_rvu2p"]
+sources/0 = SubResource("TileSetAtlasSource_sq4qx")
+sources/2 = SubResource("TileSetAtlasSource_glccb")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sq4qx"]
+height = 24.0
+
+[node name="PedraMovelPuzzle" type="Node2D" unique_id=378435891]
+y_sort_enabled = true
+script = ExtResource("1_script")
+
+[node name="Pedra" type="RigidBody2D" parent="." unique_id=340677654]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+mass = 50.0
+physics_material_override = SubResource("PhysicsMaterial_rock")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 15.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Pedra" unique_id=959621508]
+y_sort_enabled = true
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0, 255, 255, 0, 0, 2, 0, 0, 0, 8, 0, 0, 0)
+tile_set = SubResource("TileSet_rvu2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pedra" unique_id=1680179077]
+z_index = 2
+position = Vector2(-8, 1)
+shape = SubResource("CapsuleShape2D_sq4qx")

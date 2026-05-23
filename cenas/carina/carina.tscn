@@ -830,6 +830,7 @@ color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
 [node name="Carina" type="CharacterBody2D" unique_id=1385650990]
+y_sort_enabled = true
 collision_mask = 22
 motion_mode = 1
 script = ExtResource("2_0u81b")

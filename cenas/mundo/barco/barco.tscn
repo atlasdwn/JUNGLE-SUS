@@ -28,7 +28,6 @@ color = Color(0.45, 0.3, 0.15, 1)
 
 [node name="TriggerZone" type="Area2D" parent="." unique_id=1272820270]
 collision_layer = 0
-collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerZone" unique_id=1008189943]
 position = Vector2(-3.5, -3.5)
@@ -36,9 +35,8 @@ shape = SubResource("RectangleShape2D_trigger")
 
 [node name="EmbarkZone" type="Area2D" parent="." unique_id=2041738512]
 collision_layer = 0
-collision_mask = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EmbarkZone" unique_id=3198274061]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmbarkZone" unique_id=-1096693235]
 shape = SubResource("RectangleShape2D_embark")
 
 [node name="PontoEmbarque" type="Marker2D" parent="." unique_id=784846635]

@@ -60,22 +60,38 @@ func _on_player_at_barco() -> void:
 	if cutscene_started:
 		return
 	cutscene_started = true
-	print("[Mundo] Carina chegou ao barco! Embarcando...")
+	print("[Mundo] Carina chegou ao barco! Iniciando cutscene...")
 
 	if dialog_box != null:
 		dialog_box.hide_message()
 
-	# Tira o controle do jogador
+	# Tira o controle do jogador imediatamente
 	player.is_collecting = true
 
-	# Esconde o sprite da Carina
+	# Caminha automaticamente até o barco via StateCutscene
+	var cutscene_state = player.state_machine.get_node_or_null("Cutscene")
+	if cutscene_state == null:
+		push_warning("[Mundo] StateCutscene nao encontrado! Embarcando direto...")
+		_embarcar()
+		return
+
+	cutscene_state.target_position = barco.ponto_embarque.global_position
+	player.state_machine.change_state(cutscene_state)
+	cutscene_state.arrived_at_target.connect(_embarcar, CONNECT_ONE_SHOT)
+
+func _embarcar() -> void:
+	print("[Mundo] Carina embarcou! Escondendo e partindo...")
+
+	# Esconde sprite, sombra e para o dust
 	var anim_sprite = player.get_node_or_null("Anim")
 	if anim_sprite != null:
 		anim_sprite.visible = false
-	else:
-		push_warning("[Mundo] Node 'Anim' nao encontrado na Carina!")
 
-	# Parte o barco
+	var shadow = player.get_node_or_null("Sprite2D")
+	if shadow != null:
+		shadow.visible = false
+
+	player.set_walk_dust(false)
 	barco.depart()
 
 func _on_player_embarked() -> void:
@@ -83,3 +99,4 @@ func _on_player_embarked() -> void:
 
 func _on_barco_departed() -> void:
 	print("[Mundo] Barco partiu! Fase concluída!")
+

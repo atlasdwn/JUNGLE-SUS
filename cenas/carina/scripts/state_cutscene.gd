@@ -6,16 +6,23 @@ var target_position: Vector2
 var move_speed: float = 50.0
 var arrival_threshold: float = 4.0
 var has_arrived := false
+var original_mask: int = 0
 
 func enter() -> void:
 	has_arrived = false
 	player.is_collecting = true
 	player.set_walk_dust(true)
+	
+	# Salva a mascara e desativa colisoes fisicas
+	# Isso permite que ela ande por cima da agua/barreiras ate o barco
+	original_mask = player.collision_mask
+	player.collision_mask = 0
 
 func exit() -> void:
 	player.is_collecting = false
 	player.velocity = Vector2.ZERO
 	player.set_walk_dust(false)
+	player.collision_mask = original_mask
 
 func process(_delta: float) -> State:
 	if has_arrived:

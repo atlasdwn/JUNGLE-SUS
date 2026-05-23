@@ -44,6 +44,6 @@ func _on_embark_zone_body_entered(body: Node2D) -> void:
 func depart() -> void:
 	print("[Barco] Partindo!")
 	var tween := create_tween()
-	tween.tween_property(self, "position", position + Vector2(0, 400), 3.5) \
+	tween.tween_property(self, "position", position + Vector2(0, 400), 7.0) \
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): departed.emit())
