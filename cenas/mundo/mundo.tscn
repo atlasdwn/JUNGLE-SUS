@@ -573,6 +573,8 @@ z_as_relative = false
 position = Vector2(-549, -1607)
 item_escondido_path = NodePath("../../Suprimento5")
 
+[node name="Node2D" type="Node2D" parent="Y-sorting" unique_id=1134334866]
+
 [node name="Barco" parent="." unique_id=1138993283 instance=ExtResource("15_vuvim")]
 position = Vector2(-5, 17)
 

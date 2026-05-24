@@ -3,7 +3,7 @@ extends Control
 const HOVER_ROTATION := deg_to_rad(4.0)
 const HOVER_TWEEN_DURATION := 0.12
 
-@export_file("*.tscn") var world_scene_path := "res://cenas/mundo/mundo.tscn"
+@export_file("*.tscn") var world_scene_path := "res://cenas/cutscenes/cutscene_inicio.tscn"
 
 @onready var start_button: TextureButton = $SafeArea/BottomDock/BottomRow/Buttons/StartButton
 @onready var exit_button: TextureButton = $SafeArea/BottomDock/BottomRow/Buttons/ExitButton
