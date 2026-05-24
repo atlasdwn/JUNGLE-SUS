@@ -1262,6 +1262,7 @@ position = Vector2(371, 352)
 [node name="Suprimento" parent="Coletáveis" unique_id=1250907370 instance=ExtResource("7_ve4po")]
 position = Vector2(-74, 33)
 scale = Vector2(0.99030894, 0.9822321)
+collision_mask = 1
 
 [node name="Suprimento4" parent="Coletáveis" unique_id=230553679 instance=ExtResource("7_ve4po")]
 

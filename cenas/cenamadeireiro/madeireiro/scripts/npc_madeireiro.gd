@@ -4,16 +4,12 @@ class_name NPC extends Area2D
 
 @onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
+@onready var dialog_interaction: DialogInteraction = $DialogInteraction
 
 @export var char_info: CharacterResource
+@export var dialogs: Array[DialogResource]
 
 var player_in_area = false
-var falando = false
-var pode_avancar = false
-var fala_index = 0
-var falas = [
-	"Ola, voce esta perdida? vc eh do ibama?"
-]
 
 
 func _ready() -> void:
@@ -21,7 +17,12 @@ func _ready() -> void:
 	caixa_dialogo.visible = false
 	texto_dialogo.visible = false
 	label_interacao.visible = false
-
+	dialog_interaction.player_entered.connect(set_dialog)
+	dialog_interaction.player_exited.connect(clear_dialog)
+	
+func set_dialog() -> void:
+	pass
+	
 func _process(_delta: float) -> void:
 	#if player_in_area and not falando and Input.is_action_just_pressed("interact"):
 		#iniciar_dialogo()

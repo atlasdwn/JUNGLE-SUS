@@ -1,6 +1,6 @@
 @tool
 @icon("res://assets/npc_and_dialog/icons/chat_bubble.svg")
-class_name DialogItem extends Node
+class_name DialogItem extends Resource
 
 @export var char_info: CharacterResource
 

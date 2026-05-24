@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cd0iquutm1bmq"]
 
 [ext_resource type="Texture2D" uid="uid://d0h4ivxtu7v2n" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Floors_Tiles.png" id="1_n5ilh"]
+[ext_resource type="Script" uid="uid://dtrxhvaw3lnnh" path="res://cenas/cenamadeireiro/scripts/madeireiro.gd" id="1_xpd3o"]
 [ext_resource type="Texture2D" uid="uid://cihsaprg6tbqy" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" id="2_le401"]
 [ext_resource type="Texture2D" uid="uid://25nlldv0hw38" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Variations.png" id="3_dt2ji"]
 [ext_resource type="Texture2D" uid="uid://dvbc8o1kjfmam" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="4_c4eyq"]
@@ -18,10 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://baedtfilulleq" path="res://cenas/cenamadeireiro/Objetos/cortador_3.tscn" id="16_iukor"]
 [ext_resource type="Texture2D" uid="uid://baehr806yw4td" path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" id="17_lkkyf"]
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
-[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="19_autvp"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
-[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://cenas/interactibles/dialog/scripts/dialog_text.gd" id="20_km7vu"]
-[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="21_km7vu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1908,8 +1906,12 @@ sources/0 = SubResource("TileSetAtlasSource_62v6h")
 sources/4 = SubResource("TileSetAtlasSource_5dfey")
 sources/5 = SubResource("TileSetScenesCollectionSource_gmk1b")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_autvp"]
+size = Vector2(20, 26)
+
 [node name="CenaMadeireiro" type="Node2D" unique_id=1052854838]
 position = Vector2(0, -6)
+script = ExtResource("1_xpd3o")
 metadata/_edit_vertical_guides_ = [-43.0]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=732698208]
@@ -1953,14 +1955,6 @@ position = Vector2(124, 118)
 [node name="cortador3" parent="Ambiente" unique_id=1445648248 instance=ExtResource("16_iukor")]
 position = Vector2(240, 97)
 
-[node name="Carina" parent="Ambiente" unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
-y_sort_enabled = true
-position = Vector2(-162, 82)
-safe_margin = 0.001
-camera = NodePath("Camera2D")
-
-[node name="Camera2D" type="Camera2D" parent="Ambiente/Carina" unique_id=306622875]
-
 [node name="Machado" type="StaticBody2D" parent="Ambiente" unique_id=427177083]
 y_sort_enabled = true
 position = Vector2(1908, -4)
@@ -1974,23 +1968,24 @@ offset = Vector2(0, -12.245)
 position = Vector2(0, -12.09)
 polygon = PackedVector2Array(-7, 11.09, -7, 14, -5, 16, 5, 16, 7, 14, 7, 11.09, 5, 9.09, -5, 9.09)
 
+[node name="Entrada" type="Area2D" parent="." unique_id=966599801]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada" unique_id=1438916430]
+position = Vector2(-56, 26)
+shape = SubResource("RectangleShape2D_autvp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=306622875]
+position = Vector2(-162, 62)
+
+[node name="Carina" parent="." unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
+y_sort_enabled = true
+position = Vector2(-162, 62)
+safe_margin = 0.001
+camera = NodePath("../Camera2D")
+
 [node name="NpcMadeireiro" parent="." unique_id=1470037563 instance=ExtResource("19_akwsc")]
 position = Vector2(-84, 54)
-
-[node name="DialogInteraction" parent="NpcMadeireiro" unique_id=276655289 instance=ExtResource("19_autvp")]
-
-[node name="DialogText" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=663692697]
-process_mode = 3
-script = ExtResource("20_km7vu")
-text = "Ola, voce esta perdida? vc eh do ibama?"
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
-[node name="DialogText2" type="Node" parent="NpcMadeireiro/DialogInteraction" unique_id=1682363716]
-process_mode = 3
-script = ExtResource("20_km7vu")
-text = "sIM5"
-char_info = ExtResource("21_km7vu")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]
 position = Vector2(1858, -23)
