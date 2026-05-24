@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ddy6v63qcxk8t"]
 
 [ext_resource type="Script" uid="uid://bkhx4wpgwtmrk" path="res://cenas/cutscenes/scripts/cutscene_inicio.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://bdacbt3fbwi56" path="res://assets/cutsceneInicio/1.png" id="2_img1"]
-[ext_resource type="Texture2D" uid="uid://7jvecsdpmphr" path="res://assets/cutsceneInicio/2.png" id="3_img2"]
-[ext_resource type="Texture2D" uid="uid://d8v6hkv0c63k" path="res://assets/cutsceneInicio/3.png" id="4_img3"]
+[ext_resource type="Texture2D" uid="uid://bh8viq8rbwtiy" path="res://assets/cutsceneInicio/1.png" id="2_225ao"]
+[ext_resource type="Texture2D" uid="uid://h0mca7ryasj" path="res://assets/cutsceneInicio/2.png" id="3_img2"]
+[ext_resource type="Texture2D" uid="uid://bhc64o8cee0ti" path="res://assets/cutsceneInicio/3.png" id="4_225ao"]
 
 [sub_resource type="Animation" id="Animation_225ao"]
 length = 13.0
@@ -71,14 +71,14 @@ script = ExtResource("1_script")
 metadata/_edit_vertical_guides_ = [-2106.0]
 
 [node name="ColorRectBG" type="ColorRect" parent="." unique_id=1684691328]
-offset_left = -6822.0
-offset_top = -3000.0
-offset_right = 11178.0
-offset_bottom = 4000.0
+offset_left = -6824.0
+offset_top = -2997.0
+offset_right = 11176.0
+offset_bottom = 4003.0
 color = Color(0, 0, 0, 1)
 
 [node name="Quadro1" type="Sprite2D" parent="." unique_id=1195559781]
-texture = ExtResource("2_img1")
+texture = ExtResource("2_225ao")
 
 [node name="Quadro2" type="Sprite2D" parent="." unique_id=1436363074]
 position = Vector2(4500, 0)
@@ -86,7 +86,7 @@ texture = ExtResource("3_img2")
 
 [node name="Quadro3" type="Sprite2D" parent="." unique_id=1314425375]
 position = Vector2(9000, 0)
-texture = ExtResource("4_img3")
+texture = ExtResource("4_225ao")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1389028496]
 position = Vector2(-1176, 7)
