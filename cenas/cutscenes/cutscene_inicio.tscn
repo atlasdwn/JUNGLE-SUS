@@ -34,7 +34,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_intro"]
 resource_name = "play"
-length = 16.733334
+length = 40.066666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -42,10 +42,10 @@ tracks/0/path = NodePath("Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 10.774969, 10.775644, 11.866667),
-"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1, 1),
+"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 11.06, 13.05, 13.055, 15.1, 17.933332, 20.596718, 22.73512, 25.76434, 28.033333, 30.166666, 34.3, 37.231544),
+"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-4231, -21), Vector2(2, 7), Vector2(2, 7), Vector2(-1178, 88), Vector2(-1178, 88), Vector2(300, -490), Vector2(300, -490), Vector2(1486, -490), Vector2(1486, -490), Vector2(358, 396), Vector2(358, 396), Vector2(1534, 550), Vector2(1534, 417), Vector2(4573, 10), Vector2(4573, 10)]
+"values": [Vector2(-4231, -21), Vector2(2, 7), Vector2(2, 7), Vector2(-1178, 88), Vector2(-1178, 88), Vector2(300, -490), Vector2(300, -490), Vector2(1486, -490), Vector2(1486, -490), Vector2(358, 396), Vector2(358, 396), Vector2(1534, 550), Vector2(1534, 385), Vector2(1534, 385), Vector2(4517, 1), Vector2(4517, 1), Vector2(4517, 1), Vector2(7457, -557), Vector2(7457, -557), Vector2(7537, 361), Vector2(7537, 361), Vector2(9542, -19), Vector2(9542, -19), Vector2(9949, -164)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -54,10 +54,10 @@ tracks/1/path = NodePath("Camera2D:zoom")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 10.774969, 12.468644),
-"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1),
+"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 13.05, 13.055, 15.099967, 17.9333, 20.596718, 22.73512, 25.76434, 28.033333, 30.166666, 34.3, 37.231544),
+"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.15, 0.15)]
+"values": [Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.5, 0.5), Vector2(0.5, 0.5), Vector2(0.7, 0.7), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.5, 0.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_intro"]
