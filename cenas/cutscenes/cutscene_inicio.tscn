@@ -5,13 +5,75 @@
 [ext_resource type="Texture2D" uid="uid://7jvecsdpmphr" path="res://assets/cutsceneInicio/2.png" id="3_img2"]
 [ext_resource type="Texture2D" uid="uid://d8v6hkv0c63k" path="res://assets/cutsceneInicio/3.png" id="4_img3"]
 
+[sub_resource type="Animation" id="Animation_225ao"]
+length = 13.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1176, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.15, 0.15)]
+}
+
+[sub_resource type="Animation" id="Animation_intro"]
+resource_name = "play"
+length = 16.733334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 10.774969, 10.775644, 11.866667),
+"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-4231, -21), Vector2(2, 7), Vector2(2, 7), Vector2(-1178, 88), Vector2(-1178, 88), Vector2(300, -490), Vector2(300, -490), Vector2(1486, -490), Vector2(1486, -490), Vector2(358, 396), Vector2(358, 396), Vector2(1534, 550), Vector2(1534, 417), Vector2(4573, 10), Vector2(4573, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 3.3566663, 4.133333, 5.1666665, 5.866667, 6.366667, 7.2, 7.7, 8.333333, 9.133333, 9.633333, 10.774969, 12.468644),
+"transitions": PackedFloat32Array(0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 0.23325826, 1, 1),
+"update": 0,
+"values": [Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.15, 0.15)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_intro"]
+_data = {
+&"RESET": SubResource("Animation_225ao"),
+&"play": SubResource("Animation_intro")
+}
+
 [node name="CutsceneInicio" type="Node2D" unique_id=1659911652]
 script = ExtResource("1_script")
+metadata/_edit_vertical_guides_ = [-2106.0]
 
 [node name="ColorRectBG" type="ColorRect" parent="." unique_id=1684691328]
-offset_left = -3000.0
+offset_left = -6822.0
 offset_top = -3000.0
-offset_right = 15000.0
+offset_right = 11178.0
 offset_bottom = 4000.0
 color = Color(0, 0, 0, 1)
 
@@ -27,7 +89,11 @@ position = Vector2(9000, 0)
 texture = ExtResource("4_img3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1389028496]
-zoom = Vector2(0.3, 0.3)
+position = Vector2(-1176, 7)
+zoom = Vector2(0.15, 0.15)
+process_callback = 0
+limit_enabled = false
+position_smoothing_speed = 2.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=444086239]
 
@@ -39,3 +105,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=987654321]
+libraries/ = SubResource("AnimationLibrary_intro")
