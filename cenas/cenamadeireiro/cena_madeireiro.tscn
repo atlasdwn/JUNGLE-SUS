@@ -21,9 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://d0f8komtqrr0w" path="res://cenas/cenamadeireiro/scripts/entrada.gd" id="20_k3qyx"]
-[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="20_um7d6"]
-[ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="21_5h3mn"]
 [ext_resource type="PackedScene" uid="uid://c4gp8w387g102" path="res://cenas/inventario/inventario_ui.tscn" id="23_k3qyx"]
+[ext_resource type="PackedScene" uid="uid://b1234568aaabc" path="res://cenas/cenamadeireiro/gerenciador_evento_matinta.tscn" id="24_event"]
+[ext_resource type="AudioStream" uid="uid://ccw73cidhoxxf" path="res://assets/npc_and_dialog/audio/voice_blip.wav" id="24_pqr77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1916,6 +1916,12 @@ size = Vector2(20, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_km7vu"]
 size = Vector2(6, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqr77"]
+size = Vector2(6, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esconderijo"]
+size = Vector2(79, 66.25)
+
 [node name="CenaMadeireiro" type="Node2D" unique_id=1052854838]
 position = Vector2(0, -6)
 script = ExtResource("1_xpd3o")
@@ -1963,8 +1969,7 @@ position = Vector2(124, 118)
 position = Vector2(240, 97)
 
 [node name="Carina" parent="Ambiente" unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
-y_sort_enabled = true
-position = Vector2(-162, 82)
+position = Vector2(274, 23)
 safe_margin = 0.001
 camera = NodePath("../../Camera2D")
 
@@ -1973,11 +1978,9 @@ position = Vector2(-162, 62)
 
 [node name="NpcMadeireiro" parent="." unique_id=1470037563 instance=ExtResource("19_akwsc")]
 position = Vector2(-84, 54)
-machado_item = ExtResource("20_um7d6")
-suprimento_item = ExtResource("21_5h3mn")
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]
-position = Vector2(234, 15)
+position = Vector2(1871, -73)
 
 [node name="Entrada" type="Area2D" parent="." unique_id=966599801 node_paths=PackedStringArray("npc_madeireiro")]
 position = Vector2(0, -20)
@@ -1985,19 +1988,89 @@ script = ExtResource("20_k3qyx")
 dialog = ExtResource("3_k3qyx")
 npc_madeireiro = NodePath("../NpcMadeireiro")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada" unique_id=1438916430]
+[node name="Collision" type="CollisionShape2D" parent="Entrada" unique_id=1438916430]
 position = Vector2(-56, 26)
 shape = SubResource("RectangleShape2D_autvp")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Entrada" unique_id=1904717087]
+[node name="Parede" type="StaticBody2D" parent="Entrada" unique_id=1904717087]
 position = Vector2(-56, 26)
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada/StaticBody2D" unique_id=1229100026]
+[node name="Collision" type="CollisionShape2D" parent="Entrada/Parede" unique_id=1229100026]
 shape = SubResource("RectangleShape2D_km7vu")
+debug_color = Color(0.70196074, 0.009057884, 0, 0.41960785)
+
+[node name="ParedeMatinta" type="StaticBody2D" parent="." unique_id=920768163]
+position = Vector2(312, 7)
+collision_layer = 2
+
+[node name="Collision" type="CollisionShape2D" parent="ParedeMatinta" unique_id=785206500]
+shape = SubResource("RectangleShape2D_pqr77")
 debug_color = Color(0.70196074, 0.009057884, 0, 0.41960785)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1044012124]
 
 [node name="Inventario_UI" parent="CanvasLayer" unique_id=2066259853 instance=ExtResource("23_k3qyx")]
 visible = false
+
+[node name="GerenciadorEventoMatinta" parent="." unique_id=861351398 instance=ExtResource("24_event")]
+position = Vector2(0, -6)
+
+[node name="GatilhoEvento" parent="GerenciadorEventoMatinta" index="0"]
+collision_mask = 1
+
+[node name="CollisionShape2D" parent="GerenciadorEventoMatinta/GatilhoEvento" index="0"]
+position = Vector2(-5, 12)
+
+[node name="AudioPassaro" parent="GerenciadorEventoMatinta" index="3"]
+stream = ExtResource("24_pqr77")
+
+[node name="Esconderijo1" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="0"]
+position = Vector2(469, -257)
+collision_mask = 1
+
+[node name="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo1" index="0"]
+position = Vector2(-3, -29.75)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[node name="Esconderijo2" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="1"]
+position = Vector2(983, -137)
+collision_mask = 1
+
+[node name="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo2" index="0"]
+position = Vector2(1, -20)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[node name="Esconderijo3" type="Area2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="2" unique_id=810785000]
+position = Vector2(616, 166)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo3" unique_id=145340731]
+position = Vector2(-3.5, -26.5)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[node name="Esconderijo4" type="Area2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="3" unique_id=1744881876]
+position = Vector2(1058, 256)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo4" unique_id=655049644]
+position = Vector2(2, -12)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[node name="Esconderijo5" type="Area2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="4" unique_id=427469824]
+position = Vector2(1366, 10)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo5" unique_id=1853257459]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[node name="Esconderijo6" type="Area2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo" index="5" unique_id=534862692]
+position = Vector2(1508, -234)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GerenciadorEventoMatinta/ZonasDeEsconderijo/Esconderijo6" unique_id=1074382124]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_esconderijo")
+
+[editable path="GerenciadorEventoMatinta"]

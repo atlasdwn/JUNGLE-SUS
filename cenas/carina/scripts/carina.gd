@@ -3,8 +3,9 @@ class_name Player extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $Anim
 @onready var anim_player: AnimationPlayer = $AnimPlayer
 @onready var state_machine: PlayerStateMachine = $StateMachine
-@export var camera : Camera2D
 @onready var poeira_passo: Marker2D = $PoeiraPasso
+
+@export var camera : Camera2D
 @export var inventory : InventoryData
 
 const WALK_DUST_INTERVAL := 0.12
@@ -68,7 +69,7 @@ func set_direction() -> bool:
 
 func update_animation(state : String) -> void:
 	anim_player.play(state + "_" + anim_direction())
-
+	
 func anim_direction() -> String:
 	match cardinal_direction:
 		Vector2.DOWN:
