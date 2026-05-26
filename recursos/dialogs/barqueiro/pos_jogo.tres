@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://b03p0j1abgw3h"]
+
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_bpj01"]
+[ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_bpj01"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_bpj01"]
+
+[sub_resource type="Resource" id="Resource_bpj001"]
+script = ExtResource("1_bpj01")
+text = "A missão terminou, menina. Agora vai descansar."
+char_info = ExtResource("2_bpj01")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[resource]
+script = ExtResource("3_bpj01")
+dial_name = "Pos Jogo"
+lines = Array[ExtResource("1_bpj01")]([SubResource("Resource_bpj001")])
+metadata/_custom_type_script = "uid://fq0jowlitt7b"

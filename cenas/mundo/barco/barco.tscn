@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://cd0ueycfkyl31"]
 
-[ext_resource type="Script" uid="uid://c4f30fl8nkayv" path="res://cenas/mundo/barco/barco.gd" id="1_barco"]
+[ext_resource type="Script" uid="uid://bo1oshsui3cf" path="res://cenas/mundo/barco/scripts/npc_barqueiro.gd" id="1_barco"]
+[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="2_barco"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_8a4lr"]
+[ext_resource type="Resource" uid="uid://cjikft83t6yce" path="res://recursos/dialogs/barqueiro/chamada.tres" id="3_barco"]
+[ext_resource type="Resource" uid="uid://b03p0j1abgw3h" path="res://recursos/dialogs/barqueiro/pos_jogo.tres" id="4_barco"]
+[ext_resource type="Resource" uid="uid://barqueiro_aguardando" path="res://recursos/dialogs/barqueiro/aguardando.tres" id="5_barco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trigger"]
 size = Vector2(161, 115)
@@ -8,32 +13,25 @@ size = Vector2(161, 115)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_embark"]
 size = Vector2(30, 24)
 
-[node name="Barco" type="Node2D" unique_id=26391971]
+[node name="Barco" type="Area2D" unique_id=26391971]
 script = ExtResource("1_barco")
 
-[node name="Placeholder" type="ColorRect" parent="." unique_id=881618448]
-offset_left = -24.0
-offset_top = -12.0
-offset_right = 24.0
-offset_bottom = 12.0
-color = Color(0.35, 0.22, 0.1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=881618448]
 
-[node name="Detalhe" type="ColorRect" parent="Placeholder" unique_id=1945085161]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 2.0
-offset_right = 44.0
+[node name="ColorRect" type="ColorRect" parent="Sprite2D" unique_id=939539500]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
 offset_bottom = 20.0
-color = Color(0.45, 0.3, 0.15, 1)
+color = Color(1, 0.06666667, 1, 1)
 
-[node name="TriggerZone" type="Area2D" parent="." unique_id=1272820270]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerZone" unique_id=1008189943]
-position = Vector2(-3.5, -3.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1008189943]
 shape = SubResource("RectangleShape2D_trigger")
 
-[node name="EmbarkZone" type="Area2D" parent="." unique_id=2041738512]
+[node name="DialogInteraction" parent="." unique_id=2041738512 instance=ExtResource("2_barco")]
+dialogs = Array[ExtResource("3_8a4lr")]([ExtResource("5_barco"), ExtResource("3_barco"), ExtResource("4_barco")])
+
+[node name="EmbarkZone" type="Area2D" parent="." unique_id=1272820270]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EmbarkZone" unique_id=-1096693235]
@@ -42,5 +40,4 @@ shape = SubResource("RectangleShape2D_embark")
 [node name="PontoEmbarque" type="Marker2D" parent="." unique_id=784846635]
 position = Vector2(0, -5)
 
-[connection signal="body_entered" from="TriggerZone" to="." method="_on_trigger_zone_body_entered"]
 [connection signal="body_entered" from="EmbarkZone" to="." method="_on_embark_zone_body_entered"]
