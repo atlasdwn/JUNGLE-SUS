@@ -74,7 +74,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_intro"]
 resource_name = "play"
-length = 40.066666
+length = 46.48996
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -82,7 +82,7 @@ tracks/0/path = NodePath("Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 3.3566663, 4.2999997, 5.9333334, 7.0000005, 8.133333, 9, 10.4, 11.166667, 13.266666, 13.833333, 15.001757, 17.3, 20.133331, 22.333334, 24.471737, 27.500956, 29.769949, 32.033333, 36.166664, 38.8),
+"times": PackedFloat32Array(0, 3, 4, 6.066667, 9.033334, 11.100001, 13.066667, 15.031576, 17.033333, 19.166666, 22.033333, 24.066668, 26, 28.066668, 31.166666, 33, 36.066666, 38.033333, 40.033333, 41.966667, 45.033333, 46.433334),
 "transitions": PackedFloat32Array(0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 1, 1, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502),
 "update": 0,
 "values": [Vector2(-4231, -21), Vector2(2, 7), Vector2(2, 7), Vector2(-1178, 88), Vector2(-1178, 88), Vector2(300, -490), Vector2(300, -490), Vector2(1486, -490), Vector2(1486, -490), Vector2(358, 396), Vector2(358, 396), Vector2(1575, 363), Vector2(1575, 363), Vector2(4517, 1), Vector2(4517, 1), Vector2(7457, -557), Vector2(7457, -557), Vector2(7537, 361), Vector2(7537, 361), Vector2(9542, -19), Vector2(9542, -19), Vector2(9949, -164)]
@@ -94,7 +94,7 @@ tracks/1/path = NodePath("Camera2D:zoom")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 3.3566663, 4.2999997, 5.9333334, 7.0000005, 8.133333, 9, 10.4, 11.166667, 13.266666, 15.001757, 17.299965, 20.1333, 22.333334, 24.471737, 27.500956, 29.769949, 32.033333, 36.166664, 38.8),
+"times": PackedFloat32Array(0, 3, 4, 6.066667, 9.033334, 11.100001, 13.066667, 15.031576, 17.033333, 19.166666, 22.033333, 26, 28.066633, 31.166636, 33, 36.066666, 38.033333, 40.033333, 41.966667, 45.033333, 46.433334),
 "transitions": PackedFloat32Array(0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502),
 "update": 0,
 "values": [Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.5, 0.5)]
@@ -106,7 +106,7 @@ tracks/2/path = NodePath("dialogos/001:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(3.5339363, 4.3),
+"times": PackedFloat32Array(3.9672692, 5.3941493),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.7, 0.7)]
@@ -118,7 +118,7 @@ tracks/3/path = NodePath("dialogos/002:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(4.1000004, 4.866667),
+"times": PackedFloat32Array(4.6058507, 6.0333333),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.7, 0.7)]
@@ -130,7 +130,7 @@ tracks/4/path = NodePath("dialogos/003:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(6.1, 6.8666663),
+"times": PackedFloat32Array(10.072517, 11.5),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
@@ -142,7 +142,7 @@ tracks/5/path = NodePath("dialogos/004:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(8.3, 9.066667),
+"times": PackedFloat32Array(13.705851, 15.133333),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
@@ -154,7 +154,7 @@ tracks/6/path = NodePath("dialogos/005:scale")
 tracks/6/interp = 2
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(11.566667, 12.333333),
+"times": PackedFloat32Array(19.766666, 21.194149),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
@@ -166,7 +166,7 @@ tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(8.6),
+"times": PackedFloat32Array(13.766666),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [800.0],
@@ -180,7 +180,7 @@ tracks/8/path = NodePath("dialogos/006:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(10.7, 11.4660635),
+"times": PackedFloat32Array(18.07312, 19.5),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.7, 0.7)]
@@ -192,7 +192,7 @@ tracks/9/path = NodePath("dialogos/007:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(11.033334, 11.799397),
+"times": PackedFloat32Array(18.939787, 20.366667),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.7, 0.7)]
@@ -204,7 +204,7 @@ tracks/10/path = NodePath("dialogos/008:scale")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(13.3, 14.066064),
+"times": PackedFloat32Array(23.039787, 24.466667),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
@@ -216,7 +216,7 @@ tracks/11/path = NodePath("dialogos/009:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(17.663725, 18.429789),
+"times": PackedFloat32Array(26.97312, 28.4),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.6, 1.6)]
@@ -228,7 +228,7 @@ tracks/12/path = NodePath("dialogos/010:scale")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(20.649038, 21.966667),
+"times": PackedFloat32Array(32.041763, 34.033333),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.75, 0.75)]
@@ -240,7 +240,7 @@ tracks/13/path = NodePath("dialogos/011:scale")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(21.978853, 23.296482),
+"times": PackedFloat32Array(33.075096, 34.5),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
@@ -252,7 +252,7 @@ tracks/14/path = NodePath("dialogos/012:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(23.315704, 24.633333),
+"times": PackedFloat32Array(33.975098, 35.966667),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
@@ -264,7 +264,7 @@ tracks/15/path = NodePath("dialogos/013:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(24.41685, 25.734478),
+"times": PackedFloat32Array(37.10843, 39.1),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
@@ -276,7 +276,7 @@ tracks/16/path = NodePath("dialogos/014:scale")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(30.053814, 31.371443),
+"times": PackedFloat32Array(41.041767, 42.233334),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
@@ -288,7 +288,7 @@ tracks/17/path = NodePath("dialogos/015:scale")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(31.808432, 33.12606),
+"times": PackedFloat32Array(42.166668, 43.358234),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8)]
@@ -300,7 +300,7 @@ tracks/18/path = NodePath("dialogos/016:scale")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
-"times": PackedFloat32Array(33.082375, 34.4),
+"times": PackedFloat32Array(43.366665, 44.55823),
 "transitions": PackedFloat32Array(0.333, 0.333),
 "update": 0,
 "values": [Vector2(1e-05, 1e-05), Vector2(1.1, 1.1)]
@@ -370,81 +370,77 @@ offset = Vector2(-171.42859, -151.42854)
 
 [node name="003" type="Sprite2D" parent="dialogos" unique_id=1459928959]
 position = Vector2(-8, -670)
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_b8oio")
 
 [node name="004" type="Sprite2D" parent="dialogos" unique_id=230558715]
 position = Vector2(1905, -158)
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_ukhsr")
 offset = Vector2(-105, -140)
 
 [node name="005" type="Sprite2D" parent="dialogos" unique_id=366506368]
 position = Vector2(823, 613.00006)
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("9_rl2n0")
 offset = Vector2(50.010254, 20.735962)
 
 [node name="006" type="Sprite2D" parent="dialogos" unique_id=1982978447]
 position = Vector2(-14, 180)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("10_4hqf7")
 offset = Vector2(84, -41)
 
 [node name="007" type="Sprite2D" parent="dialogos" unique_id=98750900]
 position = Vector2(261, 241)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("11_uib1w")
 offset = Vector2(124, 6)
 
 [node name="008" type="Sprite2D" parent="dialogos" unique_id=853842917]
 position = Vector2(1648, 179)
-scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("12_j7q0i")
 offset = Vector2(-104, -54)
 
 [node name="009" type="Sprite2D" parent="dialogos" unique_id=1327257042]
 position = Vector2(3445, -475)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("13_f745u")
 offset = Vector2(289.3335, -70)
 
 [node name="010" type="Sprite2D" parent="dialogos" unique_id=1750989]
 position = Vector2(7764, -613.99994)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("14_64a55")
 offset = Vector2(141.52441, 42.857056)
 
 [node name="011" type="Sprite2D" parent="dialogos" unique_id=2092628517]
 position = Vector2(7756.0005, -229)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("15_64a55")
 offset = Vector2(162.66602, -150.66666)
 
 [node name="012" type="Sprite2D" parent="dialogos" unique_id=907516166]
 position = Vector2(8033, -246)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("16_icgs0")
 offset = Vector2(80, -137)
 
 [node name="013" type="Sprite2D" parent="dialogos" unique_id=1994647995]
 position = Vector2(7802, 464)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("17_iamfh")
 offset = Vector2(160, -76)
 
 [node name="014" type="Sprite2D" parent="dialogos" unique_id=1529952744]
 position = Vector2(8973, 182)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("18_0yahi")
 
 [node name="015" type="Sprite2D" parent="dialogos" unique_id=438501621]
 position = Vector2(8575, -660)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("19_0qogw")
 offset = Vector2(-106, -135)
 
 [node name="016" type="Sprite2D" parent="dialogos" unique_id=1424053521]
 position = Vector2(10606, -393)
-scale = Vector2(1e-05, 1e-05)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("20_hjtus")

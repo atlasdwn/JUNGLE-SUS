@@ -99,4 +99,3 @@ func _on_player_embarked() -> void:
 
 func _on_barco_departed() -> void:
 	print("[Mundo] Barco partiu! Fase concluída!")
-
