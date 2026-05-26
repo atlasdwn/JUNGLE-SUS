@@ -17,7 +17,7 @@ func check_npc_data():
 		while  _checking == true:
 			p = p.get_parent()
 			if p:
-				if p is NPC and p.char_info:
+				if p is NPCBase and p.char_info:
 					char_info = p.char_info
 					_checking = false
 			else:

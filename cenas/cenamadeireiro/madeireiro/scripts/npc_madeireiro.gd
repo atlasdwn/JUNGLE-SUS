@@ -1,98 +1,53 @@
-class_name NPC extends Area2D
+extends NPCBase
 
-@onready var label_interacao: Label = $LabelInteracao
+enum MadeireiroState { FIRST_MEET, WAITING_FOR_AXE, COMPLETED, DEFAULT }
 
-@onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
-@onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
-@onready var dialog_interaction: DialogInteraction = $DialogInteraction
-
-@export var char_info: CharacterResource
-@export var dialogs: Array[DialogResource]
-
+var current_state: MadeireiroState = MadeireiroState.FIRST_MEET
 var player_in_area = false
+var player: Player
 
+@export var machado_item: ItemData
+@export var suprimento_item: ItemData
 
-func _ready() -> void:
-	#gather_interactables()
-	caixa_dialogo.visible = false
-	texto_dialogo.visible = false
-	label_interacao.visible = false
-	dialog_interaction.player_entered.connect(set_dialog)
-	dialog_interaction.player_exited.connect(clear_dialog)
-	
-func set_dialog() -> void:
-	pass
+func _ready() -> void:	
+	super._ready()
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
+
+# 💡 Sobrescreve o método virtual do NPCBase
+func _on_player_entered_dialog() -> void:
+	match current_state:
+		MadeireiroState.FIRST_MEET:
+			dialog_interaction.current_dialog = _find_dialog("Primeiro Interact")
+		MadeireiroState.WAITING_FOR_AXE:
+			if player and player.inventory.has_item(machado_item):
+				dialog_interaction.current_dialog = _find_dialog("Completed")
+			else:
+				dialog_interaction.current_dialog = _find_dialog("Waiting Axe")
+		MadeireiroState.COMPLETED, MadeireiroState.DEFAULT:
+			dialog_interaction.current_dialog = _find_dialog("Default")
+
+# 💡 Sobrescreve o método virtual do NPCBase
+func _on_interaction_finished() -> void:
+	if current_state == MadeireiroState.FIRST_MEET:
+		current_state = MadeireiroState.WAITING_FOR_AXE
+		_on_player_entered_dialog()
+	elif current_state == MadeireiroState.WAITING_FOR_AXE:
+		if player and player.inventory.has_item(machado_item):
+			player.inventory.remove_item(machado_item)
+			player.inventory.add_item(suprimento_item)
+			current_state = MadeireiroState.COMPLETED
+			_on_player_entered_dialog()
 	
 func _process(_delta: float) -> void:
-	#if player_in_area and not falando and Input.is_action_just_pressed("interact"):
-		#iniciar_dialogo()
-	#elif falando and pode_avancar and Input.is_action_just_pressed("interact"):
-		#proxima_fala()
-	pass
-#func gather_interactables() -> void:
-	#for c in get_children():
-		#if c is DialogInteraction:
-			#c.player_interacted.connect(_on_player_interacted)
-			#c.finished.connect(_on_interaction_finished)
-	#pass
-
-#func _on_player_interacted() -> void:
-	##update_direction(PlayerManager.player.global_position)
-	##state = idle
-	##velocity = Vector2.ZERO
-	##update_animation()
-	##do_behavior = false
-	#pass
-
-func _on_interaction_finished() -> void:	
-	#state = idle
-	#update_animation()
-	#do_behavior = true
-	#do_behavior.enabled.emit()
 	pass
 
 func _on_body_entered(body) -> void:
 	if body.name == "Carina":
 		player_in_area = true
-		#label_interacao.text = "Pressione 'E' para interagir"
-		#label_interacao.visible = true
+		player = body
 
 func _on_body_exited(body) -> void:
 	if body.name == "Carina":
 		player_in_area = false
-		#label_interacao.visible = false
-		#if falando:
-			#encerrar_dialogo()
-
-
-#func iniciar_dialogo():
-	#falando = true
-	#label_interacao.visible = false
-	#caixa_dialogo.visible = true
-	#texto_dialogo.visible = true
-	#fala_index = 0
-	#proxima_fala()
-#
-#func proxima_fala():
-	#if fala_index < falas.size():
-		#pode_avancar = false
-		#texto_dialogo.text = ""
-		#var texto = falas[fala_index]
-		#fala_index += 1
-		#mostrar_texto_com_efeito(texto)
-	#else:
-		#encerrar_dialogo()
-#
-#
-#func mostrar_texto_com_efeito(texto: String):
-	#await get_tree().create_timer(0.1).timeout
-	#for letra in texto:
-		#texto_dialogo.text += letra
-		#await get_tree().create_timer(0.02).timeout
-	#pode_avancar = true
-#
-#func encerrar_dialogo():
-	#falando = false
-	#pode_avancar = false
-	#texto_dialogo.visible = false
-	#caixa_dialogo.visible = false
+		player = null

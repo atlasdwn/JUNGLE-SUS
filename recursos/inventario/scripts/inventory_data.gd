@@ -14,3 +14,16 @@ func add_item(item: ItemData) -> void:
 			emptyslots[0].item = item
 			emptyslots[0].amount = 1
 	update.emit()
+
+func has_item(item: ItemData) -> bool:
+	var itemslots = slots.filter(func(slot): return slot.item == item)
+	return not itemslots.is_empty() and itemslots[0].amount > 0
+
+func remove_item(item: ItemData) -> void:
+	var itemslots = slots.filter(func(slot): return slot.item == item)
+	if not itemslots.is_empty():
+		itemslots[0].amount -= 1
+		if itemslots[0].amount <= 0:
+			itemslots[0].item = null
+			itemslots[0].amount = 0
+		update.emit()

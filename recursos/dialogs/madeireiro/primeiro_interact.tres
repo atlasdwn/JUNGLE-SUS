@@ -1,0 +1,120 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cmo1khj8m2ssx"]
+
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_fan28"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="2_8hb7l"]
+[ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/madeireiro_data.tres" id="3_p6swj"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_olc50"]
+
+[sub_resource type="Resource" id="Resource_bv3q1"]
+script = ExtResource("1_fan28")
+text = "Eu te conheço?"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_8v5rc"]
+script = ExtResource("1_fan28")
+text = "Não."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_rvc7g"]
+script = ExtResource("1_fan28")
+text = "..."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_b7x3b"]
+script = ExtResource("1_fan28")
+text = "..."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_cjntt"]
+script = ExtResource("1_fan28")
+text = "Você tá desmatando?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_7fegv"]
+script = ExtResource("1_fan28")
+text = "Tô lucrando, tem diferença."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_s3f70"]
+script = ExtResource("1_fan28")
+text = "As árvores estão sendo cortadas do mesmo jeito."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_8jiyk"]
+script = ExtResource("1_fan28")
+text = "Não posso fazer nada."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_5n686"]
+script = ExtResource("1_fan28")
+text = "...Tá.  Você viu uma bolsa por aí?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_33vf4"]
+script = ExtResource("1_fan28")
+text = "Se eu vi estava vazia, mas eu achei um dipirona ou dois pela mata."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_t1mtd"]
+script = ExtResource("1_fan28")
+text = ".."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_thrmm"]
+script = ExtResource("1_fan28")
+text = "É seu?"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_8dsg7"]
+script = ExtResource("1_fan28")
+text = "É."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_wkra0"]
+script = ExtResource("1_fan28")
+text = "Você não vai me dar, né?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_5uhuu"]
+script = ExtResource("1_fan28")
+text = "Claro que não. Mas posso pensar no teu caso se você conseguir achar meu machado."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_3vfc4"]
+script = ExtResource("1_fan28")
+text = "Não tenho nada a ver com isso. Devolve os meus remédios, tem gente precisando deles."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_i1dos"]
+script = ExtResource("1_fan28")
+text = "Veio aqui distribuir eles, foi? Caridade não me comove. Se quer os remédios, me dá o machado."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_jc5lg"]
+script = ExtResource("1_fan28")
+text = "Ugh..."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[resource]
+script = ExtResource("4_olc50")
+dial_name = "Primeiro Interact"
+lines = Array[ExtResource("1_fan28")]([SubResource("Resource_bv3q1"), SubResource("Resource_8v5rc"), SubResource("Resource_rvc7g"), SubResource("Resource_b7x3b"), SubResource("Resource_cjntt"), SubResource("Resource_7fegv"), SubResource("Resource_s3f70"), SubResource("Resource_8jiyk"), SubResource("Resource_5n686"), SubResource("Resource_33vf4"), SubResource("Resource_t1mtd"), SubResource("Resource_thrmm"), SubResource("Resource_8dsg7"), SubResource("Resource_wkra0"), SubResource("Resource_5uhuu"), SubResource("Resource_3vfc4"), SubResource("Resource_i1dos"), SubResource("Resource_jc5lg")])
+metadata/_custom_type_script = "uid://fq0jowlitt7b"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dg2qchifle45e"]
 
 [ext_resource type="Texture2D" uid="uid://citewbhumjatd" path="res://assets/inventario/inventory-slot.png" id="1_04hr1"]
-[ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
+[ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://cenas/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
 [ext_resource type="FontFile" uid="uid://bfqd18xyi784b" path="res://assets/fonts/monogram.ttf" id="3_4utms"]
 [ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_6yrxe"]
 

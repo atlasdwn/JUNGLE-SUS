@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfnmug2kprnef"]
+
+[ext_resource type="Script" uid="uid://bng5gxko0cjgy" path="res://recursos/itens/scripts/item_data.gd" id="1_wixji"]
+[ext_resource type="Texture2D" uid="uid://bva8ah1hjsh48" path="res://assets/items/machado.png" id="2_say6f"]
+
+[resource]
+script = ExtResource("1_wixji")
+name = "Machado"
+description = "Uma maçã."
+texture = ExtResource("2_say6f")
+metadata/_custom_type_script = "uid://bng5gxko0cjgy"

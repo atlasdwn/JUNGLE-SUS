@@ -1,12 +1,15 @@
 class_name StateCollect extends State
 
+@onready var anim_player: AnimationPlayer = $"../../AnimPlayer"
 @onready var idle: StateIdle = $"../Idle"
+
 var final_dir: Vector2
 var finished = false
 var original_dir: Vector2
 
 ## O que acontece quando o player entra no estado
 func enter() -> void:
+	anim_player.animation_finished.connect(_on_anim_player_animation_finished)
 	var item = player.collectible
 	var item_distance = item.global_position - player.collision.global_position
 	
@@ -55,3 +58,4 @@ func handle_input(_event: InputEvent) -> State:
 
 func _on_anim_player_animation_finished(_anim_name: StringName) -> void:
 	finished = true
+	anim_player.animation_finished.disconnect(_on_anim_player_animation_finished)

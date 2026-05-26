@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://blwlgf7noc70j" path="res://cenas/carina/carina.tscn" id="2_s2wow"]
 [ext_resource type="Texture2D" uid="uid://25nlldv0hw38" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Variations.png" id="3_cgmdw"]
 [ext_resource type="Texture2D" uid="uid://dvbc8o1kjfmam" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="4_grbdc"]
-[ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento/suprimento2.tscn" id="6_43lej"]
-[ext_resource type="PackedScene" uid="uid://c4gp8w387g102" path="res://inventario/inventario_ui.tscn" id="6_63rjy"]
-[ext_resource type="PackedScene" uid="uid://bayvpyn46qgbr" path="res://cenas/coletaveis/suprimento/Maça.tscn" id="7_ve4po"]
+[ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento.tscn" id="6_43lej"]
+[ext_resource type="PackedScene" uid="uid://c4gp8w387g102" path="res://cenas/inventario/inventario_ui.tscn" id="6_63rjy"]
+[ext_resource type="PackedScene" uid="uid://bayvpyn46qgbr" path="res://cenas/coletaveis/machado.tscn" id="7_ve4po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("1_7w86a")
@@ -1276,7 +1276,7 @@ position = Vector2(-51, 98)
 position = Vector2(-66, 51)
 
 [node name="Suprimento8" parent="Coletáveis" unique_id=759370128 instance=ExtResource("7_ve4po")]
-position = Vector2(-149, -3)
+position = Vector2(-291, -62)
 
 [node name="Suprimento9" parent="Coletáveis" unique_id=384889423 instance=ExtResource("7_ve4po")]
 position = Vector2(-88, -68)
@@ -1305,4 +1305,5 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 
 [node name="Inventario_UI" parent="CanvasGroup/CenterContainer" unique_id=2066259853 instance=ExtResource("6_63rjy")]
+visible = false
 layout_mode = 2

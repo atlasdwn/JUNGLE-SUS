@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://b3ssdjdkpy75s"]
 
-[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/suprimento/scripts/suprimento.gd" id="1_0g38e"]
+[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/scripts/suprimento.gd" id="1_0g38e"]
 [ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="2_ukla1"]
+[ext_resource type="Texture2D" uid="uid://c3gtx01xqe1sa" path="res://assets/items/47 Sem Título_20260522155938.png" id="3_kxfom"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukla1"]
 radius = 49.78109
 height = 142.23169
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7ea4t"]
-load_path = "res://.godot/imported/Farm.png-6b0b1bd5b24492ee3647eebc7c000f30.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0g38e"]
-atlas = SubResource("CompressedTexture2D_7ea4t")
-region = Rect2(256, 0, 16, 16)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_38yap"]
 load_path = "res://.godot/imported/Keyboard Letters and Symbols.png-37e39907d6e71ef9d1c2fe8a41ada563.ctex"
@@ -35,10 +29,11 @@ rotation = 1.5707964
 scale = Vector2(0.14061564, 0.14061564)
 shape = SubResource("CapsuleShape2D_ukla1")
 
-[node name="SpriteSuprimento" type="Sprite2D" parent="." unique_id=1561457950]
-texture = SubResource("AtlasTexture_0g38e")
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1561457950]
+texture = ExtResource("3_kxfom")
 
 [node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=240322463]
+visible = false
 position = Vector2(0, -18)
 texture = SubResource("AtlasTexture_edw16")
 

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://dblct38tp2hv4"]
+
+[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="1_l3pg7"]
+[ext_resource type="Texture2D" uid="uid://b5hlubpigc7cm" path="res://assets/npc_and_dialog/sprites/portraits/hero_portrait.png" id="1_wwinr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62mvi"]
+atlas = ExtResource("1_wwinr")
+region = Rect2(9, 9, 86, 130)
+
+[resource]
+script = ExtResource("1_l3pg7")
+name = "Matinta"
+portrait = SubResource("AtlasTexture_62mvi")
+metadata/_custom_type_script = "uid://3se4ee0klg28"

@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://0822qru8ystp"]
 
+[ext_resource type="Script" uid="uid://c8ta25j1mc3xw" path="res://cenas/matinta/scripts/matinta.gd" id="1_1wprd"]
 [ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="1_iw2kc"]
+[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="2_mlogr"]
+[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_nnnly"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="5_6obqx"]
+[ext_resource type="Resource" uid="uid://v228setp7sgv" path="res://recursos/dialogs/matinta/entregar_machado.tres" id="6_66510"]
+[ext_resource type="Resource" uid="uid://c6w62434ugjcw" path="res://recursos/dialogs/matinta/default.tres" id="7_if141"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
 atlas = ExtResource("1_iw2kc")
@@ -46,6 +52,8 @@ radius = 4.0
 height = 16.0
 
 [node name="Matinta" type="Area2D" unique_id=1181002116]
+script = ExtResource("1_1wprd")
+machado_item = ExtResource("2_mlogr")
 
 [node name="Anim" type="AnimatedSprite2D" parent="." unique_id=1559849775]
 sprite_frames = SubResource("SpriteFrames_7212u")
@@ -63,3 +71,6 @@ shape = SubResource("RectangleShape2D_5c32j")
 [node name="Collision" type="CollisionShape2D" parent="Collider" unique_id=1014482068]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_w8id7")
+
+[node name="DialogInteraction" parent="." unique_id=276655289 instance=ExtResource("4_nnnly")]
+dialogs = Array[ExtResource("5_6obqx")]([ExtResource("6_66510"), ExtResource("7_if141")])

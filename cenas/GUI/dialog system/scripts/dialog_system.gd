@@ -20,7 +20,7 @@ var text_in_progress : bool = false
 var dialog_items : Array[DialogItem]
 var dialog_item_index : int = 0
 
-var text_speed : float = 0.02
+var text_speed : float = 0.03
 var text_length : int = 0
 var plain_text : String
 
@@ -35,22 +35,25 @@ func _ready() -> void:
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("interact") or event.is_action_pressed('ui_accept'):
 		if is_active == false:
 			return
-
-		if(
-			event.is_action_pressed("interact") or
-			event.is_action_pressed('ui_accept')
-		):
+			
+		get_viewport().set_input_as_handled()
+		
+		if text_in_progress:
+			# Completa o texto instantaneamente em vez de alterar a velocidade
+			content.visible_characters = text_length
+			timer.stop()
+			text_in_progress = false
+			show_dialog_button(true)
+		else:
+			# Avança para o próximo
 			dialog_item_index += 1
 			if dialog_item_index < dialog_items.size():
-				print(event,'sim')
 				start_dialog()
 			else:
-				print(event,'nao')
 				hide_dialog()
-		pass
 
 func show_dialog(_items: Array[DialogItem]) -> void:
 	is_active = true
@@ -72,7 +75,7 @@ func hide_dialog() -> void:
 
 func start_dialog() -> void:
 	dialog_ui.visible = true
-	show_dialog_button(true)
+	show_dialog_button(false) # Esconde o botão até o texto terminar
 	var _d : DialogItem = dialog_items[dialog_item_index]
 	set_dialog_data(_d)
 	pass

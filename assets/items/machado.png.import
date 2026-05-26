@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pm2g8idrgpj2"
-path="res://.godot/imported/Idle_Side-Sheet2_20260515114342.png-ac4f8642fea92fc62b3cbb16260af79f.ctex"
+uid="uid://bva8ah1hjsh48"
+path="res://.godot/imported/machado.png-1e318333f13d5a03856e7c9c0d869d66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/Idle_Side-Sheet2_20260515114342.png"
-dest_files=["res://.godot/imported/Idle_Side-Sheet2_20260515114342.png-ac4f8642fea92fc62b3cbb16260af79f.ctex"]
+source_file="res://assets/items/machado.png"
+dest_files=["res://.godot/imported/machado.png-1e318333f13d5a03856e7c9c0d869d66.ctex"]
 
 [params]
 

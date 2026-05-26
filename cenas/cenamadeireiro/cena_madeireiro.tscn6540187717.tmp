@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bpr3dg46jqj6t" path="res://cenas/cenamadeireiro/Objetos/cortador_1.tscn" id="15_akwsc"]
 [ext_resource type="PackedScene" uid="uid://dootfr8xaq8aa" path="res://cenas/cenamadeireiro/vegetacao/grandes_desmatadas.tscn" id="15_iukor"]
 [ext_resource type="PackedScene" uid="uid://baedtfilulleq" path="res://cenas/cenamadeireiro/Objetos/cortador_3.tscn" id="16_iukor"]
+[ext_resource type="PackedScene" uid="uid://bayvpyn46qgbr" path="res://cenas/coletaveis/machado.tscn" id="18_km7vu"]
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://d0f8komtqrr0w" path="res://cenas/cenamadeireiro/scripts/entrada.gd" id="20_k3qyx"]
@@ -1968,6 +1969,9 @@ position = Vector2(-162, 82)
 safe_margin = 0.001
 camera = NodePath("../../Camera2D")
 
+[node name="Machado" parent="Ambiente" unique_id=1250907370 instance=ExtResource("18_km7vu")]
+position = Vector2(32, 58)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=306622875]
 position = Vector2(-162, 62)
 
@@ -1977,7 +1981,7 @@ machado_item = ExtResource("20_um7d6")
 suprimento_item = ExtResource("21_5h3mn")
 
 [node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]
-position = Vector2(234, 15)
+position = Vector2(1858, -23)
 
 [node name="Entrada" type="Area2D" parent="." unique_id=966599801 node_paths=PackedStringArray("npc_madeireiro")]
 position = Vector2(0, -20)
