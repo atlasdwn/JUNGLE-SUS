@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cd0ueycfkyl31"]
+
+[ext_resource type="Script" uid="uid://c4f30fl8nkayv" path="res://cenas/mundo/barco/barco.gd" id="1_barco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trigger"]
+size = Vector2(161, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_embark"]
+size = Vector2(30, 24)
+
+[node name="Barco" type="Node2D" unique_id=26391971]
+script = ExtResource("1_barco")
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=881618448]
+offset_left = -24.0
+offset_top = -12.0
+offset_right = 24.0
+offset_bottom = 12.0
+color = Color(0.35, 0.22, 0.1, 1)
+
+[node name="Detalhe" type="ColorRect" parent="Placeholder" unique_id=1945085161]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 44.0
+offset_bottom = 20.0
+color = Color(0.45, 0.3, 0.15, 1)
+
+[node name="TriggerZone" type="Area2D" parent="." unique_id=1272820270]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerZone" unique_id=1008189943]
+position = Vector2(-3.5, -3.5)
+shape = SubResource("RectangleShape2D_trigger")
+
+[node name="EmbarkZone" type="Area2D" parent="." unique_id=2041738512]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmbarkZone" unique_id=-1096693235]
+shape = SubResource("RectangleShape2D_embark")
+
+[node name="PontoEmbarque" type="Marker2D" parent="." unique_id=784846635]
+position = Vector2(0, -5)
+
+[connection signal="body_entered" from="TriggerZone" to="." method="_on_trigger_zone_body_entered"]
+[connection signal="body_entered" from="EmbarkZone" to="." method="_on_embark_zone_body_entered"]

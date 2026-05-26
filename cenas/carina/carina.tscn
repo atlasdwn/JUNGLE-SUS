@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://cfy2iadcbltf1" path="res://cenas/carina/scripts/state_idle.gd" id="13_1hr3a"]
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
+[ext_resource type="Script" uid="uid://c6egnpajd3d3d" path="res://cenas/carina/scripts/state_cutscene.gd" id="17_1e60c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18ija"]
 atlas = ExtResource("3_w8id7")
@@ -829,6 +830,7 @@ color_ramp = SubResource("GradientTexture1D_folhas")
 anim_offset_max = 0.46559998
 
 [node name="Carina" type="CharacterBody2D" unique_id=1385650990]
+y_sort_enabled = true
 collision_mask = 22
 motion_mode = 1
 script = ExtResource("2_0u81b")
@@ -863,6 +865,9 @@ script = ExtResource("14_8dyrv")
 
 [node name="Collect" type="Node" parent="StateMachine" unique_id=466380645]
 script = ExtResource("15_t3phn")
+
+[node name="Cutscene" type="Node" parent="StateMachine" unique_id=755965487]
+script = ExtResource("17_1e60c")
 
 [node name="Collider" type="Area2D" parent="." unique_id=1408964914]
 collision_layer = 16
