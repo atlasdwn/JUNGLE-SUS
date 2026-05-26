@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0822qru8ystp"]
 
 [ext_resource type="Script" uid="uid://c8ta25j1mc3xw" path="res://cenas/matinta/scripts/matinta.gd" id="1_1wprd"]
-[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="1_iw2kc"]
+[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Personagens/corpo/Karina/antigo_base/Idle_Base/Idle_Side-Sheet.png" id="1_iw2kc"]
 [ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="2_mlogr"]
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_nnnly"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="5_6obqx"]

@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://bkxg68y4s2q52"]
+
+[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/scripts/coletavel.gd" id="1_jhd6t"]
+[ext_resource type="Script" uid="uid://bng5gxko0cjgy" path="res://recursos/itens/scripts/item_data.gd" id="2_bjyk7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wylj6"]
+load_path = "res://.godot/imported/machado.png-1e318333f13d5a03856e7c9c0d869d66.ctex"
+
+[sub_resource type="Resource" id="Resource_p5glq"]
+script = ExtResource("2_bjyk7")
+name = "Machado"
+description = "Uma maçã."
+texture = SubResource("CompressedTexture2D_wylj6")
+metadata/_custom_type_script = "uid://bng5gxko0cjgy"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6a62k"]
+radius = 78.227425
+height = 156.45485
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_85lxb"]
+load_path = "res://.godot/imported/Keyboard Letters and Symbols.png-37e39907d6e71ef9d1c2fe8a41ada563.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcqhb"]
+atlas = SubResource("CompressedTexture2D_85lxb")
+region = Rect2(65, 34, 13, 12)
+
+[sub_resource type="Animation" id="Animation_w3w70"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -32)]
+}
+
+[sub_resource type="Animation" id="Animation_uhdbg"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -32)]
+}
+
+[sub_resource type="Animation" id="Animation_4o1u5"]
+resource_name = "hide"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -35), Vector2(0, -32)]
+}
+
+[sub_resource type="Animation" id="Animation_5r3xe"]
+resource_name = "show"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.20000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -32), Vector2(0, -35)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_onvk7"]
+_data = {
+&"RESET": SubResource("Animation_w3w70"),
+&"default": SubResource("Animation_uhdbg"),
+&"hide": SubResource("Animation_4o1u5"),
+&"show": SubResource("Animation_5r3xe")
+}
+
+[node name="Coletavel" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_jhd6t")
+item = SubResource("Resource_p5glq")
+
+[node name="CollectibleArea" type="Area2D" parent="." unique_id=1551370280]
+collision_layer = 16
+
+[node name="Collision" type="CollisionShape2D" parent="CollectibleArea" unique_id=424898172]
+position = Vector2(0, 1)
+scale = Vector2(0.14061564, 0.14061564)
+shape = SubResource("CapsuleShape2D_6a62k")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1561457950]
+
+[node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=1878036055]
+visible = false
+y_sort_enabled = true
+position = Vector2(0, -32)
+texture = SubResource("AtlasTexture_qcqhb")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="SpriteInteracao" unique_id=1611680454]
+libraries/ = SubResource("AnimationLibrary_onvk7")
+autoplay = &"default"
+
+[connection signal="area_entered" from="CollectibleArea" to="." method="_on_collectible_area_entered"]
+[connection signal="area_exited" from="CollectibleArea" to="." method="_on_collectible_area_exited"]
+[connection signal="body_entered" from="CollectibleArea" to="." method="_on_collectible_area_body_entered"]
+[connection signal="body_exited" from="CollectibleArea" to="." method="_on_collectible_area_body_exited"]

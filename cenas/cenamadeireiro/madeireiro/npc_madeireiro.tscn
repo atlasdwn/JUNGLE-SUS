@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://cvxhai18ys8wd"]
 
 [ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/cenamadeireiro/madeireiro/scripts/npc_madeireiro.gd" id="1_ut076"]
-[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Carina/Idle_Base/Idle_Side-Sheet.png" id="2_ex5cn"]
+[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Personagens/corpo/Karina/antigo_base/Idle_Base/Idle_Side-Sheet.png" id="2_ex5cn"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_b4rhy"]
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_t2e2s"]
 [ext_resource type="Resource" uid="uid://cmo1khj8m2ssx" path="res://recursos/dialogs/madeireiro/primeiro_interact.tres" id="5_4drwu"]
 [ext_resource type="Resource" uid="uid://dpbub30mb6u20" path="res://recursos/dialogs/madeireiro/waiting_axe.tres" id="6_tufwi"]
 [ext_resource type="Resource" uid="uid://2hhpo0x71bol" path="res://recursos/dialogs/madeireiro/completed.tres" id="7_4yfte"]
 [ext_resource type="Resource" uid="uid://8w5dulp0s16v" path="res://recursos/dialogs/madeireiro/default.tres" id="8_l8af7"]
+[ext_resource type="PackedScene" uid="uid://bkxg68y4s2q52" path="res://cenas/coletaveis/coletavel_base.tscn" id="9_4yfte"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
 atlas = ExtResource("2_ex5cn")
@@ -64,3 +65,5 @@ shape = SubResource("RectangleShape2D_5c32j")
 
 [node name="DialogInteraction" parent="." unique_id=276655289 instance=ExtResource("4_t2e2s")]
 dialogs = Array[ExtResource("4_b4rhy")]([ExtResource("5_4drwu"), ExtResource("6_tufwi"), ExtResource("7_4yfte"), ExtResource("8_l8af7")])
+
+[node name="Coletavel" parent="." unique_id=1250907370 instance=ExtResource("9_4yfte")]

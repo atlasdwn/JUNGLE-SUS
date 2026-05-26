@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_wixji")
 name = "Machado"
-description = "Uma maçã."
+description = "Um machado."
 texture = ExtResource("2_say6f")
 metadata/_custom_type_script = "uid://bng5gxko0cjgy"

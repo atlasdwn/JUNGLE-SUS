@@ -14,7 +14,7 @@ func enter() -> void:
 	if item == null:
 		return
 
-	var item_distance = item.global_position - player.collision.global_position
+	var item_distance = item.global_position - player.global_position
 
 	player.velocity = Vector2.ZERO
 	player.set_walk_dust(false)

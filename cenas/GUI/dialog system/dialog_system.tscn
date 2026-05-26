@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cugw5bbr2pyf6" path="res://assets/npc_and_dialog/sprites/text-bubble.png" id="2_mf8n1"]
 [ext_resource type="FontFile" uid="uid://mdvpqqagjwdp" path="res://assets/npc_and_dialog/fonts/Abaddon Light.ttf" id="3_6ahns"]
 [ext_resource type="FontFile" uid="uid://daao4vtcmdxn5" path="res://assets/npc_and_dialog/fonts/Abaddon Bold.ttf" id="4_8fri0"]
-[ext_resource type="Texture2D" uid="uid://bpwiukybo6vgt" path="res://assets/portraits/teste-removebg-preview.png" id="5_8fri0"]
+[ext_resource type="Texture2D" uid="uid://bpwiukybo6vgt" path="res://assets/Personagens/portraits/teste-removebg-preview.png" id="5_8fri0"]
 [ext_resource type="FontFile" uid="uid://bfqd18xyi784b" path="res://assets/fonts/monogram.ttf" id="6_8fri0"]
 
 [sub_resource type="Gradient" id="Gradient_8jyo3"]

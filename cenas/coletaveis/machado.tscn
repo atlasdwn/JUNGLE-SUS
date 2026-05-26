@@ -1,41 +1,19 @@
 [gd_scene format=3 uid="uid://bayvpyn46qgbr"]
 
-[ext_resource type="Script" uid="uid://c0grhqcs1xgsu" path="res://cenas/coletaveis/scripts/suprimento.gd" id="1_susap"]
+[ext_resource type="PackedScene" uid="uid://bkxg68y4s2q52" path="res://cenas/coletaveis/coletavel_base.tscn" id="1_78vqc"]
 [ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="2_fiuw2"]
-[ext_resource type="Texture2D" uid="uid://c3gtx01xqe1sa" path="res://assets/items/47 Sem Título_20260522155938.png" id="3_ie5hh"]
-[ext_resource type="Texture2D" uid="uid://ceik3x4r2j444" path="res://assets/Teclas/Keyboard Letters and Symbols.png" id="4_rgyy1"]
+[ext_resource type="Texture2D" uid="uid://bva8ah1hjsh48" path="res://assets/items/machado.png" id="3_600o1"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au7qt"]
-radius = 49.78109
-height = 99.56218
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_600o1"]
+radius = 64.00426
+height = 156.45485
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ohphm"]
-atlas = ExtResource("4_rgyy1")
-region = Rect2(65, 34, 13, 12)
-
-[node name="Machado" type="StaticBody2D" unique_id=1250907370 groups=["Collectibles"]]
-collision_layer = 8
-collision_mask = 0
-script = ExtResource("1_susap")
+[node name="Machado" unique_id=1250907370 instance=ExtResource("1_78vqc")]
 item = ExtResource("2_fiuw2")
 
-[node name="CollectibleArea" type="Area2D" parent="." unique_id=1551370280]
-collision_layer = 16
+[node name="Collision" parent="CollectibleArea" parent_id_path=PackedInt32Array(1551370280) index="0" unique_id=424898172]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_600o1")
 
-[node name="Collision" type="CollisionShape2D" parent="CollectibleArea" unique_id=424898172]
-position = Vector2(0, 1)
-scale = Vector2(0.14061564, 0.14061564)
-shape = SubResource("CapsuleShape2D_au7qt")
-
-[node name="Sprite" type="Sprite2D" parent="." unique_id=1561457950]
-texture = ExtResource("3_ie5hh")
-
-[node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=240322463]
-visible = false
-position = Vector2(0, -18)
-texture = SubResource("AtlasTexture_ohphm")
-
-[connection signal="area_entered" from="CollectibleArea" to="." method="_on_collectible_area_entered"]
-[connection signal="area_exited" from="CollectibleArea" to="." method="_on_collectible_area_exited"]
-[connection signal="body_entered" from="CollectibleArea" to="." method="_on_collectible_area_body_entered"]
-[connection signal="body_exited" from="CollectibleArea" to="." method="_on_collectible_area_body_exited"]
+[node name="Sprite" parent="." index="1" unique_id=1561457950]
+texture = ExtResource("3_600o1")

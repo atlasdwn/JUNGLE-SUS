@@ -1,7 +1,6 @@
 class_name Player extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $Anim
-@onready var collision: CollisionShape2D = $Collision
 @onready var anim_player: AnimationPlayer = $AnimPlayer
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @export var camera : Camera2D
@@ -54,7 +53,8 @@ func set_direction() -> bool:
 	if direction == Vector2.ZERO:
 		return false
 
-	if abs(direction.x) > abs(direction.y):
+	# Alterado para >= para dar prioridade à direção horizontal nas diagonais
+	if abs(direction.x) >= abs(direction.y):
 		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
 	else:
 		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN
