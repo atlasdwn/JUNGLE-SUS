@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cmo1khj8m2ssx"]
 
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_b7x3b"]
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_fan28"]
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="2_8hb7l"]
 [ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/madeireiro_data.tres" id="3_p6swj"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_olc50"]
+[ext_resource type="Script" uid="uid://wryjswybcgh3" path="res://recursos/dialogs/scripts/dialog_choice.gd" id="5_cjntt"]
 
 [sub_resource type="Resource" id="Resource_bv3q1"]
 script = ExtResource("1_fan28")
@@ -113,8 +115,92 @@ text = "Ugh..."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
+[sub_resource type="Resource" id="Resource_g4mm0"]
+script = ExtResource("1_fan28")
+text = "Tá bom, vou procurar seu machado. Onde foi a última vez que você o viu?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_7ndir"]
+script = ExtResource("1_fan28")
+text = "É o seguinte... ele tá com uma velha."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_gkdef"]
+script = ExtResource("1_fan28")
+text = "...
+Sua mãe?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_8mpeu"]
+script = ExtResource("1_fan28")
+text = "O quê? Não!"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_bd34i"]
+script = ExtResource("1_fan28")
+text = "Quando cheguei aqui ontem de manhã, essa velha já estava aqui, do lado das minhas máquinas.
+Ela ficava mandando eu ir embora, mas essa área É MINHA!"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_ifoat"]
+script = ExtResource("1_fan28")
+text = "Agora, acontece que o meu machado sumiu e, coincidentemente, ELA TAMBÉM!"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_huvfe"]
+script = ExtResource("1_fan28")
+text = "Então... você quer que eu procure por alguém armado... e você nem sequer sabe onde essa pessoa está?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_ojm4q"]
+script = ExtResource("1_fan28")
+text = "Você tem alguma escolha? É isso, ou nada."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_w7io2"]
+script = ExtResource("1_fan28")
+text = "..."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_x8hne"]
+script = ExtResource("1_fan28")
+text = "Só porque eu sou uma cara legal... quando ela foi embora no momento em que a gente se encontrou, ela havia ido em direção à área que fica atravessando meu terreno. Você pode entrar."
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_omvic"]
+script = ExtResource("1_fan28")
+text = "Isso não vai estar acontecendo. Eu vou dar o meu jeito, mas não vou te ajudar a destruir nossa floresta."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_fvap7"]
+script = ExtResource("1_fan28")
+text = "Bom... boa sorte tentando salvar aquela criança. Ha ha ha!"
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_f70r5"]
+script = ExtResource("5_cjntt")
+choice_id = "Quest Madeireiro"
+text = "Ache ruim o quanto quiser. Sem meu machado, sem seus remédios.
+O que você prefere?"
+accept_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_g4mm0"), SubResource("Resource_7ndir"), SubResource("Resource_gkdef"), SubResource("Resource_8mpeu"), SubResource("Resource_bd34i"), SubResource("Resource_ifoat"), SubResource("Resource_huvfe"), SubResource("Resource_ojm4q"), SubResource("Resource_w7io2"), SubResource("Resource_x8hne")])
+refuse_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_omvic"), SubResource("Resource_fvap7")])
+char_info = ExtResource("3_p6swj")
+metadata/_custom_type_script = "uid://wryjswybcgh3"
+
 [resource]
 script = ExtResource("4_olc50")
 dial_name = "Primeiro Interact"
-lines = Array[ExtResource("1_fan28")]([SubResource("Resource_bv3q1"), SubResource("Resource_8v5rc"), SubResource("Resource_rvc7g"), SubResource("Resource_b7x3b"), SubResource("Resource_cjntt"), SubResource("Resource_7fegv"), SubResource("Resource_s3f70"), SubResource("Resource_8jiyk"), SubResource("Resource_5n686"), SubResource("Resource_33vf4"), SubResource("Resource_t1mtd"), SubResource("Resource_thrmm"), SubResource("Resource_8dsg7"), SubResource("Resource_wkra0"), SubResource("Resource_5uhuu"), SubResource("Resource_3vfc4"), SubResource("Resource_i1dos"), SubResource("Resource_jc5lg")])
+lines = Array[ExtResource("1_b7x3b")]([SubResource("Resource_bv3q1"), SubResource("Resource_8v5rc"), SubResource("Resource_rvc7g"), SubResource("Resource_b7x3b"), SubResource("Resource_cjntt"), SubResource("Resource_7fegv"), SubResource("Resource_s3f70"), SubResource("Resource_8jiyk"), SubResource("Resource_5n686"), SubResource("Resource_33vf4"), SubResource("Resource_t1mtd"), SubResource("Resource_thrmm"), SubResource("Resource_8dsg7"), SubResource("Resource_wkra0"), SubResource("Resource_5uhuu"), SubResource("Resource_3vfc4"), SubResource("Resource_i1dos"), SubResource("Resource_jc5lg"), SubResource("Resource_f70r5")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

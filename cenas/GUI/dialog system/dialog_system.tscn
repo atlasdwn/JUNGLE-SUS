@@ -174,3 +174,16 @@ vertical_alignment = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgress" unique_id=1156964663]
 libraries/ = SubResource("AnimationLibrary_e4gep")
 autoplay = &"default"
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="DialogUI" unique_id=793478667]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonAccept" type="Button" parent="DialogUI/ChoiceContainer" unique_id=1312480364]
+layout_mode = 2
+text = "Aceitar"
+
+[node name="ButtonRefuse" type="Button" parent="DialogUI/ChoiceContainer" unique_id=225662497]
+layout_mode = 2
+text = "Recursar"

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var parede_matinta = get_node_or_null("../ParedeMatinta/Collision")
+@onready var parede_matinta = get_node_or_null("../Ambiente/Passagens/ParedeMatinta/Collision")
 @onready var gatilho_evento = $GatilhoEvento
 @onready var zonas_esconderijo = $ZonasDeEsconderijo.get_children()
 @onready var sombra_matinta = $CanvasLayer/SombraMatinta

@@ -13,8 +13,8 @@ Criar uma mecânica onde o jogador empurra uma pedra física (RigidBody2D) de fo
 1. Manter a raiz atual `Node2D` (nome: `PedraMovelPuzzle`).
 2. Adicionar os seguintes nós filhos:
    - `RigidBody2D` (nome: `Pedra`)
-     - `Sprite2D` (usando o spritesheet das pedras, com `region_enabled = true` para recortar apenas uma pedra da imagem).
-     - `CollisionShape2D` (tamanho exato da base da pedra).
+	 - `Sprite2D` (usando o spritesheet das pedras, com `region_enabled = true` para recortar apenas uma pedra da imagem).
+	 - `CollisionShape2D` (tamanho exato da base da pedra).
    - Um nó placeholder para colocar o Suprimento.
 3. Configuração do `RigidBody2D`:
    - `gravity_scale` = 0 (por ser jogo top-down).
@@ -40,9 +40,9 @@ No Godot 4, um `CharacterBody2D` como a Carina não empurra um `RigidBody2D` aut
 2. Implementar a lógica após `move_and_slide()`:
    ```gdscript
    for i in get_slide_collision_count():
-       var c = get_slide_collision(i)
-       if c.get_collider() is RigidBody2D:
-           c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
+	   var c = get_slide_collision(i)
+	   if c.get_collider() is RigidBody2D:
+		   c.get_collider().apply_central_impulse(-c.get_normal() * PUSH_FORCE)
    ```
 
 ## Fase 4: Teste e Validação

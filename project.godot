@@ -30,7 +30,7 @@ window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/DropShadowCaster2D/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 
