@@ -1,69 +1,71 @@
 [gd_scene format=3 uid="uid://cvxhai18ys8wd"]
 
 [ext_resource type="Script" uid="uid://c812l4e5yxyfa" path="res://cenas/cenamadeireiro/madeireiro/scripts/npc_madeireiro.gd" id="1_ut076"]
-[ext_resource type="Texture2D" uid="uid://do1jnh4pdmxxt" path="res://assets/Personagens/corpo/Karina/antigo_base/Idle_Base/Idle_Side-Sheet.png" id="2_ex5cn"]
+[ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="2_ba4k5"]
+[ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="3_fadty"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_b4rhy"]
+[ext_resource type="Texture2D" uid="uid://cjm03qbacy4po" path="res://assets/Personagens/corpo/Madeireiro/Madeireiro - idle.png" id="4_l8af7"]
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_t2e2s"]
 [ext_resource type="Resource" uid="uid://cmo1khj8m2ssx" path="res://recursos/dialogs/madeireiro/primeiro_interact.tres" id="5_4drwu"]
 [ext_resource type="Resource" uid="uid://dpbub30mb6u20" path="res://recursos/dialogs/madeireiro/waiting_axe.tres" id="6_tufwi"]
 [ext_resource type="Resource" uid="uid://2hhpo0x71bol" path="res://recursos/dialogs/madeireiro/completed.tres" id="7_4yfte"]
 [ext_resource type="Resource" uid="uid://8w5dulp0s16v" path="res://recursos/dialogs/madeireiro/default.tres" id="8_l8af7"]
-[ext_resource type="PackedScene" uid="uid://bkxg68y4s2q52" path="res://cenas/coletaveis/coletavel_base.tscn" id="9_4yfte"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_65g2u"]
-atlas = ExtResource("2_ex5cn")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
+size = Vector2(58, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba4k5"]
+atlas = ExtResource("4_l8af7")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iepuk"]
-atlas = ExtResource("2_ex5cn")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fadty"]
+atlas = ExtResource("4_l8af7")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3wcef"]
-atlas = ExtResource("2_ex5cn")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmfpd"]
+atlas = ExtResource("4_l8af7")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_08w5b"]
-atlas = ExtResource("2_ex5cn")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjuy8"]
+atlas = ExtResource("4_l8af7")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7212u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_65g2u")
+"texture": SubResource("AtlasTexture_ba4k5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iepuk")
+"texture": SubResource("AtlasTexture_fadty")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3wcef")
+"texture": SubResource("AtlasTexture_gmfpd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_08w5b")
+"texture": SubResource("AtlasTexture_tjuy8")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 4.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
-size = Vector2(58, 55)
-
 [node name="NpcMadeireiro" type="Area2D" unique_id=1470037563]
 collision_layer = 4
 script = ExtResource("1_ut076")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350984207]
-sprite_frames = SubResource("SpriteFrames_7212u")
-animation = &"idle"
-autoplay = "idle"
-flip_h = true
+machado_item = ExtResource("2_ba4k5")
+suprimento_item = ExtResource("3_fadty")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1209348106]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_5c32j")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1350984207]
+sprite_frames = SubResource("SpriteFrames_7212u")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.49868858
+flip_h = true
+
 [node name="DialogInteraction" parent="." unique_id=276655289 instance=ExtResource("4_t2e2s")]
 dialogs = Array[ExtResource("4_b4rhy")]([ExtResource("5_4drwu"), ExtResource("6_tufwi"), ExtResource("7_4yfte"), ExtResource("8_l8af7")])
-
-[node name="Coletavel" parent="." unique_id=1250907370 instance=ExtResource("9_4yfte")]

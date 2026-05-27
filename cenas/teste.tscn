@@ -1290,4 +1290,3 @@ size_flags_vertical = 6
 
 [node name="Inventario_UI" parent="CanvasGroup/CenterContainer" unique_id=2066259853 instance=ExtResource("6_63rjy")]
 visible = false
-layout_mode = 2
