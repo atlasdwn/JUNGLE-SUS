@@ -3,8 +3,8 @@ class_name NPCBarqueiro extends NPCBase
 signal player_embarked
 signal departed
 
-enum BarqueiroState { AGUARDANDO_SUPRIMENTOS, CHAMANDO, POS_JOGO }
-var current_state: BarqueiroState = BarqueiroState.AGUARDANDO_SUPRIMENTOS
+enum BarqueiroState { INICIO, AGUARDANDO_SUPRIMENTOS, CHAMANDO, POS_JOGO }
+var current_state: BarqueiroState = BarqueiroState.INICIO
 
 var embarked := false
 var departing := false
@@ -12,12 +12,41 @@ var ponto_embarque: Marker2D
 
 func _ready() -> void:
 	super._ready()
+	var anim_node = get_node_or_null("AnimatedSprite2D")
+	if anim_node:
+		anim_node.play("idle")
 	ponto_embarque = get_node_or_null("PontoEmbarque")
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
+	if not body_entered.is_connected(_on_body_entered):
+		body_entered.connect(_on_body_entered)
+	if not body_exited.is_connected(_on_body_exited):
+		body_exited.connect(_on_body_exited)
 	var embark_zone = get_node_or_null("EmbarkZone")
-	if embark_zone:
+	if embark_zone and not embark_zone.body_entered.is_connected(_on_embark_zone_body_entered):
 		embark_zone.body_entered.connect(_on_embark_zone_body_entered)
+
+## Retorna as linhas de um diálogo pelo nome (usado pelo mundo.gd para orquestrar)
+func get_dialog_lines(dial_name: String) -> Array[DialogItem]:
+	var dialog := _find_dialog(dial_name)
+	if dialog == null:
+		return []
+	var items: Array[DialogItem] = []
+	items.assign(dialog.lines)
+	return items
+
+func finalizar_inicio() -> void:
+	current_state = BarqueiroState.AGUARDANDO_SUPRIMENTOS
+
+func assustar() -> void:
+	var anim_node = get_node_or_null("AnimatedSprite2D")
+	if anim_node:
+		anim_node.process_mode = Node.PROCESS_MODE_ALWAYS
+		anim_node.play("scared")
+
+func acalmar() -> void:
+	var anim_node = get_node_or_null("AnimatedSprite2D")
+	if anim_node:
+		anim_node.play("idle")
+		anim_node.process_mode = Node.PROCESS_MODE_INHERIT
 
 # Chamado pelo mundo.gd quando todos os suprimentos são coletados
 func ativar_chamada() -> void:
@@ -30,6 +59,8 @@ func missao_concluida() -> void:
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_player_entered_dialog() -> void:
 	match current_state:
+		BarqueiroState.INICIO:
+			pass # diálogo de início dispara via DialogSystem, não por aproximação
 		BarqueiroState.AGUARDANDO_SUPRIMENTOS:
 			dialog_interaction.current_dialog = _find_dialog("Aguardando")
 		BarqueiroState.CHAMANDO:

@@ -42,7 +42,6 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		if collider is RigidBody2D:
-			# Agora que a Carina enxerga a pedra, o código abaixo vai rodar de verdade!
 			# Força do empurrão. Se estiver muito rápido, abaixe. Se muito devagar, aumente.
 			var push_force = 100.0
 			collider.apply_central_impulse(-collision.get_normal() * push_force)

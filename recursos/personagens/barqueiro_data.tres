@@ -1,14 +1,10 @@
 [gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://3el80eeq62tu"]
 
-[ext_resource type="Texture2D" uid="uid://dg7o564a46mnu" path="res://assets/npc_and_dialog/sprites/portraits/npc_portrait_02.png" id="1_brq01"]
+[ext_resource type="Texture2D" uid="uid://ceu3aowuu2b2k" path="res://assets/Personagens/portraits/Navegador.png" id="1_841j4"]
 [ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="2_brq02"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_barq"]
-atlas = ExtResource("1_brq01")
-region = Rect2(10, 10, 80, 127)
 
 [resource]
 script = ExtResource("2_brq02")
-name = "Barqueiro"
-portrait = SubResource("AtlasTexture_barq")
+name = "Carlos"
+portrait = ExtResource("1_841j4")
 metadata/_custom_type_script = "uid://3se4ee0klg28"

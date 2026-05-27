@@ -1,18 +1,47 @@
 extends NPCBase
 
-enum IaraState { PRIMEIRO_ENCONTRO, DEFAULT }
+signal apareceu
+signal saiu
 
-var current_state: IaraState = IaraState.PRIMEIRO_ENCONTRO
+enum IaraState { OCULTA, APARECENDO, VISIVEL, SAINDO, SUMIDA }
+var current_state: IaraState = IaraState.OCULTA
 
-# 💡 Sobrescreve o método virtual do NPCBase
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready() -> void:
+	super._ready()
+	visible = false
+	# Permite animações rodarem mesmo com get_tree().paused = true
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	if dialog_interaction:
+		dialog_interaction.enabled = false
+
+## Chamado pelo mundo.gd — toca "coming" → "idle" e emite sinal
+func aparecer() -> void:
+	if current_state != IaraState.OCULTA:
+		return
+	current_state = IaraState.APARECENDO
+	visible = true
+	anim.play(&"coming")
+	await anim.animation_finished
+	current_state = IaraState.VISIVEL
+	anim.play(&"idle")
+	apareceu.emit()
+
+## Chamado pelo mundo.gd — toca "leaving" e emite sinal
+func sair() -> void:
+	if current_state != IaraState.VISIVEL:
+		return
+	current_state = IaraState.SAINDO
+	anim.play(&"leaving")
+	await anim.animation_finished
+	current_state = IaraState.SUMIDA
+	visible = false
+	saiu.emit()
+
+## Iara não volta mais — sem interação
 func _on_player_entered_dialog() -> void:
-	match current_state:
-		IaraState.PRIMEIRO_ENCONTRO:
-			dialog_interaction.current_dialog = _find_dialog("Primeiro Encontro")
-		IaraState.DEFAULT:
-			dialog_interaction.current_dialog = _find_dialog("Default")
+	pass
 
-# 💡 Sobrescreve o método virtual do NPCBase
 func _on_interaction_finished() -> void:
-	if current_state == IaraState.PRIMEIRO_ENCONTRO:
-		current_state = IaraState.DEFAULT
+	pass
