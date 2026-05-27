@@ -188,3 +188,27 @@ func _on_collider_area_exited(area: Area2D) -> void:
 	if area.owner == collectible:
 		collectible = null
 		collectible_in_area = false
+
+func assustar() -> void:
+	var frames = anim.sprite_frames
+	if frames and frames.has_animation("scare"):
+		frames.set_animation_loop("scare", false)
+	
+	# Desabilita a StateMachine temporariamente para não voltar pro Idle sozinho
+	if state_machine:
+		state_machine.process_mode = Node.PROCESS_MODE_DISABLED
+	
+	# Permite tocar mesmo que o jogo esteja pausado (ex: durante cutscene)
+	anim.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	# Para a animação do AnimationPlayer (que controla o andar/idle) e toca a do AnimatedSprite2D
+	anim_player.stop()
+	anim.play("scare")
+
+func acalmar() -> void:
+	# Retorna o controle normal das animações
+	anim.process_mode = Node.PROCESS_MODE_INHERIT
+	if state_machine:
+		state_machine.process_mode = Node.PROCESS_MODE_INHERIT
+	
+	update_animation("idle")

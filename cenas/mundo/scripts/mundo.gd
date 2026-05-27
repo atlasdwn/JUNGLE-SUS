@@ -109,6 +109,8 @@ func _iniciar_dialogo_abertura() -> void:
 	if iara != null and iara.has_method("aparecer"):
 		iara.aparecer()
 		barco.assustar()
+		if player and player.has_method("assustar"):
+			player.assustar()
 		await iara.apareceu
 
 	## Parte 2: Reações "!!" + Iara fala (linhas 8-13)
@@ -120,6 +122,8 @@ func _iniciar_dialogo_abertura() -> void:
 	if iara != null and iara.has_method("sair"):
 		iara.sair()
 		barco.acalmar()
+		if player and player.has_method("acalmar"):
+			player.acalmar()
 		await iara.saiu
 
 	## Parte 3: Carlos + Carina reagem, Carina decide ir (linhas 14-fim)

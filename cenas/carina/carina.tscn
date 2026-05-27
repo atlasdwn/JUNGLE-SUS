@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bfhs658um66hr" path="res://assets/Personagens/corpo/Karina/Idle/carina_Idle_lados.png" id="7_w8id7"]
 [ext_resource type="Texture2D" uid="uid://c1wu3kv312g4l" path="res://assets/Personagens/corpo/Karina/Idle/carina_idle_cima.png" id="8_1e60c"]
 [ext_resource type="Texture2D" uid="uid://dt4be8jakosyk" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/leafs2.png" id="9_pfolhas"]
+[ext_resource type="Texture2D" uid="uid://ckq4opmr0se2g" path="res://assets/Personagens/corpo/Karina/susto/susto.png" id="10_d864g"]
 [ext_resource type="Texture2D" uid="uid://hhservgjg0h6" path="res://assets/Personagens/corpo/Karina/Walk/carina_andar_baixo-Sheet.png" id="10_g0b2n"]
 [ext_resource type="Texture2D" uid="uid://bfsbe4uc0e6fj" path="res://assets/Personagens/corpo/Karina/Walk/carina_andar_lados-Sheet.png" id="11_tubqr"]
 [ext_resource type="Script" uid="uid://dtg73eevfgqun" path="res://cenas/carina/scripts/player_state_machine.gd" id="12_me0xk"]
@@ -169,6 +170,22 @@ region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8arva"]
 atlas = ExtResource("8_1e60c")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrgvq"]
+atlas = ExtResource("10_d864g")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64v0b"]
+atlas = ExtResource("10_d864g")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqua5"]
+atlas = ExtResource("10_d864g")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pivrl"]
+atlas = ExtResource("10_d864g")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n63lv"]
@@ -381,6 +398,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrgvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64v0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqua5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pivrl")
+}],
+"loop": false,
+"name": &"scare",
 "speed": 5.0
 }, {
 "frames": [{
@@ -693,6 +727,23 @@ tracks/1/keys = {
 "values": [&"idle_up"]
 }
 
+[sub_resource type="Animation" id="Animation_s58ca"]
+resource_name = "scare"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anim:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="Animation" id="Animation_i6mtq"]
 resource_name = "walk_down"
 length = 0.75
@@ -792,6 +843,7 @@ _data = {
 &"idle_down": SubResource("Animation_tohx1"),
 &"idle_side": SubResource("Animation_j8f6s"),
 &"idle_up": SubResource("Animation_0cafi"),
+&"scare": SubResource("Animation_s58ca"),
 &"walk_down": SubResource("Animation_i6mtq"),
 &"walk_side": SubResource("Animation_dpxno"),
 &"walk_up": SubResource("Animation_2mvx2")
