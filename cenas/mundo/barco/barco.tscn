@@ -16,7 +16,7 @@
 size = Vector2(161, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_embark"]
-size = Vector2(30, 24)
+size = Vector2(54, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tfrk"]
 atlas = ExtResource("7_j1j0h")
@@ -97,7 +97,6 @@ texture = ExtResource("11_p4jbc")
 0:3/size_in_atlas = Vector2i(5, 2)
 0:3/0 = 0
 0:3/0/texture_origin = Vector2i(0, 31)
-0:3/0/z_index = -1
 
 [sub_resource type="TileSet" id="TileSet_b1uvp"]
 sources/0 = SubResource("TileSetAtlasSource_617f6")
@@ -116,6 +115,7 @@ dialogs = Array[ExtResource("3_8a4lr")]([ExtResource("6_barco"), ExtResource("5_
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EmbarkZone" unique_id=-1096693235]
+position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_embark")
 
 [node name="PontoEmbarque" type="Marker2D" parent="." unique_id=784846635]

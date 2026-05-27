@@ -14,6 +14,10 @@ func _ready() -> void:
 	super._ready()
 	var anim_node = get_node_or_null("AnimatedSprite2D")
 	if anim_node:
+		# Garante via código que a animação de susto toque apenas UMA vez e pare no último frame
+		var frames = anim_node.sprite_frames
+		if frames and frames.has_animation("scared"):
+			frames.set_animation_loop("scared", false)
 		anim_node.play("idle")
 	ponto_embarque = get_node_or_null("PontoEmbarque")
 	if not body_entered.is_connected(_on_body_entered):
@@ -35,6 +39,11 @@ func get_dialog_lines(dial_name: String) -> Array[DialogItem]:
 
 func finalizar_inicio() -> void:
 	current_state = BarqueiroState.AGUARDANDO_SUPRIMENTOS
+	# Safety: ensure barqueiro returns to idle after cutscene
+	var anim_node = get_node_or_null("AnimatedSprite2D")
+	if anim_node:
+		anim_node.play("idle")
+		anim_node.process_mode = Node.PROCESS_MODE_INHERIT
 
 func assustar() -> void:
 	var anim_node = get_node_or_null("AnimatedSprite2D")

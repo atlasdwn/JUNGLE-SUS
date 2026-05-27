@@ -30,4 +30,6 @@ func tremer_camera(intensidade: float = 650.0) -> void:
 	shake_strength = intensidade
 
 func _on_animation_finished(anim_name: String) -> void:
+	# Fecha o círculo na Carina/Câmera antes de pular pro jogo!
+	await ScreenTransition.iris_out(camera, 1.2)
 	get_tree().change_scene_to_file("res://cenas/mundo/mundo.tscn")

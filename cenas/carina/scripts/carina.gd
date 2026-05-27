@@ -4,6 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var anim_player: AnimationPlayer = $AnimPlayer
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @onready var poeira_passo: Marker2D = $PoeiraPasso
+@onready var folhas_ambiente: GPUParticles2D = get_node_or_null("FolhasAmbiente")
 
 @export var camera : Camera2D
 @export var inventory : InventoryData
@@ -29,6 +30,28 @@ func _ready():
 		$RemoteTransform2D.remote_path = active_camera.get_path()
 
 	state_machine.initialize(self)
+	
+	if folhas_ambiente != null:
+		_ciclo_folhas()
+
+# Controla as folhas caindo (liga e desliga aleatoriamente)
+func _ciclo_folhas() -> void:
+	if not is_inside_tree() or folhas_ambiente == null:
+		return
+	
+	# Liga as folhas e deixa tocando por 3 a 6 segundos
+	folhas_ambiente.emitting = true
+	await get_tree().create_timer(randf_range(3.0, 6.0)).timeout
+	
+	if not is_inside_tree() or folhas_ambiente == null:
+		return
+		
+	# Desliga as folhas e espera 5 a 10 segundos antes de voltar
+	folhas_ambiente.emitting = false
+	await get_tree().create_timer(randf_range(5.0, 10.0)).timeout
+	
+	# Inicia o loop de novo
+	_ciclo_folhas()
 
 func _process(_delta: float) -> void:
 	if is_collecting == false:

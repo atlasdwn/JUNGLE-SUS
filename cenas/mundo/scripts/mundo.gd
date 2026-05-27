@@ -12,6 +12,11 @@ const BARQUEIRO_DATA = preload("res://recursos/personagens/barqueiro_data.tres")
 func _ready() -> void:
 	_find_nodes()
 	inventory.all_collected.connect(_on_all_collected)
+	
+	# Efeito Iris de abertura do jogo (tela começa preta e foca na Carina)
+	if player:
+	
+		ScreenTransition.iris_in(player, 1.5)
 
 	if barco != null:
 		barco.player_embarked.connect(_on_player_embarked)
@@ -66,6 +71,13 @@ func _on_player_at_barco() -> void:
 
 func _on_player_embarked() -> void:
 	print("[Mundo] Carina embarcou! Barco partindo...")
+	
+	# Efeito Iris: Fecha na Carina no final do jogo!
+	if player:
+		await ScreenTransition.iris_out(player, 2.0)
+	
+	# Aqui você pode chamar a tela de créditos ou mudar de cena
+	# get_tree().change_scene_to_file("res://cenas/creditos.tscn")
 
 func _on_barco_departed() -> void:
 	print("[Mundo] Barco partiu! Fase concluída!")
@@ -118,19 +130,6 @@ func _iniciar_dialogo_abertura() -> void:
 	barco.finalizar_inicio()
 	print("[Mundo] Diálogo de abertura concluído.")
 	
-	# DEBUG: Estado após o diálogo
-	print("[Mundo] DEBUG paused=", get_tree().paused)
-	print("[Mundo] DEBUG DialogSystem.is_active=", DialogSystem.is_active)
-	if player:
-		print("[Mundo] DEBUG player.is_collecting=", player.is_collecting)
-		print("[Mundo] DEBUG player.process_mode=", player.process_mode)
-		var sm = player.get_node_or_null("StateMachine")
-		if sm:
-			print("[Mundo] DEBUG StateMachine.process_mode=", sm.process_mode)
-			print("[Mundo] DEBUG StateMachine.current_state=", sm.current_state)
-	else:
-		print("[Mundo] DEBUG player=NULL!!!")
-	
 	# Garante que o jogo não fique pausado
 	get_tree().paused = false
 	
@@ -138,8 +137,6 @@ func _iniciar_dialogo_abertura() -> void:
 	var barco_dialog_final := barco.get_node_or_null("DialogInteraction") as DialogInteraction
 	if barco_dialog_final:
 		barco_dialog_final.enabled = true
-	
-	print("[Mundo] DEBUG FINAL paused=", get_tree().paused)
 
 ## Helper: dispara um segmento de diálogo e aguarda terminar
 func _play_dialog_segment(lines: Array[DialogItem]) -> void:

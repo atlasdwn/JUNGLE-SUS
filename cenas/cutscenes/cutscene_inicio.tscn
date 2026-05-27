@@ -370,77 +370,81 @@ offset = Vector2(-171.42859, -151.42854)
 
 [node name="003" type="Sprite2D" parent="dialogos" unique_id=1459928959]
 position = Vector2(-8, -670)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_b8oio")
 
 [node name="004" type="Sprite2D" parent="dialogos" unique_id=230558715]
 position = Vector2(1905, -158)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("8_ukhsr")
 offset = Vector2(-105, -140)
 
 [node name="005" type="Sprite2D" parent="dialogos" unique_id=366506368]
 position = Vector2(823, 613.00006)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("9_rl2n0")
 offset = Vector2(50.010254, 20.735962)
 
 [node name="006" type="Sprite2D" parent="dialogos" unique_id=1982978447]
 position = Vector2(-14, 180)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("10_4hqf7")
 offset = Vector2(84, -41)
 
 [node name="007" type="Sprite2D" parent="dialogos" unique_id=98750900]
 position = Vector2(261, 241)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("11_uib1w")
 offset = Vector2(124, 6)
 
 [node name="008" type="Sprite2D" parent="dialogos" unique_id=853842917]
 position = Vector2(1648, 179)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("12_j7q0i")
 offset = Vector2(-104, -54)
 
 [node name="009" type="Sprite2D" parent="dialogos" unique_id=1327257042]
 position = Vector2(3445, -475)
-scale = Vector2(1.6, 1.6)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("13_f745u")
 offset = Vector2(289.3335, -70)
 
 [node name="010" type="Sprite2D" parent="dialogos" unique_id=1750989]
 position = Vector2(7764, -613.99994)
-scale = Vector2(0.75, 0.75)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("14_64a55")
 offset = Vector2(141.52441, 42.857056)
 
 [node name="011" type="Sprite2D" parent="dialogos" unique_id=2092628517]
 position = Vector2(7756.0005, -229)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("15_64a55")
 offset = Vector2(162.66602, -150.66666)
 
 [node name="012" type="Sprite2D" parent="dialogos" unique_id=907516166]
 position = Vector2(8033, -246)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("16_icgs0")
 offset = Vector2(80, -137)
 
 [node name="013" type="Sprite2D" parent="dialogos" unique_id=1994647995]
 position = Vector2(7802, 464)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("17_iamfh")
 offset = Vector2(160, -76)
 
 [node name="014" type="Sprite2D" parent="dialogos" unique_id=1529952744]
 position = Vector2(8973, 182)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("18_0yahi")
 
 [node name="015" type="Sprite2D" parent="dialogos" unique_id=438501621]
 position = Vector2(8575, -660)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("19_0qogw")
 offset = Vector2(-106, -135)
 
 [node name="016" type="Sprite2D" parent="dialogos" unique_id=1424053521]
 position = Vector2(10606, -393)
-scale = Vector2(1.1, 1.1)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("20_hjtus")
