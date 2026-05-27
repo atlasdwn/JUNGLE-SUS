@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://d0f8komtqrr0w" path="res://cenas/cenamadeireiro/scripts/entrada.gd" id="20_k3qyx"]
 [ext_resource type="PackedScene" uid="uid://c4gp8w387g102" path="res://cenas/inventario/inventario_ui.tscn" id="23_k3qyx"]
 [ext_resource type="PackedScene" uid="uid://b1234568aaabc" path="res://cenas/cenamadeireiro/gerenciador_evento_matinta.tscn" id="24_event"]
-[ext_resource type="AudioStream" uid="uid://ccw73cidhoxxf" path="res://assets/npc_and_dialog/audio/voice_blip.wav" id="24_pqr77"]
+[ext_resource type="AudioStream" uid="uid://b85s4reo6djrj" path="res://assets/audio/passaro-gritando.wav" id="24_pqr77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3glhi"]
 texture = ExtResource("1_n5ilh")
@@ -1961,6 +1961,7 @@ tile_set = SubResource("TileSet_ltya7")
 
 [node name="CasaMadeireiro" parent="Ambiente" unique_id=574193902 instance=ExtResource("10_oyb5f")]
 position = Vector2(0, 13)
+collision_layer = 2
 
 [node name="cortador1" parent="Ambiente" unique_id=1632689675 instance=ExtResource("15_akwsc")]
 position = Vector2(124, 118)
