@@ -66,11 +66,14 @@ func show_dialog(_items: Array[DialogItem]) -> void:
 	pass
 	
 func hide_dialog() -> void:
+	print("[DialogSystem] hide_dialog() CALLED — is_active era: ", is_active)
 	is_active = false
 	dialog_ui.visible = false
 	dialog_ui.process_mode= Node.PROCESS_MODE_DISABLED
 	get_tree().paused = false
+	print("[DialogSystem] hide_dialog() — paused agora: ", get_tree().paused)
 	finished.emit() 
+	print("[DialogSystem] hide_dialog() — finished emitido")
 	pass
 
 func start_dialog() -> void:

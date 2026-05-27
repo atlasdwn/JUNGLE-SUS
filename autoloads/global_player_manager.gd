@@ -14,5 +14,7 @@ func _process(_delta: float) -> void:
 
 func interact() -> void:
 	print('emitiu interact')
+	if DialogSystem.is_active:
+		return
 	interact_handled = false
 	interact_pressed.emit()

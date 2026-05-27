@@ -756,7 +756,7 @@ position = Vector2(124, 118)
 position = Vector2(240, 97)
 
 [node name="Carina" parent="Ambiente" unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("10_6py1q")]
-position = Vector2(274, 23)
+position = Vector2(-162, 82)
 safe_margin = 0.001
 camera = NodePath("../../Camera2D")
 

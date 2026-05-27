@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://becf1a87tps8b"]
+
+[ext_resource type="Script" uid="uid://1gv8vv6g43lw" path="res://cenas/mundo/iara/scripts/npc_iara.gd" id="1_iara"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="2_iara"]
+[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="3_iara"]
+[ext_resource type="Resource" uid="uid://bv74ubs7j07ve" path="res://recursos/dialogs/iara/primeiro_encontro.tres" id="4_iara"]
+[ext_resource type="Resource" uid="uid://7l757iott0mw" path="res://recursos/dialogs/iara/default.tres" id="5_iara"]
+[ext_resource type="Texture2D" uid="uid://b3ktia8e0vycg" path="res://assets/Personagens/corpo/Iara/pixil-frame-0 (5).png" id="6_51how"]
+[ext_resource type="Texture2D" uid="uid://i3st2wunqmyi" path="res://assets/Personagens/corpo/Iara/pixilart-drawing (1).png" id="6_a6s8l"]
+[ext_resource type="Texture2D" uid="uid://b5a3g1x2mgg6y" path="res://assets/Personagens/corpo/Iara/Iara saindo.png" id="7_snd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iara"]
+size = Vector2(41, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmjcs"]
+atlas = ExtResource("6_51how")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unl43"]
+atlas = ExtResource("6_51how")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq5wy"]
+atlas = ExtResource("6_51how")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5tsl"]
+atlas = ExtResource("6_51how")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51how"]
+atlas = ExtResource("6_a6s8l")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0qug"]
+atlas = ExtResource("6_a6s8l")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88r7b"]
+atlas = ExtResource("6_a6s8l")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1tbp"]
+atlas = ExtResource("6_a6s8l")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snd0"]
+atlas = ExtResource("7_snd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snd1"]
+atlas = ExtResource("7_snd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snd2"]
+atlas = ExtResource("7_snd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snd3"]
+atlas = ExtResource("7_snd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snd4"]
+atlas = ExtResource("7_snd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmjcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmjcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unl43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq5wy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5tsl")
+}],
+"loop": false,
+"name": &"coming",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51how")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0qug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88r7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1tbp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snd4")
+}],
+"loop": false,
+"name": &"leaving",
+"speed": 5.0
+}]
+
+[node name="NpcIara" type="Area2D" unique_id=100000001]
+collision_layer = 4
+script = ExtResource("1_iara")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=100000002]
+position = Vector2(-2, 5)
+shape = SubResource("RectangleShape2D_iara")
+
+[node name="DialogInteraction" parent="." unique_id=100000003 instance=ExtResource("3_iara")]
+dialogs = Array[ExtResource("2_iara")]([ExtResource("4_iara"), ExtResource("5_iara")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2089292609]
+position = Vector2(2, 4)
+sprite_frames = SubResource("SpriteFrames_bmjcs")
+animation = &"idle"
