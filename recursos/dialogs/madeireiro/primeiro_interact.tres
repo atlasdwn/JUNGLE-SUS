@@ -129,20 +129,25 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_gkdef"]
 script = ExtResource("1_fan28")
-text = "...
-Sua mãe?"
+text = "..."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_8mpeu"]
 script = ExtResource("1_fan28")
-text = "O quê? Não!"
+text = "Sua mãe?"
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_716kg"]
+script = ExtResource("1_fan28")
+text = "O quê?! Não!"
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_bd34i"]
 script = ExtResource("1_fan28")
-text = "Quando cheguei aqui ontem de manhã, essa velha já estava aqui, do lado das minhas máquinas.
+text = "Enfim, quando cheguei aqui ontem de manhã, essa velha já estava aqui, do lado das minhas máquinas.
 Ela ficava mandando eu ir embora, mas essa área É MINHA!"
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
@@ -165,21 +170,22 @@ text = "Você tem alguma escolha? É isso, ou nada."
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
-[sub_resource type="Resource" id="Resource_w7io2"]
-script = ExtResource("1_fan28")
-text = "..."
-char_info = ExtResource("2_8hb7l")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
 [sub_resource type="Resource" id="Resource_x8hne"]
 script = ExtResource("1_fan28")
 text = "Só porque eu sou uma cara legal... quando ela foi embora no momento em que a gente se encontrou, ela havia ido em direção à área que fica atravessando meu terreno. Você pode entrar."
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
+[sub_resource type="Resource" id="Resource_w7io2"]
+script = ExtResource("1_fan28")
+text = "Ok..."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
 [sub_resource type="Resource" id="Resource_omvic"]
 script = ExtResource("1_fan28")
-text = "Isso não vai estar acontecendo. Eu vou dar o meu jeito, mas não vou te ajudar a destruir nossa floresta."
+text = "Isso não vai estar acontecendo. 
+Eu vou dar o meu jeito, mas não vou te ajudar a destruir nossa floresta."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -194,7 +200,7 @@ script = ExtResource("5_cjntt")
 choice_id = "Quest Madeireiro"
 text = "Ache ruim o quanto quiser. Sem meu machado, sem seus remédios.
 O que você prefere?"
-accept_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_g4mm0"), SubResource("Resource_7ndir"), SubResource("Resource_gkdef"), SubResource("Resource_8mpeu"), SubResource("Resource_bd34i"), SubResource("Resource_ifoat"), SubResource("Resource_huvfe"), SubResource("Resource_ojm4q"), SubResource("Resource_w7io2"), SubResource("Resource_x8hne")])
+accept_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_g4mm0"), SubResource("Resource_7ndir"), SubResource("Resource_gkdef"), SubResource("Resource_8mpeu"), SubResource("Resource_716kg"), SubResource("Resource_bd34i"), SubResource("Resource_ifoat"), SubResource("Resource_huvfe"), SubResource("Resource_ojm4q"), SubResource("Resource_x8hne"), SubResource("Resource_w7io2")])
 refuse_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_omvic"), SubResource("Resource_fvap7")])
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://wryjswybcgh3"
