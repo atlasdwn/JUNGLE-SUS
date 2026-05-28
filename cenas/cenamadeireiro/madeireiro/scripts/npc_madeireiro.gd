@@ -1,6 +1,6 @@
 extends NPCBase
 
-enum MadeireiroState { FIRST_MEET, WAITING_FOR_AXE, COMPLETED, DEFAULT }
+enum MadeireiroState { FIRST_MEET, WAITING_FOR_AXE, COMPLETED, DEFAULT, DEATH }
 enum QuestStatus { READY, ONGOING, FINISHED }
 
 var current_state: MadeireiroState = MadeireiroState.FIRST_MEET
@@ -11,6 +11,7 @@ var current_quest_status : QuestStatus = QuestStatus.READY
 
 @export var machado_item: ItemData
 @export var suprimento_item: ItemData
+@export var npc_quests: Array[QuestData]
 
 func _ready() -> void:	
 	super._ready()
@@ -48,6 +49,10 @@ func _on_interaction_finished() -> void:
 			current_state = MadeireiroState.COMPLETED
 			current_quest_status = QuestStatus.FINISHED
 			PlayerManager.quest_madeireiro_concluida = true
+			
+			# Avisa o gerenciador global que a missão acabou para atualizar a tela!
+			QuestManager.complete_quest("quest_madeireiro")
+			
 			_on_player_entered_dialog()
 	
 func _process(_delta: float) -> void:
@@ -64,6 +69,12 @@ func _on_body_exited(body) -> void:
 		player = null
 
 func _on_escolha_feita(id: String, aceitou: bool) -> void:
-	if id == "Quest Madeireiro":
-		quest_aceita = aceitou
-		current_quest_status = QuestStatus.ONGOING
+	# O NPC procura na lista dele para ver se esse ID pertence a ele
+	for quest in npc_quests:
+		if quest.id == id:
+			# Atualiza a variável de estado para a cena conseguir avançar!
+			quest_aceita = aceitou 
+			
+			if aceitou:
+				QuestManager.start_quest(quest)
+			break

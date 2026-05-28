@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dhtla6uii8gna" path="res://cenas/cenamadeireiro/casamadeireiro/casa_madeireiro.tscn" id="10_oyb5f"]
 [ext_resource type="PackedScene" uid="uid://bpr3dg46jqj6t" path="res://cenas/cenamadeireiro/Objetos/cortador_1.tscn" id="15_akwsc"]
 [ext_resource type="PackedScene" uid="uid://dootfr8xaq8aa" path="res://cenas/cenamadeireiro/vegetacao/grandes_desmatadas.tscn" id="15_iukor"]
-[ext_resource type="PackedScene" uid="uid://baedtfilulleq" path="res://cenas/cenamadeireiro/Objetos/cortador_3.tscn" id="16_iukor"]
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://d0f8komtqrr0w" path="res://cenas/cenamadeireiro/scripts/entrada.gd" id="20_k3qyx"]
@@ -720,7 +719,6 @@ y_sort_enabled = true
 position = Vector2(0, -20)
 
 [node name="Tiles" type="Node2D" parent="Ambiente" unique_id=758442140]
-z_as_relative = false
 y_sort_enabled = true
 position = Vector2(0, 13)
 
@@ -742,14 +740,11 @@ tile_map_data = PackedByteArray("AABeAPP/AQAAAAAABABvAA8AAQAAAAAABAAdAPH/AQAAAAA
 tile_set = SubResource("TileSet_ltya7")
 
 [node name="CasaMadeireiro" parent="Ambiente" unique_id=574193902 instance=ExtResource("10_oyb5f")]
-position = Vector2(0, 13)
+position = Vector2(61, 0)
 collision_layer = 2
 
 [node name="cortador1" parent="Ambiente" unique_id=1632689675 instance=ExtResource("15_akwsc")]
-position = Vector2(124, 118)
-
-[node name="cortador3" parent="Ambiente" unique_id=1445648248 instance=ExtResource("16_iukor")]
-position = Vector2(240, 97)
+position = Vector2(136, 126)
 
 [node name="Passagens" type="Node2D" parent="Ambiente" unique_id=1052007593]
 
