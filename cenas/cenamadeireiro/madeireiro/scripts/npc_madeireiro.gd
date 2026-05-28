@@ -5,6 +5,7 @@ enum MadeireiroState { FIRST_MEET, WAITING_FOR_AXE, COMPLETED, DEFAULT }
 var current_state: MadeireiroState = MadeireiroState.FIRST_MEET
 var player_in_area = false
 var player: Player
+var quest_aceita = false
 
 @export var machado_item: ItemData
 @export var suprimento_item: ItemData
@@ -13,7 +14,7 @@ func _ready() -> void:
 	super._ready()
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
-
+	DialogSystem.quest_choice.connect(_on_escolha_feita)
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_player_entered_dialog() -> void:
 	match current_state:
@@ -30,8 +31,13 @@ func _on_player_entered_dialog() -> void:
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_interaction_finished() -> void:
 	if current_state == MadeireiroState.FIRST_MEET:
-		current_state = MadeireiroState.WAITING_FOR_AXE
-		_on_player_entered_dialog()
+		if quest_aceita:
+			current_state = MadeireiroState.WAITING_FOR_AXE
+			_on_player_entered_dialog()
+		else:
+			# Se recusou, ele continua no FIRST_MEET para você falar de novo depois
+			pass
+		quest_aceita = false
 	elif current_state == MadeireiroState.WAITING_FOR_AXE:
 		if player and player.inventory.has_item(machado_item):
 			player.inventory.remove_item(machado_item)
@@ -51,3 +57,7 @@ func _on_body_exited(body) -> void:
 	if body.name == "Carina":
 		player_in_area = false
 		player = null
+
+func _on_escolha_feita(id: String, aceitou: bool) -> void:
+	if id == "Quest Madeireiro": 
+		quest_aceita = aceitou

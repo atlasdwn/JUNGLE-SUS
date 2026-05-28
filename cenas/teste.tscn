@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://25nlldv0hw38" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Variations.png" id="3_cgmdw"]
 [ext_resource type="Texture2D" uid="uid://dvbc8o1kjfmam" path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Wall_Tiles.png" id="4_grbdc"]
 [ext_resource type="PackedScene" uid="uid://bayvpyn46qgbr" path="res://cenas/coletaveis/machado.tscn" id="5_43lej"]
-[ext_resource type="PackedScene" uid="uid://c4gp8w387g102" path="res://cenas/inventario/inventario_ui.tscn" id="6_63rjy"]
 [ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento.tscn" id="6_e2cv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
@@ -1248,6 +1247,7 @@ tile_set = SubResource("TileSet_1bvp3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=609025670]
 position = Vector2(297, 344)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
@@ -1276,17 +1276,3 @@ position = Vector2(-219, -34)
 [node name="Carina" parent="." unique_id=1385650990 node_paths=PackedStringArray("camera") instance=ExtResource("2_s2wow")]
 position = Vector2(297, 344)
 camera = NodePath("../Camera2D")
-
-[node name="CanvasGroup" type="CanvasLayer" parent="." unique_id=1076752496]
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasGroup" unique_id=337265074]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Inventario_UI" parent="CanvasGroup/CenterContainer" unique_id=2066259853 instance=ExtResource("6_63rjy")]
-visible = false

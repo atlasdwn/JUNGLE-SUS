@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var parede_matinta = get_node_or_null("../ParedeMatinta/Collision")
+@onready var parede_matinta = get_node_or_null("../Ambiente/Passagens/ParedeMatinta/Collision")
 @onready var gatilho_evento = $GatilhoEvento
 @onready var zonas_esconderijo = $ZonasDeEsconderijo.get_children()
 @onready var sombra_matinta = $CanvasLayer/SombraMatinta
@@ -29,6 +29,7 @@ func _process(_delta):
 		# Finaliza quando Carina esta a 300 pixels (ou menos) de distancia a esquerda da Matinta
 		if carina.global_position.x > (matinta.global_position.x - 300):
 			finalizar_evento()
+			
 
 func _on_gatilho_entered(body):
 	if body == carina and not evento_ativo:
@@ -45,6 +46,8 @@ func finalizar_evento():
 	timer_evento.stop()
 	timer_sombra.stop()
 	sombra_matinta.visible = false
+	parede_matinta.set_deferred("disabled", true)
+
 
 func agendar_proximo_ataque():
 	if not evento_ativo: return

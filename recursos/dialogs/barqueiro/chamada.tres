@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cjikft83t6yce"]
 
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_bc001"]
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_hlyp2"]
 [ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_bc001"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_bc001"]
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="4_bc001"]
@@ -9,22 +10,25 @@
 script = ExtResource("1_bc001")
 text = "Ei, menina! Você já tem os suprimentos que a gente precisa?"
 char_info = ExtResource("2_bc001")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_bc002"]
 script = ExtResource("1_bc001")
 text = "Tô com tudo aqui."
 char_info = ExtResource("4_bc001")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_bc003"]
 script = ExtResource("1_bc001")
 text = "Ótimo. Pode embarcar, vamos sair daqui."
 char_info = ExtResource("2_bc001")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("3_bc001")
 dial_name = "Chamada"
-lines = Array[ExtResource("1_bc001")]([SubResource("Resource_bc001"), SubResource("Resource_bc002"), SubResource("Resource_bc003")])
+lines = Array[ExtResource("1_hlyp2")]([SubResource("Resource_bc001"), SubResource("Resource_bc002"), SubResource("Resource_bc003")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

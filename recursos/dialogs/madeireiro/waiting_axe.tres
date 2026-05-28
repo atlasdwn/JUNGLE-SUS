@@ -1,17 +1,37 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://dpbub30mb6u20"]
 
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_fscso"]
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_rirwg"]
 [ext_resource type="Resource" uid="uid://cx1x2rlqha3je" path="res://recursos/personagens/madeireiro_data.tres" id="2_rirwg"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_a2ap7"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="4_a2ap7"]
 
 [sub_resource type="Resource" id="Resource_jcoj1"]
 script = ExtResource("1_fscso")
-text = "Cade porra"
+text = "Achou o meu machado?"
 char_info = ExtResource("2_rirwg")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_xohaj"]
+script = ExtResource("1_fscso")
+text = "Ainda não."
+char_info = ExtResource("4_a2ap7")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_b072f"]
+script = ExtResource("1_fscso")
+text = "Então é melhor que você ache, ou terá que procuras seus remédios no fundo do rio."
+char_info = ExtResource("2_rirwg")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_d3enn"]
+script = ExtResource("1_fscso")
+text = "Tenta pra ver o que acontece "
+char_info = ExtResource("4_a2ap7")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("3_a2ap7")
 dial_name = "Waiting Axe"
-lines = Array[ExtResource("1_fscso")]([SubResource("Resource_jcoj1")])
+lines = Array[ExtResource("1_rirwg")]([SubResource("Resource_jcoj1"), SubResource("Resource_xohaj"), SubResource("Resource_b072f"), SubResource("Resource_d3enn")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

@@ -540,6 +540,7 @@ camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="Y-sorting/Carina" unique_id=2091242147]
 position = Vector2(0, -16)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
 editor_draw_drag_margin = true
 

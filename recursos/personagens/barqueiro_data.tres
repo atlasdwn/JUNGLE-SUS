@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_brq02")
 name = "Carlos"
-portrait = ExtResource("1_841j4")
+portraits = Array[Texture]([ExtResource("1_841j4")])
 metadata/_custom_type_script = "uid://3se4ee0klg28"
