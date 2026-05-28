@@ -45,7 +45,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.15, 0.15)]
+"values": [Vector2(0.45, 0.45)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -97,7 +97,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3, 4, 6.066667, 9.033334, 11.100001, 13.066667, 15.031576, 17.033333, 19.166666, 22.033333, 26, 28.066633, 31.166636, 33, 36.066666, 38.033333, 40.033333, 41.966667, 45.033333, 46.433334),
 "transitions": PackedFloat32Array(0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502, 0.43527502),
 "update": 0,
-"values": [Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.35, 0.35), Vector2(0.35, 0.35), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.15, 0.15), Vector2(0.15, 0.15), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.5, 0.5)]
+"values": [Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(1.05, 1.05), Vector2(1.05, 1.05), Vector2(1.2, 1.2), Vector2(1.2, 1.2), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(0.45, 0.45), Vector2(0.45, 0.45), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(1.35, 1.35), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(1.5, 1.5)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -335,7 +335,7 @@ texture = ExtResource("4_225ao")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1389028496]
 position = Vector2(-1176, 7)
-zoom = Vector2(0.15, 0.15)
+zoom = Vector2(0.45, 0.45)
 process_callback = 0
 limit_enabled = false
 position_smoothing_speed = 2.0
