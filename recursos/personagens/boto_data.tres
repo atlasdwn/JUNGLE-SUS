@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://veo8lw1i6nq2"]
+
+[ext_resource type="Texture2D" uid="uid://cmfdpx6a1jgiy" path="res://assets/Personagens/portraits/Boto (1).png" id="1_lky1t"]
+[ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+name = "Boto"
+portraits = Array[Texture]([ExtResource("1_lky1t")])
+metadata/_custom_type_script = "uid://3se4ee0klg28"

@@ -4,11 +4,11 @@ const EDGE_PADDING := 12.0
 const TURN_NOISE := 1.4
 const FLOAT_STRENGTH := 4.0
 
-@export_range(0, 80, 1) var firefly_count := 50
+@export_range(0, 80, 1) var firefly_count := 80
 @export var min_speed := 5.0
 @export var max_speed := 16.0
-@export var min_radius := 0.55
-@export var max_radius := 1.25
+@export var min_radius := 0.75
+@export var max_radius := 2.00
 @export var glow_multiplier := 5.0
 
 class Firefly:

@@ -78,16 +78,7 @@ func on_madeira_entregue() -> void:
 
 func _on_all_collected() -> void:
 	if barco != null and barco.current_state == NPCBarqueiro.BarqueiroState.AGUARDANDO_SUPRIMENTOS:
-		print("[Mundo] 5 suprimentos coletados! Iniciando evento de ajuda do Barqueiro.")
-		PlayerManager.carlos_precisa_ajuda = true
-		barco.current_state = NPCBarqueiro.BarqueiroState.PEDINDO_AJUDA
-		
-		var msg := DialogText.new()
-		msg.text = "Carina! Volte para o barco agora, preciso de ajuda e só você pode ajudar!"
-		msg.char_info = BARQUEIRO_DATA
-		var items: Array[DialogItem] = []
-		items.assign([msg])
-		DialogSystem.show_dialog(items)
+		print("[Mundo] 5 suprimentos coletados, aguardando madeireiro...")
 	else:
 		print("[Mundo] Todos os coletáveis e madeiras foram pegos!")
 		var msg := DialogText.new()
@@ -96,6 +87,26 @@ func _on_all_collected() -> void:
 		var items: Array[DialogItem] = []
 		items.assign([msg])
 		DialogSystem.show_dialog(items)
+
+var _esperando_madeireiro := true
+
+func _process(_delta: float) -> void:
+	if _esperando_madeireiro and PlayerManager.quest_madeireiro_concluida:
+		_esperando_madeireiro = false
+		_disparar_pedido_madeira()
+
+func _disparar_pedido_madeira() -> void:
+	if barco == null or barco.current_state != NPCBarqueiro.BarqueiroState.AGUARDANDO_SUPRIMENTOS:
+		return
+	print("[Mundo] Quest madeireiro concluída! Iniciando evento de ajuda do Barqueiro.")
+	PlayerManager.carlos_precisa_ajuda = true
+	barco.current_state = NPCBarqueiro.BarqueiroState.PEDINDO_AJUDA
+	var msg := DialogText.new()
+	msg.text = "Karina! Volte para o barco agora, precisamos conversar."
+	msg.char_info = BARQUEIRO_DATA
+	var items: Array[DialogItem] = []
+	items.assign([msg])
+	DialogSystem.show_dialog(items)
 
 
 func _on_player_at_barco() -> void:
@@ -132,9 +143,9 @@ func _iniciar_dialogo_abertura() -> void:
 			barco_dialog.enabled = true
 		return
 
-	## Parte 1: Carina + Carlos conversam (linhas 0-7)
+	## Parte 1: Carina + Carlos conversam (linhas 0-11)
 	var parte1: Array[DialogItem] = []
-	parte1.assign(all_lines.slice(0, 8))
+	parte1.assign(all_lines.slice(0, 12))
 	await _play_dialog_segment(parte1)
 
 	## Iara aparece (animação roda com game unpaused)
@@ -145,9 +156,9 @@ func _iniciar_dialogo_abertura() -> void:
 			player.assustar()
 		await iara.apareceu
 
-	## Parte 2: Reações "!!" + Iara fala (linhas 8-13)
+	## Parte 2: Reações "!!" + Iara fala (linhas 12-17)
 	var parte2: Array[DialogItem] = []
-	parte2.assign(all_lines.slice(8, 14))
+	parte2.assign(all_lines.slice(12, 18))
 	await _play_dialog_segment(parte2)
 
 	## Iara sai (animação roda com game unpaused)
@@ -158,9 +169,9 @@ func _iniciar_dialogo_abertura() -> void:
 			player.acalmar()
 		await iara.saiu
 
-	## Parte 3: Carlos + Carina reagem, Carina decide ir (linhas 14-fim)
+	## Parte 3: Carlos + Carina reagem, Carina decide ir (linhas 18-fim)
 	var parte3: Array[DialogItem] = []
-	parte3.assign(all_lines.slice(14))
+	parte3.assign(all_lines.slice(18))
 	await _play_dialog_segment(parte3)
 
 	barco.finalizar_inicio()

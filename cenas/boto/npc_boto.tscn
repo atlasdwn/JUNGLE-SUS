@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cwruijabut2d1"]
+
+[ext_resource type="Script" uid="uid://b1mtyvphitenl" path="res://cenas/boto/scripts/npc_boto.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="2_dialog"]
+[ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="2_dk6qq"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_ngtri"]
+[ext_resource type="Resource" uid="uid://cxjboto123" path="res://recursos/dialogs/boto/primeiro_interact.tres" id="4_lqx2s"]
+[ext_resource type="Texture2D" uid="uid://codm17m7tf8yf" path="res://assets/Pixel Crawler - Free Pack/Entities/Mobs/Skeleton Crew/Skeleton - Base/Idle/Idle-Sheet.png" id="6_2bgpp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boto"]
+size = Vector2(60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0ubn"]
+atlas = ExtResource("6_2bgpp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swhbc"]
+atlas = ExtResource("6_2bgpp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjnwt"]
+atlas = ExtResource("6_2bgpp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yat3s"]
+atlas = ExtResource("6_2bgpp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u2t8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0ubn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swhbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjnwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yat3s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NPCBoto" type="Area2D" unique_id=2130623779]
+collision_layer = 4
+script = ExtResource("1_script")
+remedio_item = ExtResource("2_dk6qq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1748676063]
+shape = SubResource("RectangleShape2D_boto")
+
+[node name="DialogInteraction" parent="." unique_id=633004537 instance=ExtResource("2_dialog")]
+dialogs = Array[ExtResource("3_ngtri")]([ExtResource("4_lqx2s")])
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=469481042]
+sprite_frames = SubResource("SpriteFrames_u2t8b")
+animation = &"idle"
+autoplay = "idle"
+frame = 3
+frame_progress = 0.009729637

@@ -1,23 +1,132 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://chy1uvbxaxdak"]
 
-[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_baw01"]
-[ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_baw01"]
-[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_baw01"]
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_itm"]
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_txt"]
+[ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_bar"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="3_kar"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="5_res"]
 
-[sub_resource type="Resource" id="conc001"]
-script = ExtResource("1_baw01")
-text = "Excelente! Você conseguiu todas as madeiras! Vou consertar o casco agora."
-char_info = ExtResource("2_baw01")
+[sub_resource type="Resource" id="sub_0"]
+script = ExtResource("1_txt")
+text = "Aqui. É o suficiente?"
+char_info = ExtResource("3_kar")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
-[sub_resource type="Resource" id="conc002"]
-script = ExtResource("1_baw01")
-text = "Assim que terminar os suprimentos restantes, estaremos prontos para partir!"
-char_info = ExtResource("2_baw01")
+[sub_resource type="Resource" id="sub_1"]
+script = ExtResource("1_txt")
+text = "Eita. Onde tu achou tudo isso? Tá só o tucupi de madeira."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_2"]
+script = ExtResource("1_txt")
+text = "Agradeça ao desmatador ambulante que eu mencionei mais cedo."
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_3"]
+script = ExtResource("1_txt")
+text = "Agora sim."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_4"]
+script = ExtResource("1_txt")
+text = "Só falta a força de vontade mesmo, Karina. Quando tu achar a nossa bagagem, volta aqui pra me ajudar."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_5"]
+script = ExtResource("1_txt")
+text = "Claro, sem problemas."
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_6"]
+script = ExtResource("1_txt")
+text = "Por que você tá com essa cara?"
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_7"]
+script = ExtResource("1_txt")
+text = "Eu acho que aquela mulher esquisita tá por aqui de novo."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_8"]
+script = ExtResource("1_txt")
+text = "A Iara?"
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_9"]
+script = ExtResource("1_txt")
+text = "Acho que você tem mais o que se preocupar, tipo um jacaré, uma cobra..."
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_10"]
+script = ExtResource("1_txt")
+text = "...!"
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_11"]
+script = ExtResource("1_txt")
+text = "Tu só me deixou mais cabreiro."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_12"]
+script = ExtResource("1_txt")
+text = "Só me promete que ela não vai subir aqui pra me estrangular."
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_13"]
+script = ExtResource("1_txt")
+text = "Bom, ela já deve ter percebido que você é um homem, mas um homem de bom coração."
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_14"]
+script = ExtResource("1_txt")
+text = "E o quê tem a ver eu ser um homem?"
+char_info = ExtResource("2_bar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_15"]
+script = ExtResource("1_txt")
+text = "Você não sabia? Ela arrasta os bicho tudo pra debaixo d'agua."
+char_info = ExtResource("3_kar")
+portrait_index = null
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="sub_16"]
+script = ExtResource("1_txt")
+text = "..Quê?!"
+char_info = ExtResource("2_bar")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
-script = ExtResource("4_baw01")
+script = ExtResource("5_res")
 dial_name = "Concluido"
-lines = Array[ExtResource("1_baw01")]([SubResource("conc001"), SubResource("conc002")])
+lines = Array[ExtResource("1_itm")]([SubResource("sub_0"), SubResource("sub_1"), SubResource("sub_2"), SubResource("sub_3"), SubResource("sub_4"), SubResource("sub_5"), SubResource("sub_6"), SubResource("sub_7"), SubResource("sub_8"), SubResource("sub_9"), SubResource("sub_10"), SubResource("sub_11"), SubResource("sub_12"), SubResource("sub_13"), SubResource("sub_14"), SubResource("sub_15"), SubResource("sub_16")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"
