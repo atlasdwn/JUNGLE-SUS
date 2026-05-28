@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://c4gp8w387g102"]
 
-[ext_resource type="Texture2D" uid="uid://b272d7aye1dgg" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0001.png" id="1_ljsf4"]
+[ext_resource type="Texture2D" uid="uid://c7lg8154d7psf" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0014.png" id="1_ljsf4"]
 [ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://cenas/inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
 [ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://cenas/inventario/inv_slot.tscn" id="3_4lnmx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lnmx"]
 texture = ExtResource("1_ljsf4")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 4.0
+texture_margin_left = 5.002825
+texture_margin_top = 4.970475
+texture_margin_right = 4.981258
+texture_margin_bottom = 4.978563
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=922488053]
 
@@ -19,8 +19,8 @@ anchor_left = 0.36577505
 anchor_top = 0.33611116
 anchor_right = 0.634225
 anchor_bottom = 0.6638889
-offset_left = -8.096024
-offset_right = 8.096008
+offset_left = -8.096008
+offset_right = 8.096069
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6

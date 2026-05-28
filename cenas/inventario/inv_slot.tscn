@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dg2qchifle45e"]
 
 [ext_resource type="Texture2D" uid="uid://citewbhumjatd" path="res://assets/inventario/inventory-slot.png" id="1_04hr1"]
-[ext_resource type="Texture2D" uid="uid://d1s8qjwqxt55h" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0013.png" id="1_nauo4"]
+[ext_resource type="Texture2D" uid="uid://c7lg8154d7psf" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0014.png" id="1_nauo4"]
 [ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://cenas/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
-[ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_6yrxe"]
+[ext_resource type="Texture2D" uid="uid://bva8ah1hjsh48" path="res://assets/items/machado.png" id="4_ljusd"]
+[ext_resource type="FontFile" uid="uid://o01nhxjut5c7" path="res://assets/fonts/static/PixelifySans-Medium.ttf" id="5_ljusd"]
+[ext_resource type="Script" uid="uid://4bknpks47fcx" path="res://cenas/inventario/scripts/tooltip.gd" id="6_6bklq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yrxe"]
 texture = ExtResource("1_nauo4")
@@ -17,15 +19,20 @@ draw_center = false
 texture = ExtResource("1_04hr1")
 modulate_color = Color(0.90186185, 0.90186185, 0.90186185, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4utms"]
-atlas = ExtResource("3_6yrxe")
-region = Rect2(128, 48, 16, 16)
-
 [sub_resource type="LabelSettings" id="LabelSettings_6yrxe"]
+font = ExtResource("5_ljusd")
 font_size = 32
-outline_size = 4
-outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
-shadow_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
+outline_size = 2
+outline_color = Color(0.23968577, 0.1566146, 0.07078219, 1)
+shadow_color = Color(0.23968577, 0.1566146, 0.07078219, 1)
+shadow_offset = Vector2(1, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atl44"]
+content_margin_left = 4.0
+content_margin_top = 1.0
+bg_color = Color(0, 0, 0, 0.7176471)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lwjxl"]
 
 [node name="InvSlot" type="Button" unique_id=1950122671]
 custom_minimum_size = Vector2(32, 32)
@@ -53,7 +60,7 @@ offset_right = 32.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_4utms")
+texture = ExtResource("4_ljusd")
 expand_mode = 3
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
@@ -73,3 +80,36 @@ text = "99"
 label_settings = SubResource("LabelSettings_6yrxe")
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="Tooltip" type="PanelContainer" parent="." unique_id=1865685826]
+top_level = true
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16666667
+anchor_top = -0.083333336
+anchor_right = 0.16666667
+anchor_bottom = -0.083333336
+offset_left = -216.0
+offset_top = 90.0
+offset_right = -61.36487
+offset_bottom = 175.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_atl44")
+script = ExtResource("6_6bklq")
+
+[node name="VContainer" type="VBoxContainer" parent="Tooltip" unique_id=1204283848]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="Tooltip/VContainer" unique_id=1050319103]
+layout_mode = 2
+text = "Nome do item"
+label_settings = SubResource("LabelSettings_lwjxl")
+
+[node name="ItemDesc" type="RichTextLabel" parent="Tooltip/VContainer" unique_id=742394217]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "Descrição do item"
+scroll_active = false
