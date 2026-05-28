@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://dg2qchifle45e"]
 
 [ext_resource type="Texture2D" uid="uid://citewbhumjatd" path="res://assets/inventario/inventory-slot.png" id="1_04hr1"]
+[ext_resource type="Texture2D" uid="uid://d1s8qjwqxt55h" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0013.png" id="1_nauo4"]
 [ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://cenas/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
 [ext_resource type="Texture2D" uid="uid://dbja14qjpcx4c" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Farm.png" id="3_6yrxe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yrxe"]
-texture = ExtResource("1_04hr1")
+texture = ExtResource("1_nauo4")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+draw_center = false
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4utms"]
 texture = ExtResource("1_04hr1")
@@ -17,15 +23,16 @@ region = Rect2(128, 48, 16, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6yrxe"]
 font_size = 32
-outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 0.065000005)
+outline_size = 4
+outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
+shadow_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
 
 [node name="InvSlot" type="Button" unique_id=1950122671]
 custom_minimum_size = Vector2(32, 32)
 anchors_preset = -1
 anchor_right = 0.05
 anchor_bottom = 0.089
-offset_bottom = -0.040000916
+offset_bottom = -0.12000275
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxTexture_6yrxe")
