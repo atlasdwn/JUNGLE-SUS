@@ -1,17 +1,20 @@
 extends NPCBase
 
 enum MadeireiroState { FIRST_MEET, WAITING_FOR_AXE, COMPLETED, DEFAULT }
+enum QuestStatus { READY, ONGOING, FINISHED }
 
 var current_state: MadeireiroState = MadeireiroState.FIRST_MEET
-var player_in_area = false
+var player_in_area : bool = false
 var player: Player
-var quest_aceita = false
+var quest_aceita : bool = false
+var current_quest_status : QuestStatus = QuestStatus.READY
 
 @export var machado_item: ItemData
 @export var suprimento_item: ItemData
 
 func _ready() -> void:	
 	super._ready()
+	
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	DialogSystem.quest_choice.connect(_on_escolha_feita)
@@ -43,6 +46,7 @@ func _on_interaction_finished() -> void:
 			player.inventory.remove_item(machado_item)
 			player.inventory.add_item(suprimento_item)
 			current_state = MadeireiroState.COMPLETED
+			current_quest_status = QuestStatus.FINISHED
 			_on_player_entered_dialog()
 	
 func _process(_delta: float) -> void:
@@ -59,5 +63,6 @@ func _on_body_exited(body) -> void:
 		player = null
 
 func _on_escolha_feita(id: String, aceitou: bool) -> void:
-	if id == "Quest Madeireiro": 
+	if id == "Quest Madeireiro":
 		quest_aceita = aceitou
+		current_quest_status = QuestStatus.ONGOING
