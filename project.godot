@@ -22,8 +22,8 @@ InventarioUi="*uid://c4gp8w387g102"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
@@ -47,7 +47,7 @@ Collectibles=""
 
 [gui]
 
-theme/custom_font="uid://mdvpqqagjwdp"
+theme/custom_font="uid://c7wxkxp51e5p0"
 
 [input]
 

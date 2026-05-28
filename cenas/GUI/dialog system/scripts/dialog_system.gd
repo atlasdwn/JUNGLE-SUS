@@ -4,7 +4,7 @@ extends CanvasLayer
 class_name DialogSystemNode 
 
 @onready var dialog_ui: Control = $DialogUI
-@onready var name_label: Label = $DialogUI/NameLabel
+@onready var name_label: Label = $DialogUI/NameBG/NameLabel
 @onready var portrait: Sprite2D = $DialogUI/Portrait
 @onready var dialog_progress: PanelContainer = $DialogUI/DialogProgress
 @onready var dialog_progress_button: Label = $DialogUI/DialogProgress/DialogProgressButton
@@ -134,7 +134,11 @@ func set_dialog_data(_d) -> void:
 	# Puxa informações do personagem
 	if _d.char_info:
 		name_label.text = _d.char_info.name
-		portrait.texture = _d.char_info.portrait
+		if _d.char_info.portraits and _d.char_info.portraits.size() > 0:
+			if _d.portrait_index < _d.char_info.portraits.size():
+				portrait.texture = _d.char_info.portraits[_d.portrait_index]
+			else:
+				portrait.texture = _d.char_info.portraits[0]
 		
 	content.visible_characters = 0
 	text_length = content.get_total_character_count()
@@ -146,9 +150,9 @@ func show_dialog_button( _is_visible: bool) -> void:
 	dialog_progress.visible = _is_visible
 	# Verifica se há mais texto nesta lista OU se há algo na pilha para voltar
 	if dialog_item_index + 1 < dialog_items.size() or dialog_stack.size() > 0:
-		dialog_progress_button.text = 'NEXT'
+		dialog_progress_button.text = 'PRÓXIMO'
 	else:
-		dialog_progress_button.text = 'END'
+		dialog_progress_button.text = 'TERMINAR'
 	
 func start_timer() -> void:
 	timer.wait_time = text_speed

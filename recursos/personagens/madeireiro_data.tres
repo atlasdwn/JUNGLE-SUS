@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://cx1x2rlqha3je"]
 
+[ext_resource type="Texture2D" uid="uid://dknmwpxaphm0n" path="res://assets/Personagens/portraits/Madeireiro (1).png" id="1_naulh"]
 [ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="2_2vhc6"]
 
 [resource]
 script = ExtResource("2_2vhc6")
 name = "Madeireiro"
+portraits = Array[Texture]([ExtResource("1_naulh")])
 metadata/_custom_type_script = "uid://3se4ee0klg28"

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://bv74ubs7j07ve"]
 
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_7yawv"]
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_ipe01"]
 [ext_resource type="Resource" uid="uid://c0f2dlvn4fk45" path="res://recursos/personagens/iara_data.tres" id="2_ipe01"]
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="3_ipe01"]
@@ -9,46 +10,53 @@
 script = ExtResource("1_ipe01")
 text = "Karina... que bom que você chegou."
 char_info = ExtResource("2_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe002"]
 script = ExtResource("1_ipe01")
 text = "Como você sabe meu nome?"
 char_info = ExtResource("3_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe003"]
 script = ExtResource("1_ipe01")
 text = "A floresta me conta muitas coisas. E ela está me contando que está morrendo de sede."
 char_info = ExtResource("2_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe004"]
 script = ExtResource("1_ipe01")
 text = "A seca está mesmo muito grave aqui na região?"
 char_info = ExtResource("3_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe005"]
 script = ExtResource("1_ipe01")
 text = "Os igarapés estão secando. Os bichos estão com fome. As famílias não têm água limpa para beber."
 char_info = ExtResource("2_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe006"]
 script = ExtResource("1_ipe01")
 text = "É por isso que trouxemos os suprimentos. As comunidades precisam de ajuda."
 char_info = ExtResource("3_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe007"]
 script = ExtResource("1_ipe01")
 text = "Sim. E eu sei que você vai fazer a coisa certa. Vá, Karina. A floresta está esperando."
 char_info = ExtResource("2_ipe01")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("4_ipe01")
 dial_name = "Primeiro Encontro"
-lines = Array[ExtResource("1_ipe01")]([SubResource("Resource_ipe001"), SubResource("Resource_ipe002"), SubResource("Resource_ipe003"), SubResource("Resource_ipe004"), SubResource("Resource_ipe005"), SubResource("Resource_ipe006"), SubResource("Resource_ipe007")])
+lines = Array[ExtResource("1_7yawv")]([SubResource("Resource_ipe001"), SubResource("Resource_ipe002"), SubResource("Resource_ipe003"), SubResource("Resource_ipe004"), SubResource("Resource_ipe005"), SubResource("Resource_ipe006"), SubResource("Resource_ipe007")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

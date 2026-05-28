@@ -3,6 +3,7 @@
 class_name DialogItem extends Resource
 
 @export var char_info: CharacterResource
+@export var portrait_index: int = 0
 
 func _ready() -> void:
 	if Engine.is_editor_hint():

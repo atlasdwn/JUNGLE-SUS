@@ -57,37 +57,37 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_5n686"]
 script = ExtResource("1_fan28")
-text = "...Tá.  Você viu uma bolsa por aí?"
+text = "...Tá.  Você viu uma maleta médica por aí?"
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_33vf4"]
 script = ExtResource("1_fan28")
-text = "Se eu vi estava vazia, mas eu achei um dipirona ou dois pela mata."
+text = "Se eu vi estava vazia, mas eu achei umas cartelas de comprimidos e umas ampolas pela mata."
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_t1mtd"]
 script = ExtResource("1_fan28")
-text = ".."
+text = "..."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_thrmm"]
 script = ExtResource("1_fan28")
-text = "É seu?"
+text = "São seus?"
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_8dsg7"]
 script = ExtResource("1_fan28")
-text = "É."
+text = "São. É medicação para Malária."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_wkra0"]
 script = ExtResource("1_fan28")
-text = "Você não vai me dar, né?"
+text = "Você não vai me devolver, né?"
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -99,13 +99,13 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_3vfc4"]
 script = ExtResource("1_fan28")
-text = "Não tenho nada a ver com isso. Devolve os meus remédios, tem gente precisando deles."
+text = "Isso não é um jogo. Tem uma criança na vila com Malária grave. Se eu não começar o tratamento hoje, a infecção vai atingir o cérebro e ela não vai resistir."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_i1dos"]
 script = ExtResource("1_fan28")
-text = "Veio aqui distribuir eles, foi? Caridade não me comove. Se quer os remédios, me dá o machado."
+text = "Veio aqui bancar a heroína do SUS, foi? O problema dela não me comove. Se quer a medicação, me dá o machado."
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -184,24 +184,29 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_omvic"]
 script = ExtResource("1_fan28")
-text = "Isso não vai estar acontecendo. 
-Eu vou dar o meu jeito, mas não vou te ajudar a destruir nossa floresta."
+text = "Isso não vai acontecer."
+char_info = ExtResource("2_8hb7l")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_1cvyy"]
+script = ExtResource("1_fan28")
+text = "Eu fiz um juramento para salvar vidas, não para ajudar a destruir nossa floresta. Eu vou dar o meu jeito."
 char_info = ExtResource("2_8hb7l")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_fvap7"]
 script = ExtResource("1_fan28")
-text = "Bom... boa sorte tentando salvar aquela criança. Ha ha ha!"
+text = "Bom... tomara que aquela criancinha resista à febre da malária enquanto você tenta bancar a santa. Ha ha ha!"
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_f70r5"]
 script = ExtResource("5_cjntt")
 choice_id = "Quest Madeireiro"
-text = "Ache ruim o quanto quiser. Sem meu machado, sem seus remédios.
+text = "Ache ruim o quanto quiser. Sem meu machado, sem remédios. A doença só vai piorar.
 O que você prefere?"
 accept_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_g4mm0"), SubResource("Resource_7ndir"), SubResource("Resource_gkdef"), SubResource("Resource_8mpeu"), SubResource("Resource_716kg"), SubResource("Resource_bd34i"), SubResource("Resource_ifoat"), SubResource("Resource_huvfe"), SubResource("Resource_ojm4q"), SubResource("Resource_x8hne"), SubResource("Resource_w7io2")])
-refuse_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_omvic"), SubResource("Resource_fvap7")])
+refuse_dialogs = Array[ExtResource("1_b7x3b")]([SubResource("Resource_omvic"), SubResource("Resource_1cvyy"), SubResource("Resource_fvap7")])
 char_info = ExtResource("3_p6swj")
 metadata/_custom_type_script = "uid://wryjswybcgh3"
 

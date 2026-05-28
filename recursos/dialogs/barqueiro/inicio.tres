@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cuwls3yobek3o"]
 
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_ini"]
+[ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_q4tvw"]
 [ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_ini"]
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="3_ini"]
 [ext_resource type="Resource" uid="uid://c0f2dlvn4fk45" path="res://recursos/personagens/iara_data.tres" id="4_ini"]
@@ -10,178 +11,207 @@
 script = ExtResource("1_ini")
 text = "Está ficando escuro, não dá pra ficar parado, Carlos."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i002"]
 script = ExtResource("1_ini")
 text = "Ainda tô consertando o motor, se eu parar agora pra procurar bandagem e remédio a gente não sai daqui tão cedo."
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i003"]
 script = ExtResource("1_ini")
 text = "Que situação..."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i004"]
 script = ExtResource("1_ini")
 text = "Da próxima vez a gente vem de cruzeiro."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i005"]
 script = ExtResource("1_ini")
 text = "Ha. Isso se tiver próxima vez."
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i006"]
 script = ExtResource("1_ini")
 text = "De qualquer jeito, essa situação me preocupa. E se não chegarmos a tempo na comunidade...?"
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i007"]
 script = ExtResource("1_ini")
 text = "O pessoal tá muito doente, e as rotas continuam difíceis de navegar..."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i008"]
 script = ExtResource("1_ini")
 text = "Tá impossível de chegar até eles..."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i009"]
 script = ExtResource("1_ini")
 text = "!!"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i010"]
 script = ExtResource("1_ini")
 text = "!"
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i011"]
 script = ExtResource("1_ini")
 text = "..."
 char_info = ExtResource("4_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i012"]
 script = ExtResource("1_ini")
 text = "Intrusos."
 char_info = ExtResource("4_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i013"]
 script = ExtResource("1_ini")
 text = "A floresta... os rios... estão sofrendo o suficiente. Eu estou..."
 char_info = ExtResource("4_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i014"]
 script = ExtResource("1_ini")
 text = "Vão embora."
 char_info = ExtResource("4_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i015"]
 script = ExtResource("1_ini")
 text = "Mas o que...? Carina, você viu isso?"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i016"]
 script = ExtResource("1_ini")
 text = "...vi."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i017"]
 script = ExtResource("1_ini")
 text = "É uma mulher??"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i018"]
 script = ExtResource("1_ini")
 text = "...É a Iara."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i019"]
 script = ExtResource("1_ini")
 text = "Quem?"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i020"]
 script = ExtResource("1_ini")
 text = "É a Iara! Não ouviu o que ela disse? ela tá sofrendo com a seca."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i021"]
 script = ExtResource("1_ini")
 text = "Eu lá sei quem diabos é Iara!"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i022"]
 script = ExtResource("1_ini")
 text = "Mas você entende a gravidade da situação!"
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i023"]
 script = ExtResource("1_ini")
 text = "Eu vou atrás dos suprimentos, barco nenhum vai chegar aqui com o rio nesse estado."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i024"]
 script = ExtResource("1_ini")
 text = "Você fica."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i025"]
 script = ExtResource("1_ini")
 text = "O quê? Quer que eu fique sozinho com essa mulher esquisita no meu cangote??"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i026"]
 script = ExtResource("1_ini")
 text = "Sim! Eu preciso pegar as bolsas e os remédios de volta."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i027"]
 script = ExtResource("1_ini")
 text = "Se ela cantar, tapa os ouvidos e se finge de bobo. E grita por ajuda."
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i028"]
 script = ExtResource("1_ini")
 text = "Peraí, Carina-!"
 char_info = ExtResource("2_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="i029"]
 script = ExtResource("1_ini")
 text = "Te vejo depois!"
 char_info = ExtResource("3_ini")
+portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("5_ini")
 dial_name = "Inicio"
-lines = Array[ExtResource("1_ini")]([SubResource("i001"), SubResource("i002"), SubResource("i003"), SubResource("i004"), SubResource("i005"), SubResource("i006"), SubResource("i007"), SubResource("i008"), SubResource("i009"), SubResource("i010"), SubResource("i011"), SubResource("i012"), SubResource("i013"), SubResource("i014"), SubResource("i015"), SubResource("i016"), SubResource("i017"), SubResource("i018"), SubResource("i019"), SubResource("i020"), SubResource("i021"), SubResource("i022"), SubResource("i023"), SubResource("i024"), SubResource("i025"), SubResource("i026"), SubResource("i027"), SubResource("i028"), SubResource("i029")])
+lines = Array[ExtResource("1_q4tvw")]([SubResource("i001"), SubResource("i002"), SubResource("i003"), SubResource("i004"), SubResource("i005"), SubResource("i006"), SubResource("i007"), SubResource("i008"), SubResource("i009"), SubResource("i010"), SubResource("i011"), SubResource("i012"), SubResource("i013"), SubResource("i014"), SubResource("i015"), SubResource("i016"), SubResource("i017"), SubResource("i018"), SubResource("i019"), SubResource("i020"), SubResource("i021"), SubResource("i022"), SubResource("i023"), SubResource("i024"), SubResource("i025"), SubResource("i026"), SubResource("i027"), SubResource("i028"), SubResource("i029")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"
