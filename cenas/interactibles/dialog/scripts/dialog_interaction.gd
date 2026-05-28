@@ -26,8 +26,20 @@ func _ready() -> void:
 func player_interact() -> void:
 	await get_tree().process_frame
 	await get_tree().process_frame
+	
+	if PlayerManager.carlos_precisa_ajuda and not (owner is NPCBarqueiro):
+		var msg := DialogText.new()
+		msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
+		msg.char_info = preload("res://recursos/personagens/barqueiro_data.tres")
+		var items: Array[DialogItem] = []
+		items.assign([msg])
+		DialogSystem.show_dialog(items)
+		DialogSystem.finished.connect(_on_dialog_finished)
+		return
+		
 	DialogSystem.show_dialog(dialog_items)
 	DialogSystem.finished.connect(_on_dialog_finished)
+
 
 func _on_body_entered(_body : PhysicsBody2D) -> void:
 	if enabled == false:

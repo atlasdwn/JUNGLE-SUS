@@ -17,6 +17,12 @@ func process(_delta: float) -> State:
 	if player.direction == Vector2.ZERO:
 		return idle
 	elif Input.is_action_just_pressed("interact") and player.collectible_in_area == true:
+		if PlayerManager.carlos_precisa_ajuda:
+			var msg := DialogText.new()
+			msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
+			msg.char_info = preload("res://recursos/personagens/barqueiro_data.tres")
+			DialogSystem.show_dialog(Array([msg], TYPE_OBJECT, &"RefCounted", DialogItem))
+			return null
 		return collect
 	player.velocity = player.direction.normalized() * move_speed
 	

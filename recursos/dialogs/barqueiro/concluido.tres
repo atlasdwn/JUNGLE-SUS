@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://chy1uvbxaxdak"]
+
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_baw01"]
+[ext_resource type="Resource" uid="uid://3el80eeq62tu" path="res://recursos/personagens/barqueiro_data.tres" id="2_baw01"]
+[ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_baw01"]
+
+[sub_resource type="Resource" id="conc001"]
+script = ExtResource("1_baw01")
+text = "Excelente! Você conseguiu todas as madeiras! Vou consertar o casco agora."
+char_info = ExtResource("2_baw01")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="conc002"]
+script = ExtResource("1_baw01")
+text = "Assim que terminar os suprimentos restantes, estaremos prontos para partir!"
+char_info = ExtResource("2_baw01")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[resource]
+script = ExtResource("4_baw01")
+dial_name = "Concluido"
+lines = Array[ExtResource("1_baw01")]([SubResource("conc001"), SubResource("conc002")])
+metadata/_custom_type_script = "uid://fq0jowlitt7b"

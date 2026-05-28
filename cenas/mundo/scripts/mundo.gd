@@ -13,6 +13,10 @@ func _ready() -> void:
 	_find_nodes()
 	inventory.all_collected.connect(_on_all_collected)
 	
+	# Inicializa a quest do barco
+	inventory.required_items = 5
+	set_wood_visible(false)
+	
 	# Efeito Iris de abertura do jogo (tela começa preta e foca na Carina)
 	if player:
 	
@@ -52,19 +56,47 @@ func _find_child_by_name(node_name: String) -> Node:
 			return found
 	return null
 
-func _on_all_collected() -> void:
-	print("[Mundo] Todos os coletáveis foram pegos!")
-	print("[Mundo] barco ref: ", barco)
-	var msg := DialogText.new()
-	msg.text = "Carina, está na hora de voltar pro barco!"
-	msg.char_info = BARQUEIRO_DATA
-	var items: Array[DialogItem] = []
-	items.assign([msg])
-	DialogSystem.show_dialog(items)
+func set_wood_visible(visible: bool) -> void:
+	for node in get_tree().get_nodes_in_group("Collectibles"):
+		if node is Coletavel and node.item != null and node.item.name == "Madeira":
+			node.visible = visible
+			var col_area = node.get_node_or_null("CollectibleArea")
+			if col_area:
+				col_area.set_deferred("monitoring", visible)
+				col_area.set_deferred("monitorable", visible)
+
+func on_barqueiro_ajuda_pedida() -> void:
+	print("[Mundo] Barqueiro pediu ajuda! Liberando madeiras no mapa.")
+	PlayerManager.carlos_precisa_ajuda = false
+	inventory.required_items = 10
+	set_wood_visible(true)
+
+func on_madeira_entregue() -> void:
+	print("[Mundo] Madeiras entregues! Carlos preparando o barco.")
 	if barco != null:
 		barco.ativar_chamada()
+
+func _on_all_collected() -> void:
+	if barco != null and barco.current_state == NPCBarqueiro.BarqueiroState.AGUARDANDO_SUPRIMENTOS:
+		print("[Mundo] 5 suprimentos coletados! Iniciando evento de ajuda do Barqueiro.")
+		PlayerManager.carlos_precisa_ajuda = true
+		barco.current_state = NPCBarqueiro.BarqueiroState.PEDINDO_AJUDA
+		
+		var msg := DialogText.new()
+		msg.text = "Carina! Volte para o barco agora, preciso de ajuda e só você pode ajudar!"
+		msg.char_info = BARQUEIRO_DATA
+		var items: Array[DialogItem] = []
+		items.assign([msg])
+		DialogSystem.show_dialog(items)
 	else:
-		push_error("[Mundo] barco é NULL!")
+		print("[Mundo] Todos os coletáveis e madeiras foram pegos!")
+		var msg := DialogText.new()
+		msg.text = "Carina, você coletou tudo! Volte para o barco para consertarmos e partirmos."
+		msg.char_info = BARQUEIRO_DATA
+		var items: Array[DialogItem] = []
+		items.assign([msg])
+		DialogSystem.show_dialog(items)
+
 
 func _on_player_at_barco() -> void:
 	pass

@@ -22,6 +22,12 @@ func has_item(item: ItemData) -> bool:
 	var itemslots = slots.filter(func(slot): return slot.item == item)
 	return not itemslots.is_empty() and itemslots[0].amount > 0
 
+func get_item_count(item: ItemData) -> int:
+	var itemslots = slots.filter(func(slot): return slot.item == item)
+	if not itemslots.is_empty():
+		return itemslots[0].amount
+	return 0
+
 func remove_item(item: ItemData) -> void:
 	var itemslots = slots.filter(func(slot): return slot.item == item)
 	if not itemslots.is_empty():

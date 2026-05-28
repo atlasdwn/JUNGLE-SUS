@@ -3,12 +3,16 @@ class_name NPCBarqueiro extends NPCBase
 signal player_embarked
 signal departed
 
-enum BarqueiroState { INICIO, AGUARDANDO_SUPRIMENTOS, CHAMANDO, POS_JOGO }
+enum BarqueiroState { INICIO, AGUARDANDO_SUPRIMENTOS, PEDINDO_AJUDA, CONSERTANDO_BARCO, CHAMANDO, POS_JOGO }
 var current_state: BarqueiroState = BarqueiroState.INICIO
 
 var embarked := false
 var departing := false
 var ponto_embarque: Marker2D
+
+var dialog_pedindo_ajuda = preload("res://recursos/dialogs/barqueiro/pedindo_ajuda.tres")
+var dialog_consertando = preload("res://recursos/dialogs/barqueiro/consertando.tres")
+var dialog_concluido = preload("res://recursos/dialogs/barqueiro/concluido.tres")
 
 func _ready() -> void:
 	super._ready()
@@ -65,6 +69,16 @@ func ativar_chamada() -> void:
 func missao_concluida() -> void:
 	current_state = BarqueiroState.POS_JOGO
 
+func _get_world_node() -> Node:
+	if owner != null and (owner.has_method("on_barqueiro_ajuda_pedida") or "inventory" in owner):
+		return owner
+	var p = get_parent()
+	while p != null:
+		if p.has_method("on_barqueiro_ajuda_pedida") or "inventory" in p:
+			return p
+		p = p.get_parent()
+	return get_parent()
+
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_player_entered_dialog() -> void:
 	match current_state:
@@ -72,6 +86,19 @@ func _on_player_entered_dialog() -> void:
 			pass # diálogo de início dispara via DialogSystem, não por aproximação
 		BarqueiroState.AGUARDANDO_SUPRIMENTOS:
 			dialog_interaction.current_dialog = _find_dialog("Aguardando")
+		BarqueiroState.PEDINDO_AJUDA:
+			dialog_interaction.current_dialog = dialog_pedindo_ajuda
+		BarqueiroState.CONSERTANDO_BARCO:
+			var world = _get_world_node()
+			var total_madeira = 0
+			if world and "inventory" in world:
+				var wood_item = preload("res://recursos/itens/madeira_data.tres")
+				total_madeira = world.inventory.get_item_count(wood_item)
+			
+			if total_madeira >= 5:
+				dialog_interaction.current_dialog = dialog_concluido
+			else:
+				dialog_interaction.current_dialog = dialog_consertando
 		BarqueiroState.CHAMANDO:
 			dialog_interaction.current_dialog = _find_dialog("Chamada")
 		BarqueiroState.POS_JOGO:
@@ -80,6 +107,26 @@ func _on_player_entered_dialog() -> void:
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_interaction_finished() -> void:
 	match current_state:
+		BarqueiroState.PEDINDO_AJUDA:
+			current_state = BarqueiroState.CONSERTANDO_BARCO
+			var world = _get_world_node()
+			if world and world.has_method("on_barqueiro_ajuda_pedida"):
+				world.on_barqueiro_ajuda_pedida()
+		BarqueiroState.CONSERTANDO_BARCO:
+			var world = _get_world_node()
+			var total_madeira = 0
+			if world and "inventory" in world:
+				var wood_item = preload("res://recursos/itens/madeira_data.tres")
+				total_madeira = world.inventory.get_item_count(wood_item)
+			
+			if total_madeira >= 5:
+				current_state = BarqueiroState.CHAMANDO
+				if world and "inventory" in world:
+					var wood_item = preload("res://recursos/itens/madeira_data.tres")
+					for i in range(5):
+						world.inventory.remove_item(wood_item)
+				if world and world.has_method("on_madeira_entregue"):
+					world.on_madeira_entregue()
 		BarqueiroState.CHAMANDO:
 			# Inicia a partida do barco após a conversa
 			depart()
@@ -101,7 +148,7 @@ func depart() -> void:
 	print("[Barco] Partindo!")
 	
 	# Esconde a Carina diretamente (ela já está dentro da zona)
-	var mundo = get_parent()
+	var mundo = _get_world_node()
 	var carina = mundo.find_child("Carina", true, false) if mundo else null
 	if carina:
 		var anim_sprite = carina.get_node_or_null("Anim")

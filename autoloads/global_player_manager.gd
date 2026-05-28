@@ -3,6 +3,8 @@ extends Node
 signal interact_pressed
 
 var interact_handled : bool = true
+var carlos_precisa_ajuda : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento.tscn" id="17_vuvim"]
 [ext_resource type="PackedScene" uid="uid://678q46ccs74h" path="res://cenas/puzzles/pedrasMoveis.tscn" id="18_7vlvb"]
 [ext_resource type="PackedScene" uid="uid://becf1a87tps8b" path="res://cenas/mundo/iara/npc_iara.tscn" id="19_don86"]
+[ext_resource type="PackedScene" uid="uid://ptmx3snqcnc6" path="res://cenas/coletaveis/madeira.tscn" id="20_hothi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvte"]
 texture = ExtResource("1_v4jgv")
@@ -605,8 +606,17 @@ position = Vector2(-14, -326)
 [node name="Suprimento4" parent="." unique_id=1454991590 instance=ExtResource("17_vuvim")]
 position = Vector2(3, -272)
 
+[node name="Suprimento7" parent="." unique_id=97635105 instance=ExtResource("17_vuvim")]
+position = Vector2(-45, -307)
+
 [node name="Suprimento5" parent="." unique_id=1488579436 instance=ExtResource("17_vuvim")]
 position = Vector2(-580, -1781)
 
+[node name="Suprimento6" parent="." unique_id=591708546 instance=ExtResource("17_vuvim")]
+position = Vector2(-540, -1773)
+
 [node name="NpcIara" parent="." unique_id=100000001 instance=ExtResource("19_don86")]
 position = Vector2(40, 52)
+
+[node name="Madeira" parent="." unique_id=2033560475 instance=ExtResource("20_hothi")]
+position = Vector2(137, 32)
