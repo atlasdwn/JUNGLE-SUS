@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_kg6y2"]
 script = ExtResource("1_1ivad")
-text = "Pega ai"
+text = ""
 char_info = ExtResource("2_735c8")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 

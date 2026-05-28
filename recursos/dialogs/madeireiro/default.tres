@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_1opj3"]
 script = ExtResource("1_b5y5k")
-text = "oiiii"
+text = "O que você quer?"
 char_info = ExtResource("2_i0d78")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 

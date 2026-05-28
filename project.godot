@@ -20,6 +20,7 @@ PlayerManager="*uid://dlrtb8ym8615l"
 DialogSystem="*uid://lq43cdbj4q32"
 InventarioUi="*uid://c4gp8w387g102"
 ScreenTransition="*res://autoloads/screen_transition.gd"
+QuestManager="*uid://duqacmvml46fh"
 
 [display]
 
