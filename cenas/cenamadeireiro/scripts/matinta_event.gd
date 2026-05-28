@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var parede_matinta = get_node_or_null("../Ambiente/Passagens/ParedeMatinta/Collision")
+@onready var parede_matinta: CollisionShape2D = $"../Ambiente/Passagens/ParedeMatinta/Collision"
 @onready var gatilho_evento = $GatilhoEvento
 @onready var zonas_esconderijo = $ZonasDeEsconderijo.get_children()
 @onready var sombra_matinta = $CanvasLayer/SombraMatinta
@@ -8,9 +8,10 @@ extends Node2D
 @onready var timer_evento = $TimerEvento
 @onready var timer_sombra = $TimerSombra
 @onready var animation_player = $CanvasLayer/SombraMatinta/AnimationPlayer
+@onready var matinta: Matinta = $"../Matinta"
+@onready var carina : Player
 
-@onready var carina = get_node_or_null("../Ambiente/Carina")
-@onready var matinta = get_node_or_null("../Matinta")
+
 
 var evento_ativo = false
 
@@ -32,9 +33,11 @@ func _process(_delta):
 			
 
 func _on_gatilho_entered(body):
-	if body == carina and not evento_ativo:
-		iniciar_evento()
-		gatilho_evento.set_deferred("monitoring", false)
+	if body.name == 'Carina':
+		if not evento_ativo:
+			carina = body
+			iniciar_evento()
+			gatilho_evento.set_deferred("monitoring", false)
 
 func iniciar_evento():
 	evento_ativo = true
