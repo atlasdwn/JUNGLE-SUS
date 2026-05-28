@@ -30,7 +30,7 @@ func player_interact() -> void:
 	if PlayerManager.carlos_precisa_ajuda and not (owner is NPCBarqueiro):
 		var msg := DialogText.new()
 		msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
-		msg.char_info = preload("res://recursos/personagens/barqueiro_data.tres")
+		msg.char_info = preload("res://recursos/personagens/karina_data.tres")
 		var items: Array[DialogItem] = []
 		items.assign([msg])
 		DialogSystem.show_dialog(items)

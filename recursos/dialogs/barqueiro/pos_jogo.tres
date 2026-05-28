@@ -9,7 +9,6 @@
 script = ExtResource("1_bpj01")
 text = "A missão terminou, menina. Agora vai descansar."
 char_info = ExtResource("2_bpj01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

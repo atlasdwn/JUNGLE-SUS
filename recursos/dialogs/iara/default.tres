@@ -9,7 +9,6 @@
 script = ExtResource("1_idf01")
 text = "A floresta está com você, Karina."
 char_info = ExtResource("2_idf01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

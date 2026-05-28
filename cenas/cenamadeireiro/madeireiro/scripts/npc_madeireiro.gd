@@ -47,6 +47,7 @@ func _on_interaction_finished() -> void:
 			player.inventory.add_item(suprimento_item)
 			current_state = MadeireiroState.COMPLETED
 			current_quest_status = QuestStatus.FINISHED
+			PlayerManager.quest_madeireiro_concluida = true
 			_on_player_entered_dialog()
 	
 func _process(_delta: float) -> void:

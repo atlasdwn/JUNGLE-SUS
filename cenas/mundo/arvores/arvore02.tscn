@@ -25,8 +25,8 @@ sources/0 = SubResource("TileSetAtlasSource_jolad")
 sources/1 = SubResource("TileSetAtlasSource_wyici")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wcv7v"]
-radius = 41.5
-height = 141.0
+radius = 20.0
+height = 70.0
 
 [node name="Arvore02" type="TileMapLayer" unique_id=495842257]
 y_sort_enabled = true

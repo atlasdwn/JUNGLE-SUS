@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogResource" format=3 uid="uid://cxjboto123"]
 
-[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_txt"]
 [ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_itm"]
+[ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_txt"]
 [ext_resource type="Resource" uid="uid://veo8lw1i6nq2" path="res://recursos/personagens/boto_data.tres" id="2_bot"]
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="3_kar"]
 [ext_resource type="Script" uid="uid://wryjswybcgh3" path="res://recursos/dialogs/scripts/dialog_choice.gd" id="4_chc"]
@@ -11,280 +11,240 @@
 script = ExtResource("1_txt")
 text = "Mas o quê..?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_1"]
 script = ExtResource("1_txt")
 text = "Boa noite, moçoila."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_2"]
 script = ExtResource("1_txt")
 text = "Noite."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_3"]
 script = ExtResource("1_txt")
 text = "Oras! O que uma jovem tão linda anda fazendo por aqui, hm?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_4"]
 script = ExtResource("1_txt")
 text = "E o que um cara de 2 metros vestido em um paletó e gravata faz aqui?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_5"]
 script = ExtResource("1_txt")
 text = "Haha. Isso eu não posso dizer."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_6"]
 script = ExtResource("1_txt")
 text = "Está perdida?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_7"]
 script = ExtResource("1_txt")
 text = "...você tá fumando dois cigarros ao mesmo tempo?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_8"]
 script = ExtResource("1_txt")
 text = "Primeiramente, isso são palheiros."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_9"]
 script = ExtResource("1_txt")
 text = "E segundamente, não desvie de assunto, dengo."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_10"]
 script = ExtResource("1_txt")
 text = "Dengo...?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_11"]
 script = ExtResource("1_txt")
 text = "Tá. Você viu uma bolsa por aí? De preferência uma com equipamento médico e remédios."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_12"]
 script = ExtResource("1_txt")
 text = "És médica? Vejo que além de deslumbrante, também é inteligente."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_13"]
 script = ExtResource("1_txt")
 text = "Sim, inteligente o suficiente pra perceber que você não é normal."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_14"]
 script = ExtResource("1_txt")
 text = "Ah, não sei do que está falando, sou apenas um-"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_15"]
 script = ExtResource("1_txt")
 text = "Mas eu quero descobrir o por quê."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_16"]
 script = ExtResource("1_txt")
 text = "...?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_17"]
 script = ExtResource("1_txt")
 text = "Entendi."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_18"]
 script = ExtResource("1_txt")
 text = "Por que você não me acompanha a um local mais reservado, meu bem?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_19"]
 script = ExtResource("1_txt")
 text = "Claro. O barco pode esperar."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_20"]
 script = ExtResource("1_txt")
 text = "Dá pra você parar de encher o saco e responder minha pergunta?!"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_21"]
 script = ExtResource("1_txt")
 text = "Eita, impaciente, não é?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_22"]
 script = ExtResource("1_txt")
 text = "Talvez eu tenha visto algo, sim."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_23"]
 script = ExtResource("1_txt")
 text = "Pode devolver?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_24"]
 script = ExtResource("1_txt")
 text = "Ah, mas eu poderia fazer muito mais por uma jovem tão linda como voc-"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_25"]
 script = ExtResource("1_txt")
 text = "Agora."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_26"]
 script = ExtResource("1_txt")
 text = "..."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_27"]
 script = ExtResource("1_txt")
 text = "Meus charmes não te atingem, minha flor?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_28"]
 script = ExtResource("1_txt")
 text = "Não. Tenho mais o que fazer."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_29"]
 script = ExtResource("1_txt")
 text = "Ok, tudo bem. Posso ajudar uma pessoa tão centrada quanto você, sim."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_30"]
 script = ExtResource("1_txt")
 text = "...é esse mesmo. Obrigada."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_31"]
 script = ExtResource("1_txt")
 text = "Não há de quê. Deseja algo a mais?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_32"]
 script = ExtResource("1_txt")
 text = "De você, não."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_33"]
 script = ExtResource("1_txt")
 text = "Mas se você tá tão desesperado por companhia assim, posso te passar um contato."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_34"]
 script = ExtResource("1_txt")
 text = "És de uma mulher tão linda quanto você?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_35"]
 script = ExtResource("1_txt")
 text = "Hmm, não. É o meu navegador."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_36"]
 script = ExtResource("1_txt")
 text = " 'navegador'..?"
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_37"]
 script = ExtResource("1_txt")
 text = "Tudo bem, o Boto dá um jeito."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_38"]
 script = ExtResource("1_txt")
 text = "Bom, é isso. Obrigada de novo."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_39"]
 script = ExtResource("1_txt")
 text = "Foi um prazer."
 char_info = ExtResource("2_bot")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_40"]

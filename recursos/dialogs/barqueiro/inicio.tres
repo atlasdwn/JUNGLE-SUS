@@ -11,238 +11,204 @@
 script = ExtResource("1_txt")
 text = "Está ficando escuro, não dá pra ficar parado, Carlos."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_1"]
 script = ExtResource("1_txt")
 text = "Ainda tô consertando o motor, se eu parar agora pra procurar bandagem e remédio a gente não sai daqui tão cedo."
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_2"]
 script = ExtResource("1_txt")
 text = "Que situação..."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_3"]
 script = ExtResource("1_txt")
 text = "Da próxima vez a gente vem de cruzeiro."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_4"]
 script = ExtResource("1_txt")
 text = "Ha. Isso se tiver próxima vez."
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_5"]
 script = ExtResource("1_txt")
 text = "Torce pra essa seca melhorar daqui pra ano que vem."
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_6"]
 script = ExtResource("1_txt")
 text = "Como se fosse uma questão de sorte e não se programar direito para lidar com isso, né?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_7"]
 script = ExtResource("1_txt")
 text = "...Ou ter infraestrutura."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_8"]
 script = ExtResource("1_txt")
 text = "..."
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_9"]
 script = ExtResource("1_txt")
 text = "Enfim, essa situação me preocupa. E se não chegarmos a tempo na comunidade...?"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_10"]
 script = ExtResource("1_txt")
 text = "O pessoal tá muito doente, e as rotas continuam difíceis de navegar..."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_11"]
 script = ExtResource("1_txt")
 text = "Tá impossível de chegar até eles... e eu duvido que meia dúzia de profissionais da saúde seja o suficiente."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_12"]
 script = ExtResource("1_txt")
 text = "!!"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_13"]
 script = ExtResource("1_txt")
 text = "!"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_14"]
 script = ExtResource("1_txt")
 text = "..."
 char_info = ExtResource("4_iar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_15"]
 script = ExtResource("1_txt")
 text = "Vocês são...intrusos."
 char_info = ExtResource("4_iar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_16"]
 script = ExtResource("1_txt")
 text = "Os rios...o solo...estão sofrendo o suficiente. Eu estou..."
 char_info = ExtResource("4_iar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_17"]
 script = ExtResource("1_txt")
 text = "A floresta não te quer, vão embora...!"
 char_info = ExtResource("4_iar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_18"]
 script = ExtResource("1_txt")
 text = "Mas o que...? Karina, você viu isso?"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_19"]
 script = ExtResource("1_txt")
 text = "...vi."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_20"]
 script = ExtResource("1_txt")
 text = "É uma mulher??"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_21"]
 script = ExtResource("1_txt")
 text = "...É a Iara."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_22"]
 script = ExtResource("1_txt")
 text = "Quem?"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_23"]
 script = ExtResource("1_txt")
 text = "É a Iara! Nunca ouviu falar?!"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_24"]
 script = ExtResource("1_txt")
 text = "Eu lá sei quem diabos é Iara!"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_25"]
 script = ExtResource("1_txt")
 text = "De qualquer forma, você a ouviu."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_26"]
 script = ExtResource("1_txt")
 text = "Até ela está sofrendo com tudo isso."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_27"]
 script = ExtResource("1_txt")
 text = "Eu vou atrás dos suprimentos, barco nenhum vai chegar aqui com o rio nesse estado, mal tem água pra navegar."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_28"]
 script = ExtResource("1_txt")
 text = "Você fica."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_29"]
 script = ExtResource("1_txt")
 text = "O quê? Quer que eu fique sozinho com essa mulher esquisita no meu cangote??"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_30"]
 script = ExtResource("1_txt")
 text = "Sim! Eu preciso pegar as bolsas e os remédios de volta."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_31"]
 script = ExtResource("1_txt")
 text = "Se ela cantar, tapa os ouvidos e se finge de bobo. E grita por ajuda."
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_32"]
 script = ExtResource("1_txt")
 text = "Peraí, Karina-!"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_33"]
 script = ExtResource("1_txt")
 text = "Te vejo depois!"
 char_info = ExtResource("3_kar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

@@ -9,7 +9,6 @@
 script = ExtResource("1_txt")
 text = "Ainda preciso da madeira. Vai lá no madeireiro!"
 char_info = ExtResource("2_bar")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

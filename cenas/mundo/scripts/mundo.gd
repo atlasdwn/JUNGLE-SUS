@@ -16,6 +16,7 @@ func _ready() -> void:
 	# Inicializa a quest do barco
 	inventory.required_items = 5
 	set_wood_visible(false)
+	set_boto_visible(false)
 	
 	# Efeito Iris de abertura do jogo (tela começa preta e foca na Carina)
 	if player:
@@ -65,6 +66,12 @@ func set_wood_visible(visible: bool) -> void:
 				col_area.set_deferred("monitoring", visible)
 				col_area.set_deferred("monitorable", visible)
 
+func set_boto_visible(vis: bool) -> void:
+	for node in get_tree().get_nodes_in_group("NPCBoto"):
+		node.visible = vis
+		node.set_deferred("monitoring", vis)
+		node.set_deferred("monitorable", vis)
+
 func on_barqueiro_ajuda_pedida() -> void:
 	print("[Mundo] Barqueiro pediu ajuda! Liberando madeiras no mapa.")
 	PlayerManager.carlos_precisa_ajuda = false
@@ -101,6 +108,8 @@ func _disparar_pedido_madeira() -> void:
 	print("[Mundo] Quest madeireiro concluída! Iniciando evento de ajuda do Barqueiro.")
 	PlayerManager.carlos_precisa_ajuda = true
 	barco.current_state = NPCBarqueiro.BarqueiroState.PEDINDO_AJUDA
+	# Boto aparece junto com o aviso do Carlos
+	set_boto_visible(true)
 	var msg := DialogText.new()
 	msg.text = "Karina! Volte para o barco agora, precisamos conversar."
 	msg.char_info = BARQUEIRO_DATA

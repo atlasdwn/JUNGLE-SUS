@@ -10,49 +10,42 @@
 script = ExtResource("1_ipe01")
 text = "Karina... que bom que você chegou."
 char_info = ExtResource("2_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe002"]
 script = ExtResource("1_ipe01")
 text = "Como você sabe meu nome?"
 char_info = ExtResource("3_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe003"]
 script = ExtResource("1_ipe01")
 text = "A floresta me conta muitas coisas. E ela está me contando que está morrendo de sede."
 char_info = ExtResource("2_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe004"]
 script = ExtResource("1_ipe01")
 text = "A seca está mesmo muito grave aqui na região?"
 char_info = ExtResource("3_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe005"]
 script = ExtResource("1_ipe01")
 text = "Os igarapés estão secando. Os bichos estão com fome. As famílias não têm água limpa para beber."
 char_info = ExtResource("2_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe006"]
 script = ExtResource("1_ipe01")
 text = "É por isso que trouxemos os suprimentos. As comunidades precisam de ajuda."
 char_info = ExtResource("3_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_ipe007"]
 script = ExtResource("1_ipe01")
 text = "Sim. E eu sei que você vai fazer a coisa certa. Vá, Karina. A floresta está esperando."
 char_info = ExtResource("2_ipe01")
-portrait_index = null
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

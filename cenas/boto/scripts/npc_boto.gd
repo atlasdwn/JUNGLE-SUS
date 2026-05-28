@@ -12,6 +12,9 @@ var escolha_feita = false
 
 func _ready() -> void:
 	super._ready()
+	add_to_group("NPCBoto")
+	visible = false
+	monitoring = false
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	DialogSystem.quest_choice.connect(_on_escolha_feita)
