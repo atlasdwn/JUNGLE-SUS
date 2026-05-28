@@ -4,9 +4,11 @@
 [ext_resource type="Resource" uid="uid://cfnmug2kprnef" path="res://recursos/itens/machado.tres" id="2_ba4k5"]
 [ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="3_fadty"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_b4rhy"]
+[ext_resource type="Script" uid="uid://dkgtqtfgar4pi" path="res://recursos/quests/scripts/quest_data.gd" id="4_fadty"]
 [ext_resource type="Texture2D" uid="uid://cjm03qbacy4po" path="res://assets/Personagens/corpo/Madeireiro/Madeireiro - idle.png" id="4_l8af7"]
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_t2e2s"]
 [ext_resource type="Resource" uid="uid://cmo1khj8m2ssx" path="res://recursos/dialogs/madeireiro/primeiro_interact.tres" id="5_4drwu"]
+[ext_resource type="Resource" uid="uid://cm5ky1eqb2qjd" path="res://recursos/quests/quest_madeireiro.tres" id="5_gmfpd"]
 [ext_resource type="Resource" uid="uid://dpbub30mb6u20" path="res://recursos/dialogs/madeireiro/waiting_axe.tres" id="6_tufwi"]
 [ext_resource type="Resource" uid="uid://2hhpo0x71bol" path="res://recursos/dialogs/madeireiro/completed.tres" id="7_4yfte"]
 [ext_resource type="Resource" uid="uid://8w5dulp0s16v" path="res://recursos/dialogs/madeireiro/default.tres" id="8_l8af7"]
@@ -55,6 +57,7 @@ collision_layer = 4
 script = ExtResource("1_ut076")
 machado_item = ExtResource("2_ba4k5")
 suprimento_item = ExtResource("3_fadty")
+npc_quests = Array[ExtResource("4_fadty")]([ExtResource("5_gmfpd")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1209348106]
 position = Vector2(0, 0.5)

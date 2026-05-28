@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c7lg8154d7psf" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0014.png" id="1_ljsf4"]
 [ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://cenas/inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
 [ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://cenas/inventario/inv_slot.tscn" id="3_4lnmx"]
+[ext_resource type="PackedScene" uid="uid://dne0vigmm0kga" path="res://cenas/GUI/quest_system/QuestUI.tscn" id="4_ffkhx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lnmx"]
 texture = ExtResource("1_ljsf4")
@@ -80,3 +81,9 @@ layout_mode = 2
 
 [node name="inv_slot15" parent="Inventario_UI/GridContainer" unique_id=1731860247 instance=ExtResource("3_4lnmx")]
 layout_mode = 2
+
+[node name="QuestUI" parent="Inventario_UI" unique_id=1951473505 instance=ExtResource("4_ffkhx")]
+top_level = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0

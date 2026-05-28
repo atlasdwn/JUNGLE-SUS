@@ -5,7 +5,8 @@ FALTANTES!!!!!:
 3. Portrait Madeireiro
 4. Sprite boto
 5. Sprite macacos
-
+6. Morte Madeireiro
+7. Morte Karina
 
 SUGESTOES
 1. A cena de saída da Karina e barqueiro no final ser um pouco mais lenta. Tudo acontece meio rápido.

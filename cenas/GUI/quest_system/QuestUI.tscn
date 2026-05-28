@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dne0vigmm0kga"]
+
+[ext_resource type="Script" uid="uid://djjh5twvuxpxv" path="res://cenas/GUI/quest_system/quest_ui.gd" id="1_cytyi"]
+
+[node name="QuestUI" type="Control" unique_id=1951473505]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cytyi")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=298637822]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 511.0
+offset_right = 40.0
+offset_bottom = 551.0
+grow_vertical = 2
+
+[node name="QuestList" type="VBoxContainer" parent="MarginContainer" unique_id=913047243]
+layout_mode = 2

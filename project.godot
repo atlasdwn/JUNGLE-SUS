@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 PlayerManager="*uid://dlrtb8ym8615l"
 DialogSystem="*uid://lq43cdbj4q32"
 InventarioUi="*uid://c4gp8w387g102"
+QuestManager="*uid://duqacmvml46fh"
 
 [display]
 

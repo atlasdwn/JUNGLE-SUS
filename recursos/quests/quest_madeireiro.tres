@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://cm5ky1eqb2qjd"]
+
+[ext_resource type="Script" uid="uid://dkgtqtfgar4pi" path="res://recursos/quests/scripts/quest_data.gd" id="1_b8ytj"]
+
+[resource]
+script = ExtResource("1_b8ytj")
+id = "quest_madeireiro"
+title = "O Machado Roubado"
+description = "Agora EU preciso recuperar o machado daquele MISERÁVEL.  "
+metadata/_custom_type_script = "uid://dkgtqtfgar4pi"

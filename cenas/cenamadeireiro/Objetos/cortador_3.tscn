@@ -10,8 +10,11 @@ y_sort_enabled = true
 collision_layer = 16
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1529934998]
+y_sort_enabled = true
+position = Vector2(0, -9)
 texture = ExtResource("1_8xdu2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=570891387]
-position = Vector2(-0.5, 8.5)
+y_sort_enabled = true
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_huood")
