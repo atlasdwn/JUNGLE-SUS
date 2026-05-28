@@ -7,7 +7,7 @@ FALTANTES!!!!!:
 5. Sprite macacos
 
 
-
+SUGESTOES
 1. A cena de saída da Karina e barqueiro no final ser um pouco mais lenta. Tudo acontece meio rápido.
 2. Fazer um sistema para gerenciar e exibir a progressão das quests na UI.
 3. Criação do minimapa.
@@ -19,3 +19,5 @@ FALTANTES!!!!!:
 	state estiver ativado, a Karina não conseguirá coletar ou interagir com outros NPCs. Caso tente 
 	intragir, aparecerá uma caixa de diálogo com a Karina dizendo que deveria ir ver o 
 	Carlos (barqueiro) pois ele gritou chamando seu nome.
+5. Inventário está com um fundo muito distoante dos slots
+6. Slots do inventário não mostra informações do item quando está focado
