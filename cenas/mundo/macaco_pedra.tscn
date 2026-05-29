@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://beofwaueuwkeg"]
+
+[ext_resource type="Script" path="res://cenas/mundo/macaco_pedra.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bidv0v03jedrv" path="res://assets/Personagens/macacos/Macaco - animação pedra.png" id="1_agg3q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jwhi"]
+atlas = ExtResource("1_agg3q")
+region = Rect2(0, 0, 74, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnalh"]
+atlas = ExtResource("1_agg3q")
+region = Rect2(74, 0, 74, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0f7q"]
+atlas = ExtResource("1_agg3q")
+region = Rect2(148, 0, 74, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuuaw"]
+atlas = ExtResource("1_agg3q")
+region = Rect2(222, 0, 74, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2yfpi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jwhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnalh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0f7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuuaw")
+}],
+"loop": true,
+"name": &"animacao_pedra",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_macaco"]
+radius = 250.0
+
+[node name="macaco" type="Node2D" unique_id="972187899"]
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id="1886648448"]
+sprite_frames = SubResource("SpriteFrames_2yfpi")
+animation = &"animacao_pedra"
+frame_progress = 0.98125166
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_macaco")

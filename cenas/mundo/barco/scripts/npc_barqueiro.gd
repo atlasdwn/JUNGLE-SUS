@@ -100,7 +100,7 @@ func _on_player_entered_dialog() -> void:
 			else:
 				dialog_interaction.current_dialog = dialog_consertando
 		BarqueiroState.CHAMANDO:
-			dialog_interaction.current_dialog = _find_dialog("Chamada")
+			pass # Diálogo final orquestrado por mundo.gd
 		BarqueiroState.POS_JOGO:
 			dialog_interaction.current_dialog = _find_dialog("Pos Jogo")
 
@@ -130,9 +130,7 @@ func _on_interaction_finished() -> void:
 					world.on_madeira_entregue()
 				_on_player_entered_dialog()
 		BarqueiroState.CHAMANDO:
-			depart()
-			current_state = BarqueiroState.POS_JOGO
-			_on_player_entered_dialog()
+			pass # Partida orquestrada por mundo.gd
 		_:
 			pass # Nos outros estados apenas fecha o diálogo
 
@@ -149,29 +147,16 @@ func depart() -> void:
 	departing = true
 	print("[Barco] Partindo!")
 	
-	# Esconde a Carina diretamente (ela já está dentro da zona)
 	var mundo = _get_world_node()
 	var carina = mundo.find_child("Carina", true, false) if mundo else null
 	if carina:
 		if carina.has_method("bloquear_movimento"):
 			carina.bloquear_movimento()
-		var camera = carina.get_node_or_null("Camera2D") as Camera2D
-		if camera:
-			camera.reparent(self, true)
-		var anim_sprite = carina.get_node_or_null("Anim")
-		if anim_sprite:
-			anim_sprite.visible = false
-		var shadow = carina.get_node_or_null("SpriteSombra")
-		if shadow:
-			shadow.visible = false
-		print("[Barco] Carina escondida!")
+		print("[Barco] Carina continua no pier.")
 	else:
-		push_warning("[Barco] Carina nao encontrada para esconder!")
+		push_warning("[Barco] Carina nao encontrada!")
 	
-	var tween := create_tween()
-	tween.tween_property(self, "position", position + Vector2(0, 400), 7.0) \
-		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
-	tween.tween_callback(func(): departed.emit())
+	departed.emit()
 
 func _on_body_entered(_body) -> void:
 	pass

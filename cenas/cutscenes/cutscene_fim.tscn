@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dk3k8xlaj3l2j"]
+
+[ext_resource type="Script" path="res://cenas/cutscenes/scripts/cutscene_fim.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://n42dt1pq53g0" path="res://assets/fonts/static/PixelifySans-Bold.ttf" id="2_font"]
+
+[node name="CutsceneFim" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_script")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackBG" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FimLabel" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988235, 0.972549, 0.921569, 1)
+theme_override_colors/font_outline_color = Color(0.25098, 0.145098, 0.121569, 0.6)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 72
+text = "FIM!"
+horizontal_alignment = 1
+vertical_alignment = 1

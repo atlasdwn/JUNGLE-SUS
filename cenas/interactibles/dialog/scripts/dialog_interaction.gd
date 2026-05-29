@@ -6,6 +6,7 @@ class_name DialogInteraction extends Area2D
 signal player_entered
 signal player_exited
 signal finished
+signal started
 
 @export var enabled : bool = true
 @export var dialogs: Array[DialogResource] # Usado caso nenhum diálogo seja injetado
@@ -24,6 +25,7 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 func player_interact() -> void:
+	started.emit()
 	await get_tree().process_frame
 	await get_tree().process_frame
 	

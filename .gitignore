@@ -4,4 +4,6 @@
 
 # Gemini CLI Agent
 .agent/
+.agents/
+.omo/
 handoff.md

@@ -39,6 +39,11 @@ func sair() -> void:
 	visible = false
 	saiu.emit()
 
+## Reseta para o estado inicial — permite aparecer novamente (usado no diálogo final)
+func resetar() -> void:
+	current_state = IaraState.OCULTA
+	visible = false
+
 ## Iara não volta mais — sem interação
 func _on_player_entered_dialog() -> void:
 	pass

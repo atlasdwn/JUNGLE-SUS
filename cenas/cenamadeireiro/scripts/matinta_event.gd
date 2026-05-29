@@ -112,8 +112,8 @@ func _on_sombra_animation_finished(_anim_name):
 			break
 	
 	if not esta_escondida:
-		# Punição: O jogo fecha
-		get_tree().quit()
+		# Game Over: Matinta pegou a Carina
+		get_tree().change_scene_to_file("res://cenas/cutscenes/game_over.tscn")
 	else:
 		# Sobreviveu, agenda proximo
 		agendar_proximo_ataque()

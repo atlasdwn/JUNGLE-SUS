@@ -30,11 +30,89 @@ func _ready() -> void:
 		await get_tree().create_timer(1.0).timeout
 		barco.player_embarked.connect(_on_player_embarked)
 		barco.departed.connect(_on_barco_departed)
+		if barco.dialog_interaction:
+			barco.dialog_interaction.player_entered.connect(_on_barco_player_entered)
 		# Dispara o diálogo de abertura após 1 segundo
 		var timer := get_tree().create_timer(1.0)
 		timer.timeout.connect(_iniciar_dialogo_abertura)
 	else:
 		push_warning("[Mundo] Barco nao encontrado! Verifique se o no 'Barco' esta na cena.")
+
+var _cutscene_final_ativa := false
+
+## Detecta quando o player entra na zona do barco — se for CHAMANDO, orquestra o diálogo final
+func _on_barco_player_entered() -> void:
+	if barco == null or barco.current_state != NPCBarqueiro.BarqueiroState.CHAMANDO:
+		return
+	if _cutscene_final_ativa:
+		return
+	_cutscene_final_ativa = true
+	_iniciar_dialogo_final()
+
+## Orquestra o diálogo final em 3 partes com animações da Iara (igual ao início)
+func _iniciar_dialogo_final() -> void:
+	# Desativa a zona de interação do Barco
+	var barco_dialog := barco.get_node_or_null("DialogInteraction") as DialogInteraction
+	if barco_dialog:
+		barco_dialog.enabled = false
+
+	if player:
+		player.bloquear_movimento()
+
+	var all_lines := barco.get_dialog_lines("Chamada")
+	if all_lines.is_empty():
+		push_warning("[Mundo] Diálogo 'Chamada' vazio ou não encontrado.")
+		barco.depart()
+		return
+
+	## Parte 1: Carlos grita socorro + Karina reage (linhas 0-2)
+	var parte1: Array[DialogItem] = []
+	parte1.assign(all_lines.slice(0, 3))
+	await _play_dialog_segment(parte1)
+
+	## Iara aparece (reseta do estado SUMIDA e toca coming → idle)
+	if iara != null:
+		if iara.has_method("resetar"):
+			iara.resetar()
+		if iara.has_method("aparecer"):
+			iara.aparecer()
+			barco.assustar()
+			if player and player.has_method("assustar"):
+				player.assustar()
+			await iara.apareceu
+			await get_tree().create_timer(1.0).timeout
+
+	## Parte 2: Iara fala com todos (linhas 3-42)
+	var parte2: Array[DialogItem] = []
+	parte2.assign(all_lines.slice(3, 43))
+	await _play_dialog_segment(parte2)
+
+	## Iara sai
+	if iara != null and iara.has_method("sair"):
+		iara.sair()
+		barco.acalmar()
+		if player and player.has_method("acalmar"):
+			player.acalmar()
+		await iara.saiu
+		await get_tree().create_timer(1.0).timeout
+
+	## Parte 3: Carlos e Karina reagem (linhas 43-fim)
+	var parte3: Array[DialogItem] = []
+	parte3.assign(all_lines.slice(43))
+	await _play_dialog_segment(parte3)
+
+	get_tree().paused = false
+	print("[Mundo] Diálogo final concluído. Barco partindo!")
+
+	barco.current_state = NPCBarqueiro.BarqueiroState.POS_JOGO
+	barco.depart()
+
+	# Efeito Iris: Fecha na Carina no pier IMEDIATAMENTE após o fim da fala
+	if player:
+		await ScreenTransition.iris_out(player, 2.0)
+	
+	# Transição para a cena de FIM
+	get_tree().change_scene_to_file("res://cenas/cutscenes/cutscene_fim.tscn")
 
 func _find_nodes() -> void:
 	player = _find_child_by_class("Player") as Player
@@ -72,9 +150,16 @@ func set_wood_visible(_visible: bool) -> void:
 
 func set_boto_visible(vis: bool) -> void:
 	for node in get_tree().get_nodes_in_group("NPCBoto"):
-		node.visible = vis
 		node.set_deferred("monitoring", vis)
 		node.set_deferred("monitorable", vis)
+		
+		if vis:
+			node.modulate.a = 0.0
+			node.visible = true
+			var tween = create_tween()
+			tween.tween_property(node, "modulate:a", 1.0, 1.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		else:
+			node.visible = false
 
 func on_barqueiro_ajuda_pedida() -> void:
 	print("[Mundo] Barqueiro pediu ajuda! Liberando madeiras no mapa.")
@@ -87,6 +172,7 @@ func on_barqueiro_ajuda_pedida() -> void:
 func on_madeira_entregue() -> void:
 	print("[Mundo] Madeiras entregues! Carlos preparando o barco.")
 	QuestManager.complete_quest("quest_madeiras")
+	set_boto_visible(true) # Faz o boto aparecer depois de entregar a madeira
 	inventory.required_items = 5
 	# Se já tiver os 5 suprimentos, dispara o evento de todos coletados!
 	if inventory.get_item_count(preload("res://recursos/itens/suprimento.tres")) >= 5:
@@ -129,8 +215,6 @@ func _disparar_pedido_madeira() -> void:
 	print("[Mundo] Quest madeireiro concluída! Iniciando evento de ajuda do Barqueiro.")
 	PlayerManager.carlos_precisa_ajuda = true
 	barco.current_state = NPCBarqueiro.BarqueiroState.PEDINDO_AJUDA
-	# Boto aparece junto com o aviso do Carlos
-	set_boto_visible(true)
 	var msg := DialogText.new()
 	msg.text = "Karina! Volte para o barco agora, precisamos conversar."
 	msg.char_info = BARQUEIRO_DATA
@@ -143,14 +227,7 @@ func _on_player_at_barco() -> void:
 	pass
 
 func _on_player_embarked() -> void:
-	print("[Mundo] Carina embarcou! Barco partindo...")
-	
-	# Efeito Iris: Fecha na Carina no final do jogo!
-	if player:
-		await ScreenTransition.iris_out(player, 2.0)
-	
-	# Aqui você pode chamar a tela de créditos ou mudar de cena
-	# get_tree().change_scene_to_file("res://cenas/creditos.tscn")
+	pass
 
 func _on_barco_departed() -> void:
 	print("[Mundo] Barco partiu! Fase concluída!")

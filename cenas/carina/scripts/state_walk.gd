@@ -1,6 +1,6 @@
 class_name StateWalk extends State
 
-@export var move_speed : float = 60.0
+@export var move_speed : float = 200.0
 @onready var idle: State = $"../Idle"
 @onready var collect: StateCollect = $"../Collect"
 
@@ -20,7 +20,7 @@ func process(_delta: float) -> State:
 		if PlayerManager.carlos_precisa_ajuda:
 			var msg := DialogText.new()
 			msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
-			msg.char_info = preload("res://recursos/personagens/barqueiro_data.tres")
+			msg.char_info = preload("res://recursos/personagens/karina_data.tres")
 			DialogSystem.show_dialog(Array([msg], TYPE_OBJECT, &"RefCounted", DialogItem))
 			return null
 		return collect

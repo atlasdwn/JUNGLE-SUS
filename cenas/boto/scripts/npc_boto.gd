@@ -32,8 +32,7 @@ func _on_interaction_finished() -> void:
 		if escolha_feita:
 			if cantada_aceita:
 				print("Game Over - Karina deu bola pro Boto")
-				# Chamar a tela de Game Over
-				# get_tree().change_scene_to_file("res://cenas/game_over.tscn")
+				get_tree().change_scene_to_file("res://cenas/cutscenes/game_over.tscn")
 			else:
 				print("Boto entregou o item")
 				if player and remedio_item:

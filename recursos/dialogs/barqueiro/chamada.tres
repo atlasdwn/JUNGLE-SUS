@@ -285,7 +285,7 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_46"]
 script = ExtResource("1_txt")
-text = "Graças a Deus!"
+text = "Então vamos embora daqui"
 char_info = ExtResource("2_bar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
