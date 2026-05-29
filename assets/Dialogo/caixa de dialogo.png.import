@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxpsd8oqsl11a"
-path="res://.godot/imported/caixa de dialogo com box.png-a6a7103bcc3ebe5c4257de91bfa4fa4a.ctex"
+uid="uid://ckhmnktkjkes"
+path="res://.godot/imported/caixa de dialogo.png-4398472455759fe870b42484706cf6b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TESTAR/caixa de dialogo com box.png"
-dest_files=["res://.godot/imported/caixa de dialogo com box.png-a6a7103bcc3ebe5c4257de91bfa4fa4a.ctex"]
+source_file="res://assets/Dialogo/caixa de dialogo.png"
+dest_files=["res://.godot/imported/caixa de dialogo.png-4398472455759fe870b42484706cf6b2.ctex"]
 
 [params]
 

@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bn5hvifrdykjd" path="res://assets/effects/torch_light.png" id="11_torch"]
 [ext_resource type="Script" uid="uid://blw0wrnx3asua" path="res://cenas/mundo/scripts/player_torch_light.gd" id="12_torch_light"]
 [ext_resource type="PackedScene" uid="uid://cd0ueycfkyl31" path="res://cenas/mundo/barco/barco.tscn" id="15_vuvim"]
-[ext_resource type="PackedScene" uid="uid://cgbgndriw6aw" path="res://cenas/GUI/dialog_box/dialog_box.tscn" id="16_7vlvb"]
 [ext_resource type="PackedScene" uid="uid://cd0iquutm1bmq" path="res://cenas/cenamadeireiro/cena_madeireiro.tscn" id="16_x0df2"]
 [ext_resource type="PackedScene" uid="uid://b3ssdjdkpy75s" path="res://cenas/coletaveis/suprimento.tscn" id="17_vuvim"]
 [ext_resource type="PackedScene" uid="uid://678q46ccs74h" path="res://cenas/puzzles/pedrasMoveis.tscn" id="18_7vlvb"]
@@ -598,8 +597,6 @@ position = Vector2(-549, -1607)
 item_escondido_path = NodePath("../../Suprimento5")
 
 [node name="Node2D" type="Node2D" parent="Y-sorting" unique_id=1134334866]
-
-[node name="DialogBoxLayer" parent="." unique_id=1492253376 instance=ExtResource("16_7vlvb")]
 
 [node name="Suprimento" parent="." unique_id=1250907370 instance=ExtResource("17_vuvim")]
 position = Vector2(-56, -271)

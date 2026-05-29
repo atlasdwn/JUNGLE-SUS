@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cugw5bbr2pyf6"
-path="res://.godot/imported/text-bubble.png-6c81c1ac04d9dd3437df8532a3195d40.ctex"
+uid="uid://dxpsd8oqsl11a"
+path="res://.godot/imported/caixa de dialogo com box.png-0819f67448557ff41a3d14378573eac4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc_and_dialog/sprites/text-bubble.png"
-dest_files=["res://.godot/imported/text-bubble.png-6c81c1ac04d9dd3437df8532a3195d40.ctex"]
+source_file="res://assets/Dialogo/caixa de dialogo com box.png"
+dest_files=["res://.godot/imported/caixa de dialogo com box.png-0819f67448557ff41a3d14378573eac4.ctex"]
 
 [params]
 

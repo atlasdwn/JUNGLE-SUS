@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di4mqni1iomfq"
-path="res://.godot/imported/npc_sprite_02.png-fcae9b0473a48ec488e45c4bc39943a8.ctex"
+uid="uid://8n2j0wp8hawf"
+path="res://.godot/imported/box.png-ba96d6becc93c14993533736003b16f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc_and_dialog/sprites/npc_sprite_02.png"
-dest_files=["res://.godot/imported/npc_sprite_02.png-fcae9b0473a48ec488e45c4bc39943a8.ctex"]
+source_file="res://assets/Dialogo/box.png"
+dest_files=["res://.godot/imported/box.png-ba96d6becc93c14993533736003b16f6.ctex"]
 
 [params]
 

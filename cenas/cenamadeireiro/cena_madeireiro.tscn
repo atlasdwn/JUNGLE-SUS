@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dhtla6uii8gna" path="res://cenas/cenamadeireiro/casamadeireiro/casa_madeireiro.tscn" id="10_oyb5f"]
 [ext_resource type="PackedScene" uid="uid://bpr3dg46jqj6t" path="res://cenas/cenamadeireiro/Objetos/cortador_1.tscn" id="15_akwsc"]
 [ext_resource type="PackedScene" uid="uid://dootfr8xaq8aa" path="res://cenas/cenamadeireiro/vegetacao/grandes_desmatadas.tscn" id="15_iukor"]
+[ext_resource type="Texture2D" uid="uid://bwytwld88wov8" path="res://assets/Personagens/corpo/Matinta/Passaro voando.png" id="18_gmk1b"]
 [ext_resource type="PackedScene" uid="uid://cvxhai18ys8wd" path="res://cenas/cenamadeireiro/madeireiro/npc_madeireiro.tscn" id="19_akwsc"]
 [ext_resource type="PackedScene" uid="uid://0822qru8ystp" path="res://cenas/matinta/matinta.tscn" id="19_xpd3o"]
 [ext_resource type="Script" uid="uid://d0f8komtqrr0w" path="res://cenas/cenamadeireiro/scripts/entrada.gd" id="20_k3qyx"]
@@ -688,6 +689,36 @@ size = Vector2(22, 593)
 radius = 41.5
 height = 141.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkkyf"]
+atlas = ExtResource("18_gmk1b")
+region = Rect2(0, 0, 273, 280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3qyx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkkyf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_pqr77"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-590, 400)]
+}
+
 [sub_resource type="Animation" id="Animation_shadow"]
 resource_name = "cruzar_tela"
 length = 2.5
@@ -696,16 +727,17 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = false
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5),
+"times": PackedFloat32Array(-0.03333336, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-590, 400), Vector2(1940, 400)]
+"values": [Vector2(-590, 556), Vector2(1940, 556)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_shadow"]
 _data = {
+&"RESET": SubResource("Animation_pqr77"),
 &"cruzar_tela": SubResource("Animation_shadow")
 }
 
@@ -858,17 +890,12 @@ shape = SubResource("CapsuleShape2D_wcv7v")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GerenciadorEventoMatinta" unique_id=1618484029]
 
-[node name="SombraMatinta" type="ColorRect" parent="GerenciadorEventoMatinta/CanvasLayer" unique_id=1422421879]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -590.0
-offset_top = 400.0
-offset_right = -1976.002
-offset_bottom = -400.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.5)
+[node name="SombraMatinta" type="AnimatedSprite2D" parent="GerenciadorEventoMatinta/CanvasLayer" unique_id=1423157324]
+modulate = Color(1, 1, 1, 0.476)
+position = Vector2(-590, 400)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_k3qyx")
+frame_progress = 0.60622835
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GerenciadorEventoMatinta/CanvasLayer/SombraMatinta" unique_id=836907760]
 libraries/ = SubResource("AnimationLibrary_shadow")

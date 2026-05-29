@@ -4,11 +4,11 @@ extends CanvasLayer
 class_name DialogSystemNode 
 
 @onready var dialog_ui: Control = $DialogUI
-@onready var name_label: Label = $DialogUI/NameBG/NameLabel
+@onready var name_label: Label = $DialogUI/NameBox/NameLabel
 @onready var portrait: Sprite2D = $DialogUI/Portrait
 @onready var dialog_progress: PanelContainer = $DialogUI/DialogProgress
 @onready var dialog_progress_button: Label = $DialogUI/DialogProgress/DialogProgressButton
-@onready var content: RichTextLabel = $DialogUI/DialogBG/Content
+@onready var content: RichTextLabel = $DialogUI/DialogBG/TextureRect/Content
 @onready var timer: Timer = $DialogUI/Timer
 
 # NÓS NOVOS PARA ESCOLHA (Você criará na UI)
