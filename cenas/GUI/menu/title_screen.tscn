@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://da0svce61unex"]
 
 [ext_resource type="Script" uid="uid://cw8r0msk0kf7s" path="res://cenas/GUI/menu/scripts/title_screen.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://s0ikbekdjce" path="res://assets/menu/Illustration79_16x9_center.png" id="2_center"]
+[ext_resource type="Texture2D" uid="uid://dcnmq85htx58w" path="res://assets/menu/JUNGLE SUS (2).png" id="2_center"]
 [ext_resource type="FontFile" uid="uid://n42dt1pq53g0" path="res://assets/fonts/static/PixelifySans-Bold.ttf" id="3_font"]
 [ext_resource type="Texture2D" uid="uid://c5y7ftiu1uh6u" path="res://assets/menu/buttons/box (1).png" id="4_wood_sign"]
 [ext_resource type="Script" uid="uid://dvkp50ts6e056" path="res://cenas/GUI/menu/scripts/firefly_layer.gd" id="5_firefly_layer"]
@@ -84,16 +84,12 @@ mouse_filter = 2
 [node name="BottomRow" type="HBoxContainer" parent="SafeArea/BottomDock" unique_id=60009461]
 layout_mode = 2
 mouse_filter = 2
+alignment = 1
 
-[node name="HorizontalSpacer" type="Control" parent="SafeArea/BottomDock/BottomRow" unique_id=1457199031]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-
-[node name="Buttons" type="VBoxContainer" parent="SafeArea/BottomDock/BottomRow" unique_id=315572460]
+[node name="Buttons" type="HBoxContainer" parent="SafeArea/BottomDock/BottomRow" unique_id=315572460]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 40
 
 [node name="StartButton" type="TextureButton" parent="SafeArea/BottomDock/BottomRow/Buttons" unique_id=597242065]
 texture_filter = 6

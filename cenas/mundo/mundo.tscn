@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://by8pd5nvmo0f4" path="res://cenas/mundo/arvores/arvore04.tscn" id="6_cq3ta"]
 [ext_resource type="Texture2D" uid="uid://drv6ayu16cthg" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Rocks.png" id="7_2qnpr"]
 [ext_resource type="Texture2D" uid="uid://sbh2uxuhjtmw" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Vegetation.png" id="8_8ktfk"]
-[ext_resource type="Texture2D" uid="uid://dah7vgkqw05ow" path="res://assets/Pixel Crawler - Free Pack/Environment/Props/Static/Trees/Model_01/Size_05.png" id="9_bmsli"]
 [ext_resource type="Script" uid="uid://ywvqwij7acuw" path="res://cenas/mundo/scripts/night_cycle.gd" id="9_night_cycle"]
 [ext_resource type="Script" uid="uid://ryaje27xj66q" path="res://cenas/mundo/scripts/world_firefly_layer.gd" id="10_world_fireflies"]
 [ext_resource type="Texture2D" uid="uid://bn5hvifrdykjd" path="res://assets/effects/torch_light.png" id="11_torch"]
@@ -436,11 +435,6 @@ pattern_0 = SubResource("TileMapPattern_2qnpr")
 pattern_1 = SubResource("TileMapPattern_8ktfk")
 pattern_2 = SubResource("TileMapPattern_uyvml")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o06hu"]
-texture = ExtResource("9_bmsli")
-0:0/size_in_atlas = Vector2i(7, 10)
-0:0/0 = 0
-
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_cxrh1"]
 scenes/2/scene = ExtResource("4_cxrh1")
 scenes/3/scene = ExtResource("5_ttabm")
@@ -450,7 +444,6 @@ scenes/4/scene = ExtResource("6_cq3ta")
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 6
 sources/1 = SubResource("TileSetScenesCollectionSource_cxrh1")
-sources/0 = SubResource("TileSetAtlasSource_o06hu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uyvml"]
 texture = ExtResource("7_2qnpr")
