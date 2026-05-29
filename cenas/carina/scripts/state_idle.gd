@@ -15,14 +15,6 @@ func exit() -> void:
 func process(_delta: float) -> State:
 	if player.direction != Vector2.ZERO:
 		return walk
-	elif Input.is_action_just_pressed("interact") and player.collectible_in_area == true:
-		if PlayerManager.carlos_precisa_ajuda:
-			var msg := DialogText.new()
-			msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
-			msg.char_info = preload("res://recursos/personagens/karina_data.tres")
-			DialogSystem.show_dialog(Array([msg], TYPE_OBJECT, &"RefCounted", DialogItem))
-			return null
-		return collect
 	player.velocity = Vector2.ZERO
 	return null
 	
@@ -33,5 +25,13 @@ func physics(_delta: float) -> State:
 ## O que acontece com os inputs do estado
 func handle_input(_event: InputEvent) -> State:
 	if _event.is_action_pressed("interact"):
+		if player.collectible_in_area:
+			if PlayerManager.carlos_precisa_ajuda:
+				var msg := DialogText.new()
+				msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
+				msg.char_info = preload("res://recursos/personagens/karina_data.tres")
+				DialogSystem.show_dialog(Array([msg], TYPE_OBJECT, &"RefCounted", DialogItem))
+				return null
+			return collect
 		PlayerManager.interact()
 	return null

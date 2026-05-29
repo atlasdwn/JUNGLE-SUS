@@ -47,6 +47,7 @@ animations = [{
 }]
 
 [node name="NPCBoto" type="Area2D" unique_id=2130623779]
+position = Vector2(0, -9)
 collision_layer = 4
 script = ExtResource("1_script")
 remedio_item = ExtResource("2_dk6qq")

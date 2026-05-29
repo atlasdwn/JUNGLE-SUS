@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://beofwaueuwkeg"]
+[gd_scene format=3 uid="uid://beofwaueuwkeg"]
 
-[ext_resource type="Script" path="res://cenas/mundo/macaco_pedra.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://bidv0v03jedrv" path="res://assets/Personagens/macacos/Macaco - animação pedra.png" id="1_agg3q"]
+[ext_resource type="Script" uid="uid://clm1k40sbh0x7" path="res://cenas/mundo/macaco_pedra.gd" id="1_script"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6jwhi"]
 atlas = ExtResource("1_agg3q")
@@ -42,17 +42,19 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_macaco"]
 radius = 250.0
 
-[node name="macaco" type="Node2D" unique_id="972187899"]
+[node name="macaco" type="Node2D" unique_id=972187899]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_script")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id="1886648448"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1886648448]
 sprite_frames = SubResource("SpriteFrames_2yfpi")
 animation = &"animacao_pedra"
 frame_progress = 0.98125166
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=475560251]
 collision_layer = 0
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1264910852]
 shape = SubResource("CircleShape2D_macaco")
