@@ -3,8 +3,13 @@
 [ext_resource type="Script" uid="uid://cw8r0msk0kf7s" path="res://cenas/GUI/menu/scripts/title_screen.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://s0ikbekdjce" path="res://assets/menu/Illustration79_16x9_center.png" id="2_center"]
 [ext_resource type="FontFile" uid="uid://n42dt1pq53g0" path="res://assets/fonts/static/PixelifySans-Bold.ttf" id="3_font"]
-[ext_resource type="Texture2D" uid="uid://colisks0upytu" path="res://assets/menu/buttons/wood_sign_top_left.png" id="4_wood_sign"]
+[ext_resource type="Texture2D" uid="uid://c5y7ftiu1uh6u" path="res://assets/menu/buttons/box (1).png" id="4_wood_sign"]
 [ext_resource type="Script" uid="uid://dvkp50ts6e056" path="res://cenas/GUI/menu/scripts/firefly_layer.gd" id="5_firefly_layer"]
+[ext_resource type="Texture2D" uid="uid://bnbu1iamq31dk" path="res://assets/menu/IMG_5586 (1).PNG" id="6_corner_img"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_box"]
+atlas = ExtResource("4_wood_sign")
+region = Rect2(460, 30, 322, 97)
 
 [node name="TitleScreen" type="Control" unique_id=105985552]
 layout_mode = 3
@@ -51,6 +56,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="CornerLogo" type="TextureRect" parent="SafeArea" unique_id=1546196869]
+layout_mode = 1
+offset_left = -189.0
+offset_top = -113.0
+offset_right = 211.0
+offset_bottom = 102.0
+scale = Vector2(2.3600004, 2.3600004)
+texture = ExtResource("6_corner_img")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="BottomDock" type="VBoxContainer" parent="SafeArea" unique_id=7875100]
 layout_mode = 1
 anchors_preset = 15
@@ -85,9 +101,9 @@ custom_minimum_size = Vector2(340, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("4_wood_sign")
-texture_pressed = ExtResource("4_wood_sign")
-texture_hover = ExtResource("4_wood_sign")
+texture_normal = SubResource("AtlasTexture_box")
+texture_pressed = SubResource("AtlasTexture_box")
+texture_hover = SubResource("AtlasTexture_box")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -119,9 +135,9 @@ custom_minimum_size = Vector2(340, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("4_wood_sign")
-texture_pressed = ExtResource("4_wood_sign")
-texture_hover = ExtResource("4_wood_sign")
+texture_normal = SubResource("AtlasTexture_box")
+texture_pressed = SubResource("AtlasTexture_box")
+texture_hover = SubResource("AtlasTexture_box")
 ignore_texture_size = true
 stretch_mode = 0
 

@@ -26,12 +26,6 @@ func physics(_delta: float) -> State:
 func handle_input(_event: InputEvent) -> State:
 	if _event.is_action_pressed("interact"):
 		if player.collectible_in_area:
-			if PlayerManager.carlos_precisa_ajuda:
-				var msg := DialogText.new()
-				msg.text = "Preciso voltar e falar com o Carlos no barco primeiro..."
-				msg.char_info = preload("res://recursos/personagens/karina_data.tres")
-				DialogSystem.show_dialog(Array([msg], TYPE_OBJECT, &"RefCounted", DialogItem))
-				return null
 			return collect
 		PlayerManager.interact()
 	return null
