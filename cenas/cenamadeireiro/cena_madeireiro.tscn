@@ -754,6 +754,7 @@ font_size = 64
 content_margin_top = 68.0
 
 [node name="CenaMadeireiro" type="Node2D" unique_id=1052854838]
+y_sort_enabled = true
 position = Vector2(0, -6)
 script = ExtResource("1_xpd3o")
 metadata/_edit_vertical_guides_ = [-43.0]

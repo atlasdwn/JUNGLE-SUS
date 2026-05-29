@@ -129,6 +129,7 @@ shape = SubResource("RectangleShape2D_5c32j")
 sprite_frames = SubResource("SpriteFrames_7212u")
 animation = &"idle"
 autoplay = "idle"
+offset = Vector2(0, -15)
 
 [node name="DialogInteraction" parent="." unique_id=276655289 instance=ExtResource("4_t2e2s")]
 dialogs = Array[ExtResource("4_b4rhy")]([ExtResource("5_4drwu"), ExtResource("6_tufwi"), ExtResource("7_4yfte"), ExtResource("8_l8af7")])
