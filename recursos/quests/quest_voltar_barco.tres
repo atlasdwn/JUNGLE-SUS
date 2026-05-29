@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://dsppwk7vvmg1w"]
+
+[ext_resource type="Script" uid="uid://dkgtqtfgar4pi" path="res://recursos/quests/scripts/quest_data.gd" id="1_tw6hc"]
+
+[resource]
+script = ExtResource("1_tw6hc")
+id = "quest_voltar_barco"
+title = "Voltar ao barco"
+description = "Já coletei tudo o que preciso. Aquele menino vai ficar bem."
+metadata/_custom_type_script = "uid://dkgtqtfgar4pi"

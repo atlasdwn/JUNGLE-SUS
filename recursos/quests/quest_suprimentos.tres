@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://dkqjjvt8npaym"]
+
+[ext_resource type="Script" uid="uid://dkgtqtfgar4pi" path="res://recursos/quests/scripts/quest_data.gd" id="1_38ydl"]
+
+[resource]
+script = ExtResource("1_38ydl")
+id = "quest_suprimentos"
+title = "Medicações Perdidas"
+description = "Preciso dos meus [b]8[/b] suprimentos médicos de volta."
+metadata/_custom_type_script = "uid://dkgtqtfgar4pi"
