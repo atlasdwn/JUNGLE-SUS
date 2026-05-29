@@ -6,5 +6,5 @@
 script = ExtResource("1_38ydl")
 id = "quest_suprimentos"
 title = "Medicações Perdidas"
-description = "Preciso dos meus [b]8[/b] suprimentos médicos de volta."
+description = "Preciso dos meus 8 suprimentos médicos de volta."
 metadata/_custom_type_script = "uid://dkgtqtfgar4pi"

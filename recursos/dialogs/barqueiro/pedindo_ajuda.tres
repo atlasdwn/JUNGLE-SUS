@@ -62,19 +62,13 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_9"]
 script = ExtResource("1_txt")
-text = "..."
-char_info = ExtResource("2_bar")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
-[sub_resource type="Resource" id="sub_10"]
-script = ExtResource("1_txt")
-text = "Minutos."
+text = "... Minutos."
 char_info = ExtResource("2_bar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_11"]
 script = ExtResource("1_txt")
-text = "Beleza e o resto da equipe? Onde eles estão?"
+text = "Certo. E o resto da equipe? Onde eles estão?"
 char_info = ExtResource("3_kar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -98,7 +92,7 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="sub_15"]
 script = ExtResource("1_txt")
-text = "Preciso que você pegue isso pra mim."
+text = "Preciso que você um pouco de madeira pra mim."
 char_info = ExtResource("2_bar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -108,15 +102,9 @@ text = "Ah, claro. Esse barco estava nas últimas mesmo, ein."
 char_info = ExtResource("3_kar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
-[sub_resource type="Resource" id="sub_17"]
-script = ExtResource("1_txt")
-text = "...Madeira?"
-char_info = ExtResource("3_kar")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
 [sub_resource type="Resource" id="sub_18"]
 script = ExtResource("1_txt")
-text = "É o seu dia de sorte, você não sabe o quê eu encontrei no meio de todo esse mato."
+text = "É o seu dia de sorte, você não sabe o que eu encontrei no meio de todo esse mato."
 char_info = ExtResource("3_kar")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -165,5 +153,5 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 [resource]
 script = ExtResource("5_res")
 dial_name = "PedindoAjuda"
-lines = Array[ExtResource("1_itm")]([SubResource("sub_0"), SubResource("sub_1"), SubResource("sub_2"), SubResource("sub_3"), SubResource("sub_4"), SubResource("sub_5"), SubResource("sub_6"), SubResource("sub_7"), SubResource("sub_8"), SubResource("sub_9"), SubResource("sub_10"), SubResource("sub_11"), SubResource("sub_12"), SubResource("sub_13"), SubResource("sub_14"), SubResource("sub_15"), SubResource("sub_16"), SubResource("sub_17"), SubResource("sub_18"), SubResource("sub_19"), SubResource("sub_20"), SubResource("sub_21"), SubResource("sub_22"), SubResource("sub_23"), SubResource("sub_24"), SubResource("sub_25")])
+lines = Array[ExtResource("1_itm")]([SubResource("sub_0"), SubResource("sub_1"), SubResource("sub_2"), SubResource("sub_3"), SubResource("sub_4"), SubResource("sub_5"), SubResource("sub_6"), SubResource("sub_7"), SubResource("sub_8"), SubResource("sub_9"), SubResource("sub_11"), SubResource("sub_12"), SubResource("sub_13"), SubResource("sub_14"), SubResource("sub_15"), SubResource("sub_16"), SubResource("sub_18"), SubResource("sub_19"), SubResource("sub_20"), SubResource("sub_21"), SubResource("sub_22"), SubResource("sub_23"), SubResource("sub_24"), SubResource("sub_25")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

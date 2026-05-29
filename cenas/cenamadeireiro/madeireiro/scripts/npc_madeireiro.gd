@@ -13,12 +13,23 @@ var current_quest_status : QuestStatus = QuestStatus.READY
 @export var suprimento_item: ItemData
 @export var npc_quests: Array[QuestData]
 
+@onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 func _ready() -> void:	
 	super._ready()
 	
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	DialogSystem.quest_choice.connect(_on_escolha_feita)
+	QuestManager.quests_updated.connect(_on_quests_updated)
+
+func _on_quests_updated() -> void:
+	if current_state != MadeireiroState.DEATH and QuestManager.is_completed("quest_madeiras"):
+		current_state = MadeireiroState.DEATH
+		if dialog_interaction:
+			dialog_interaction.enabled = false
+		if anim_sprite:
+			anim_sprite.play("death")
 # 💡 Sobrescreve o método virtual do NPCBase
 func _on_player_entered_dialog() -> void:
 	match current_state:

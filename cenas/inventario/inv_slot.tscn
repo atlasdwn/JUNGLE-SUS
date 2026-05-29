@@ -33,6 +33,7 @@ content_margin_top = 1.0
 bg_color = Color(0, 0, 0, 0.7176471)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lwjxl"]
+font_size = 25
 
 [node name="InvSlot" type="Button" unique_id=1950122671]
 custom_minimum_size = Vector2(32, 32)
@@ -100,16 +101,21 @@ script = ExtResource("6_6bklq")
 
 [node name="VContainer" type="VBoxContainer" parent="Tooltip" unique_id=1204283848]
 layout_mode = 2
+theme_override_constants/separation = 15
 
 [node name="ItemName" type="Label" parent="Tooltip/VContainer" unique_id=1050319103]
 layout_mode = 2
 text = "Nome do item"
 label_settings = SubResource("LabelSettings_lwjxl")
+autowrap_mode = 3
 
 [node name="ItemDesc" type="RichTextLabel" parent="Tooltip/VContainer" unique_id=742394217]
+clip_contents = false
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "Descrição do item"
+fit_content = true
 scroll_active = false

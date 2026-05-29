@@ -112,6 +112,7 @@ func _on_interaction_finished() -> void:
 			var world = _get_world_node()
 			if world and world.has_method("on_barqueiro_ajuda_pedida"):
 				world.on_barqueiro_ajuda_pedida()
+			_on_player_entered_dialog()
 		BarqueiroState.CONSERTANDO_BARCO:
 			var world = _get_world_node()
 			var total_madeira = 0
@@ -120,17 +121,18 @@ func _on_interaction_finished() -> void:
 				total_madeira = world.inventory.get_item_count(wood_item)
 			
 			if total_madeira >= 5:
-				current_state = BarqueiroState.CHAMANDO
+				current_state = BarqueiroState.AGUARDANDO_SUPRIMENTOS
 				if world and "inventory" in world:
 					var wood_item = preload("res://recursos/itens/madeira_data.tres")
 					for i in range(5):
 						world.inventory.remove_item(wood_item)
 				if world and world.has_method("on_madeira_entregue"):
 					world.on_madeira_entregue()
+				_on_player_entered_dialog()
 		BarqueiroState.CHAMANDO:
-			# Inicia a partida do barco após a conversa
 			depart()
 			current_state = BarqueiroState.POS_JOGO
+			_on_player_entered_dialog()
 		_:
 			pass # Nos outros estados apenas fecha o diálogo
 
@@ -151,10 +153,15 @@ func depart() -> void:
 	var mundo = _get_world_node()
 	var carina = mundo.find_child("Carina", true, false) if mundo else null
 	if carina:
+		if carina.has_method("bloquear_movimento"):
+			carina.bloquear_movimento()
+		var camera = carina.get_node_or_null("Camera2D") as Camera2D
+		if camera:
+			camera.reparent(self, true)
 		var anim_sprite = carina.get_node_or_null("Anim")
 		if anim_sprite:
 			anim_sprite.visible = false
-		var shadow = carina.get_node_or_null("Sprite2D")
+		var shadow = carina.get_node_or_null("SpriteSombra")
 		if shadow:
 			shadow.visible = false
 		print("[Barco] Carina escondida!")
@@ -166,8 +173,8 @@ func depart() -> void:
 		.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.tween_callback(func(): departed.emit())
 
-func _on_body_entered(body) -> void:
+func _on_body_entered(_body) -> void:
 	pass
 
-func _on_body_exited(body) -> void:
+func _on_body_exited(_body) -> void:
 	pass

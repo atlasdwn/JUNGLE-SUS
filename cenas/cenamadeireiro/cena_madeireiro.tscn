@@ -741,6 +741,18 @@ _data = {
 &"cruzar_tela": SubResource("Animation_shadow")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmk1b"]
+bg_color = Color(0, 0, 0, 0.61300004)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lkkyf"]
+content_margin_top = 44.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpd3o"]
+font_size = 64
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmk1b"]
+content_margin_top = 68.0
+
 [node name="CenaMadeireiro" type="Node2D" unique_id=1052854838]
 position = Vector2(0, -6)
 script = ExtResource("1_xpd3o")
@@ -765,18 +777,17 @@ tile_map_data = PackedByteArray("AAD8////AAAAAA8AAAD8/wEAAAAAAA8AAAATAPT/AAAAAA8
 tile_set = SubResource("TileSet_u7qij")
 
 [node name="Vegetacao" type="TileMapLayer" parent="Ambiente/Tiles" unique_id=755960372]
-z_as_relative = false
 y_sort_enabled = true
-position = Vector2(-10, 0)
+position = Vector2(-11, 0)
 tile_map_data = PackedByteArray("AABeAPP/AQAAAAAABABvAA8AAQAAAAAABAAdAPH/AQAAAAAABABCABIAAQAAAAAABAA9APn/AQAAAAAABABVAAIAAQAAAAAABAAmAAwAAQAAAAAABAAXAPj/BQAAAAAAAQApAPL/BQAAAAAAAQAdAAQABQAAAAAAAQAzAPn/BQAAAAAAAQAnAPz/BQAAAAAAAQAyAAoABQAAAAAAAQAXAAoABQAAAAAAAQAfABAABQAAAAAAAQAqAAYABQAAAAAAAQAtABEABQAAAAAAAQAkAAgABQAAAAAAAQAhAPj/BQAAAAAAAQA5APP/BQAAAAAAAQA9AAEABQAAAAAAAQBEAAwABQAAAAAAAQA8AA0ABQAAAAAAAQBIAPz/BQAAAAAAAQBMAO//BQAAAAAAAQBPAAYABQAAAAAAAQBaAPz/BQAAAAAAAQBWAPX/BQAAAAAAAQBNABAABQAAAAAAAQBdAAoABQAAAAAAAQBrAPf/BQAAAAAAAQBwAPD/BQAAAAAAAQBlAAMABQAAAAAAAQAzAAIABQAAAAAAAQBHAAgABQAAAAAAAQBFAPT/BQAAAAAAAQAzAO7/BQAAAAAAAQBYABEABQAAAAAAAQBnAA8ABQAAAAAAAQB1AAoABQAAAAAAAQA=")
 tile_set = SubResource("TileSet_ltya7")
 
-[node name="CasaMadeireiro" parent="Ambiente" unique_id=574193902 instance=ExtResource("10_oyb5f")]
-position = Vector2(61, 0)
+[node name="CasaMadeireiro" parent="Ambiente/Tiles" unique_id=574193902 instance=ExtResource("10_oyb5f")]
+position = Vector2(61, -13)
 collision_layer = 2
 
-[node name="cortador1" parent="Ambiente" unique_id=1632689675 instance=ExtResource("15_akwsc")]
-position = Vector2(136, 126)
+[node name="cortador1" parent="Ambiente/Tiles" unique_id=1632689675 instance=ExtResource("15_akwsc")]
+position = Vector2(136, 113)
 
 [node name="Passagens" type="Node2D" parent="Ambiente" unique_id=1052007593]
 
@@ -891,6 +902,7 @@ shape = SubResource("CapsuleShape2D_wcv7v")
 [node name="CanvasLayer" type="CanvasLayer" parent="GerenciadorEventoMatinta" unique_id=1618484029]
 
 [node name="SombraMatinta" type="AnimatedSprite2D" parent="GerenciadorEventoMatinta/CanvasLayer" unique_id=1423157324]
+visible = false
 modulate = Color(1, 1, 1, 0.476)
 position = Vector2(-590, 400)
 scale = Vector2(2, 2)
@@ -899,3 +911,39 @@ frame_progress = 0.60622835
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GerenciadorEventoMatinta/CanvasLayer/SombraMatinta" unique_id=836907760]
 libraries/ = SubResource("AnimationLibrary_shadow")
+
+[node name="TelaDica" type="PanelContainer" parent="GerenciadorEventoMatinta/CanvasLayer" unique_id=47657342]
+visible = false
+anchors_preset = -1
+anchor_left = -0.00026041668
+anchor_right = 0.59400004
+anchor_bottom = 0.49300003
+offset_left = 402.9248
+offset_top = 263.0
+offset_right = 419.5951
+offset_bottom = 270.55994
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gmk1b")
+
+[node name="Label" type="Label" parent="GerenciadorEventoMatinta/CanvasLayer/TelaDica" unique_id=2006861713]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lkkyf")
+text = "CUIDADO!!"
+label_settings = SubResource("LabelSettings_xpd3o")
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GerenciadorEventoMatinta/CanvasLayer/TelaDica" unique_id=1646405453]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmk1b")
+bbcode_enabled = true
+text = "Esconda-se atrás das grandes árvores até que o Grande Crispim vá embora.
+
+
+PRESSIONE [E] PARA CONTINUAR"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

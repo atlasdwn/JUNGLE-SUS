@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_inimf")
-name = "Suprimento"
+name = "Suprimento Médico"
+description = "Algumas medicações e equipamentos para atendimento médico."
 texture = ExtResource("2_cwwgi")
 metadata/_custom_type_script = "uid://bng5gxko0cjgy"

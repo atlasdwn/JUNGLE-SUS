@@ -10,14 +10,19 @@ extends Node2D
 @onready var animation_player = $CanvasLayer/SombraMatinta/AnimationPlayer
 @onready var matinta: Matinta = $"../Matinta"
 @onready var carina : Player
-
-
+@onready var tela_dica: PanelContainer = $CanvasLayer/TelaDica
 
 var evento_ativo = false
+var esperando_input_dica = false
 
 func _ready():
+	# Permite que este script gerencie inputs mesmo com o jogo pausado
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	parede_matinta.set_deferred("disabled", true)
 	sombra_matinta.visible = false
+	tela_dica.visible = false
+	
 	gatilho_evento.body_entered.connect(_on_gatilho_entered)
 	timer_evento.timeout.connect(_on_timer_evento_timeout)
 	timer_sombra.timeout.connect(_on_timer_sombra_timeout)
@@ -42,7 +47,25 @@ func _on_gatilho_entered(body):
 func iniciar_evento():
 	evento_ativo = true
 	parede_matinta.set_deferred("disabled", false)
-	agendar_proximo_ataque()
+	
+	# Exibe a dica e pausa o jogo para o jogador ler
+	tela_dica.visible = true
+	get_tree().paused = true
+	esperando_input_dica = true
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Só processa se a tela da dica estiver visível e esperando
+	if esperando_input_dica:
+		if event.is_action_pressed("interact") or event.is_action_pressed("ui_accept"):
+			# Marca o input como consumido para não acionar outras coisas (ex: falar com NPC)
+			get_viewport().set_input_as_handled()
+			
+			esperando_input_dica = false
+			tela_dica.visible = false
+			get_tree().paused = false
+			
+			# Agora que o jogador fechou a dica, o evento realmente começa a rodar
+			agendar_proximo_ataque()
 
 func finalizar_evento():
 	evento_ativo = false

@@ -212,3 +212,11 @@ func acalmar() -> void:
 		state_machine.process_mode = Node.PROCESS_MODE_INHERIT
 	
 	update_animation("idle")
+
+func bloquear_movimento() -> void:
+	if state_machine:
+		state_machine.process_mode = Node.PROCESS_MODE_DISABLED
+
+func liberar_movimento() -> void:
+	if state_machine:
+		state_machine.process_mode = Node.PROCESS_MODE_INHERIT

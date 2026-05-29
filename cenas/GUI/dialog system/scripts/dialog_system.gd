@@ -95,6 +95,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			next_dialog()
 
 func show_dialog(_items: Array) -> void:
+	var inv_panel = InventarioUi.get_node_or_null("Inventario_UI")
+	if inv_panel and inv_panel.has_method("close"):
+		inv_panel.close()
+	else:
+		InventarioUi.hide()
 	is_active = true
 	dialog_ui.process_mode = Node.PROCESS_MODE_ALWAYS
 	dialog_items = _items

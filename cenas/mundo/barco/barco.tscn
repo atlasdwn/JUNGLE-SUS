@@ -111,6 +111,9 @@ shape = SubResource("RectangleShape2D_trigger")
 [node name="DialogInteraction" parent="." unique_id=2041738512 instance=ExtResource("2_barco")]
 dialogs = Array[ExtResource("3_8a4lr")]([ExtResource("6_barco"), ExtResource("5_barco"), ExtResource("3_barco"), ExtResource("4_barco")])
 
+[node name="CollisionShape2D" parent="DialogInteraction" index="0" unique_id=1228163063]
+position = Vector2(12.5, 2.5)
+
 [node name="EmbarkZone" type="Area2D" parent="." unique_id=1272820270]
 collision_layer = 0
 
@@ -136,3 +139,5 @@ tile_map_data = PackedByteArray(0, 0, 244, 255, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 24
 tile_set = SubResource("TileSet_b1uvp")
 
 [connection signal="body_entered" from="EmbarkZone" to="." method="_on_embark_zone_body_entered"]
+
+[editable path="DialogInteraction"]

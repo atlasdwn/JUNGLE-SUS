@@ -9,12 +9,45 @@
 [ext_resource type="PackedScene" uid="uid://cxt06qneps3s3" path="res://cenas/interactibles/dialog/dialog_interaction.tscn" id="4_t2e2s"]
 [ext_resource type="Resource" uid="uid://cmo1khj8m2ssx" path="res://recursos/dialogs/madeireiro/primeiro_interact.tres" id="5_4drwu"]
 [ext_resource type="Resource" uid="uid://cm5ky1eqb2qjd" path="res://recursos/quests/quest_madeireiro.tres" id="5_gmfpd"]
+[ext_resource type="Texture2D" uid="uid://c11t2mwdsnn1i" path="res://assets/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Death_Base/Death_Side-Sheet.png" id="6_gmfpd"]
 [ext_resource type="Resource" uid="uid://dpbub30mb6u20" path="res://recursos/dialogs/madeireiro/waiting_axe.tres" id="6_tufwi"]
 [ext_resource type="Resource" uid="uid://2hhpo0x71bol" path="res://recursos/dialogs/madeireiro/completed.tres" id="7_4yfte"]
 [ext_resource type="Resource" uid="uid://8w5dulp0s16v" path="res://recursos/dialogs/madeireiro/default.tres" id="8_l8af7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c32j"]
 size = Vector2(58, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ggsu"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w38pd"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njbm5"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3upk"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3yhu"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojy6q"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3qjw"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dimna"]
+atlas = ExtResource("6_gmfpd")
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ba4k5"]
 atlas = ExtResource("4_l8af7")
@@ -34,6 +67,35 @@ region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7212u"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ggsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w38pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njbm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3upk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3yhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojy6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3qjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dimna")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ba4k5")
@@ -67,8 +129,11 @@ shape = SubResource("RectangleShape2D_5c32j")
 sprite_frames = SubResource("SpriteFrames_7212u")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.49868858
 
 [node name="DialogInteraction" parent="." unique_id=276655289 instance=ExtResource("4_t2e2s")]
 dialogs = Array[ExtResource("4_b4rhy")]([ExtResource("5_4drwu"), ExtResource("6_tufwi"), ExtResource("7_4yfte"), ExtResource("8_l8af7")])
-metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="DialogInteraction" index="0" unique_id=1228163063]
+position = Vector2(-6.25, 7.25)
+
+[editable path="DialogInteraction"]

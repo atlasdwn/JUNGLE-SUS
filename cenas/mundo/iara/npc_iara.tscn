@@ -135,4 +135,4 @@ dialogs = Array[ExtResource("2_iara")]([ExtResource("4_iara"), ExtResource("5_ia
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2089292609]
 position = Vector2(2, 4)
 sprite_frames = SubResource("SpriteFrames_bmjcs")
-animation = &"idle"
+animation = &"coming"

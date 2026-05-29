@@ -1,7 +1,7 @@
 class_name InventoryData extends Resource
 
 @export var slots : Array[SlotData]
-@export var required_items: int = 1
+@export var required_items: int = 5
 
 signal update
 signal all_collected

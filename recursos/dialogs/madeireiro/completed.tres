@@ -28,16 +28,19 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 [sub_resource type="Resource" id="Resource_y05tv"]
 script = ExtResource("1_51bxc")
 text = "E eu muito menos."
+char_info = ExtResource("4_qfwtf")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_xupud"]
 script = ExtResource("1_51bxc")
 text = "Eu to falando sério."
+char_info = ExtResource("2_6mp4j")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_a56yw"]
 script = ExtResource("1_51bxc")
 text = "Mas tu não para de encher meu saco... Tá bom, toma."
+char_info = ExtResource("4_qfwtf")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="Resource_np6cj"]
@@ -49,6 +52,7 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 [sub_resource type="Resource" id="Resource_s15rj"]
 script = ExtResource("1_51bxc")
 text = "Tanto faz. Some logo da minha frente, menina."
+char_info = ExtResource("4_qfwtf")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]

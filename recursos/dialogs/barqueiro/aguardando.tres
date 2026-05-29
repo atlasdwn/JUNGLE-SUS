@@ -6,12 +6,6 @@
 [ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="3_baw01"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="4_baw01"]
 
-[sub_resource type="Resource" id="aw001"]
-script = ExtResource("1_baw01")
-text = "Finalmente você voltou."
-char_info = ExtResource("2_baw01")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
 [sub_resource type="Resource" id="aw002"]
 script = ExtResource("1_baw01")
 text = "Conseguiu nossa bagagem de volta?"
@@ -38,7 +32,7 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="aw006"]
 script = ExtResource("1_baw01")
-text = "...enfim."
+text = "... Enfim."
 char_info = ExtResource("3_baw01")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -62,13 +56,7 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="aw010"]
 script = ExtResource("1_baw01")
-text = "..."
-char_info = ExtResource("2_baw01")
-metadata/_custom_type_script = "uid://ba7gawa2x48ms"
-
-[sub_resource type="Resource" id="aw011"]
-script = ExtResource("1_baw01")
-text = "Minutos."
+text = "... Minutos."
 char_info = ExtResource("2_baw01")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
@@ -80,18 +68,18 @@ metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="aw013"]
 script = ExtResource("1_baw01")
-text = "Tu acha mesmo que eles iam perder tempo com isso? Se não for pra fazer dinheiro, eles não pisam por essas bandas."
+text = "Eu espero que sim, senão sabe lá o que vai acontecer com o menino e com a gente."
 char_info = ExtResource("2_baw01")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [sub_resource type="Resource" id="aw014"]
 script = ExtResource("1_baw01")
-text = "É, não estou surpresa."
+text = "É... espero."
 char_info = ExtResource("3_baw01")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("4_baw01")
 dial_name = "Aguardando"
-lines = Array[ExtResource("1_tllfr")]([SubResource("aw001"), SubResource("aw002"), SubResource("aw003"), SubResource("aw004"), SubResource("aw005"), SubResource("aw006"), SubResource("aw007"), SubResource("aw008"), SubResource("aw009"), SubResource("aw010"), SubResource("aw011"), SubResource("aw012"), SubResource("aw013"), SubResource("aw014")])
+lines = Array[ExtResource("1_tllfr")]([SubResource("aw002"), SubResource("aw003"), SubResource("aw004"), SubResource("aw005"), SubResource("aw006"), SubResource("aw007"), SubResource("aw008"), SubResource("aw009"), SubResource("aw010"), SubResource("aw012"), SubResource("aw013"), SubResource("aw014")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

@@ -8,6 +8,9 @@ var iara: Node = null
 var cutscene_started := false
 
 const BARQUEIRO_DATA = preload("res://recursos/personagens/barqueiro_data.tres")
+const QUEST_SUPRIMENTOS = preload("res://recursos/quests/quest_suprimentos.tres")
+const QUEST_VOLTAR_BARCO = preload("res://recursos/quests/quest_voltar_barco.tres")
+const QUEST_MADEIRAS = preload("res://recursos/quests/quest_madeiras.tres")
 
 func _ready() -> void:
 	_find_nodes()
@@ -20,10 +23,11 @@ func _ready() -> void:
 	
 	# Efeito Iris de abertura do jogo (tela começa preta e foca na Carina)
 	if player:
-	
+		player.bloquear_movimento()
 		ScreenTransition.iris_in(player, 1.5)
 
 	if barco != null:
+		await get_tree().create_timer(1.0).timeout
 		barco.player_embarked.connect(_on_player_embarked)
 		barco.departed.connect(_on_barco_departed)
 		# Dispara o diálogo de abertura após 1 segundo
@@ -57,14 +61,14 @@ func _find_child_by_name(node_name: String) -> Node:
 			return found
 	return null
 
-func set_wood_visible(visible: bool) -> void:
+func set_wood_visible(_visible: bool) -> void:
 	for node in get_tree().get_nodes_in_group("Collectibles"):
 		if node is Coletavel and node.item != null and node.item.name == "Madeira":
-			node.visible = visible
+			node.visible = _visible
 			var col_area = node.get_node_or_null("CollectibleArea")
 			if col_area:
-				col_area.set_deferred("monitoring", visible)
-				col_area.set_deferred("monitorable", visible)
+				col_area.set_deferred("monitoring", _visible)
+				col_area.set_deferred("monitorable", _visible)
 
 func set_boto_visible(vis: bool) -> void:
 	for node in get_tree().get_nodes_in_group("NPCBoto"):
@@ -77,23 +81,40 @@ func on_barqueiro_ajuda_pedida() -> void:
 	PlayerManager.carlos_precisa_ajuda = false
 	inventory.required_items = 10
 	set_wood_visible(true)
+	QuestManager.start_quest(QUEST_MADEIRAS)
+
 
 func on_madeira_entregue() -> void:
 	print("[Mundo] Madeiras entregues! Carlos preparando o barco.")
-	if barco != null:
-		barco.ativar_chamada()
+	QuestManager.complete_quest("quest_madeiras")
+	inventory.required_items = 5
+	# Se já tiver os 5 suprimentos, dispara o evento de todos coletados!
+	if inventory.get_item_count(preload("res://recursos/itens/suprimento.tres")) >= 5:
+		_on_all_collected()
 
 func _on_all_collected() -> void:
 	if barco != null and barco.current_state == NPCBarqueiro.BarqueiroState.AGUARDANDO_SUPRIMENTOS:
 		print("[Mundo] 5 suprimentos coletados, aguardando madeireiro...")
+		QuestManager.complete_quest("quest_suprimentos")
+		
+		# Toca o diálogo de socorro quando encontra o último suprimento
+		var socorro_dialog = preload("res://recursos/dialogs/barqueiro/socorro.tres")
+		DialogSystem.show_dialog(socorro_dialog.lines)
+		
+		# Atualiza o barqueiro para o estado CHAMANDO para tocar chamada.tres na próxima vez que ela falar com ele!
+		barco.current_state = NPCBarqueiro.BarqueiroState.CHAMANDO
+		barco._on_player_entered_dialog()
+		
+		QuestManager.start_quest(QUEST_VOLTAR_BARCO)
 	else:
-		print("[Mundo] Todos os coletáveis e madeiras foram pegos!")
+		print("[Mundo] Todas as madeiras foram pegas!")
 		var msg := DialogText.new()
-		msg.text = "Carina, você coletou tudo! Volte para o barco para consertarmos e partirmos."
+		msg.text = "Carina, você coletou toda a madeira! Volte para o barco para consertarmos e partirmos."
 		msg.char_info = BARQUEIRO_DATA
 		var items: Array[DialogItem] = []
 		items.assign([msg])
-		DialogSystem.show_dialog(items)
+		DialogSystem.show_dialog(items)	
+		QuestManager.start_quest(QUEST_VOLTAR_BARCO)
 
 var _esperando_madeireiro := true
 
@@ -164,6 +185,8 @@ func _iniciar_dialogo_abertura() -> void:
 		if player and player.has_method("assustar"):
 			player.assustar()
 		await iara.apareceu
+		
+		await get_tree().create_timer(1.5).timeout
 
 	## Parte 2: Reações "!!" + Iara fala (linhas 12-17)
 	var parte2: Array[DialogItem] = []
@@ -177,6 +200,8 @@ func _iniciar_dialogo_abertura() -> void:
 		if player and player.has_method("acalmar"):
 			player.acalmar()
 		await iara.saiu
+	
+		await get_tree().create_timer(1.5).timeout
 
 	## Parte 3: Carlos + Carina reagem, Carina decide ir (linhas 18-fim)
 	var parte3: Array[DialogItem] = []
@@ -185,7 +210,8 @@ func _iniciar_dialogo_abertura() -> void:
 
 	barco.finalizar_inicio()
 	print("[Mundo] Diálogo de abertura concluído.")
-	
+	QuestManager.start_quest(QUEST_SUPRIMENTOS)
+
 	# Garante que o jogo não fique pausado
 	get_tree().paused = false
 	
@@ -193,6 +219,10 @@ func _iniciar_dialogo_abertura() -> void:
 	var barco_dialog_final := barco.get_node_or_null("DialogInteraction") as DialogInteraction
 	if barco_dialog_final:
 		barco_dialog_final.enabled = true
+		
+	# Libera a movimentação do player
+	if player:
+		player.liberar_movimento()
 
 ## Helper: dispara um segmento de diálogo e aguarda terminar
 func _play_dialog_segment(lines: Array[DialogItem]) -> void:
