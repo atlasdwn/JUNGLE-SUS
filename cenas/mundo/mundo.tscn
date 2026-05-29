@@ -530,7 +530,7 @@ position = Vector2(15, -478)
 [node name="NPCBoto" parent="Y-sorting" unique_id=2130623779 instance=ExtResource("22_bmsli")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(-95, -71)
+position = Vector2(-144, -68)
 
 [node name="CenaMadeireiro" parent="Y-sorting" unique_id=1052854838 instance=ExtResource("16_x0df2")]
 position = Vector2(864, -1045)
@@ -581,76 +581,62 @@ base_texture_scale = 1.45
 
 [node name="PedraMovelPuzzle2" parent="Y-sorting" unique_id=1335281615 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
-position = Vector2(-154, -609)
-item_escondido_path = NodePath("../../Suprimento5")
+position = Vector2(-154, -610)
 
 [node name="PedraMovelPuzzle3" parent="Y-sorting" unique_id=1953853292 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(-44, -472)
-item_escondido_path = NodePath("../../Suprimento5")
+item_escondido_path = NodePath("../../Suprimento")
 
 [node name="PedraMovelPuzzle4" parent="Y-sorting" unique_id=1596736103 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(-84, -555)
-item_escondido_path = NodePath("../../Suprimento5")
+item_escondido_path = NodePath("../../Suprimento")
 
 [node name="PedraMovelPuzzle5" parent="Y-sorting" unique_id=1446570891 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(22, -541)
-item_escondido_path = NodePath("../../Suprimento5")
 
 [node name="PedraMovelPuzzle6" parent="Y-sorting" unique_id=669698716 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(60, -481)
-item_escondido_path = NodePath("../../Suprimento5")
 
 [node name="PedraMovelPuzzle7" parent="Y-sorting" unique_id=816764284 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(-138, -451)
-item_escondido_path = NodePath("../../Suprimento5")
 
 [node name="PedraMovelPuzzle" parent="Y-sorting" unique_id=378435891 instance=ExtResource("18_7vlvb")]
 z_as_relative = false
 position = Vector2(-61, -380)
-item_escondido_path = NodePath("../../Suprimento5")
 
 [node name="Madeira" parent="Y-sorting" unique_id=2033560475 instance=ExtResource("20_hothi")]
 y_sort_enabled = true
-position = Vector2(755, -1046)
+position = Vector2(841, -934)
 
 [node name="Madeira2" parent="Y-sorting" unique_id=1902955618 instance=ExtResource("20_hothi")]
 y_sort_enabled = true
-position = Vector2(734, -1082)
+position = Vector2(918, -963)
 
 [node name="Madeira3" parent="Y-sorting" unique_id=56352285 instance=ExtResource("20_hothi")]
 y_sort_enabled = true
-position = Vector2(712, -1014)
+position = Vector2(857, -1019)
 
 [node name="Madeira4" parent="Y-sorting" unique_id=1060075019 instance=ExtResource("20_hothi")]
 y_sort_enabled = true
-position = Vector2(695, -1054)
+position = Vector2(1137, -948)
 
 [node name="Madeira5" parent="Y-sorting" unique_id=1312425858 instance=ExtResource("20_hothi")]
 y_sort_enabled = true
-position = Vector2(725, -1050)
+position = Vector2(1079, -1010)
 
 [node name="Suprimento" parent="." unique_id=1250907370 instance=ExtResource("17_vuvim")]
-position = Vector2(-56, -271)
+position = Vector2(-92, -555)
 
 [node name="Suprimento2" parent="." unique_id=465045288 instance=ExtResource("17_vuvim")]
-position = Vector2(45, -311)
+position = Vector2(301, -396)
 
 [node name="Suprimento3" parent="." unique_id=2073189819 instance=ExtResource("17_vuvim")]
-position = Vector2(-14, -326)
-
-[node name="Suprimento4" parent="." unique_id=1454991590 instance=ExtResource("17_vuvim")]
-position = Vector2(3, -272)
-
-[node name="Suprimento7" parent="." unique_id=97635105 instance=ExtResource("17_vuvim")]
-position = Vector2(-45, -307)
-
-[node name="Suprimento5" parent="." unique_id=1488579436 instance=ExtResource("17_vuvim")]
-position = Vector2(-580, -1781)
+position = Vector2(729, -597)
 
 [node name="NpcIara" parent="." unique_id=100000001 instance=ExtResource("19_don86")]
 position = Vector2(-53, -10)
