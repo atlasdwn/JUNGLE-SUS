@@ -157,6 +157,7 @@ scale = Vector2(0.14061564, 0.14061564)
 shape = SubResource("CapsuleShape2D_6a62k")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1561457950]
+texture = SubResource("CompressedTexture2D_wylj6")
 
 [node name="SpriteInteracao" type="Sprite2D" parent="." unique_id=1878036055]
 visible = false

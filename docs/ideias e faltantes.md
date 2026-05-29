@@ -8,8 +8,6 @@ FALTANTES!!!!!:
 5. 
 6. Ajustar mapa (suprimentos desnecessários perto do barco e das pedras, árvores sobrepostas, etc)
 7. Fazer camera seguir barco no final do jogo até chegar num certo limite do eixo y
-8. Carlos nao grita pela Karina pedindo ajuda com a iara e nem quando coleta todos
- os suprimentos.
 9. Tela Game Over
 10. Tela final
 

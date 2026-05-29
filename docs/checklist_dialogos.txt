@@ -1,0 +1,17 @@
+Checklist fluxo de dialogos:
+	
+1. Dialogo inicial jogo - ok
+2. Dialogo Carlos perguntando dos suprimentos - OK
+3. Dialogo inicial madeireiro - ok 
+4. Dialogo madeireiro cobrando o machado - ok
+5. dialogo inicial matinta - ok
+6. dialogo default matinta - ok
+7. dialogo entrega machado - ok
+8. dialogo caso a karina tente interagir dps do carlos chamar - ok (menos se tentar coletar suprimento. talvez remover isso.e)
+9. Dialogo quest madeira - ok
+10. Dialogo Carlos cobrando madeira - ok
+11. dialogo entrega madeira - ok
+12. Dialogo Carlos perguntando dos suprimentos - OK
+13. Dialogo boto - ok (menos se a karina aceitar. deveria acabar o jogo, mas nao acaba)
+14. Dialogo Carlos pedindo socorro - ok 
+15. Dialogo final - ok (mas sprite da carina some)

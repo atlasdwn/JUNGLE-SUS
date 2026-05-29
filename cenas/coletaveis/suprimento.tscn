@@ -2,13 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bkxg68y4s2q52" path="res://cenas/coletaveis/coletavel_base.tscn" id="1_03xx1"]
 [ext_resource type="Resource" uid="uid://b4ypf782hec1v" path="res://recursos/itens/suprimento.tres" id="2_ukla1"]
+[ext_resource type="Texture2D" uid="uid://c3gtx01xqe1sa" path="res://assets/items/47 Sem Título_20260522155938.png" id="3_2rci5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_03xx1"]
 radius = 78.227425
 height = 156.45485
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2rci5"]
-load_path = "res://.godot/imported/47 Sem Título_20260522155938.png-f7954922a709e0666d30c362218c19f4.ctex"
 
 [node name="Suprimento" unique_id=1250907370 instance=ExtResource("1_03xx1")]
 item = ExtResource("2_ukla1")
@@ -18,4 +16,4 @@ position = Vector2(0, 0)
 shape = SubResource("CapsuleShape2D_03xx1")
 
 [node name="Sprite" parent="." index="1" unique_id=1561457950]
-texture = SubResource("CompressedTexture2D_2rci5")
+texture = ExtResource("3_2rci5")
