@@ -51,6 +51,7 @@ script = ExtResource("1_script")
 sprite_frames = SubResource("SpriteFrames_2yfpi")
 animation = &"animacao_pedra"
 frame_progress = 0.98125166
+offset = Vector2(0, -16)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=475560251]
 collision_layer = 0
