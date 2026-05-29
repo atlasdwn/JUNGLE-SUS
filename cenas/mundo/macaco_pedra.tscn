@@ -36,11 +36,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"animacao_pedra",
-"speed": 1.0
+"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_macaco"]
 radius = 250.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(45, 12)
 
 [node name="macaco" type="Node2D" unique_id=972187899]
 z_index = 1
@@ -59,3 +62,13 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1264910852]
 shape = SubResource("CircleShape2D_macaco")
+
+[node name="StaticBody" type="StaticBody2D" parent="." unique_id=59929281]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody" unique_id=581293812]
+position = Vector2(-9, -6)
+shape = SubResource("RectangleShape2D_body")
+debug_color = Color(1, 0, 0, 0.4)
