@@ -1,8 +1,18 @@
 extends Node2D
 
 @onready var fim_label: Label = $CanvasLayer/FimLabel
+@onready var inventory: InventoryData = preload("res://recursos/inventario/player_inventory.tres")
 
 func _ready() -> void:
+	var inv_panel = InventarioUi.get_node_or_null("Inventario_UI")
+	if inv_panel and inv_panel.has_method("close"):
+		inv_panel.close()
+	else:
+		InventarioUi.hide()
+	inventory.clear()
+	PlayerManager.reset_state()
+	QuestManager.reset_quests()
+	InventarioUi.process_mode = Node.PROCESS_MODE_DISABLED
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	ScreenTransition.shader_material.set_shader_parameter("circle_size", 1.05)
 	fim_label.modulate.a = 0.0

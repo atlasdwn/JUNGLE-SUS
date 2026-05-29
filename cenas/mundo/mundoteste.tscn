@@ -482,7 +482,6 @@ tile_map_data = PackedByteArray("AAAsAKz/AQAAAAAAAgAwAKn/AQAAAAAAAwAyAKn/AQAAAAA
 tile_set = SubResource("TileSet_g2uqa")
 
 [node name="CenaMadeireiro" parent="Y-sorting" unique_id=1052854838 instance=ExtResource("7_ndc2u")]
-y_sort_enabled = true
 position = Vector2(-74, -1141)
 
 [node name="obstaculos" type="TileMapLayer" parent="Y-sorting" unique_id=2049065841]

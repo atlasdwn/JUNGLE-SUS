@@ -32,4 +32,5 @@ func tremer_camera(intensidade: float = 650.0) -> void:
 func _on_animation_finished(_anim_name: String) -> void:
 	# Fecha o círculo na Carina/Câmera antes de pular pro jogo!
 	await ScreenTransition.iris_out(camera, 1.2)
+	InventarioUi.process_mode = Node.PROCESS_MODE_INHERIT
 	get_tree().change_scene_to_file("res://cenas/mundo/mundo.tscn")

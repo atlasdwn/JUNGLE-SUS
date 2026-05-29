@@ -18,6 +18,9 @@ func update_slots():
 			slots[i].update(null)
 
 func _process(_delta: float) -> void:
+	if DialogSystem.is_active or PlayerManager.in_cutscene:
+		return
+		
 	if Input.is_action_just_pressed("inventario"):
 		if is_open:
 			close()

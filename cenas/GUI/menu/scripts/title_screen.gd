@@ -18,7 +18,7 @@ func _ready() -> void:
 	_prepare_button(exit_button)
 	_setup_hover_rotation(start_button)
 	_setup_hover_rotation(exit_button)
-
+	InventarioUi.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _prepare_button(button: TextureButton) -> void:
 	button.rotation = 0.0

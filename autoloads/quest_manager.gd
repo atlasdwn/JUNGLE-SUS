@@ -29,3 +29,8 @@ func has_quest(quest_id: String) -> bool:
 
 func is_completed(quest_id: String) -> bool:
 	return quest_id in completed_quests
+
+func reset_quests() -> void:
+	active_quests.clear()
+	completed_quests.clear()
+	quests_updated.emit()

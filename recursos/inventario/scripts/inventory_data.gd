@@ -44,3 +44,10 @@ func _check_completion() -> void:
 			total += slot.amount
 	if total >= required_items:
 		all_collected.emit()
+
+func clear() -> void:
+	for slot in slots:
+		slot.item = null
+		slot.amount = 0
+	required_items = 5
+	update.emit()

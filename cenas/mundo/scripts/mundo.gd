@@ -23,6 +23,7 @@ func _ready() -> void:
 	
 	# Efeito Iris de abertura do jogo (tela começa preta e foca na Carina)
 	if player:
+		PlayerManager.in_cutscene = true
 		player.bloquear_movimento()
 		ScreenTransition.iris_in(player, 1.5)
 
@@ -57,6 +58,7 @@ func _iniciar_dialogo_final() -> void:
 		barco_dialog.enabled = false
 
 	if player:
+		PlayerManager.in_cutscene = true
 		player.bloquear_movimento()
 
 	var all_lines := barco.get_dialog_lines("Chamada")
@@ -288,6 +290,8 @@ func _iniciar_dialogo_abertura() -> void:
 	barco.finalizar_inicio()
 	print("[Mundo] Diálogo de abertura concluído.")
 	QuestManager.start_quest(QUEST_SUPRIMENTOS)
+
+	PlayerManager.in_cutscene = false
 
 	# Garante que o jogo não fique pausado
 	get_tree().paused = false

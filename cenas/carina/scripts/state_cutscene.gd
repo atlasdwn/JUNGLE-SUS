@@ -3,7 +3,7 @@ class_name StateCutscene extends State
 signal arrived_at_target
 
 var target_position: Vector2
-var move_speed: float = 50.0
+var move_speed: float = 60.0
 var arrival_threshold: float = 4.0
 var has_arrived := false
 var original_mask: int = 0

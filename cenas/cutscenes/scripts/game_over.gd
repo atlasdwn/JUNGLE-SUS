@@ -5,7 +5,18 @@ extends Node2D
 
 var mensagem_game_over: String = "GAME OVER"
 
+@onready var inventory: InventoryData = preload("res://recursos/inventario/player_inventory.tres")
+
 func _ready() -> void:
+	var inv_panel = InventarioUi.get_node_or_null("Inventario_UI")
+	if inv_panel and inv_panel.has_method("close"):
+		inv_panel.close()
+	else:
+		InventarioUi.hide()
+	inventory.clear()
+	InventarioUi.process_mode = Node.PROCESS_MODE_DISABLED
+	PlayerManager.reset_state()
+	QuestManager.reset_quests()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	get_tree().paused = false
 	ScreenTransition.shader_material.set_shader_parameter("circle_size", 1.05)
