@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://dblct38tp2hv4"]
 
 [ext_resource type="Script" uid="uid://3se4ee0klg28" path="res://recursos/personagens/scripts/character_resource.gd" id="1_l3pg7"]
-[ext_resource type="Texture2D" uid="uid://dknmwpxaphm0n" path="res://assets/Personagens/portraits/Madeireiro (1).png" id="1_wwinr"]
+[ext_resource type="Texture2D" uid="uid://dfr2f8u6gc1y6" path="res://assets/Personagens/portraits/Matinta.png" id="1_wwinr"]
 
 [resource]
 script = ExtResource("1_l3pg7")

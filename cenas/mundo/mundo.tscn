@@ -484,6 +484,12 @@ sources/0 = SubResource("TileSetAtlasSource_uyvml")
 sources/1 = SubResource("TileSetAtlasSource_k0wqi")
 sources/2 = SubResource("TileSetAtlasSource_ty0wy")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o06hu"]
+size = Vector2(42.399483, 61.910244)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x44kn"]
+size = Vector2(127.31398, 61.910244)
+
 [node name="Mundo" type="Node2D" unique_id=1017883843]
 script = ExtResource("1_682qv")
 metadata/_edit_vertical_guides_ = [-2561.0, 2562.0, 2.0]
@@ -638,43 +644,81 @@ position = Vector2(-53, -10)
 position = Vector2(640.99994, -1134)
 rotation = -1.0799059
 scale = Vector2(3.7199998, 1)
+collision_layer = 2
 
 [node name="ParedeInvisivel2" parent="." unique_id=1128401351 instance=ExtResource("22_x44kn")]
 position = Vector2(600, -871)
 rotation = -2.0181355
 scale = Vector2(5.4969482, 1.1644824)
+collision_layer = 2
 
 [node name="ParedeInvisivel3" parent="." unique_id=1093957830 instance=ExtResource("22_x44kn")]
 position = Vector2(481, -629)
 rotation = -3.8267527
 scale = Vector2(5.4969482, 1.1644824)
+collision_layer = 2
 
 [node name="ParedeInvisivel4" parent="." unique_id=291670040 instance=ExtResource("22_x44kn")]
 position = Vector2(190.99995, -624)
 rotation = -5.6614714
 scale = Vector2(5.4969482, 1.1644824)
+collision_layer = 2
 
 [node name="ParedeInvisivel5" parent="." unique_id=1054723898 instance=ExtResource("22_x44kn")]
 position = Vector2(-272, -678.00006)
 rotation = -6.808213
 scale = Vector2(5.4969482, 1.1644824)
+collision_layer = 2
 
 [node name="ParedeInvisivel7" parent="." unique_id=301856024 instance=ExtResource("22_x44kn")]
 position = Vector2(-539, -385.00006)
 rotation = -7.1361833
 scale = Vector2(9.149342, 1.1644824)
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="ParedeInvisivel7" index="0" unique_id=1463204510]
+position = Vector2(-1.2086716, 0.7194824)
+scale = Vector2(1, 1.0000001)
 
 [node name="ParedeInvisivel8" parent="." unique_id=329249509 instance=ExtResource("22_x44kn")]
 position = Vector2(367.00003, 88)
 rotation = -6.287059
 scale = Vector2(28.184704, 1.1644824)
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="ParedeInvisivel8" index="0" unique_id=1463204510]
+position = Vector2(10.800258, 1.0449066)
+shape = SubResource("RectangleShape2D_o06hu")
 
 [node name="ParedeInvisivel9" parent="." unique_id=741413598 instance=ExtResource("22_x44kn")]
 position = Vector2(1277.0001, -285)
 rotation = -4.720622
 scale = Vector2(14.50639, 0.8483527)
+collision_layer = 2
+
+[node name="ParedeInvisivel10" parent="." unique_id=64472310 instance=ExtResource("22_x44kn")]
+position = Vector2(2640, -704)
+rotation = -6.2831855
+scale = Vector2(14.50639, 0.8483527)
+collision_layer = 2
+
+[node name="ParedeInvisivel11" parent="." unique_id=1561081559 instance=ExtResource("22_x44kn")]
+position = Vector2(1481.9999, -1369.9999)
+rotation = -6.2831855
+scale = Vector2(14.50639, 0.8483527)
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="ParedeInvisivel11" index="0" unique_id=1463204510]
+position = Vector2(37.953407, -0.00024414063)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_x44kn")
 
 [node name="ParedeInvisivel6" parent="." unique_id=679991386 instance=ExtResource("22_x44kn")]
 position = Vector2(-48.00003, -756)
 rotation = -6.808213
 scale = Vector2(2.7675543, 0.7641528)
+collision_layer = 2
+
+[editable path="ParedeInvisivel7"]
+[editable path="ParedeInvisivel8"]
+[editable path="ParedeInvisivel11"]

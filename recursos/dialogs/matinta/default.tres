@@ -4,15 +4,46 @@
 [ext_resource type="Script" uid="uid://ba7gawa2x48ms" path="res://recursos/dialogs/scripts/dialog_text.gd" id="1_phkmv"]
 [ext_resource type="Resource" uid="uid://dblct38tp2hv4" path="res://recursos/personagens/matinta.tres" id="2_66jbk"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="2_cl3y6"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="2_twtb8"]
 
 [sub_resource type="Resource" id="Resource_twtb8"]
 script = ExtResource("1_phkmv")
-text = "oiiieee"
+text = "Estranho, desde que comecei a falar com você, o pássaro sumiu."
+char_info = ExtResource("2_twtb8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_jmrbo"]
+script = ExtResource("1_phkmv")
+text = "Que coincidência."
+char_info = ExtResource("2_66jbk")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_0rx2a"]
+script = ExtResource("1_phkmv")
+text = "..."
+char_info = ExtResource("2_twtb8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_0gaup"]
+script = ExtResource("1_phkmv")
+text = "...?"
+char_info = ExtResource("2_twtb8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_watwl"]
+script = ExtResource("1_phkmv")
+text = "Pera aí-"
+char_info = ExtResource("2_twtb8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_yxcmm"]
+script = ExtResource("1_phkmv")
+text = "Hm."
 char_info = ExtResource("2_66jbk")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("2_cl3y6")
 dial_name = "Default"
-lines = Array[ExtResource("1_66jbk")]([SubResource("Resource_twtb8")])
+lines = Array[ExtResource("1_66jbk")]([SubResource("Resource_twtb8"), SubResource("Resource_jmrbo"), SubResource("Resource_0rx2a"), SubResource("Resource_0gaup"), SubResource("Resource_watwl"), SubResource("Resource_yxcmm")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"

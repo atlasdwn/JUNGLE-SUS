@@ -4,15 +4,178 @@
 [ext_resource type="Script" uid="uid://df0mmluyebmg3" path="res://recursos/dialogs/scripts/dialog_item.gd" id="1_735c8"]
 [ext_resource type="Resource" uid="uid://dblct38tp2hv4" path="res://recursos/personagens/matinta.tres" id="2_735c8"]
 [ext_resource type="Script" uid="uid://fq0jowlitt7b" path="res://recursos/dialogs/scripts/dialog_resource.gd" id="3_hdkje"]
+[ext_resource type="Resource" uid="uid://ld8ty8apvv22" path="res://recursos/personagens/karina_data.tres" id="4_hdkje"]
 
 [sub_resource type="Resource" id="Resource_kg6y2"]
 script = ExtResource("1_1ivad")
-text = "eeeeeeu souuuuu a matinta pereeeeira e eu nao vou te dar o machaaaaado"
+text = "Estás procurando o machado?"
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_xuolm"]
+script = ExtResource("1_1ivad")
+text = "!"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_x8rnk"]
+script = ExtResource("1_1ivad")
+text = "Você é... uma bruxa?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_55y8y"]
+script = ExtResource("1_1ivad")
+text = "Bom, a questão não é o meu querer, o dono quer ele de volta."
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_0fwk8"]
+script = ExtResource("1_1ivad")
+text = "Esqueça. Aquele homem não machucará mais essas terras."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_4w2fs"]
+script = ExtResource("1_1ivad")
+text = "Olha, senhora..?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_enffk"]
+script = ExtResource("1_1ivad")
+text = "Pereira."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_c8q00"]
+script = ExtResource("1_1ivad")
+text = "Senhora Pereira."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_hvyat"]
+script = ExtResource("1_1ivad")
+text = "Você não imagina o trabalho que deu chegar até aqui...Tinha um pássaro gigante me perseguindo e"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_be4br"]
+script = ExtResource("1_1ivad")
+text = "Ah, sim. Não consigo imaginar seu sufoco."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_wkwml"]
+script = ExtResource("1_1ivad")
+text = "Ei, eu não concordo com isso. Acredite, se eu pudesse, quem estaria ganhando a machadada era ele e não a árvore."
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_75iba"]
+script = ExtResource("1_1ivad")
+text = "Aquele homem me deve."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_7tyqy"]
+script = ExtResource("1_1ivad")
+text = "Não posso entregar o que ele tanto deseja."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_kq4iq"]
+script = ExtResource("1_1ivad")
+text = "Ele te deve? Deve o quê?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_0h7tr"]
+script = ExtResource("1_1ivad")
+text = "Me prometeu cachaça e a nicotina de todo um fumódromo. Hoje pela manhã, sua promessa não havia sido cumprida."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_86ylp"]
+script = ExtResource("1_1ivad")
+text = "Ele sofrerá as consequências."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_aqp3o"]
+script = ExtResource("1_1ivad")
+text = "O quê? Não pode matar ele! Ele tem algo que me pertence!"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_eknvl"]
+script = ExtResource("1_1ivad")
+text = "Preciso da minha bolsa de volta, e só ele sabe onde está. Vim exercer assistência médica aos Kakoma."
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_wu7rw"]
+script = ExtResource("1_1ivad")
+text = "Entendeu agora, o porquê de tudo isso?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_2cgc3"]
+script = ExtResource("1_1ivad")
+text = "Perfeitamente."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_k0fon"]
+script = ExtResource("1_1ivad")
+text = "Tenho uma proposta, minha jovem."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_sefvp"]
+script = ExtResource("1_1ivad")
+text = "Entregue-o o machado, este será sua perdição."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_l6rrh"]
+script = ExtResource("1_1ivad")
+text = "Mas o que..."
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_npy2o"]
+script = ExtResource("1_1ivad")
+text = "Está enfeitiçado?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_uv8ap"]
+script = ExtResource("1_1ivad")
+text = "Você é realmente uma bruxa, não é?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_rqhw6"]
+script = ExtResource("1_1ivad")
+text = "Se és dos Kakoma, saberá quem eu sou."
+char_info = ExtResource("2_735c8")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_ob87y"]
+script = ExtResource("1_1ivad")
+text = "Pereira...Pereira Matinta?"
+char_info = ExtResource("4_hdkje")
+metadata/_custom_type_script = "uid://ba7gawa2x48ms"
+
+[sub_resource type="Resource" id="Resource_6q4vt"]
+script = ExtResource("1_1ivad")
+text = "Sim, menina esperta."
 char_info = ExtResource("2_735c8")
 metadata/_custom_type_script = "uid://ba7gawa2x48ms"
 
 [resource]
 script = ExtResource("3_hdkje")
 dial_name = "Entregar Machado"
-lines = Array[ExtResource("1_735c8")]([SubResource("Resource_kg6y2")])
+lines = Array[ExtResource("1_735c8")]([SubResource("Resource_kg6y2"), SubResource("Resource_xuolm"), SubResource("Resource_x8rnk"), SubResource("Resource_55y8y"), SubResource("Resource_0fwk8"), SubResource("Resource_4w2fs"), SubResource("Resource_enffk"), SubResource("Resource_c8q00"), SubResource("Resource_hvyat"), SubResource("Resource_be4br"), SubResource("Resource_wkwml"), SubResource("Resource_75iba"), SubResource("Resource_7tyqy"), SubResource("Resource_kq4iq"), SubResource("Resource_0h7tr"), SubResource("Resource_86ylp"), SubResource("Resource_aqp3o"), SubResource("Resource_eknvl"), SubResource("Resource_wu7rw"), SubResource("Resource_2cgc3"), SubResource("Resource_k0fon"), SubResource("Resource_sefvp"), SubResource("Resource_l6rrh"), SubResource("Resource_npy2o"), SubResource("Resource_uv8ap"), SubResource("Resource_rqhw6"), SubResource("Resource_ob87y"), SubResource("Resource_6q4vt")])
 metadata/_custom_type_script = "uid://fq0jowlitt7b"
