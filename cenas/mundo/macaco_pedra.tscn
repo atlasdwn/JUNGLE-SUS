@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_macaco"]
-radius = 250.0
+radius = 382.08377
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
 size = Vector2(45, 12)
