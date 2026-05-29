@@ -797,7 +797,7 @@ position = Vector2(136, 113)
 [node name="Entrada" type="Area2D" parent="Ambiente/Passagens" unique_id=966599801 node_paths=PackedStringArray("npc_madeireiro")]
 script = ExtResource("20_k3qyx")
 dialog = ExtResource("3_k3qyx")
-npc_madeireiro = NodePath("../../../NpcMadeireiro")
+npc_madeireiro = NodePath("../../NpcMadeireiro")
 
 [node name="Collision" type="CollisionShape2D" parent="Ambiente/Passagens/Entrada" unique_id=1438916430]
 position = Vector2(-56, 26)
@@ -819,11 +819,12 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_pqr77")
 debug_color = Color(0.70196074, 0.009057884, 0, 0.41960785)
 
-[node name="NpcMadeireiro" parent="." unique_id=1470037563 instance=ExtResource("19_akwsc")]
-position = Vector2(-84, 54)
+[node name="NpcMadeireiro" parent="Ambiente" unique_id=1470037563 instance=ExtResource("19_akwsc")]
+y_sort_enabled = true
+position = Vector2(-84, 74)
 
-[node name="Matinta" parent="." unique_id=1181002116 instance=ExtResource("19_xpd3o")]
-position = Vector2(1871, -73)
+[node name="Matinta" parent="Ambiente" unique_id=1181002116 instance=ExtResource("19_xpd3o")]
+position = Vector2(1871, -53)
 
 [node name="GerenciadorEventoMatinta" type="Node2D" parent="." unique_id=861351398]
 position = Vector2(0, -6)

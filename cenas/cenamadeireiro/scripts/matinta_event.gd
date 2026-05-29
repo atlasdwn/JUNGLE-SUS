@@ -8,7 +8,7 @@ extends Node2D
 @onready var timer_evento = $TimerEvento
 @onready var timer_sombra = $TimerSombra
 @onready var animation_player = $CanvasLayer/SombraMatinta/AnimationPlayer
-@onready var matinta: Matinta = $"../Matinta"
+@onready var matinta: Matinta = $"../Ambiente/Matinta"
 @onready var carina : Player
 @onready var tela_dica: PanelContainer = $CanvasLayer/TelaDica
 

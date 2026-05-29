@@ -117,5 +117,4 @@ size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "Descrição do item"
-fit_content = true
 scroll_active = false

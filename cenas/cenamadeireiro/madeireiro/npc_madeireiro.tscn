@@ -114,6 +114,10 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmfpd"]
+radius = 4.0
+height = 16.0
+
 [node name="NpcMadeireiro" type="Area2D" unique_id=1470037563]
 collision_layer = 4
 script = ExtResource("1_ut076")
@@ -136,5 +140,13 @@ dialogs = Array[ExtResource("4_b4rhy")]([ExtResource("5_4drwu"), ExtResource("6_
 
 [node name="CollisionShape2D" parent="DialogInteraction" index="0" unique_id=1228163063]
 position = Vector2(-6.25, 7.25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1830915318]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape2D" parent="StaticBody2D" unique_id=1893886967]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gmfpd")
 
 [editable path="DialogInteraction"]
