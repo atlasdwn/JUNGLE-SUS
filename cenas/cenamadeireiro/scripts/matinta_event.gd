@@ -113,7 +113,7 @@ func _on_sombra_animation_finished(_anim_name):
 	
 	if not esta_escondida:
 		# Game Over: Matinta pegou a Carina
-		get_tree().change_scene_to_file("res://cenas/cutscenes/game_over.tscn")
+		pass
 	else:
 		# Sobreviveu, agenda proximo
 		agendar_proximo_ataque()
