@@ -14,10 +14,15 @@ func exit() -> void:
 
 ## O que acontece durante _process
 func process(_delta: float) -> State:
+	
 	if player.direction == Vector2.ZERO:
 		return idle
-	player.velocity = player.direction.normalized() * move_speed
-	
+	if Input.is_action_pressed('correr'):
+		player.velocity = player.direction.normalized() * move_speed * 3
+	else:
+		player.velocity = player.direction.normalized() * move_speed
+		
+		pass
 	if player.set_direction():
 		player.update_animation("walk")
 		
