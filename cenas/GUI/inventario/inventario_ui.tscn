@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4gp8w387g102"]
 
 [ext_resource type="Texture2D" uid="uid://c7lg8154d7psf" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0014.png" id="1_ljsf4"]
-[ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://cenas/inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
-[ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://cenas/inventario/inv_slot.tscn" id="3_4lnmx"]
+[ext_resource type="Script" uid="uid://dt0hkkugosqb0" path="res://cenas/GUI/inventario/scripts/inventario_ui.gd" id="2_4lnmx"]
+[ext_resource type="PackedScene" uid="uid://dg2qchifle45e" path="res://cenas/GUI/inventario/inv_slot.tscn" id="3_4lnmx"]
 [ext_resource type="PackedScene" uid="uid://dne0vigmm0kga" path="res://cenas/GUI/quest_system/QuestUI.tscn" id="4_ffkhx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lnmx"]
@@ -16,12 +16,12 @@ texture_margin_bottom = 4.978563
 
 [node name="Inventario_UI" type="PanelContainer" parent="." unique_id=2066259853]
 anchors_preset = -1
-anchor_left = 0.36577505
-anchor_top = 0.33611116
-anchor_right = 0.634225
-anchor_bottom = 0.6638889
-offset_left = -8.096008
-offset_right = 8.096069
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 694.1921
+offset_top = 363.00006
+offset_right = -694.1919
+offset_bottom = -363.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6

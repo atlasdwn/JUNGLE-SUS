@@ -216,7 +216,7 @@ func acalmar() -> void:
 func bloquear_movimento() -> void:
 	velocity = Vector2.ZERO
 	direction = Vector2.ZERO
-	update_animation("idle")
+	update_animation("idle") 
 	if state_machine:
 		state_machine.process_mode = Node.PROCESS_MODE_DISABLED
 

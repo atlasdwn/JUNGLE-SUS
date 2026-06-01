@@ -44,7 +44,6 @@ func change_state(new_state : State) -> void:
 	
 	prev_state = current_state
 	current_state = new_state
-	print(current_state)
 	current_state.enter() 
 	
 	

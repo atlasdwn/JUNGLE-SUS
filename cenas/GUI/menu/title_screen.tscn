@@ -11,7 +11,9 @@
 atlas = ExtResource("4_wood_sign")
 region = Rect2(460, 30, 322, 97)
 
-[node name="TitleScreen" type="Control" unique_id=105985552]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1033611395]
+
+[node name="TitleScreen" type="Control" parent="." unique_id=105985552]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="." unique_id=1891287097]
+[node name="Background" type="TextureRect" parent="TitleScreen" unique_id=1891287097]
 texture_filter = 6
 layout_mode = 1
 anchors_preset = 15
@@ -33,7 +35,7 @@ texture = ExtResource("2_center")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="FireflyLayer" type="Control" parent="." unique_id=1528330796]
+[node name="FireflyLayer" type="Control" parent="TitleScreen" unique_id=1528330796]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,7 +45,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("5_firefly_layer")
 
-[node name="SafeArea" type="Control" parent="." unique_id=1128847715]
+[node name="SafeArea" type="Control" parent="TitleScreen" unique_id=1128847715]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="CornerLogo" type="TextureRect" parent="SafeArea" unique_id=1546196869]
+[node name="CornerLogo" type="TextureRect" parent="TitleScreen/SafeArea" unique_id=1546196869]
 layout_mode = 1
 offset_left = -189.0
 offset_top = -113.0
@@ -67,7 +69,7 @@ texture = ExtResource("6_corner_img")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="BottomDock" type="VBoxContainer" parent="SafeArea" unique_id=7875100]
+[node name="BottomDock" type="VBoxContainer" parent="TitleScreen/SafeArea" unique_id=7875100]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,22 +78,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="VerticalSpacer" type="Control" parent="SafeArea/BottomDock" unique_id=1225797860]
+[node name="VerticalSpacer" type="Control" parent="TitleScreen/SafeArea/BottomDock" unique_id=1225797860]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="BottomRow" type="HBoxContainer" parent="SafeArea/BottomDock" unique_id=60009461]
+[node name="BottomRow" type="HBoxContainer" parent="TitleScreen/SafeArea/BottomDock" unique_id=60009461]
 layout_mode = 2
 mouse_filter = 2
 alignment = 1
 
-[node name="Buttons" type="HBoxContainer" parent="SafeArea/BottomDock/BottomRow" unique_id=315572460]
+[node name="Buttons" type="HBoxContainer" parent="TitleScreen/SafeArea/BottomDock/BottomRow" unique_id=315572460]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 40
 
-[node name="StartButton" type="TextureButton" parent="SafeArea/BottomDock/BottomRow/Buttons" unique_id=597242065]
+[node name="StartButton" type="TextureButton" parent="TitleScreen/SafeArea/BottomDock/BottomRow/Buttons" unique_id=597242065]
 texture_filter = 6
 custom_minimum_size = Vector2(340, 128)
 layout_mode = 2
@@ -103,7 +105,7 @@ texture_hover = SubResource("AtlasTexture_box")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="SafeArea/BottomDock/BottomRow/Buttons/StartButton" unique_id=2008483294]
+[node name="Label" type="Label" parent="TitleScreen/SafeArea/BottomDock/BottomRow/Buttons/StartButton" unique_id=2008483294]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -125,7 +127,7 @@ text = "Iniciar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitButton" type="TextureButton" parent="SafeArea/BottomDock/BottomRow/Buttons" unique_id=503319223]
+[node name="ExitButton" type="TextureButton" parent="TitleScreen/SafeArea/BottomDock/BottomRow/Buttons" unique_id=503319223]
 texture_filter = 6
 custom_minimum_size = Vector2(340, 128)
 layout_mode = 2
@@ -137,7 +139,7 @@ texture_hover = SubResource("AtlasTexture_box")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="SafeArea/BottomDock/BottomRow/Buttons/ExitButton" unique_id=375743513]
+[node name="Label" type="Label" parent="TitleScreen/SafeArea/BottomDock/BottomRow/Buttons/ExitButton" unique_id=375743513]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

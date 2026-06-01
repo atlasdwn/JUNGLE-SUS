@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://citewbhumjatd" path="res://assets/inventario/inventory-slot.png" id="1_04hr1"]
 [ext_resource type="Texture2D" uid="uid://c7lg8154d7psf" path="res://assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0014.png" id="1_nauo4"]
-[ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://cenas/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
+[ext_resource type="Script" uid="uid://ck0yv63yp34lf" path="res://cenas/GUI/inventario/scripts/inv_slot_ui.gd" id="2_4utms"]
 [ext_resource type="Texture2D" uid="uid://bva8ah1hjsh48" path="res://assets/items/machado.png" id="4_ljusd"]
 [ext_resource type="FontFile" uid="uid://o01nhxjut5c7" path="res://assets/fonts/static/PixelifySans-Medium.ttf" id="5_ljusd"]
-[ext_resource type="Script" uid="uid://4bknpks47fcx" path="res://cenas/inventario/scripts/tooltip.gd" id="6_6bklq"]
+[ext_resource type="Script" uid="uid://4bknpks47fcx" path="res://cenas/GUI/inventario/scripts/tooltip.gd" id="6_6bklq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yrxe"]
 texture = ExtResource("1_nauo4")

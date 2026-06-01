@@ -259,6 +259,7 @@ func _iniciar_dialogo_abertura() -> void:
 
 	## Iara aparece (animação roda com game unpaused)
 	if iara != null and iara.has_method("aparecer"):
+		print('asssustou')
 		iara.aparecer()
 		barco.assustar()
 		if player and player.has_method("assustar"):
@@ -290,20 +291,14 @@ func _iniciar_dialogo_abertura() -> void:
 	barco.finalizar_inicio()
 	print("[Mundo] Diálogo de abertura concluído.")
 	QuestManager.start_quest(QUEST_SUPRIMENTOS)
-
 	PlayerManager.in_cutscene = false
-
 	# Garante que o jogo não fique pausado
 	get_tree().paused = false
-	
+
 	# Reativa a interação do Barco agora que a cutscene terminou
 	var barco_dialog_final := barco.get_node_or_null("DialogInteraction") as DialogInteraction
 	if barco_dialog_final:
 		barco_dialog_final.enabled = true
-		
-	# Libera a movimentação do player
-	if player:
-		player.liberar_movimento()
 
 ## Helper: dispara um segmento de diálogo e aguarda terminar
 func _play_dialog_segment(lines: Array[DialogItem]) -> void:
