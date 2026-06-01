@@ -34,7 +34,6 @@ tile_set = SubResource("TileSet_hq8ww")
 script = ExtResource("3_qk2hn")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=512869967]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=434435028]
 y_sort_enabled = true

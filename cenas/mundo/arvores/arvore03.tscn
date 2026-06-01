@@ -34,7 +34,6 @@ tile_set = SubResource("TileSet_hq8ww")
 script = ExtResource("3_0qg2v")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1244575390]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=387412336]
 position = Vector2(7, -66)

@@ -208,8 +208,7 @@ func assustar() -> void:
 func acalmar() -> void:
 	# Retorna o controle normal das animações
 	anim.process_mode = Node.PROCESS_MODE_INHERIT
-	if state_machine:
-		state_machine.process_mode = Node.PROCESS_MODE_INHERIT
+
 	
 	update_animation("idle")
 
