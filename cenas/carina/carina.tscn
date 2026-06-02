@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://dhqraorb751t4" path="res://cenas/carina/scripts/state_walk.gd" id="14_8dyrv"]
 [ext_resource type="Script" uid="uid://cojmblkq8vde7" path="res://cenas/carina/scripts/state_collect.gd" id="15_t3phn"]
 [ext_resource type="Script" uid="uid://c6egnpajd3d3d" path="res://cenas/carina/scripts/state_cutscene.gd" id="17_1e60c"]
+[ext_resource type="Script" uid="uid://drfa5jtoh20ei" path="res://cenas/carina/scripts/state_run.gd" id="22_o5ll6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18ija"]
 atlas = ExtResource("3_w8id7")
@@ -1157,6 +1158,9 @@ script = ExtResource("15_t3phn")
 
 [node name="Cutscene" type="Node" parent="StateMachine" unique_id=755965487]
 script = ExtResource("17_1e60c")
+
+[node name="Run" type="Node" parent="StateMachine" unique_id=905395212]
+script = ExtResource("22_o5ll6")
 
 [node name="Collider" type="Area2D" parent="." unique_id=1408964914]
 collision_layer = 16

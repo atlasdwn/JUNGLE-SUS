@@ -1,26 +1,26 @@
-class_name StateWalk extends State
+extends State
 
-@export var move_speed : float = 65.0
-@onready var idle: State = $"../Idle"
+@onready var idle: StateIdle = $"../Idle"
 @onready var collect: StateCollect = $"../Collect"
-@onready var run: Node = $"../Run"
+@onready var walk: StateWalk = $"../Walk"
 
-## O que acontece quando o player entra no estado
+@export var move_speed: float = 120.0
+
 func enter() -> void:
-	player.update_animation("walk")
+	player.update_animation("run")
 	player.set_walk_dust(true)
 
 func exit() -> void:
-	print('saiu do run')
 	player.set_walk_dust(false)
 
 ## O que acontece durante _process
 func process(_delta: float) -> State:
 	player.velocity = player.direction.normalized() * move_speed
 	if player.direction == Vector2.ZERO:
-		return idle	
+		return idle
+		pass
 	if player.set_direction():
-		player.update_animation("walk")
+		player.update_animation("run")
 		
 	return null
 	
@@ -30,9 +30,9 @@ func physics(_delta: float) -> State:
 
 ## O que acontece com os inputs do estado
 func handle_input(_event: InputEvent) -> State:
-	if _event.is_action_pressed('correr'):
-		return run
-	elif _event.is_action_pressed("interact"):
+	if _event.is_action_released('correr'):
+		return walk
+	if _event.is_action_pressed("interact"):
 		if player.collectible_in_area:
 			return collect
 		PlayerManager.interact()
